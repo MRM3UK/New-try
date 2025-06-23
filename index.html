@@ -175,11 +175,21 @@
       #channelList li { padding: 12px; }
       #channelList img { width: 50px; height: 50px; }
     }
+
+   
+#typingTitle {
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 30px 0;
+}
   </style>
 </head>
 <body>
 
-  <h1>MASUM TV</h1>
+<h1 id="typingTitle">MASUM TV</h1>
 
   <div class="player-container">
     <div class="video-container">
@@ -213,7 +223,6 @@
   <ul id="channelList"></ul>
   
   
-
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const m3uUrl = urlParams.get('link');
@@ -341,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const titles = [
     "MASUM TV",
     "MΔSUM LIVE",
-    "MASUM ❤️ STREAM",
+    "MASUM STREAM",
     "MASUM STUDIO 🎬",
     "মাসুম টিভি 📺"
   ];
@@ -350,34 +359,35 @@ document.addEventListener("DOMContentLoaded", function () {
   let charIndex = 0;
   let typing = true;
 
-  function typeTitle() {
+  function typeEffect() {
     const currentTitle = titles[titleIndex];
+    const target = document.getElementById("typingTitle");
+
+    if (!target) return;
 
     if (typing) {
-      document.title = currentTitle.substring(0, charIndex + 1);
+      target.textContent = currentTitle.substring(0, charIndex + 1);
       charIndex++;
-
       if (charIndex === currentTitle.length) {
         typing = false;
-        setTimeout(typeTitle, 1500); // Wait after full word
+        setTimeout(typeEffect, 1500); // Wait after full title shown
         return;
       }
     } else {
-      document.title = currentTitle.substring(0, charIndex - 1);
+      target.textContent = currentTitle.substring(0, charIndex - 1);
       charIndex--;
-
       if (charIndex === 0) {
         typing = true;
         titleIndex = (titleIndex + 1) % titles.length;
       }
     }
 
-    setTimeout(typeTitle, 150); // typing/deleting speed
+    setTimeout(typeEffect, 150); // typing speed
   }
 
-  typeTitle(); // start the loop
+  typeEffect();
 });
-  
+ 
   </script>
 
 </body>
