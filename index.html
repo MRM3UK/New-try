@@ -337,44 +337,47 @@
 setInterval(updateClock, 1000);
 updateClock();
     
-const titles = [
-  "MASUM TV",
-  "MΔSUM LIVE",
-  "MASUM STREAM",
-  "MASUM STUDIO 🎬",
-  "মাসুম টিভি 📺"
-];
+document.addEventListener("DOMContentLoaded", function () {
+  const titles = [
+    "MASUM TV",
+    "MΔSUM LIVE",
+    "MASUM ❤️ STREAM",
+    "MASUM STUDIO 🎬",
+    "মাসুম টিভি 📺"
+  ];
 
-let titleIndex = 0;
-let charIndex = 0;
-let typing = true;
+  let titleIndex = 0;
+  let charIndex = 0;
+  let typing = true;
 
-function typeTitle() {
-  const currentTitle = titles[titleIndex];
-  
-  if (typing) {
-    // টাইপ হচ্ছে
-    document.title = currentTitle.substring(0, charIndex + 1);
-    charIndex++;
-    if (charIndex === currentTitle.length) {
-      typing = false;
-      setTimeout(typeTitle, 1500); // পুরো টাইপ শেষ হলে একটু বিরতি
-      return;
+  function typeTitle() {
+    const currentTitle = titles[titleIndex];
+
+    if (typing) {
+      document.title = currentTitle.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentTitle.length) {
+        typing = false;
+        setTimeout(typeTitle, 1500); // Wait after full word
+        return;
+      }
+    } else {
+      document.title = currentTitle.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        typing = true;
+        titleIndex = (titleIndex + 1) % titles.length;
+      }
     }
-  } else {
-    // মুছে ফেলা হচ্ছে
-    document.title = currentTitle.substring(0, charIndex - 1);
-    charIndex--;
-    if (charIndex === 0) {
-      typing = true;
-      titleIndex = (titleIndex + 1) % titles.length;
-    }
+
+    setTimeout(typeTitle, 150); // typing/deleting speed
   }
-  setTimeout(typeTitle, 150); // টাইপ/ডিলিট স্পিড
-}
 
-typeTitle(); // শুরু করো
-
+  typeTitle(); // start the loop
+});
+  
   </script>
 
 </body>
