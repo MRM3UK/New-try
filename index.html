@@ -346,48 +346,6 @@
 setInterval(updateClock, 1000);
 updateClock();
     
-document.addEventListener("DOMContentLoaded", function () {
-  const titles = [
-    "MASUM TV",
-    "MΔSUM LIVE",
-    "MASUM STREAM",
-    "MASUM STUDIO 🎬",
-    "মাসুম টিভি 📺"
-  ];
-
-  let titleIndex = 0;
-  let charIndex = 0;
-  let typing = true;
-
-  function typeEffect() {
-    const currentTitle = titles[titleIndex];
-    const target = document.getElementById("typingTitle");
-
-    if (!target) return;
-
-    if (typing) {
-      target.textContent = currentTitle.substring(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === currentTitle.length) {
-        typing = false;
-        setTimeout(typeEffect, 1500); // Wait after full title shown
-        return;
-      }
-    } else {
-      target.textContent = currentTitle.substring(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        typing = true;
-        titleIndex = (titleIndex + 1) % titles.length;
-      }
-    }
-
-    setTimeout(typeEffect, 150); // typing speed
-  }
-
-  typeEffect();
-});
- 
   </script>
 
 </body>
