@@ -38,23 +38,18 @@
       max-width: 400px;
     }
 
-    #channelList {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: #333;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-      max-height: 500px;
-      overflow-y: auto;
-    }
+  #channelList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
 
-    #channelList li {
+  #channelList li {
     display: flex;
-    flex-direction: column; /* এটা লম্বালম্বি না করে item vertical সাজাবে */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -63,16 +58,26 @@
     background: #111;
     cursor: pointer;
     transition: 0.3s ease;
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; /* ✅ Neon effect */
-    border: 2px solid #0ff;
-    }
+  }
 
-    #channelList img {
-      width: 70px;
-      height: 70px;
-      margin-right: 15px;
-      border-radius: 8px;
-    }
+  #channelList img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  /* Neon Glow Styles */
+  .channel-box.online {
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  }
+
+  .channel-box.offline {
+    border: 2px solid #ff0033;
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
+  }
+
 
     #channelList li:hover {
       background: #555;
@@ -144,7 +149,7 @@
 </head>
 <body>
 
-  <h1>Live TV Player</h1>
+  <h1>MASUM TV</h1>
 
   <div class="player-container">
     <div class="video-container">
@@ -174,6 +179,8 @@
   </div>
 
   <ul id="channelList"></ul>
+  
+  
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
