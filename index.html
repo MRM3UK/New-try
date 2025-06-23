@@ -289,13 +289,13 @@ let currentColor = 0;
 setInterval(() => {
   const btn = document.getElementById("ammBtn");
   if (btn) {
+    btn.style.transition = "background-color 1s ease-in-out";
     btn.style.backgroundColor = colors[currentColor];
     btn.style.color = "#fff";
     btn.style.border = "none";
-    btn.style.transition = "background 0.5s ease";
     currentColor = (currentColor + 1) % colors.length;
   }
-}, 600);
+}, 1500); // সময়ও বাড়িয়ে দিলাম (১.৫ সেকেন্ড)
   </script>
 
 </body>
