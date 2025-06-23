@@ -336,6 +336,45 @@
 
 setInterval(updateClock, 1000);
 updateClock();
+    
+const titles = [
+  "MASUM TV",
+  "MΔSUM LIVE",
+  "MASUM STREAM",
+  "MASUM STUDIO 🎬",
+  "মাসুম টিভি 📺"
+];
+
+let titleIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function typeTitle() {
+  const currentTitle = titles[titleIndex];
+  
+  if (typing) {
+    // টাইপ হচ্ছে
+    document.title = currentTitle.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === currentTitle.length) {
+      typing = false;
+      setTimeout(typeTitle, 1500); // পুরো টাইপ শেষ হলে একটু বিরতি
+      return;
+    }
+  } else {
+    // মুছে ফেলা হচ্ছে
+    document.title = currentTitle.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      typing = true;
+      titleIndex = (titleIndex + 1) % titles.length;
+    }
+  }
+  setTimeout(typeTitle, 150); // টাইপ/ডিলিট স্পিড
+}
+
+typeTitle(); // শুরু করো
+
   </script>
 
 </body>
