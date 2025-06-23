@@ -15,7 +15,7 @@ https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Motu Patlu
 https://cloudfrontnet.vercel.app/tplay/playout/209622/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Shinchan
-https://smart.bengaldigital.live/Star-jalsha/tracks-v1a1/mono.ts.m3u8
+http://45.148.145.57/PAK_HUMTVG/index.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",4/7 Doraemon
 https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Songs
@@ -23,5 +23,4 @@ https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Songs
 https://cloudfrontnet.vercel.app/tplay/playout/209587/master.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png",Star Jalsha
-http://38.96.178.201/live/STARJALSHA/index.m3u8
-
+http://125.209.88.166:45793/BRN/HumTvHD.stream/playlist.m3u8
