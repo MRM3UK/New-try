@@ -39,26 +39,56 @@
     }
 
   #channelList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
 
-  #channelList li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 15px;
-    border-radius: 15px;
-    background: #111;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+
+            gap: 20px;
+
+            padding: 20px;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: #333;
+
+            border-radius: 15px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+
+            overflow-y: auto;
+
+            max-height: 500px;
+          
+            margin-top: 30px;
+
+        }
+
+        #channelList li {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            cursor: pointer;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+
+            background: #444;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+            position: relative;
+
+        }
 
   #channelList img {
     width: 60px;
