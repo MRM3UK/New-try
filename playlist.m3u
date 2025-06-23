@@ -22,5 +22,27 @@ https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
 https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Songs
 https://cloudfrontnet.vercel.app/tplay/playout/209587/master.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png",Star Jalsha
-http://125.209.88.166:45793/BRN/HumTvHD.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/byte-capsule/TSports-m3u8-Grabber/refs/heads/main/images/TSports-logo.jpeg",T-Sports
+https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png",Hum TV
+http://125.209.88.166:45793/BRN/HumTvHD.stream/playlist.m3u8,
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Bangla
+https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Urdu
+https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace English
+https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png",HUM TV
+http://45.148.145.57/PAK_HUMTVG/index.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/zEjeB4sG92U3ZyJtChtSl5cyb7H.jpg",Vikramadithyan
+http://ftp17.circleftp.net/FILE/Tamil%20Telugu%20%26%20Others%20Hindi%20Dubbed/2014/Vikramadithyan%20%282014%29%201080p%20WEB-DL%20%5BDual%20Audio%5D%20%5BHindi%2BMalayalam%5D%20x264/Vikramadithyan%20%282014%29%201080p%20WEB-DL%20%5BDual%20Audio%5D%20%5BHindi%2BMalayalam%5D%20x264.mkv
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/sN7qH8ynEmcodtgPBwKyd2VbFr6.jpg" group-title="Movies", Secret Zoo
+http://index2.circleftp.net/FILE/English%20%26%20Foreign%20Dubbed%20Movies/2020/Secret%20Zoo%20%282020%29%201080p%20BluRay%20%5BDual%20Audio%5D%20%5BHindi%2BKorean%5D%20x264/Secret%20Zoo%20%282020%29%201080p%20BluRay%20%5BDual%20Audio%5D%20%5BHindi%2BKorean%5D%20x264.mkv
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2http://38.96.178.201/live/STARJALSHA/index.m3u8023.png" group-title="Indian",Star Jalsha
+http://38.96.178.201/live/STARJALSHA/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png" group-title="Indian",Star Jalsha
+https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
+
+
+
