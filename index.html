@@ -187,21 +187,23 @@
     </div>
   </div>
 
-  <button id="ammBtn" onclick="unmutePlayer()" style="
-  font-weight: bold; 
-  font-size: 24px; 
-  color: #fff; 
-  text-transform: uppercase; 
-  text-shadow:
-    1px 1px 0 #000,
-    2px 2px 0 #333,
-    3px 3px 5px rgba(0,0,0,0.7),
-    0 0 5px #ff6600,
-    0 0 10px #ff6600,
-    0 0 15px #ff6600,
-    0 0 20px #ff6600;
-  letter-spacing: 2px;
-">AMM TV</button>  
+  <button id="ammBtn" style="
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  background-color: #111;
+  box-shadow:
+    0 0 10px #39ff14,
+    0 0 20px #39ff14,
+    0 0 30px #39ff14;
+  transition: background-color 0.5s ease;
+">
+  Loading Time...
+  </button>  
   
   <div id="progressContainer" style="display: none;">
     <div id="progressBar"><div id="progressFill"></div></div>
@@ -317,24 +319,23 @@
     } else {
       alert("⚠️ No live TV link found!");
     }
-    const colors = [
-  "#FF0000", "#FF7F00", "#FFFF00", "#7FFF00", "#00FF00",
-  "#00FF7F", "#00FFFF", "#007FFF", "#0000FF", "#7F00FF",
-  "#FF00FF", "#FF007F", "#FF1493", "#FF4500", "#32CD32"
-];
+    function updateClock() {
+  const now = new Date();
+  let hrs = now.getHours();
+  let mins = now.getMinutes();
+  let secs = now.getSeconds();
+  const ampm = hrs >= 12 ? "PM" : "AM";
 
-let currentColor = 0;
+  hrs = hrs % 12 || 12;
+  mins = mins < 10 ? "0" + mins : mins;
+  secs = secs < 10 ? "0" + secs : secs;
 
-setInterval(() => {
-  const btn = document.getElementById("ammBtn");
-  if (btn) {
-    btn.style.transition = "background-color 1s ease-in-out";
-    btn.style.backgroundColor = colors[currentColor];
-    btn.style.color = "#fff";
-    btn.style.border = "none";
-    currentColor = (currentColor + 1) % colors.length;
-  }
-}, 1500); // সময়ও বাড়িয়ে দিলাম (১.৫ সেকেন্ড)
+  const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+  document.getElementById("ammBtn").innerText = timeStr;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
   </script>
 
 </body>
