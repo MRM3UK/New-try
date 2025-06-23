@@ -152,8 +152,10 @@
 
   <button onclick="unmutePlayer()">🔊 Unmute</button>
 
-  <input type="text" id="searchInput" placeholder="🔍 Search channels..." oninput="filterChannels()"/>
-
+  <div style="margin: 20px;">
+  <input type="text" id="searchInput" placeholder="🔍 Search channels..." style="padding:10px; font-size:16px; border-radius:6px; width:70%; max-width:300px;">
+  <button onclick="filterChannels()" style="padding:10px 15px; font-size:16px; border-radius:6px; background:#39b54a; color:white; border:none; margin-left:5px;">Search</button>
+</div>
   <div id="progressContainer" style="display: none;">
     <div id="progressBar"><div id="progressFill"></div></div>
     <div id="progressText"></div>
