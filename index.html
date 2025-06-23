@@ -150,8 +150,7 @@
     </div>
   </div>
 
-  <button onclick="unmutePlayer()">AMM TV</button>
-
+  <button id="ammBtn" onclick="unmutePlayer()">AMM TV</button>
   
   <div id="progressContainer" style="display: none;">
     <div id="progressBar"><div id="progressFill"></div></div>
@@ -265,6 +264,24 @@
     } else {
       alert("⚠️ No live TV link found!");
     }
+    const colors = [
+  "#FF0000", "#FF7F00", "#FFFF00", "#7FFF00", "#00FF00",
+  "#00FF7F", "#00FFFF", "#007FFF", "#0000FF", "#7F00FF",
+  "#FF00FF", "#FF007F", "#FF1493", "#FF4500", "#32CD32"
+];
+
+let currentColor = 0;
+
+setInterval(() => {
+  const btn = document.getElementById("ammBtn");
+  if (btn) {
+    btn.style.backgroundColor = colors[currentColor];
+    btn.style.color = "#fff";
+    btn.style.border = "none";
+    btn.style.transition = "background 0.5s ease";
+    currentColor = (currentColor + 1) % colors.length;
+  }
+}, 600);
   </script>
 
 </body>
