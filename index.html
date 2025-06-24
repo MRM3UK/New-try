@@ -1,638 +1,347 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>LIVE Sports From MsM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMM Live TV</title>
+  <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
-    body {
-      background-color: #1a1a1a;
-      color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #181818; color: #fff; text-align: center; }
 
-    .main-app-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #2b2b2b;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      padding-bottom: 70px;
-    }
+    h1 { margin: 20px 0; font-size: 26px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); }
 
-    .app-header {
-      background-color: #333;
-      padding: 10px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .player-container { background: black; width: 100%; position: relative; }
+    .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
+    #videoPlayer { width: 100%; height: 100%; }
+
+    button {
+      background: #39b54a;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
       color: #fff;
-      font-weight: bold;
-      font-size: 18px;
-      border-bottom: 1px solid #444;
+      border-radius: 8px;
+      margin: 20px auto;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #2e9840; }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      margin: 20px;
+      width: 80%;
+      max-width: 400px;
     }
 
-    .app-header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+  #channelList {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+
+            gap: 20px;
+
+            padding: 20px;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: #333;
+
+            border-radius: 15px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+
+            overflow-y: auto;
+
+            max-height: 500px;
+          
+            margin-top: 30px;
+
+        }
+
+        #channelList li {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            cursor: pointer;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+
+            background: #444;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+            position: relative;
+
+        }
+
+  #channelList img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  /* Neon Glow Styles */
+  .channel-box.online {
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  }
+
+  .channel-box.offline {
+    border: 2px solid #ff0033;
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
+  }
+
+
+    #channelList li:hover {
+      background: #555;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     }
 
-    .app-header .logo img {
-      height: 30px;
-      border-radius: 4px;
+    #channelList li:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      background: #e74c3c;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     }
 
-    .app-header .title {
-      color: #ff9900;
-      font-size: 20px;
-    }
+    #channelList li.online:before { background: #39b54a; }
 
-    .info-bar {
-      background-color: #ff9900;
-      color: #000;
-      padding: 8px 15px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: bold;
-      /* ржкрзНрж░рж╛ржержорж┐ржХржнрж╛ржмрзЗ ржбрж┐рж╕ржкрзНрж▓рзЗ ржмрзНрж▓ржХ ржерж╛ржХржмрзЗ */
-    }
-
-    .video-section {
-      position: relative;
+    #progressContainer {
       width: 100%;
-      padding-bottom: 56.25%;
-      background-color: #000;
-      overflow: hidden;
+      max-width: 500px;
+      margin: 20px auto;
     }
 
-    .video-section video {
+    #progressBar {
+      width: 100%;
+      height: 10px;
+      border-radius: 15px;
+      background: #444;
+      border: 1px solid #333;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #progressBar div {
+      height: 100%;
+      background: linear-gradient(90deg, #39b54a, #ffbc00);
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background-color: #000;
-    }
-
-    .loading-message {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 16px;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px 20px;
-      border-radius: 5px;
-      z-index: 10;
-      text-align: center;
-      display: none; /* Changed to none */
-    }
-
-    .likes-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
-      gap: 20px;
-      background-color: #2b2b2b;
-      border-top: 1px solid #444;
-      margin-top: 10px;
-    }
-
-    .like-button,
-    .view-button,
-    .online-button {
-      background-color: #ff9900;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      cursor: pointer;
-    }
-
-    .view-button {
-      background-color: #444;
-    }
-
-    .online-button {
-      background-color: #0066cc;
-    }
-
-    /* Chat Section Styles */
-    .chat-section {
-      background-color: #2b2b2b;
-      padding: 15px;
-      margin-top: 10px;
-      border-top: 1px solid #444;
-    }
-
-    .chat-messages {
-      height: 250px; /* Adjust height as needed */
-      overflow-y: auto;
-      border: 1px solid #444;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #1a1a1a;
-      display: flex;
-      flex-direction: column-reverse; /* To show latest messages at the bottom */
-    }
-
-    .chat-message {
-      margin-bottom: 8px;
-      line-height: 1.4;
-      padding: 8px 12px;
+      width: 0;
       border-radius: 15px;
-      max-width: 80%;
-      word-wrap: break-word;
     }
 
-    .chat-message.my-message {
-        align-self: flex-end;
-        background-color: #007bff; /* Blue for sender */
-        color: white;
-        margin-left: auto; /* Push to right */
-    }
-
-    .chat-message.other-message {
-        align-self: flex-start;
-        background-color: #444; /* Grey for others */
-        color: #f0f0f0;
-        margin-right: auto; /* Push to left */
-    }
-
-    .chat-message .user-name {
+    #progressText {
+      margin-top: 10px;
+      font-size: 18px;
       font-weight: bold;
-      color: #ff9900; /* Default color for other users */
-      margin-right: 5px;
-      display: inline; /* Changed to inline so timestamp can be on same line */
-    }
-    
-    .chat-message .timestamp {
-        font-size: 0.75em;
-        color: #bbb;
-        margin-left: 8px;
-        display: inline;
+      color: #39b54a;
     }
 
-    .chat-message.my-message .user-name {
-        color: #b3d9ff; /* Lighter blue for my username */
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      input[type="text"] { font-size: 14px; }
+      #channelList li { padding: 15px; }
+      #channelList img { width: 60px; height: 60px; }
     }
 
-
-    .chat-input-container {
-      display: flex;
-      gap: 10px;
+    @media (max-width: 480px) {
+      h1 { font-size: 20px; }
+      input[type="text"] { font-size: 14px; width: 90%; }
+      #channelList li { padding: 12px; }
+      #channelList img { width: 50px; height: 50px; }
     }
 
-    .chat-input-container input[type="text"] {
-      flex-grow: 1;
-      padding: 10px;
-      border: 1px solid #444;
-      border-radius: 5px;
-      background-color: #333;
-      color: #f0f0f0;
-      font-size: 14px;
-    }
-
-    .chat-input-container button {
-      background-color: #ff9900;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .chat-input-container button:hover {
-      background-color: #e68a00;
-    }
-
-    /* Username Input Overlay */
-    .username-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-      flex-direction: column;
-      gap: 20px;
-      /* Hidden by default */
-      display: none;
-    }
-
-    .username-input-box {
-      background-color: #2b2b2b;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      text-align: center;
-      max-width: 90%;
-    }
-
-    .username-input-box h2 {
-      color: #ff9900;
-      margin-bottom: 20px;
-    }
-
-    .username-input-box input[type="text"] {
-      width: calc(100% - 20px);
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #444;
-      border-radius: 5px;
-      background-color: #333;
-      color: #f0f0f0;
-      font-size: 16px;
-    }
-
-    .username-input-box button {
-      background-color: #ff9900;
-      color: #fff;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .username-input-box button:hover {
-      background-color: #e68a00;
-    }
-
-
-    .bottom-nav {
-      background-color: #222;
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      border-top: 1px solid #444;
-    }
-
-    .nav-item {
-      text-align: center;
-      color: #f0f0f0;
-      text-decoration: none;
-      font-size: 12px;
-      padding: 5px 0;
-      flex: 1;
-    }
-
-    .nav-item i {
-      font-size: 22px;
-      display: block;
-      margin-bottom: 3px;
-      color: #aaa;
-    }
-
-    .nav-item:hover i,
-    .nav-item.active i {
-      color: #ff9900;
-    }
-
-    @media (max-width: 600px) {
-      .bottom-nav {
-        padding: 8px 0;
-      }
-
-      .nav-item i {
-        font-size: 20px;
-      }
-
-      .nav-item {
-        font-size: 11px;
-      }
-    }
+   
+#typingTitle {
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 30px 0;
+}
   </style>
 </head>
 <body>
 
-<div class="main-app-container">
+<h1 id="typingTitle">MASUM TV</h1>
 
-  <div class="app-header">
-    <div class="logo">
-      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgbuJ1rxtHvaynErboODUyLM-aHw822buNfEteS1_iMlcGJfDzD9iSD-9578GpRN8VPxiYu86NQO34X51k-98fRHKP7l3DCekpH_5rDpfxSU0WxL4Efs7Zqp5zn4Enc-i3sF-ASji8y0sl_1MiNw_Q2SPAFHInAIzzOpBrzxjGRTO8uEKI-Fnxxmx1otao=s1200" alt="Logo"/>
-      <span> </span>
+  <div class="player-container">
+    <div class="video-container">
+      <div id="videoPlayer"></div>
     </div>
   </div>
 
-  <div class="info-bar" id="infoBar">
-    ржнрж┐ржбрж┐ржУ ржЪрж╛рж▓рзБ рж╣рждрзЗ рзйрзж рж╕рзЗржХрзЗржирзНржб рж╕ржоржпрж╝ рж▓рж╛ржЧрждрзЗ ржкрж╛рж░рзЗ
+  <button id="ammBtn" style="
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+">
+  Loading Time...
+  </button>
+  
+  <div id="progressContainer" style="display: none;">
+    <div id="progressBar"><div id="progressFill"></div></div>
+    <div id="progressText"></div>
   </div>
 
-  <div class="video-section">
-    <video id="videoPlayer" controls></video>
-    <div class="loading-message" id="loadingMessage">
-      </div>
-  </div>
+  <ul id="channelList"></ul>
+  
+  
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const m3uUrl = urlParams.get('link');
+    let allChannels = [];
 
-  <div class="likes-section">
-    <div class="like-button" id="likeBtn">
-      <i class="fas fa-thumbs-up"></i> <span id="likeCount">0</span>
-    </div>
-    <div class="view-button">
-      ЁЯСБя╕П Views: <span id="viewCount">0</span>
-    </div>
-    <div class="online-button">
-      ЁЯФ┤ Online: <span id="onlineCount">0</span>
-    </div>
-  </div>
-
-  <div class="chat-section">
-    <h3>рж▓рж╛ржЗржн ржЪрзНржпрж╛ржЯ</h3>
-    <div class="chat-messages" id="chatMessages">
-      </div>
-    <div class="chat-input-container">
-      <input type="text" id="chatInput" placeholder="ржЖржкржирж╛рж░ ржмрж╛рж░рзНрждрж╛ рж▓рж┐ржЦрзБржи...">
-      <button id="sendChatBtn">ржкрж╛ржарж╛ржи</button>
-    </div>
-  </div>
-
-</div>
-
-<div class="bottom-nav">
-  <a href="/" class="nav-item">
-    <i class="fas fa-home"></i><span>Home</span>
-  </a>
-  <a href="/search" class="nav-item">
-    <i class="fas fa-search"></i><span>Search</span>
-  </a>
-  <a href="/archive" class="nav-item">
-    <i class="fas fa-star"></i><span>Favorites</span>
-  </a>
-  <a href="/labels" class="nav-item">
-    <i class="fas fa-bell"></i><span>Updates</span>
-  </a>
-  <a href="/contact" class="nav-item">
-    <i class="fas fa-bars"></i><span>More</span>
-  </a>
-</div>
-
-<div class="username-overlay" id="usernameOverlay">
-    <div class="username-input-box">
-        <h2>ржЪрзНржпрж╛ржЯрзЗ ржпрзЛржЧ ржжрж┐рждрзЗ ржЖржкржирж╛рж░ ржирж╛ржо рж▓рж┐ржЦрзБржи</h2>
-        <input type="text" id="usernameInput" placeholder="ржЖржкржирж╛рж░ ржирж╛ржо...">
-        <button id="joinChatBtn">ржпрзЛржЧ ржжрж┐ржи</button>
-    </div>
-</div>
-
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyC6xiG5b0yMWkLl4ZN0G4hzpJmoyW_Tp6I",
-    authDomain: "msm-4-39637.firebaseapp.com",
-    projectId: "msm-4-39637",
-    storageBucket: "msm-4-39637.appIdpot.com",
-    messagingSenderId: "933945465803",
-    appId: "1:933945465803:web:f3c4ce2cc93f901b23f44e",
-    databaseURL: "https://msm-4-39637-default-rtdb.firebaseio.com"
-  };
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
-
-<script>
-  const likeCountEl = document.getElementById('likeCount');
-  const viewCountEl = document.getElementById('viewCount');
-  const onlineCountEl = document.getElementById('onlineCount');
-  const likeBtn = document.getElementById('likeBtn');
-  const userID = 'user_' + Math.random().toString(36).substr(2, 9); // random user ID
-
-  // Chat related elements
-  const chatMessagesEl = document.getElementById('chatMessages');
-  const chatInput = document.getElementById('chatInput');
-  const sendChatBtn = document.getElementById('sendChatBtn');
-  const chatRef = db.ref('messages'); // Firebase path for chat messages
-
-  // Username overlay elements
-  const usernameOverlay = document.getElementById('usernameOverlay');
-  const usernameInput = document.getElementById('usernameInput');
-  const joinChatBtn = document.getElementById('joinChatBtn');
-  let currentUsername = ''; // To store the user's chosen username
-
-  // Info Bar element
-  const infoBar = document.getElementById('infoBar'); // ржирждрзБржи ржЖржЗржбрж┐ ржпрзЛржЧ ржХрж░рж╛ рж╣рзЯрзЗржЫрзЗ
-
-  // Update view count
-  const viewsRef = db.ref('stats/views');
-  viewsRef.transaction(current => (current || 0) + 1);
-
-  viewsRef.on('value', snapshot => {
-    viewCountEl.textContent = snapshot.val() || 0;
-  });
-
-  // Likes
-  const likesRef = db.ref('stats/likes');
-  likesRef.on('value', snapshot => {
-    likeCountEl.textContent = snapshot.val() || 0;
-  });
-
-  likeBtn.addEventListener('click', () => {
-    likesRef.transaction(current => (current || 0) + 1);
-  });
-
-  // --- Real-time Online Viewers Logic ---
-  const presenceRef = db.ref('presence/' + userID);
-  const connectedRef = db.ref('.info/connected');
-
-  connectedRef.on('value', snapshot => {
-    if (snapshot.val() === true) {
-      // User is connected, set their online status
-      presenceRef.onDisconnect().remove(); // Remove when disconnected
-      presenceRef.set(true); // Set true immediately when connected
-    } else {
-      // User is disconnected (or was previously disconnected)
-      // Firebase will automatically handle onDisconnect().remove()
-    }
-  });
-
-  const totalOnlineRef = db.ref('presence');
-  totalOnlineRef.on('value', snapshot => {
-    const count = snapshot.numChildren();
-    onlineCountEl.textContent = count;
-  });
-
-  // Video Load
-  document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('videoPlayer');
-    const loadingMessage = document.getElementById('loadingMessage');
-    const videoSrc = 'https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8'; // ржЖржкржирж╛рж░ рж▓рж╛ржЗржн рж╕рзНржЯрзНрж░рж┐ржо рж▓рж┐ржВржХ ржПржЦрж╛ржирзЗ ржжрж┐ржи
-
-    // --- Info Bar auto-hide logic ---
-    setTimeout(() => {
-      if (infoBar) {
-        infoBar.style.display = 'none';
+    async function fetchM3U(url) {
+      try {
+        const response = await fetch(url);
+        const data = await response.text();
+        parseM3U(data);
+      } catch (error) {
+        alert('⚠️ Error loading M3U file!');
       }
-    }, 30000); // 30 рж╕рзЗржХрзЗржирзНржб = 30000 ржорж┐рж▓рж┐рж╕рзЗржХрзЗржирзНржб
+    }
 
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(videoSrc);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, function () {
-        video.play().then(() => {
-          loadingMessage.style.display = 'none';
-        }).catch(error => {
-          // If autoplay fails, the message won't show as it's display: none by default.
-          // You can uncomment the line below if you want a fallback message in English or empty.
-          // loadingMessage.innerText = 'Video did not autoplay. Click play button.';
-          // loadingMessage.style.display = 'block';
-        });
+    function parseM3U(data) {
+      const lines = data.split("\n");
+      const channels = [];
+      let channel = {};
+
+      lines.forEach(line => {
+        line = line.trim();
+        if (line.startsWith("#EXTINF")) {
+          const nameMatch = line.match(/,(.+)/);
+          const logoMatch = line.match(/tvg-logo="(.*?)"/);
+          channel = {
+            name: nameMatch ? nameMatch[1] : "Unknown Channel",
+            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70"
+          };
+        } else if (line && !line.startsWith("#")) {
+          channel.url = line;
+          channels.push({...channel}); // Clone to avoid reference issue
+        }
       });
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = videoSrc;
-      video.addEventListener('loadedmetadata', function () {
-        video.play().then(() => {
-          loadingMessage.style.display = 'none';
-        }).catch(error => {
-          // loadingMessage.innerText = 'Video did not autoplay. Click play button.';
-          // loadingMessage.style.display = 'block';
-        });
+
+      allChannels = channels;
+      displayChannels(channels);
+    }
+
+    async function checkChannelStatus(url) {
+      try {
+        const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 10000));
+        const fetchPromise = fetch(url, { method: 'HEAD' });
+        const response = await Promise.race([fetchPromise, timeout]);
+        return response && response.ok;
+      } catch {
+        return false;
+      }
+    }
+
+    async function displayChannels(channels) {
+      const list = document.getElementById("channelList");
+      const progressBar = document.getElementById("progressBar");
+      const progressFill = document.getElementById("progressFill");
+      const progressText = document.getElementById("progressText");
+      const progressContainer = document.getElementById("progressContainer");
+
+      list.innerHTML = "";
+      progressContainer.style.display = "block";
+
+      const total = channels.length;
+      let loaded = 0;
+
+      for (const channel of channels) {
+        const li = document.createElement("li");
+        const status = await checkChannelStatus(channel.url);
+        if (status) li.classList.add("online");
+
+        li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
+        li.onclick = () => playChannel(channel.url);
+        list.appendChild(li);
+
+        loaded++;
+        const progress = Math.round((loaded / total) * 100);
+        progressFill.style.width = `${progress}%`;
+        progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
+
+        if (loaded === total) progressContainer.style.display = "none";
+      }
+    }
+
+    function playChannel(url) {
+      window.player = new Playerjs({
+        id: "videoPlayer",
+        file: url,
+        autoplay: 1,
+        muted: 1
       });
+    }
+
+    function unmutePlayer() {
+      if (window.player) player.api("volume", 100);
+    }
+
+    function filterChannels() {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = allChannels.filter(ch => ch.name.toLowerCase().includes(searchTerm));
+      displayChannels(filtered);
+    }
+
+    if (m3uUrl) {
+      fetchM3U(m3uUrl);
     } else {
-      // loadingMessage.innerText = 'Your browser does not support this video stream.';
-      // loadingMessage.style.display = 'block';
+      alert("⚠️ No live TV link found!");
     }
+    function updateClock() {
+  const now = new Date();
+  let hrs = now.getHours();
+  let mins = now.getMinutes();
+  let secs = now.getSeconds();
+  const ampm = hrs >= 12 ? "PM" : "AM";
 
-    // --- Username Handling Logic ---
-    const storedUsername = localStorage.getItem('chatUsername');
-    if (storedUsername) {
-      currentUsername = storedUsername;
-      loadChatMessages(); // Start loading messages
-    }
-  });
+  hrs = hrs % 12 || 12;
+  mins = mins < 10 ? "0" + mins : mins;
+  secs = secs < 10 ? "0" + secs : secs;
 
-  // Chat Section Logic
-  // Show username input when Send button is clicked AND username is not set
-  sendChatBtn.addEventListener('click', () => {
-    if (currentUsername === '') {
-      usernameOverlay.style.display = 'flex'; // Show the overlay
-      usernameInput.focus(); // Focus on the input field
-    } else {
-      sendMessage();
-    }
-  });
+  const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+  document.getElementById("ammBtn").innerText = timeStr;
+}
 
-  chatInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      if (currentUsername === '') {
-        usernameOverlay.style.display = 'flex';
-        usernameInput.focus();
-      } else {
-        sendMessage();
-      }
-    }
-  });
-
-
-  // Handle username submission from overlay
-  joinChatBtn.addEventListener('click', () => {
-    handleJoinChat();
-  });
-
-  usernameInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      handleJoinChat();
-    }
-  });
-
-  function handleJoinChat() {
-    const enteredUsername = usernameInput.value.trim();
-    if (enteredUsername !== '') {
-      currentUsername = enteredUsername;
-      localStorage.setItem('chatUsername', currentUsername); // Save username to localStorage
-      usernameOverlay.style.display = 'none'; // Hide the overlay
-      chatInput.focus(); // Focus on chat input
-      loadChatMessages(); // Start loading messages once joined
-      // If a message was pending, send it now
-      if (chatInput.value.trim() !== '') {
-          sendMessage();
-      }
-    } else {
-      alert('ржЕржирзБржЧрзНрж░рж╣ ржХрж░рзЗ ржПржХржЯрж┐ ржирж╛ржо рж▓рж┐ржЦрзБржиред'); // Prompt user to enter a name
-    }
-  }
-
-  // Helper function to format timestamp
-  function formatTimestamp(timestamp) {
-    const date = new Date(timestamp);
-    let hours = date.getHours();
-    const minutes = date.getMinutes();
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    const strMinutes = minutes < 10 ? '0'+minutes : minutes;
-    const day = date.getDate();
-    const month = date.getMonth() + 1; // Months are 0-indexed
-    const year = date.getFullYear();
-    return `${hours}:${strMinutes} ${ampm} - ${day}/${month}/${year}`;
-  }
-
-  // Load existing messages and listen for new ones
-  function loadChatMessages() {
-    chatRef.limitToLast(50).on('child_added', snapshot => {
-      const message = snapshot.val();
-      const messageElement = document.createElement('div');
-      messageElement.classList.add('chat-message');
-
-      if (message.user === currentUsername) {
-        messageElement.classList.add('my-message');
-      } else {
-        messageElement.classList.add('other-message');
-      }
-
-      // Add user name, message text, and formatted timestamp
-      messageElement.innerHTML = `
-        <span class="user-name">${message.user}:</span>
-        ${message.text}
-        <span class="timestamp">${formatTimestamp(message.timestamp)}</span>
-      `;
-      chatMessagesEl.prepend(messageElement); // Add new messages to the top (due to flex-direction: column-reverse)
-    });
-  }
-
-  // Send message
-  function sendMessage() {
-    const messageText = chatInput.value.trim();
-    if (messageText !== '' && currentUsername !== '') {
-      chatRef.push({
-        user: currentUsername, // Use the user's chosen username
-        text: messageText,
-        timestamp: firebase.database.ServerValue.TIMESTAMP
-      });
-      chatInput.value = ''; // Clear input field
-    }
-  }
-</script>
+setInterval(updateClock, 1000);
+updateClock();
+    
+  </script>
 
 </body>
 </html>
