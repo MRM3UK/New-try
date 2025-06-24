@@ -17,7 +17,7 @@
         }
         .light-theme { background: #ffffff; color: #000000; }
         .dark-theme { background: #1a1a2e; color: #e0e0e0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; }
         .video-player { width: 100%; height: 400px; }
         .sidebar { width: 250px; background: #16213e; padding: 10px; position: fixed; height: 100%; overflow-y: auto; }
         .channel-list { margin-left: 260px; display: flex; flex-wrap: wrap; gap: 10px; }
@@ -29,18 +29,21 @@
         .chat-messages { height: 300px; overflow-y: auto; }
         .chat-input { width: 100%; padding: 5px; margin-top: 10px; }
         .search-bar { width: 100%; padding: 10px; margin-bottom: 10px; }
-        .category-btn { background: #2b4069; border: none; padding: 5px 10px; margin: 5px; cursor: pointer; }
+        .category-btn { background: #2b4069; border: none; padding: 5px 10px; margin: 5px; cursor: pointer; color: #e0e0e0; }
         .theme-toggle { margin: 10px 0; }
         .history { margin-top: 20px; }
-        .import-btn { margin-top: 10px; }
+        .import-btn { margin-top: 10px; background: #2b4069; border: none; padding: 5px 10px; color: #e0e0e0; cursor: pointer; }
+        .error-message { color: #ff4444; }
     </style>
 </head>
 <body class="dark-theme">
     <div class="sidebar">
         <h3>ক্যাটাগরি</h3>
+        <input type="text" class="search-bar" placeholder="Search channels..." onkeyup="searchChannels()">
+        <button class="category-btn" onclick="filterCategory('All')">All</button>
         <button class="category-btn" onclick="filterCategory('Bangladesh')">Bangladesh</button>
         <button class="category-btn" onclick="filterCategory('India')">India</button>
-        <input type="text" class="search-bar" placeholder="Search channels..." onkeyup="searchChannels()">
+        <button class="category-btn" onclick="filterCategory('Imported')">Imported</button>
         <div id="channelCategories"></div>
     </div>
     <div class="container">
@@ -49,11 +52,13 @@
             <button onclick="toggleTheme()"><i class="fas fa-adjust"></i> Toggle Theme</button>
         </div>
         <video id="videoPlayer" class="video-js vjs-default-skin" controls autoplay>
-            <source src="path/to/default.m3u8" type="application/x-mpegURL">
+            <source src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" type="application/x-mpegURL">
+            <p class="vjs-no-js">To view this video, enable JavaScript or use a supported browser.</p>
         </video>
         <div class="channel-list" id="channelList"></div>
         <div class="history" id="history">History: <span id="historyList"></span></div>
         <button class="import-btn" onclick="importPlaylist()">Import Playlist</button>
+        <div id="errorMessage" class="error-message"></div>
     </div>
     <div class="chat-box">
         <h3>লাইভ চ্যাট</h3>
@@ -66,25 +71,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
         var player = videojs('videoPlayer');
-        const socket = io('https://your-chat-server.com'); // Replace with your WebSocket server
+        const socket = io('https://your-chat-server.com'); // Replace with your WebSocket server URL
 
         // Sample channel data
         let channels = [
-            { name: "DD National", logo: "dd-logo.png", url: "dd.m3u8", status: "online", category: "Bangladesh" },
-            { name: "Zee News", logo: "zee-logo.png", url: "zee.m3u8", status: "offline", category: "India" },
-            { name: "PTC Music", logo: "ptc-logo.png", url: "ptc.m3u8", status: "online", category: "India" },
-            // Add more channels
+            { name: "DD National", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/DD_National.svg/1200px-DD_National.svg.png", url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", status: "online", category: "India" },
+            { name: "Zee News", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Zee_News.svg/1200px-Zee_News.svg.png", url: "https://invalid-stream.m3u8", status: "offline", category: "India" },
+            { name: "PTC Music", logo: "https://ptcnetwork.tv/wp-content/uploads/2020/11/PTC-Music-Logo-1.png", url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", status: "online", category: "India" },
         ];
         let history = JSON.parse(localStorage.getItem('watchHistory')) || [];
 
-        function loadChannels(category = null) {
+        function loadChannels(category = 'All') {
             const list = document.getElementById('channelList');
             list.innerHTML = '';
-            const filtered = category ? channels.filter(ch => ch.category === category) : channels;
+            const filtered = category === 'All' ? channels : channels.filter(ch => ch.category === category);
             filtered.forEach(channel => {
                 const div = document.createElement('div');
                 div.className = `channel-item ${channel.status}`;
-                div.innerHTML = `<img src="${channel.logo}" onerror="this.src='default-logo.png'"> ${channel.name}`;
+                div.innerHTML = `<img src="${channel.logo}" onerror="this.src='https://via.placeholder.com/50?text=No+Logo'"> ${channel.name}`;
                 div.onclick = () => {
                     playChannel(channel.url, channel.name);
                     updateHistory(channel.name);
@@ -95,7 +99,10 @@
 
         function playChannel(url, name) {
             player.src({ type: "application/x-mpegURL", src: url });
-            player.play();
+            player.play().catch(error => {
+                showError('Failed to play stream. Check the URL.');
+                console.error('Play error:', error);
+            });
             document.title = `${name} - LIVE Sports From MsM`;
         }
 
@@ -106,7 +113,7 @@
             filtered.forEach(ch => {
                 const div = document.createElement('div');
                 div.className = `channel-item ${ch.status}`;
-                div.innerHTML = `<img src="${ch.logo}" onerror="this.src='default-logo.png'"> ${ch.name}`;
+                div.innerHTML = `<img src="${ch.logo}" onerror="this.src='https://via.placeholder.com/50?text=No+Logo'"> ${ch.name}`;
                 div.onclick = () => playChannel(ch.url, ch.name);
                 document.getElementById('channelList').appendChild(div);
             });
@@ -120,14 +127,17 @@
             const url = prompt("Paste M3U/M3U8 playlist URL:");
             if (url) {
                 fetch(url)
-                    .then(response => response.text())
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.text();
+                    })
                     .then(data => {
                         const newChannels = parseM3U(data);
                         channels = [...channels, ...newChannels];
                         localStorage.setItem('channels', JSON.stringify(channels));
                         loadChannels();
                     })
-                    .catch(err => alert('Failed to import playlist'));
+                    .catch(err => showError(`Failed to import playlist: ${err.message}`));
             }
         }
 
@@ -136,10 +146,18 @@
             const newChannels = [];
             for (let i = 0; i < lines.length; i++) {
                 if (lines[i].startsWith('#EXTINF')) {
-                    const name = lines[i].match(/tvg-name="([^"]+)"/)?.[1] || 'Unknown';
-                    const logo = lines[i].match(/tvg-logo="([^"]+)"/)?.[1] || 'default-logo.png';
+                    const nameMatch = lines[i].match(/tvg-name="([^"]+)"/);
+                    const logoMatch = lines[i].match(/tvg-logo="([^"]+)"/);
                     const url = lines[i + 1];
-                    newChannels.push({ name, logo, url, status: "online", category: "Imported" });
+                    if (nameMatch && url) {
+                        newChannels.push({
+                            name: nameMatch[1] || 'Unknown',
+                            logo: logoMatch ? logoMatch[1] : 'https://via.placeholder.com/50?text=No+Logo',
+                            url: url.trim(),
+                            status: "online",
+                            category: "Imported"
+                        });
+                    }
                     i++;
                 }
             }
@@ -149,7 +167,7 @@
         function updateHistory(channel) {
             if (!history.includes(channel)) {
                 history.push(channel);
-                if (history.length > 10) history.shift(); // Limit history to 10 items
+                if (history.length > 10) history.shift();
                 localStorage.setItem('watchHistory', JSON.stringify(history));
                 renderHistory();
             }
@@ -157,12 +175,13 @@
 
         function renderHistory() {
             const historyList = document.getElementById('historyList');
-            historyList.innerHTML = history.map(ch => `<span onclick="playFromHistory('${ch}')">${ch}</span>`).join(', ');
+            historyList.innerHTML = history.map(ch => `<span style="cursor:pointer; color:blue;" onclick="playFromHistory('${ch}')">${ch}</span>`).join(', ') || 'No history';
         }
 
         function playFromHistory(name) {
             const channel = channels.find(ch => ch.name === name);
             if (channel) playChannel(channel.url, channel.name);
+            else showError('Channel not found in history');
         }
 
         function toggleTheme() {
@@ -171,25 +190,28 @@
         }
 
         function sendMessage() {
-            const message = document.getElementById('chatInput').value;
+            const message = document.getElementById('chatInput').value.trim();
             if (message) {
-                socket.emit('chat message', message);
-                document.getElementById('chatInput').value = '';
+                // Simulated chat (replace with real WebSocket emit)
                 addMessage(`You: ${message}`);
+                document.getElementById('chatInput').value = '';
+                // socket.emit('chat message', message); // Uncomment with real server
             }
         }
 
         function addMessage(message) {
             const messages = document.getElementById('chatMessages');
-            messages.innerHTML += `<p>${message}</p>`;
+            messages.innerHTML += `<p>${message} <small>${new Date().toLocaleTimeString()}</small></p>`;
             messages.scrollTop = messages.scrollHeight;
         }
 
-        socket.on('chat message', function(msg) {
-            addMessage(`User: ${msg}`);
-        });
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.innerHTML = message;
+            setTimeout(() => errorDiv.innerHTML = '', 5000);
+        }
 
-        // Check channel status (simulated)
+        // Simulated channel status check (use a real API for production)
         function checkChannelStatus() {
             channels.forEach(ch => {
                 fetch(ch.url, { method: 'HEAD', mode: 'no-cors' })
@@ -205,6 +227,7 @@
             loadChannels();
             renderHistory();
             checkChannelStatus();
+            player.on('error', () => showError('Stream failed to load. Check the URL or network.'));
         };
     </script>
 </body>
