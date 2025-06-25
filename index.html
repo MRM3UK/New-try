@@ -1,359 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AMM Live TV</title>
-  <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #181818; color: #fff; text-align: center; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMM Live TV</title>
+  <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #181818; color: #fff; text-align: center; }
 
-    h1 { margin: 20px 0; font-size: 26px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); }
+    h1 { margin: 20px 0; font-size: 26px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); }
 
-    .player-container { background: black; width: 100%; position: relative; }
-    .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
-    #videoPlayer { width: 100%; height: 100%; }
+    .player-container { background: black; width: 100%; position: relative; }
+    .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
+    #videoPlayer { width: 100%; height: 100%; }
 
-    button {
-      background: #39b54a;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      border-radius: 8px;
-      margin: 20px auto;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover { background: #2e9840; }
+    #controls {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-    input[type="text"] {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: none;
-      margin: 20px;
-      width: 80%;
-      max-width: 400px;
-    }
+    input[type="text"], input[type="file"], button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      width: 90%;
+      max-width: 300px;
+    }
 
-    #channelList {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: #333;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-      overflow-y: auto;
-      max-height: 500px;
-      margin-top: 30px;
-    }
+    button {
+      background: #39b54a;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-    #channelList li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      cursor: pointer;
-      border-radius: 12px;
-      transition: 0.3s;
-      background: #444;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-      position: relative;
-    }
+    button:hover { background: #2e9840; }
 
-    #channelList img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-    }
+    #channelList {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #333;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+      max-height: 500px;
+      margin-top: 30px;
+    }
 
-    /* Neon Glow Styles */
-    .channel-box.online {
-      border: 2px solid #39ff14;
-      box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
-    }
+    #channelList li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: 0.3s;
+      background: #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
 
-    .channel-box.offline {
-      border: 2px solid #ff0033;
-      box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
-    }
+    #channelList img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
 
-    #channelList li:hover {
-      background: #555;
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    }
+    .channel-box.online {
+      border: 2px solid #39ff14;
+      box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
 
-    #channelList li:before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 10px;
-      height: 10px;
-      background: #e74c3c;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    }
+    .channel-box.offline {
+      border: 2px solid #ff0033;
+      box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
+    }
 
-    #channelList li.online:before { background: #39b54a; }
+    #channelList li:hover {
+      background: #555;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    }
 
-    #progressContainer {
-      width: 100%;
-      max-width: 500px;
-      margin: 20px auto;
-    }
+    #channelList li:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      background: #e74c3c;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
 
-    #progressBar {
-      width: 100%;
-      height: 10px;
-      border-radius: 15px;
-      background: #444;
-      border: 1px solid #333;
-      overflow: hidden;
-      position: relative;
-    }
+    #channelList li.online:before { background: #39b54a; }
 
-    #progressBar div {
-      height: 100%;
-      background: linear-gradient(90deg, #39b54a, #ffbc00);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      border-radius: 15px;
-    }
+    #progressContainer {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+    }
 
-    #progressText {
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #39b54a;
-    }
+    #progressBar {
+      width: 100%;
+      height: 10px;
+      border-radius: 15px;
+      background: #444;
+      border: 1px solid #333;
+      overflow: hidden;
+      position: relative;
+    }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 24px; }
-      input[type="text"] { font-size: 14px; }
-      #channelList li { padding: 15px; }
-      #channelList img { width: 60px; height: 60px; }
-    }
+    #progressBar div {
+      height: 100%;
+      background: linear-gradient(90deg, #39b54a, #ffbc00);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      border-radius: 15px;
+    }
 
-    @media (max-width: 480px) {
-      h1 { font-size: 20px; }
-      input[type="text"] { font-size: 14px; width: 90%; }
-      #channelList li { padding: 12px; }
-      #channelList img { width: 50px; height: 50px; }
-    }
+    #progressText {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #39b54a;
+    }
 
-    #typingTitle {
-      font-size: 28px;
-      color: #fff;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-      letter-spacing: 2px;
-      text-align: center;
-      margin: 30px 0;
-    }
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      #channelList li { padding: 15px; }
+      #channelList img { width: 60px; height: 60px; }
+    }
 
-    .favorite {
-      color: #ffeb3b;
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      cursor: pointer;
-    }
-    .favorite.active {
-      color: #ff9800;
-    }
-  </style>
+    @media (max-width: 480px) {
+      h1 { font-size: 20px; }
+      #channelList li { padding: 12px; }
+      #channelList img { width: 50px; height: 50px; }
+    }
+  </style>
 </head>
 <body>
-  <h1 id="typingTitle">MASUM TV</h1>
 
-  <div class="player-container">
-    <div class="video-container">
-      <div id="videoPlayer"></div>
-    </div>
-  </div>
+<h1 id="typingTitle">MASUM TV</h1>
 
-  <button id="ammBtn" style="
-    font-weight: bold;
-    font-size: 24px;
-    color: #ffffff;
-    background-color: #333;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-  ">
-    Loading Time...
-  </button>
-  
-  <div id="progressContainer" style="display: none;">
-    <div id="progressBar"><div id="progressFill"></div></div>
-    <div id="progressText"></div>
-  </div>
+<div class="player-container">
+  <div class="video-container">
+    <div id="videoPlayer"></div>
+  </div>
+</div>
 
-  <input type="text" id="searchInput" placeholder="Search channels..." onkeyup="filterChannels()">
-  <button onclick="filterChannels()">Search</button>
-  <input type="text" id="playlistInput" placeholder="Enter M3U/M3U8 URL..." style="margin: 20px;">
-  <button onclick="importPlaylist()">Import Playlist</button>
+<div id="controls">
+  <input type="text" id="searchInput" placeholder="Search channels..." />
+  <button onclick="filterChannels()">Search</button>
+  <input type="file" id="fileInput" accept=".m3u,.m3u8" />
+</div>
 
-  <ul id="channelList"></ul>
-  
-  <button onclick="displayChannels(favoriteChannels.length ? favoriteChannels : allChannels)">Show Favorites</button>
-  
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const m3uUrl = urlParams.get('link');
-    let allChannels = [];
-    let favoriteChannels = [];
+<button id="ammBtn" style="font-weight: bold; font-size: 24px; color: #ffffff; background-color: #333; border: none; border-radius: 12px; padding: 10px 20px; transition: background-color 0.3s ease;">
+  Loading Time...
+</button>
 
-    async function fetchM3U(url) {
-      try {
-        const response = await fetch(url);
-        const data = await response.text();
-        parseM3U(data);
-      } catch (error) {
-        alert('⚠️ Error loading M3U file!');
-      }
-    }
+<div id="progressContainer" style="display: none;">
+  <div id="progressBar"><div id="progressFill"></div></div>
+  <div id="progressText"></div>
+</div>
 
-    function parseM3U(data) {
-      const lines = data.split("\n");
-      const channels = [];
-      let channel = {};
+<ul id="channelList"></ul>
 
-      lines.forEach(line => {
-        line = line.trim();
-        if (line.startsWith("#EXTINF")) {
-          const nameMatch = line.match(/,(.+)/);
-          const logoMatch = line.match(/tvg-logo="(.*?)"/);
-          channel = {
-            name: nameMatch ? nameMatch[1] : "Unknown Channel",
-            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70"
-          };
-        } else if (line && !line.startsWith("#")) {
-          channel.url = line;
-          channels.push({...channel}); // Clone to avoid reference issue
-        }
-      });
+<script>
+  let allChannels = [];
 
-      allChannels = channels;
-      displayChannels(channels);
-    }
+  document.getElementById("fileInput").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
 
-    async function checkChannelStatus(url) {
-      try {
-        const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 10000));
-        const fetchPromise = fetch(url, { method: 'HEAD' });
-        const response = await Promise.race([fetchPromise, timeout]);
-        return response && response.ok;
-      } catch {
-        return false;
-      }
-    }
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const content = e.target.result;
+      parseM3U(content);
+    };
+    reader.readAsText(file);
+  });
 
-    async function displayChannels(channels) {
-      const list = document.getElementById("channelList");
-      const progressBar = document.getElementById("progressBar");
-      const progressFill = document.getElementById("progressFill");
-      const progressText = document.getElementById("progressText");
-      const progressContainer = document.getElementById("progressContainer");
+  function parseM3U(data) {
+    const lines = data.split("\n");
+    const channels = [];
+    let channel = {};
 
-      list.innerHTML = "";
-      progressContainer.style.display = "block";
+    lines.forEach(line => {
+      line = line.trim();
+      if (line.startsWith("#EXTINF")) {
+        const nameMatch = line.match(/,(.+)/);
+        const logoMatch = line.match(/tvg-logo="(.*?)"/);
+        channel = {
+          name: nameMatch ? nameMatch[1] : "Unknown Channel",
+          logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70"
+        };
+      } else if (line && !line.startsWith("#")) {
+        channel.url = line;
+        channels.push({...channel});
+      }
+    });
 
-      const total = channels.length;
-      let loaded = 0;
+    allChannels = channels;
+    displayChannels(channels);
+  }
 
-      for (const channel of channels) {
-        const li = document.createElement("li");
-        const status = await checkChannelStatus(channel.url);
-        if (status) li.classList.add("online");
+  async function checkChannelStatus(url) {
+    try {
+      const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 8000));
+      const fetchPromise = fetch(url, { method: 'HEAD' });
+      const response = await Promise.race([fetchPromise, timeout]);
+      return response && response.ok;
+    } catch {
+      return false;
+    }
+  }
 
-        const isFavorite = favoriteChannels.some(fav => fav.url === channel.url);
-        li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span><span class="favorite ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(event, '${channel.url}')">★</span>`;
-        li.onclick = () => playChannel(channel.url);
-        list.appendChild(li);
+  async function displayChannels(channels) {
+    const list = document.getElementById("channelList");
+    const progressBar = document.getElementById("progressBar");
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+    const progressContainer = document.getElementById("progressContainer");
 
-        loaded++;
-        const progress = Math.round((loaded / total) * 100);
-        progressFill.style.width = `${progress}%`;
-        progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
+    list.innerHTML = "";
+    progressContainer.style.display = "block";
 
-        if (loaded === total) progressContainer.style.display = "none";
-      }
-    }
+    const total = channels.length;
+    let loaded = 0;
 
-    function playChannel(url) {
-      window.player = new Playerjs({
-        id: "videoPlayer",
-        file: url,
-        autoplay: 1,
-        muted: 1
-      });
-    }
+    for (const channel of channels) {
+      const li = document.createElement("li");
+      const status = await checkChannelStatus(channel.url);
+      if (status) li.classList.add("online");
 
-    function unmutePlayer() {
-      if (window.player) player.api("volume", 100);
-    }
+      li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
+      li.onclick = () => playChannel(channel.url);
+      list.appendChild(li);
 
-    function filterChannels() {
-      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-      const filtered = allChannels.filter(ch => ch.name.toLowerCase().includes(searchTerm));
-      displayChannels(filtered);
-    }
+      loaded++;
+      const progress = Math.round((loaded / total) * 100);
+      progressFill.style.width = `${progress}%`;
+      progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
 
-    function toggleFavorite(event, url) {
-      event.stopPropagation();
-      const channelIndex = favoriteChannels.findIndex(fav => fav.url === url);
-      if (channelIndex > -1) {
-        favoriteChannels.splice(channelIndex, 1);
-      } else {
-        const channel = allChannels.find(ch => ch.url === url);
-        if (channel) favoriteChannels.push(channel);
-      }
-      displayChannels(allChannels); // Refresh the list to update favorites
-    }
+      if (loaded === total) progressContainer.style.display = "none";
+    }
+  }
 
-    function importPlaylist() {
-      const playlistUrl = document.getElementById("playlistInput").value;
-      if (playlistUrl) {
-        fetchM3U(playlistUrl);
-      } else {
-        alert("⚠️ Please enter a valid M3U/M3U8 URL!");
-      }
-    }
+  function playChannel(url) {
+    window.player = new Playerjs({
+      id: "videoPlayer",
+      file: url,
+      autoplay: 1,
+      muted: 0
+    });
+  }
 
-    if (m3uUrl) {
-      fetchM3U(m3uUrl);
-    } else {
-      alert("⚠️ No live TV link found!");
-    }
+  function filterChannels() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = allChannels.filter(ch => ch.name.toLowerCase().includes(searchTerm));
+    displayChannels(filtered);
+  }
 
-    function updateClock() {
-      const now = new Date();
-      let hrs = now.getHours();
-      let mins = now.getMinutes();
-      let secs = now.getSeconds();
-      const ampm = hrs >= 12 ? "PM" : "AM";
+  function updateClock() {
+    const now = new Date();
+    let hrs = now.getHours();
+    let mins = now.getMinutes();
+    let secs = now.getSeconds();
+    const ampm = hrs >= 12 ? "PM" : "AM";
 
-      hrs = hrs % 12 || 12;
-      mins = mins < 10 ? "0" + mins : mins;
-      secs = secs < 10 ? "0" + secs : secs;
+    hrs = hrs % 12 || 12;
+    mins = mins < 10 ? "0" + mins : mins;
+    secs = secs < 10 ? "0" + secs : secs;
 
-      const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
-      document.getElementById("ammBtn").innerText = timeStr;
-    }
+    const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+    document.getElementById("ammBtn").innerText = timeStr;
+  }
 
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+
 </body>
 </html>
