@@ -15,31 +15,29 @@
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
     #videoPlayer { width: 100%; height: 100%; }
 
-    #controls {
+    button {
+      background: #39b54a;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 8px;
       margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
+      cursor: pointer;
+      transition: 0.3s;
     }
+    button:hover { background: #2e9840; }
 
-    input[type="text"], input[type="file"], button {
+    input[type="text"] {
       padding: 10px;
       font-size: 16px;
       border-radius: 8px;
       border: none;
-      width: 90%;
-      max-width: 300px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 400px;
+      display: block;
     }
-
-    button {
-      background: #39b54a;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover { background: #2e9840; }
 
     #channelList {
       display: grid;
@@ -142,14 +140,25 @@
 
     @media (max-width: 768px) {
       h1 { font-size: 24px; }
+      input[type="text"] { font-size: 14px; }
       #channelList li { padding: 15px; }
       #channelList img { width: 60px; height: 60px; }
     }
 
     @media (max-width: 480px) {
       h1 { font-size: 20px; }
+      input[type="text"] { font-size: 14px; width: 90%; }
       #channelList li { padding: 12px; }
       #channelList img { width: 50px; height: 50px; }
+    }
+
+    #typingTitle {
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+      letter-spacing: 2px;
+      text-align: center;
+      margin: 30px 0;
     }
   </style>
 </head>
@@ -163,15 +172,21 @@
   </div>
 </div>
 
-<div id="controls">
-  <input type="text" id="searchInput" placeholder="Search channels..." />
-  <button onclick="filterChannels()">Search</button>
-  <input type="file" id="fileInput" accept=".m3u,.m3u8" />
-</div>
-
-<button id="ammBtn" style="font-weight: bold; font-size: 24px; color: #ffffff; background-color: #333; border: none; border-radius: 12px; padding: 10px 20px; transition: background-color 0.3s ease;">
+<button id="ammBtn" style="
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+">
   Loading Time...
 </button>
+
+<!-- ✅ Added Search Bar -->
+<input type="text" id="searchInput" placeholder="Search your favorite channel..." oninput="filterChannels()" />
 
 <div id="progressContainer" style="display: none;">
   <div id="progressBar"><div id="progressFill"></div></div>
@@ -181,19 +196,19 @@
 <ul id="channelList"></ul>
 
 <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const m3uUrl = urlParams.get('link');
   let allChannels = [];
 
-  document.getElementById("fileInput").addEventListener("change", function(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      const content = e.target.result;
-      parseM3U(content);
-    };
-    reader.readAsText(file);
-  });
+  async function fetchM3U(url) {
+    try {
+      const response = await fetch(url);
+      const data = await response.text();
+      parseM3U(data);
+    } catch (error) {
+      alert('⚠️ Error loading M3U file!');
+    }
+  }
 
   function parseM3U(data) {
     const lines = data.split("\n");
@@ -221,7 +236,7 @@
 
   async function checkChannelStatus(url) {
     try {
-      const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 8000));
+      const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 10000));
       const fetchPromise = fetch(url, { method: 'HEAD' });
       const response = await Promise.race([fetchPromise, timeout]);
       return response && response.ok;
@@ -266,8 +281,12 @@
       id: "videoPlayer",
       file: url,
       autoplay: 1,
-      muted: 0
+      muted: 1
     });
+  }
+
+  function unmutePlayer() {
+    if (window.player) player.api("volume", 100);
   }
 
   function filterChannels() {
@@ -293,6 +312,12 @@
 
   setInterval(updateClock, 1000);
   updateClock();
+
+  if (m3uUrl) {
+    fetchM3U(m3uUrl);
+  } else {
+    alert("⚠️ No live TV link found!");
+  }
 </script>
 
 </body>
