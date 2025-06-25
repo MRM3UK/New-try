@@ -1,264 +1,347 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultimate M3U Player</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMM Live TV</title>
+  <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
-    /* Core styling (more details below for extended UI) */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #181818; color: #fff; text-align: center; }
+
+    h1 { margin: 20px 0; font-size: 26px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); }
+
+    .player-container { background: black; width: 100%; position: relative; }
+    .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
+    #videoPlayer { width: 100%; height: 100%; }
+
+    button {
+      background: #39b54a;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 8px;
+      margin: 20px auto;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #2e9840; }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      margin: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+  #channelList {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+
+            gap: 20px;
+
+            padding: 20px;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: #333;
+
+            border-radius: 15px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+
+            overflow-y: auto;
+
+            max-height: 500px;
+          
+            margin-top: 30px;
+
+        }
+
+        #channelList li {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            cursor: pointer;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+
+            background: #444;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+            position: relative;
+
+        }
+
+  #channelList img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  /* Neon Glow Styles */
+  .channel-box.online {
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  }
+
+  .channel-box.offline {
+    border: 2px solid #ff0033;
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
+  }
+
+
+    #channelList li:hover {
+      background: #555;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    #channelList li:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 10px;
+      height: 10px;
+      background: #e74c3c;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    #channelList li.online:before { background: #39b54a; }
+
+    #progressContainer {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    #progressBar {
+      width: 100%;
+      height: 10px;
+      border-radius: 15px;
+      background: #444;
+      border: 1px solid #333;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #progressBar div {
+      height: 100%;
+      background: linear-gradient(90deg, #39b54a, #ffbc00);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      border-radius: 15px;
+    }
+
+    #progressText {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #39b54a;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      input[type="text"] { font-size: 14px; }
+      #channelList li { padding: 15px; }
+      #channelList img { width: 60px; height: 60px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 20px; }
+      input[type="text"] { font-size: 14px; width: 90%; }
+      #channelList li { padding: 12px; }
+      #channelList img { width: 50px; height: 50px; }
+    }
+
+   
+#typingTitle {
+  font-size: 28px;
   color: #fff;
-}
-
-.container {
-  max-width: 1300px;
-  margin: auto;
-  padding: 20px;
-}
-
-h1 {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  letter-spacing: 2px;
   text-align: center;
-  margin-bottom: 30px;
-  color: #00ffe1;
-  font-size: 2.5rem;
+  margin: 30px 0;
 }
-
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-  align-items: center;
-}
-
-.controls input,
-.controls button,
-.controls select {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
-.controls input[type="text"] {
-  flex: 1;
-  background-color: #1f1f1f;
-  color: #fff;
-}
-
-.controls button {
-  background-color: #00ffe1;
-  color: #000;
-  cursor: pointer;
-}
-
-.controls button:hover {
-  background-color: #00c8b0;
-}
-
-.theme-toggle {
-  margin-left: auto;
-  background: #333;
-  color: #fff;
-}
-
-.video-player {
-  width: 100%;
-  max-height: 600px;
-  background: #000;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-#channel-search {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #1f1f1f;
-  color: #fff;
-}
-
-.channel-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 12px;
-}
-
-.channel {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  background-color: #1f1f1f;
-  border-radius: 8px;
-  transition: background 0.3s;
-  cursor: pointer;
-}
-
-.channel:hover {
-  background-color: #2b2b2b;
-}
-
-.channel img {
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-}
-
-.channel-info {
-  flex-grow: 1;
-}
-
-.channel-name {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.channel-group {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-.favorite {
-  font-size: 1.3rem;
-  cursor: pointer;
-  color: gold;
-}
-
-.error-message {
-  color: #ff4c4c;
-  margin: 10px 0;
-}
-
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Ultimate M3U Playlist Player</h1><div class="controls">
-  <input type="text" id="playlist-url" placeholder="Enter M3U/M3U8 URL" />
-  <button onclick="loadPlaylist()">Load</button>
-  <button onclick="clearFavorites()">Clear Favorites</button>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-</div>
 
-<input type="text" id="channel-search" placeholder="Search channels..." oninput="searchChannels()" />
+<h1 id="typingTitle">MASUM TV</h1>
 
-<video id="videoPlayer" class="video-player" controls autoplay></video>
-<p id="error-message" class="error-message"></p>
+  <div class="player-container">
+    <div class="video-container">
+      <div id="videoPlayer"></div>
+    </div>
+  </div>
 
-<div id="channel-list" class="channel-list"></div>
+  <button id="ammBtn" style="
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+">
+  Loading Time...
+  </button>
+  
+  <div id="progressContainer" style="display: none;">
+    <div id="progressBar"><div id="progressFill"></div></div>
+    <div id="progressText"></div>
+  </div>
 
-  </div>  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>  <script>
-    const video = document.getElementById('videoPlayer');
-    const channelList = document.getElementById('channel-list');
-    const errorMsg = document.getElementById('error-message');
-    const searchInput = document.getElementById('channel-search');
+  <ul id="channelList"></ul>
+  
+  
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const m3uUrl = urlParams.get('link');
     let allChannels = [];
-    let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
 
-    function loadPlaylist() {
-      const url = document.getElementById('playlist-url').value.trim();
-      if (!url) return;
-      errorMsg.textContent = '';
-      channelList.innerHTML = '';
-      allChannels = [];
-
-      fetch(url)
-        .then(res => res.text())
-        .then(text => {
-          const lines = text.split('\n');
-          for (let i = 0; i < lines.length; i++) {
-            if (lines[i].startsWith('#EXTINF')) {
-              const info = lines[i];
-              const name = (info.match(/,(.*)/) || [])[1] || 'Unknown';
-              const logo = (info.match(/tvg-logo="(.*?)"/) || [])[1] || '';
-              const group = (info.match(/group-title="(.*?)"/) || [])[1] || 'Other';
-              const stream = lines[i + 1] || '';
-              if (stream.startsWith('http')) {
-                allChannels.push({ name, logo, group, stream });
-              }
-            }
-          }
-          renderChannels(allChannels);
-          if (allChannels.length > 0) playStream(allChannels[0].stream);
-        })
-        .catch(err => errorMsg.textContent = 'Failed to load playlist: ' + err.message);
+    async function fetchM3U(url) {
+      try {
+        const response = await fetch(url);
+        const data = await response.text();
+        parseM3U(data);
+      } catch (error) {
+        alert('⚠️ Error loading M3U file!');
+      }
     }
 
-    function renderChannels(channels) {
-      channelList.innerHTML = '';
-      channels.forEach(ch => {
-        const item = document.createElement('div');
-        item.className = 'channel';
-        item.onclick = () => playStream(ch.stream);
+    function parseM3U(data) {
+      const lines = data.split("\n");
+      const channels = [];
+      let channel = {};
 
-        const img = document.createElement('img');
-        img.src = ch.logo || 'https://via.placeholder.com/48';
+      lines.forEach(line => {
+        line = line.trim();
+        if (line.startsWith("#EXTINF")) {
+          const nameMatch = line.match(/,(.+)/);
+          const logoMatch = line.match(/tvg-logo="(.*?)"/);
+          channel = {
+            name: nameMatch ? nameMatch[1] : "Unknown Channel",
+            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70"
+          };
+        } else if (line && !line.startsWith("#")) {
+          channel.url = line;
+          channels.push({...channel}); // Clone to avoid reference issue
+        }
+      });
 
-        const info = document.createElement('div');
-        info.className = 'channel-info';
-        info.innerHTML = `<div class='channel-name'>${ch.name}</div><div class='channel-group'>${ch.group}</div>`;
+      allChannels = channels;
+      displayChannels(channels);
+    }
 
-        const fav = document.createElement('div');
-        fav.className = 'favorite';
-        fav.textContent = favorites.includes(ch.name) ? '★' : '☆';
-        fav.onclick = (e) => {
-          e.stopPropagation();
-          toggleFavorite(ch.name);
-          fav.textContent = favorites.includes(ch.name) ? '★' : '☆';
-        };
+    async function checkChannelStatus(url) {
+      try {
+        const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 10000));
+        const fetchPromise = fetch(url, { method: 'HEAD' });
+        const response = await Promise.race([fetchPromise, timeout]);
+        return response && response.ok;
+      } catch {
+        return false;
+      }
+    }
 
-        item.appendChild(img);
-        item.appendChild(info);
-        item.appendChild(fav);
+    async function displayChannels(channels) {
+      const list = document.getElementById("channelList");
+      const progressBar = document.getElementById("progressBar");
+      const progressFill = document.getElementById("progressFill");
+      const progressText = document.getElementById("progressText");
+      const progressContainer = document.getElementById("progressContainer");
 
-        channelList.appendChild(item);
+      list.innerHTML = "";
+      progressContainer.style.display = "block";
+
+      const total = channels.length;
+      let loaded = 0;
+
+      for (const channel of channels) {
+        const li = document.createElement("li");
+        const status = await checkChannelStatus(channel.url);
+        if (status) li.classList.add("online");
+
+        li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
+        li.onclick = () => playChannel(channel.url);
+        list.appendChild(li);
+
+        loaded++;
+        const progress = Math.round((loaded / total) * 100);
+        progressFill.style.width = `${progress}%`;
+        progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
+
+        if (loaded === total) progressContainer.style.display = "none";
+      }
+    }
+
+    function playChannel(url) {
+      window.player = new Playerjs({
+        id: "videoPlayer",
+        file: url,
+        autoplay: 1,
+        muted: 1
       });
     }
 
-    function playStream(url) {
-      if (window.hls) window.hls.destroy();
-      if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(url);
-        hls.attachMedia(video);
-        window.hls = hls;
-      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = url;
-      } else {
-        errorMsg.textContent = 'Your browser does not support HLS streaming';
-      }
-      video.play();
+    function unmutePlayer() {
+      if (window.player) player.api("volume", 100);
     }
 
-    function searchChannels() {
-      const keyword = searchInput.value.toLowerCase();
-      const filtered = allChannels.filter(c => c.name.toLowerCase().includes(keyword));
-      renderChannels(filtered);
+    function filterChannels() {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = allChannels.filter(ch => ch.name.toLowerCase().includes(searchTerm));
+      displayChannels(filtered);
     }
 
-    function toggleFavorite(name) {
-      if (favorites.includes(name)) {
-        favorites = favorites.filter(f => f !== name);
-      } else {
-        favorites.push(name);
-      }
-      localStorage.setItem('favorites', JSON.stringify(favorites));
+    if (m3uUrl) {
+      fetchM3U(m3uUrl);
+    } else {
+      alert("⚠️ No live TV link found!");
     }
+    function updateClock() {
+  const now = new Date();
+  let hrs = now.getHours();
+  let mins = now.getMinutes();
+  let secs = now.getSeconds();
+  const ampm = hrs >= 12 ? "PM" : "AM";
 
-    function clearFavorites() {
-      favorites = [];
-      localStorage.removeItem('favorites');
-      renderChannels(allChannels);
-    }
+  hrs = hrs % 12 || 12;
+  mins = mins < 10 ? "0" + mins : mins;
+  secs = secs < 10 ? "0" + secs : secs;
 
-    function toggleTheme() {
-      document.body.classList.toggle('light');
-    }
-  </script></body>
+  const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+  document.getElementById("ammBtn").innerText = timeStr;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+    
+  </script>
+
+</body>
 </html>
