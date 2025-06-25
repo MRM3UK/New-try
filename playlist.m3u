@@ -2271,141 +2271,7 @@ https://vsd246.okcdn.ru/hls/485900290780.m3u8/sig/SANEBRQSbOM/expires/1749205333
 
 opplex
 
-#EXTM3U
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/tmeallinonereborn.png" group-title="General" tvg-name="Tme-IPTVM3Y" tvg-language="Unknown",TME NUBCARDER
-https://m3uplaylist-plum.vercel.app/m3u_playlist.m3u8
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/äęóźėö_welcome_ėöóźäę.png" group-title="General" tvg-name="Äęóźėö Welcome Ėöóźäę" tvg-language="Unknown",Äęóźėö Welcome Ėöóźäę
-https://allinonereborn.fun/opplex1991/index.php?id=25974
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ary_digital.png" group-title="General" tvg-name="Pk Ary Digital" tvg-language="Unknown",Pk Ary Digital
-https://allinonereborn.fun/opplex1991/index.php?id=221337
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ary_digital_hd.png" group-title="General" tvg-name="Pk Ary Digital Hd" tvg-language="Unknown",Pk Ary Digital Hd
-https://allinonereborn.fun/opplex1991/index.php?id=25989
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ary_zindagi.png" group-title="General" tvg-name="Pk Ary Zindagi" tvg-language="Unknown",Pk Ary Zindagi
-https://allinonereborn.fun/opplex1991/index.php?id=25990
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ary_family.png" group-title="General" tvg-name="Pk Ary Family" tvg-language="Unknown",Pk Ary Family
-https://allinonereborn.fun/opplex1991/index.php?id=103673
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_express_entertainment.png" group-title="General" tvg-name="Pk Express Entertainment" tvg-language="Unknown",Pk Express Entertainment
-https://allinonereborn.fun/opplex1991/index.php?id=26010
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_hum_tv_hd.png" group-title="General" tvg-name="Pk Hum Tv Hd" tvg-language="Unknown",Pk Hum Tv Hd
-https://allinonereborn.fun/opplex1991/index.php?id=221339
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_hum_tv_4k.png" group-title="General" tvg-name="Pk Hum Tv 4K" tvg-language="Unknown",Pk Hum Tv 4K
-https://allinonereborn.fun/opplex1991/index.php?id=25981
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_hum_sitaray.png" group-title="General" tvg-name="Pk Hum Sitaray" tvg-language="Unknown",Pk Hum Sitaray
-https://allinonereborn.fun/opplex1991/index.php?id=25983
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_hum_europe.png" group-title="General" tvg-name="Pk Hum Europe" tvg-language="Unknown",Pk Hum Europe
-https://allinonereborn.fun/opplex1991/index.php?id=103688
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_hum_masala.png" group-title="General" tvg-name="Pk Hum Masala" tvg-language="Unknown",Pk Hum Masala
-https://allinonereborn.fun/opplex1991/index.php?id=103689
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_hum_pashto_1.png" group-title="General" tvg-name="Pk Hum Pashto 1" tvg-language="Unknown",Pk Hum Pashto 1
-https://allinonereborn.fun/opplex1991/index.php?id=207397
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_geo_enterment.png" group-title="General" tvg-name="Pk Geo Enterment" tvg-language="Unknown",Pk Geo Enterment
-https://allinonereborn.fun/opplex1991/index.php?id=221338
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_geo_enterment_fhd.png" group-title="General" tvg-name="Pk Geo Enterment Fhd" tvg-language="Unknown",Pk Geo Enterment Fhd
-https://allinonereborn.fun/opplex1991/index.php?id=25977
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_geo_kahani_hd.png" group-title="General" tvg-name="Pk Geo Kahani Hd" tvg-language="Unknown",Pk Geo Kahani Hd
-https://allinonereborn.fun/opplex1991/index.php?id=221341
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_urdu_1.png" group-title="General" tvg-name="Pk Urdu 1" tvg-language="Unknown",Pk Urdu 1
-https://allinonereborn.fun/opplex1991/index.php?id=221340
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_urdu_1_hd.png" group-title="General" tvg-name="Pk Urdu 1 Hd" tvg-language="Unknown",Pk Urdu 1 Hd
-https://allinonereborn.fun/opplex1991/index.php?id=26040
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ptv_home.png" group-title="General" tvg-name="Pk Ptv Home" tvg-language="Unknown",Pk Ptv Home
-https://allinonereborn.fun/opplex1991/index.php?id=221342
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ptv_home_hd.png" group-title="General" tvg-name="Pk Ptv Home Hd" tvg-language="Unknown",Pk Ptv Home Hd
-https://allinonereborn.fun/opplex1991/index.php?id=103703
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_set_entertainment.png" group-title="General" tvg-name="Pk Set Entertainment" tvg-language="Unknown",Pk Set Entertainment
-https://allinonereborn.fun/opplex1991/index.php?id=389825
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_sab_tv_pak.png" group-title="General" tvg-name="Pk Sab Tv Pak" tvg-language="Unknown",Pk Sab Tv Pak
-https://allinonereborn.fun/opplex1991/index.php?id=25975
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_a_plus.png" group-title="General" tvg-name="Pk A Plus" tvg-language="Unknown",Pk A Plus
-https://allinonereborn.fun/opplex1991/index.php?id=25984
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_tv_one.png" group-title="General" tvg-name="Pk Tv One" tvg-language="Unknown",Pk Tv One
-https://allinonereborn.fun/opplex1991/index.php?id=25986
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_see_hd.png" group-title="General" tvg-name="Pk See Hd" tvg-language="Unknown",Pk See Hd
-https://allinonereborn.fun/opplex1991/index.php?id=25982
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_atv_entertenment.png" group-title="General" tvg-name="Pk Atv Entertenment" tvg-language="Unknown",Pk Atv Entertenment
-https://allinonereborn.fun/opplex1991/index.php?id=25987
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ptv_global.png" group-title="General" tvg-name="Pk Ptv Global" tvg-language="Unknown",Pk Ptv Global
-https://allinonereborn.fun/opplex1991/index.php?id=25994
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_apna_channel.png" group-title="General" tvg-name="Pk Apna Channel" tvg-language="Unknown",Pk Apna Channel
-https://allinonereborn.fun/opplex1991/index.php?id=25998
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ary_music_pk.png" group-title="Music" tvg-name="Pk Ary Music Pk" tvg-language="Unknown",Pk Ary Music Pk
-https://allinonereborn.fun/opplex1991/index.php?id=26000
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_kay_2.png" group-title="General" tvg-name="Pk Kay 2" tvg-language="Unknown",Pk Kay 2
-https://allinonereborn.fun/opplex1991/index.php?id=26023
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_khyber_tv.png" group-title="General" tvg-name="Pk Khyber Tv" tvg-language="Unknown",Pk Khyber Tv
-https://allinonereborn.fun/opplex1991/index.php?id=26025
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ktn_entertainment.png" group-title="General" tvg-name="Pk Ktn Entertainment" tvg-language="Unknown",Pk Ktn Entertainment
-https://allinonereborn.fun/opplex1991/index.php?id=26026
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_filmax.png" group-title="General" tvg-name="Pk Filmax" tvg-language="Unknown",Pk Filmax
-https://allinonereborn.fun/opplex1991/index.php?id=26038
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_lahore_rung.png" group-title="General" tvg-name="Pk Lahore Rung" tvg-language="Unknown",Pk Lahore Rung
-https://allinonereborn.fun/opplex1991/index.php?id=26039
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_waseeb_tv.png" group-title="General" tvg-name="Pk Waseeb Tv" tvg-language="Unknown",Pk Waseeb Tv
-https://allinonereborn.fun/opplex1991/index.php?id=26042
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_zindgai_tv.png" group-title="General" tvg-name="Pk Zindgai Tv" tvg-language="Unknown",Pk Zindgai Tv
-https://allinonereborn.fun/opplex1991/index.php?id=26043
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_bol_entertainment_hd.png" group-title="General" tvg-name="Pk Bol Entertainment Hd" tvg-language="Unknown",Pk Bol Entertainment Hd
-https://allinonereborn.fun/opplex1991/index.php?id=26045
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_8xm.png" group-title="General" tvg-name="Pk 8Xm" tvg-language="Unknown",Pk 8Xm
-https://allinonereborn.fun/opplex1991/index.php?id=103668
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_aaj_entertainment.png" group-title="General" tvg-name="Pk Aaj Entertainment" tvg-language="Unknown",Pk Aaj Entertainment
-https://allinonereborn.fun/opplex1991/index.php?id=103670
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_eawaz_tv.png" group-title="General" tvg-name="Pk Eawaz Tv" tvg-language="Unknown",Pk Eawaz Tv
-https://allinonereborn.fun/opplex1991/index.php?id=103671
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_c44.png" group-title="General" tvg-name="Pk C44" tvg-language="Unknown",Pk C44
-https://allinonereborn.fun/opplex1991/index.php?id=103677
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_discover_pakistan.png" group-title="General" tvg-name="Pk Discover Pakistan" tvg-language="Unknown",Pk Discover Pakistan
-https://allinonereborn.fun/opplex1991/index.php?id=103684
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_aruj_tv.png" group-title="General" tvg-name="Pk Aruj Tv" tvg-language="Unknown",Pk Aruj Tv
-https://allinonereborn.fun/opplex1991/index.php?id=103685
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_filmworld.png" group-title="General" tvg-name="Pk Filmworld" tvg-language="Unknown",Pk Filmworld
-https://allinonereborn.fun/opplex1991/index.php?id=103686
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_gtv.png" group-title="General" tvg-name="Pk Gtv" tvg-language="Unknown",Pk Gtv
-https://allinonereborn.fun/opplex1991/index.php?id=103687
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_play_tv.png" group-title="General" tvg-name="Pk Play Tv" tvg-language="Unknown",Pk Play Tv
-https://allinonereborn.fun/opplex1991/index.php?id=103699
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_raavi_films.png" group-title="General" tvg-name="Pk Raavi Films" tvg-language="Unknown",Pk Raavi Films
-https://allinonereborn.fun/opplex1991/index.php?id=103705
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_sindh_tv.png" group-title="General" tvg-name="Pk Sindh Tv" tvg-language="Unknown",Pk Sindh Tv
-https://allinonereborn.fun/opplex1991/index.php?id=103709
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_venus_tv.png" group-title="General" tvg-name="Pk Venus Tv" tvg-language="Unknown",Pk Venus Tv
-https://allinonereborn.fun/opplex1991/index.php?id=103712
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_filmazia_entertainment.png" group-title="General" tvg-name="Pk Filmazia Entertainment" tvg-language="Unknown",Pk Filmazia Entertainment
-https://allinonereborn.fun/opplex1991/index.php?id=105792
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_a1_tv.png" group-title="General" tvg-name="Pk A1 Tv" tvg-language="Unknown",Pk A1 Tv
-https://allinonereborn.fun/opplex1991/index.php?id=105796
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_pakus_tv.png" group-title="General" tvg-name="Pk Pakus Tv" tvg-language="Unknown",Pk Pakus Tv
-https://allinonereborn.fun/opplex1991/index.php?id=105799
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ltn_family.png" group-title="General" tvg-name="Pk Ltn Family" tvg-language="Unknown",Pk Ltn Family
-https://allinonereborn.fun/opplex1991/index.php?id=106114
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_kashish.png" group-title="General" tvg-name="Pk Kashish" tvg-language="Unknown",Pk Kashish
-https://allinonereborn.fun/opplex1991/index.php?id=106115
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_kohinoor_news.png" group-title="News" tvg-name="Pk Kohinoor News" tvg-language="Unknown",Pk Kohinoor News
-https://allinonereborn.fun/opplex1991/index.php?id=106116
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_rohi_tv.png" group-title="General" tvg-name="Pk Rohi Tv" tvg-language="Unknown",Pk Rohi Tv
-https://allinonereborn.fun/opplex1991/index.php?id=106117
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_joo_music.png" group-title="Music" tvg-name="Pk Joo Music" tvg-language="Unknown",Pk Joo Music
-https://allinonereborn.fun/opplex1991/index.php?id=106118
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_ptv_national.png" group-title="General" tvg-name="Pk Ptv National" tvg-language="Unknown",Pk Ptv National
-https://allinonereborn.fun/opplex1991/index.php?id=110050
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_khyber_middle_east_tv.png" group-title="General" tvg-name="Pk Khyber Middle East Tv" tvg-language="Unknown",Pk Khyber Middle East Tv
-https://allinonereborn.fun/opplex1991/index.php?id=110051
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_king_tv.png" group-title="General" tvg-name="Pk King Tv" tvg-language="Unknown",Pk King Tv
-https://allinonereborn.fun/opplex1991/index.php?id=110053
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_tag_tv.png" group-title="General" tvg-name="Pk Tag Tv" tvg-language="Unknown",Pk Tag Tv
-https://allinonereborn.fun/opplex1991/index.php?id=110059
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_mehran_tv.png" group-title="General" tvg-name="Pk Mehran Tv" tvg-language="Unknown",Pk Mehran Tv
-https://allinonereborn.fun/opplex1991/index.php?id=110060
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ary_world.png" group-title="General" tvg-name="Ary World" tvg-language="Unknown",Ary World
-https://allinonereborn.fun/opplex1991/index.php?id=153291
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_jalwa_music.png" group-title="Music" tvg-name="Pk Jalwa Music" tvg-language="Unknown",Pk Jalwa Music
-https://allinonereborn.fun/opplex1991/index.php?id=167670
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_afghan_tv.png" group-title="General" tvg-name="Pk Afghan Tv" tvg-language="Unknown",Pk Afghan Tv
-https://allinonereborn.fun/opplex1991/index.php?id=167888
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_isaas_tv.png" group-title="General" tvg-name="Pk Isaas Tv" tvg-language="Unknown",Pk Isaas Tv
-https://allinonereborn.fun/opplex1991/index.php?id=244936
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_aur_life_hd.png" group-title="General" tvg-name="Pk Aur Life Hd" tvg-language="Unknown",Pk Aur Life Hd
-https://allinonereborn.fun/opplex1991/index.php?id=167885
+#https://allinonereborn.fun/opplex1991/index.php?id=167885
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pak_stage_drama_01.png" group-title="General" tvg-name="Pak Stage Drama 01" tvg-language="Unknown",Pak Stage Drama 01
 https://allinonereborn.fun/opplex1991/index.php?id=301513
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pak_stage_drama_02.png" group-title="General" tvg-name="Pak Stage Drama 02" tvg-language="Unknown",Pak Stage Drama 02
@@ -2416,73 +2282,36 @@ https://allinonereborn.fun/opplex1991/index.php?id=341213
 https://allinonereborn.fun/opplex1991/index.php?id=344646
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_aan_tv_fhd.png" group-title="General" tvg-name="Pk Aan Tv Fhd" tvg-language="Unknown",Pk Aan Tv Fhd
 https://allinonereborn.fun/opplex1991/index.php?id=371733
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_mun_tv_fhd.png" group-title="General" tvg-name="Pk Mun Tv Fhd" tvg-language="Unknown",Pk Mun Tv Fhd
-https://allinonereborn.fun/opplex1991/index.php?id=371734
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pk_filmazia_punjabi.png" group-title="Regional - Punjabi" tvg-name="Pk Filmazia Punjabi" tvg-language="Punjabi",Pk Filmazia Punjabi
-https://allinonereborn.fun/opplex1991/index.php?id=371763
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/äęóźėö_welcome_ėöóźäę.png" group-title="General" tvg-name="Äęóźėö Welcome Ėöóźäę" tvg-language="Unknown",Äęóźėö Welcome Ėöóźäę
-https://allinonereborn.fun/opplex1991/index.php?id=245892
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indbangla_zee_bangla_hd.png" group-title="Regional - Bangla" tvg-name="Indbangla Zee Bangla Hd" tvg-language="Bangla",Indbangla Zee Bangla Hd
-https://allinonereborn.fun/opplex1991/index.php?id=245893
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_colors_bangla.png" group-title="Regional - Bangla" tvg-name="Bdloc Colors Bangla" tvg-language="Bangla",Bdloc Colors Bangla
-https://allinonereborn.fun/opplex1991/index.php?id=245895
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indbangla_zee_bangla_cinema.png" group-title="Movies" tvg-name="Indbangla Zee Bangla Cinema" tvg-language="Bangla",Indbangla Zee Bangla Cinema
-https://allinonereborn.fun/opplex1991/index.php?id=245897
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indbangla_star_jalsa_hd.png" group-title="Regional - Bangla" tvg-name="Indbangla Star Jalsa Hd" tvg-language="Bangla",Indbangla Star Jalsa Hd
-https://allinonereborn.fun/opplex1991/index.php?id=245898
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indbangla_jalsa_movies_hd.png" group-title="Movies" tvg-name="Indbangla Jalsa Movies Hd" tvg-language="Bangla",Indbangla Jalsa Movies Hd
-https://allinonereborn.fun/opplex1991/index.php?id=245900
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_gazi_tv.png" group-title="General" tvg-name="Bdloc Gazi Tv" tvg-language="Unknown",Bdloc Gazi Tv
-https://allinonereborn.fun/opplex1991/index.php?id=245901
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_channel_9.png" group-title="General" tvg-name="Bdloc Channel 9" tvg-language="Unknown",Bdloc Channel 9
-https://allinonereborn.fun/opplex1991/index.php?id=245902
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_news_24.png" group-title="News" tvg-name="Bdloc News 24" tvg-language="Unknown",Bdloc News 24
-https://allinonereborn.fun/opplex1991/index.php?id=245903
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_masranga_hd.png" group-title="General" tvg-name="Bdloc Masranga Hd" tvg-language="Unknown",Bdloc Masranga Hd
-https://allinonereborn.fun/opplex1991/index.php?id=245904
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_atn_news.png" group-title="News" tvg-name="Bdloc Atn News" tvg-language="Unknown",Bdloc Atn News
-https://allinonereborn.fun/opplex1991/index.php?id=245905
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indbangla_sun_bangla.png" group-title="Regional - Bangla" tvg-name="Indbangla Sun Bangla" tvg-language="Bangla",Indbangla Sun Bangla
-https://allinonereborn.fun/opplex1991/index.php?id=245906
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_71banglatv.png" group-title="Regional - Bangla" tvg-name="Bdloc 71Banglatv" tvg-language="Bangla",Bdloc 71Banglatv
-https://allinonereborn.fun/opplex1991/index.php?id=245907
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_asian_tv.png" group-title="General" tvg-name="Bdloc Asian Tv" tvg-language="Unknown",Bdloc Asian Tv
-https://allinonereborn.fun/opplex1991/index.php?id=245908
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_atn_bangla.png" group-title="Regional - Bangla" tvg-name="Bdloc Atn Bangla" tvg-language="Bangla",Bdloc Atn Bangla
-https://allinonereborn.fun/opplex1991/index.php?id=245909
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_bangla_tv.png" group-title="Regional - Bangla" tvg-name="Bdloc Bangla Tv" tvg-language="Bangla",Bdloc Bangla Tv
-https://allinonereborn.fun/opplex1991/index.php?id=245910
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_rtv.png" group-title="General" tvg-name="Bdloc Rtv" tvg-language="Unknown",Bdloc Rtv
-https://allinonereborn.fun/opplex1991/index.php?id=245911
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_channel_i.png" group-title="General" tvg-name="Bdloc Channel I" tvg-language="Unknown",Bdloc Channel I
-https://allinonereborn.fun/opplex1991/index.php?id=245913
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_dbc_news.png" group-title="News" tvg-name="Bdloc Dbc News" tvg-language="Unknown",Bdloc Dbc News
-https://allinonereborn.fun/opplex1991/index.php?id=245914
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_ekattor_tv_hd.png" group-title="General" tvg-name="Bd Ekattor Tv Hd" tvg-language="Unknown",Bd Ekattor Tv Hd
-https://allinonereborn.fun/opplex1991/index.php?id=245915
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_independent.png" group-title="General" tvg-name="Bdloc Independent" tvg-language="Unknown",Bdloc Independent
-https://allinonereborn.fun/opplex1991/index.php?id=245916
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_jamuna_tv.png" group-title="General" tvg-name="Bdloc Jamuna Tv" tvg-language="Unknown",Bdloc Jamuna Tv
-https://allinonereborn.fun/opplex1991/index.php?id=245917
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_r_plus.png" group-title="General" tvg-name="Bdloc R Plus" tvg-language="Unknown",Bdloc R Plus
-https://allinonereborn.fun/opplex1991/index.php?id=245918
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_mohona_tv.png" group-title="General" tvg-name="Bdloc Mohona Tv" tvg-language="Unknown",Bdloc Mohona Tv
-https://allinonereborn.fun/opplex1991/index.php?id=245920
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_dhoom_music.png" group-title="Music" tvg-name="Bdloc Dhoom Music" tvg-language="Unknown",Bdloc Dhoom Music
-https://allinonereborn.fun/opplex1991/index.php?id=245921
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_btv_world.png" group-title="General" tvg-name="Bdloc Btv World" tvg-language="Unknown",Bdloc Btv World
-https://allinonereborn.fun/opplex1991/index.php?id=245922
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_boishakhi_tv_hd.png" group-title="General" tvg-name="Bd Boishakhi Tv Hd" tvg-language="Unknown",Bd Boishakhi Tv Hd
-https://allinonereborn.fun/opplex1991/index.php?id=245923
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_ntv.png" group-title="General" tvg-name="Bdloc Ntv" tvg-language="Unknown",Bdloc Ntv
-https://allinonereborn.fun/opplex1991/index.php?id=245924
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_somoy_tv_news.png" group-title="News" tvg-name="Bdloc Somoy Tv News" tvg-language="Unknown",Bdloc Somoy Tv News
-https://allinonereborn.fun/opplex1991/index.php?id=245925
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_deepto_tv.png" group-title="General" tvg-name="Bdloc Deepto Tv" tvg-language="Unknown",Bdloc Deepto Tv
-https://allinonereborn.fun/opplex1991/index.php?id=245927
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_aakaash.png" group-title="General" tvg-name="Bdloc Aakaash" tvg-language="Unknown",Bdloc Aakaash
-https://allinonereborn.fun/opplex1991/index.php?id=245928
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_ananda_tv.png" group-title="General" tvg-name="Bd Ananda Tv" tvg-language="Unknown",Bd Ananda Tv
+https://allinonereborn.fun/opplex1991/index.php?id=245947
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_nexus_tv.png" group-title="General" tvg-name="Bdloc Nexus Tv" tvg-language="Unknown",Bdloc Nexus Tv
+https://allinonereborn.fun/opplex1991/index.php?id=245949
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_tv9_bangla.png" group-title="Regional - Bangla" tvg-name="Bdloc Tv9 Bangla" tvg-language="Bangla",Bdloc Tv9 Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=245950
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_movie_bangla.png" group-title="Movies" tvg-name="Bd Movie Bangla" tvg-language="Bangla",Bd Movie Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=245951
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_enter_10_bangla.png" group-title="Regional - Bangla" tvg-name="Bd Enter 10 Bangla" tvg-language="Bangla",Bd Enter 10 Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=245954
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_duronto_tv.png" group-title="General" tvg-name="Bd Duronto Tv" tvg-language="Unknown",Bd Duronto Tv
+https://allinonereborn.fun/opplex1991/index.php?id=245955
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_bangla_vision.png" group-title="Regional - Bangla" tvg-name="Bd Bangla Vision" tvg-language="Bangla",Bd Bangla Vision
+https://allinonereborn.fun/opplex1991/index.php?id=245957
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/sony_yay.png" group-title="General" tvg-name="Sony Yay" tvg-language="Unknown",Sony Yay
+https://allinonereborn.fun/opplex1991/index.php?id=245959
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_nrb_tv_hd.png" group-title="General" tvg-name="Bd Nrb Tv Hd" tvg-language="Unknown",Bd Nrb Tv Hd
+https://allinonereborn.fun/opplex1991/index.php?id=245962
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_my_tv.png" group-title="General" tvg-name="Bd My Tv" tvg-language="Unknown",Bd My Tv
+https://allinonereborn.fun/opplex1991/index.php?id=245964
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_atn_music.png" group-title="Music" tvg-name="Bd Atn Music" tvg-language="Unknown",Bd Atn Music
+https://allinonereborn.fun/opplex1991/index.php?id=245965
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_discovery_bangla.png" group-title="Regional - Bangla" tvg-name="Bd Discovery Bangla" tvg-language="Bangla",Bd Discovery Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=245966
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/nat_geo_bangla.png" group-title="Regional - Bangla" tvg-name="Nat Geo Bangla" tvg-language="Bangla",Nat Geo Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=245967
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_travelxp_bangla.png" group-title="Regional - Bangla" tvg-name="Bd Travelxp Bangla" tvg-language="Bangla",Bd Travelxp Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=245968
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_channel_24.png" group-title="General" tvg-name="Bd Channel 24" tvg-language="Unknown",Bd Channel 24
+https://allinonereborn.fun/opplex1991/index.php?id=245969
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_sony_aath.png" group-title="General" tvg-name="Bd Sony Aath" tvg-language="Unknown",Bd Sony Aath
 https://allinonereborn.fun/opplex1991/index.php?id=245929
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bdloc_btv.png" group-title="General" tvg-name="Bdloc Btv" tvg-language="Unknown",Bdloc Btv
 https://allinonereborn.fun/opplex1991/index.php?id=245930
@@ -2553,6 +2382,15 @@ https://allinonereborn.fun/opplex1991/index.php?id=246003
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_amar_bangla.png" group-title="Regional - Bangla" tvg-name="Bd Amar Bangla" tvg-language="Bangla",Bd Amar Bangla
 https://allinonereborn.fun/opplex1991/index.php?id=246007
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bduk_atn_bangla.png" group-title="Regional - Bangla" tvg-name="Bduk Atn Bangla" tvg-language="Bangla",Bduk Atn Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=246010
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_channel_s_uk.png" group-title="General" tvg-name="Bd Channel S Uk" tvg-language="Unknown",Bd Channel S Uk
+https://allinonereborn.fun/opplex1991/index.php?id=301102
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/in_republic_bangla.png" group-title="Regional - Bangla" tvg-name="In Republic Bangla" tvg-language="Bangla",In Republic Bangla
+https://allinonereborn.fun/opplex1991/index.php?id=355824
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/kids.png" group-title="Kids" tvg-name="Kids" tvg-language="Unknown",Kids
+https://allinonereborn.fun/opplex1991/index.php?id=106148
+#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/in_cartoon_network.png" group-title="Kids" tvg-name="In Cartoon Network" tvg-language="Unknown",In Cartoon Network
+ps://github.com/iptv-org/iptv/tree/master/logos/bduk_atn_bangla.png" group-title="Regional - Bangla" tvg-name="Bduk Atn Bangla" tvg-language="Bangla",Bduk Atn Bangla
 https://allinonereborn.fun/opplex1991/index.php?id=246010
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/bd_channel_s_uk.png" group-title="General" tvg-name="Bd Channel S Uk" tvg-language="Unknown",Bd Channel S Uk
 https://allinonereborn.fun/opplex1991/index.php?id=301102
@@ -4225,217 +4063,3 @@ https://allinonereborn.fun/opplex1991/index.php?id=244829
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_c_news_bharat.png" group-title="News" tvg-name="Ind C News Bharat" tvg-language="Unknown",Ind C News Bharat
 https://allinonereborn.fun/opplex1991/index.php?id=244831
 #EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_hnn_24x7.png" group-title="General" tvg-name="Ind Hnn 24X7" tvg-language="Unknown",Ind Hnn 24X7
-https://allinonereborn.fun/opplex1991/index.php?id=244832
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_urdu_ann_news.png" group-title="News" tvg-name="Ind Urdu Ann News" tvg-language="Unknown",Ind Urdu Ann News
-https://allinonereborn.fun/opplex1991/index.php?id=244834
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_assamese_pratham_khabar_24x7.png" group-title="General" tvg-name="Ind Assamese Pratham Khabar 24X7" tvg-language="Unknown",Ind Assamese Pratham Khabar 24X7
-https://allinonereborn.fun/opplex1991/index.php?id=244835
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_stv_haryana_news.png" group-title="News" tvg-name="Ind Stv Haryana News" tvg-language="Unknown",Ind Stv Haryana News
-https://allinonereborn.fun/opplex1991/index.php?id=244839
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_sadhna_news_plus.png" group-title="News" tvg-name="Ind Sadhna News Plus" tvg-language="Unknown",Ind Sadhna News Plus
-https://allinonereborn.fun/opplex1991/index.php?id=244842
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_swadesh_news.png" group-title="News" tvg-name="Ind Swadesh News" tvg-language="Unknown",Ind Swadesh News
-https://allinonereborn.fun/opplex1991/index.php?id=244844
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news_india_24x7.png" group-title="News" tvg-name="Ind News India 24X7" tvg-language="Unknown",Ind News India 24X7
-https://allinonereborn.fun/opplex1991/index.php?id=244846
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_inh_24x7.png" group-title="General" tvg-name="Ind Inh 24X7" tvg-language="Unknown",Ind Inh 24X7
-https://allinonereborn.fun/opplex1991/index.php?id=244847
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_a1_tv_rajasthan.png" group-title="General" tvg-name="Ind A1 Tv Rajasthan" tvg-language="Unknown",Ind A1 Tv Rajasthan
-https://allinonereborn.fun/opplex1991/index.php?id=244848
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_bansal_news.png" group-title="News" tvg-name="Ind Bansal News" tvg-language="Unknown",Ind Bansal News
-https://allinonereborn.fun/opplex1991/index.php?id=244849
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_first_india_news.png" group-title="News" tvg-name="Ind First India News" tvg-language="Unknown",Ind First India News
-https://allinonereborn.fun/opplex1991/index.php?id=244850
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news_11.png" group-title="News" tvg-name="Ind News 11" tvg-language="Unknown",Ind News 11
-https://allinonereborn.fun/opplex1991/index.php?id=244851
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_apn_news.png" group-title="News" tvg-name="Ind Apn News" tvg-language="Unknown",Ind Apn News
-https://allinonereborn.fun/opplex1991/index.php?id=244852
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news_1_india.png" group-title="News" tvg-name="Ind News 1 India" tvg-language="Unknown",Ind News 1 India
-https://allinonereborn.fun/opplex1991/index.php?id=244853
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_k_news.png" group-title="News" tvg-name="Ind K News" tvg-language="Unknown",Ind K News
-https://allinonereborn.fun/opplex1991/index.php?id=244854
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_jk_24x7_news.png" group-title="News" tvg-name="Ind Jk 24X7 News" tvg-language="Unknown",Ind Jk 24X7 News
-https://allinonereborn.fun/opplex1991/index.php?id=244855
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_kashish_news.png" group-title="News" tvg-name="Ind Kashish News" tvg-language="Unknown",Ind Kashish News
-https://allinonereborn.fun/opplex1991/index.php?id=244856
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news_18_urdu.png" group-title="News" tvg-name="Ind News 18 Urdu" tvg-language="Unknown",Ind News 18 Urdu
-https://allinonereborn.fun/opplex1991/index.php?id=244861
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_cnn_news_18_fhd.png" group-title="News" tvg-name="Ind Cnn News 18 Fhd" tvg-language="Unknown",Ind Cnn News 18 Fhd
-https://allinonereborn.fun/opplex1991/index.php?id=244862
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news18_mp_chhattisgarh.png" group-title="News" tvg-name="Ind News18 Mp Chhattisgarh" tvg-language="Unknown",Ind News18 Mp Chhattisgarh
-https://allinonereborn.fun/opplex1991/index.php?id=244863
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news18_up_uttarakhand.png" group-title="News" tvg-name="Ind News18 Up Uttarakhand" tvg-language="Unknown",Ind News18 Up Uttarakhand
-https://allinonereborn.fun/opplex1991/index.php?id=244864
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news18_bihar_jharkhand.png" group-title="News" tvg-name="Ind News18 Bihar Jharkhand" tvg-language="Unknown",Ind News18 Bihar Jharkhand
-https://allinonereborn.fun/opplex1991/index.php?id=244865
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news18_rajasthan_fhd.png" group-title="News" tvg-name="Ind News18 Rajasthan Fhd" tvg-language="Unknown",Ind News18 Rajasthan Fhd
-https://allinonereborn.fun/opplex1991/index.php?id=244866
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news18_lokmat.png" group-title="News" tvg-name="Ind News18 Lokmat" tvg-language="Unknown",Ind News18 Lokmat
-https://allinonereborn.fun/opplex1991/index.php?id=244867
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_news18_odia_fhd.png" group-title="News" tvg-name="Ind News18 Odia Fhd" tvg-language="Unknown",Ind News18 Odia Fhd
-https://allinonereborn.fun/opplex1991/index.php?id=244868
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_aaj_tak_hd.png" group-title="General" tvg-name="Ind Aaj Tak Hd" tvg-language="Unknown",Ind Aaj Tak Hd
-https://allinonereborn.fun/opplex1991/index.php?id=244915
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_ndtv_profit.png" group-title="General" tvg-name="Ind Ndtv Profit" tvg-language="Unknown",Ind Ndtv Profit
-https://allinonereborn.fun/opplex1991/index.php?id=244916
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_ndtv_india.png" group-title="General" tvg-name="Ind Ndtv India" tvg-language="Unknown",Ind Ndtv India
-https://allinonereborn.fun/opplex1991/index.php?id=244917
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/ind_ndtv_good_times.png" group-title="General" tvg-name="Ind Ndtv Good Times" tvg-language="Unknown",Ind Ndtv Good Times
-https://allinonereborn.fun/opplex1991/index.php?id=244918
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/in_republic_bharat.png" group-title="General" tvg-name="In Republic Bharat" tvg-language="Unknown",In Republic Bharat
-https://allinonereborn.fun/opplex1991/index.php?id=243733
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/in_zee_business.png" group-title="General" tvg-name="In Zee Business" tvg-language="Unknown",In Zee Business
-https://allinonereborn.fun/opplex1991/index.php?id=341135
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/in_time_now_navbharat.png" group-title="General" tvg-name="In Time Now Navbharat" tvg-language="Unknown",In Time Now Navbharat
-https://allinonereborn.fun/opplex1991/index.php?id=345354
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/in_cnbctv18.png" group-title="General" tvg-name="In Cnbctv18" tvg-language="Unknown",In Cnbctv18
-https://allinonereborn.fun/opplex1991/index.php?id=355645
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/äęóźėö_welcome_ėöóźäę.png" group-title="General" tvg-name="Äęóźėö Welcome Ėöóźäę" tvg-language="Unknown",Äęóźėö Welcome Ėöóźäę
-https://allinonereborn.fun/opplex1991/index.php?id=246163
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_10tv.png" group-title="General" tvg-name="Indregional 10Tv" tvg-language="Unknown",Indregional 10Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246164
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_7smusic.png" group-title="Music" tvg-name="Indregional 7Smusic" tvg-language="Unknown",Indregional 7Smusic
-https://allinonereborn.fun/opplex1991/index.php?id=246165
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/pkindregional_aahomusic.png" group-title="Music" tvg-name="Pkindregional Aahomusic" tvg-language="Unknown",Pkindregional Aahomusic
-https://allinonereborn.fun/opplex1991/index.php?id=246166
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_andhra_jyoti.png" group-title="General" tvg-name="Indregional Andhra_Jyoti" tvg-language="Unknown",Indregional Andhra_Jyoti
-https://allinonereborn.fun/opplex1991/index.php?id=246167
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_ap_24x7.png" group-title="General" tvg-name="Indregional Ap_24X7" tvg-language="Unknown",Indregional Ap_24X7
-https://allinonereborn.fun/opplex1991/index.php?id=246168
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_ate_tv.png" group-title="General" tvg-name="Indregional Ate_Tv" tvg-language="Unknown",Indregional Ate_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246169
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_calvary_tv.png" group-title="General" tvg-name="Indregional Calvary_Tv" tvg-language="Unknown",Indregional Calvary_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246170
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_captain_tv.png" group-title="General" tvg-name="Indregional Captain_Tv" tvg-language="Unknown",Indregional Captain_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246171
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_cvr_news.png" group-title="News" tvg-name="Indregional Cvr_News" tvg-language="Unknown",Indregional Cvr_News
-https://allinonereborn.fun/opplex1991/index.php?id=246172
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_darshana_tv.png" group-title="General" tvg-name="Indregional Darshana_Tv" tvg-language="Unknown",Indregional Darshana_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246174
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_dheeran_tv.png" group-title="General" tvg-name="Indregional Dheeran_Tv" tvg-language="Unknown",Indregional Dheeran_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246175
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_hmtv.png" group-title="General" tvg-name="Indregional Hmtv" tvg-language="Unknown",Indregional Hmtv
-https://allinonereborn.fun/opplex1991/index.php?id=246176
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_i_news.png" group-title="News" tvg-name="Indregional I_News" tvg-language="Unknown",Indregional I_News
-https://allinonereborn.fun/opplex1991/index.php?id=246177
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_imayam_tv.png" group-title="General" tvg-name="Indregional Imayam_Tv" tvg-language="Unknown",Indregional Imayam_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246178
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kairali.png" group-title="General" tvg-name="Indregional Kairali" tvg-language="Unknown",Indregional Kairali
-https://allinonereborn.fun/opplex1991/index.php?id=246179
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kairali_arabia.png" group-title="General" tvg-name="Indregional Kairali_Arabia" tvg-language="Unknown",Indregional Kairali_Arabia
-https://allinonereborn.fun/opplex1991/index.php?id=246180
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kairali_news.png" group-title="News" tvg-name="Indregional Kairali_News" tvg-language="Unknown",Indregional Kairali_News
-https://allinonereborn.fun/opplex1991/index.php?id=246181
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalaignar_chithiram.png" group-title="General" tvg-name="Indregional Kalaignar_Chithiram" tvg-language="Unknown",Indregional Kalaignar_Chithiram
-https://allinonereborn.fun/opplex1991/index.php?id=246182
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalaignar_isai_aruvi.png" group-title="General" tvg-name="Indregional Kalaignar_Isai_Aruvi" tvg-language="Unknown",Indregional Kalaignar_Isai_Aruvi
-https://allinonereborn.fun/opplex1991/index.php?id=246183
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalaignar_murasu.png" group-title="General" tvg-name="Indregional Kalaignar_Murasu" tvg-language="Unknown",Indregional Kalaignar_Murasu
-https://allinonereborn.fun/opplex1991/index.php?id=246184
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalaignar_seithigal.png" group-title="General" tvg-name="Indregional Kalaignar_Seithigal" tvg-language="Unknown",Indregional Kalaignar_Seithigal
-https://allinonereborn.fun/opplex1991/index.php?id=246185
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalaignar_sirippoli.png" group-title="General" tvg-name="Indregional Kalaignar_Sirippoli" tvg-language="Unknown",Indregional Kalaignar_Sirippoli
-https://allinonereborn.fun/opplex1991/index.php?id=246186
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalaignar_tv.png" group-title="General" tvg-name="Indregional Kalaignar_Tv" tvg-language="Unknown",Indregional Kalaignar_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246187
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kalinga_tv.png" group-title="General" tvg-name="Indregional Kalinga_Tv" tvg-language="Unknown",Indregional Kalinga_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246188
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_kerala_vision.png" group-title="General" tvg-name="Indregional Kerala_Vision" tvg-language="Unknown",Indregional Kerala_Vision
-https://allinonereborn.fun/opplex1991/index.php?id=246189
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_madha_tv.png" group-title="General" tvg-name="Indregional Madha_Tv" tvg-language="Unknown",Indregional Madha_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246190
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_makkal_tv.png" group-title="General" tvg-name="Indregional Makkal_Tv" tvg-language="Unknown",Indregional Makkal_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246191
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_malai_murasu_seithikal.png" group-title="General" tvg-name="Indregional Malai_Murasu_Seithikal" tvg-language="Unknown",Indregional Malai_Murasu_Seithikal
-https://allinonereborn.fun/opplex1991/index.php?id=246192
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mangalam_tv.png" group-title="General" tvg-name="Indregional Mangalam_Tv" tvg-language="Unknown",Indregional Mangalam_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246193
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_manorama_news_central.png" group-title="News" tvg-name="Indregional Manorama_News_Central" tvg-language="Unknown",Indregional Manorama_News_Central
-https://allinonereborn.fun/opplex1991/index.php?id=246194
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_manorama_news_north.png" group-title="News" tvg-name="Indregional Manorama_News_North" tvg-language="Unknown",Indregional Manorama_News_North
-https://allinonereborn.fun/opplex1991/index.php?id=246195
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mazhavil_hd.png" group-title="General" tvg-name="Indregional Mazhavil_Hd" tvg-language="Unknown",Indregional Mazhavil_Hd
-https://allinonereborn.fun/opplex1991/index.php?id=246196
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mbc_tv.png" group-title="General" tvg-name="Indregional Mbc_Tv" tvg-language="Unknown",Indregional Mbc_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246197
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_media_one.png" group-title="General" tvg-name="Indregional Media_One" tvg-language="Unknown",Indregional Media_One
-https://allinonereborn.fun/opplex1991/index.php?id=246198
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mh_one_music.png" group-title="Music" tvg-name="Indregional Mh_One_Music" tvg-language="Unknown",Indregional Mh_One_Music
-https://allinonereborn.fun/opplex1991/index.php?id=246199
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mh_one_news.png" group-title="News" tvg-name="Indregional Mh_One_News" tvg-language="Unknown",Indregional Mh_One_News
-https://allinonereborn.fun/opplex1991/index.php?id=246200
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mk_six.png" group-title="General" tvg-name="Indregional Mk_Six" tvg-language="Unknown",Indregional Mk_Six
-https://allinonereborn.fun/opplex1991/index.php?id=246201
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mk_television.png" group-title="General" tvg-name="Indregional Mk_Television" tvg-language="Unknown",Indregional Mk_Television
-https://allinonereborn.fun/opplex1991/index.php?id=246202
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mk_tunes.png" group-title="General" tvg-name="Indregional Mk_Tunes" tvg-language="Unknown",Indregional Mk_Tunes
-https://allinonereborn.fun/opplex1991/index.php?id=246203
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_moon_tv.png" group-title="General" tvg-name="Indregional Moon_Tv" tvg-language="Unknown",Indregional Moon_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246204
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_orange_tv.png" group-title="General" tvg-name="Indregional Orange_Tv" tvg-language="Unknown",Indregional Orange_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246205
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_polimer.png" group-title="General" tvg-name="Indregional Polimer" tvg-language="Unknown",Indregional Polimer
-https://allinonereborn.fun/opplex1991/index.php?id=246206
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_power_vision.png" group-title="General" tvg-name="Indregional Power_Vision" tvg-language="Unknown",Indregional Power_Vision
-https://allinonereborn.fun/opplex1991/index.php?id=246207
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_public_movies.png" group-title="Movies" tvg-name="Indregional Public_Movies" tvg-language="Unknown",Indregional Public_Movies
-https://allinonereborn.fun/opplex1991/index.php?id=246208
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_public_music.png" group-title="Music" tvg-name="Indregional Public_Music" tvg-language="Unknown",Indregional Public_Music
-https://allinonereborn.fun/opplex1991/index.php?id=246209
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_public_tv.png" group-title="General" tvg-name="Indregional Public_Tv" tvg-language="Unknown",Indregional Public_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246210
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_r_tv.png" group-title="General" tvg-name="Indregional R_Tv" tvg-language="Unknown",Indregional R_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246211
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_rm_rujumargam_tv.png" group-title="General" tvg-name="Indregional Rm_Rujumargam_Tv" tvg-language="Unknown",Indregional Rm_Rujumargam_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246212
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_sadhna_prime_news.png" group-title="News" tvg-name="Indregional Sadhna_Prime_News" tvg-language="Unknown",Indregional Sadhna_Prime_News
-https://allinonereborn.fun/opplex1991/index.php?id=246213
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_sathiyam_tv.png" group-title="General" tvg-name="Indregional Sathiyam_Tv" tvg-language="Unknown",Indregional Sathiyam_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246214
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_shemaroo_marathibana.png" group-title="General" tvg-name="Indregional Shemaroo_Marathibana" tvg-language="Unknown",Indregional Shemaroo_Marathibana
-https://allinonereborn.fun/opplex1991/index.php?id=246215
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_sri_sankara.png" group-title="General" tvg-name="Indregional Sri_Sankara" tvg-language="Unknown",Indregional Sri_Sankara
-https://allinonereborn.fun/opplex1991/index.php?id=246216
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_studio_one.png" group-title="General" tvg-name="Indregional Studio_One" tvg-language="Unknown",Indregional Studio_One
-https://allinonereborn.fun/opplex1991/index.php?id=246217
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_t_news.png" group-title="News" tvg-name="Indregional T_News" tvg-language="Unknown",Indregional T_News
-https://allinonereborn.fun/opplex1991/index.php?id=246218
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_tamilan_television.png" group-title="Regional - Tamil" tvg-name="Indregional Tamilan_Television" tvg-language="Tamil",Indregional Tamilan_Television
-https://allinonereborn.fun/opplex1991/index.php?id=246219
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_tv_5.png" group-title="General" tvg-name="Indregional Tv_5" tvg-language="Unknown",Indregional Tv_5
-https://allinonereborn.fun/opplex1991/index.php?id=246220
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_tv5_kannada.png" group-title="General" tvg-name="Indregional Tv5_Kannada" tvg-language="Unknown",Indregional Tv5_Kannada
-https://allinonereborn.fun/opplex1991/index.php?id=246221
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_24news.png" group-title="News" tvg-name="Indregional 24News" tvg-language="Unknown",Indregional 24News
-https://allinonereborn.fun/opplex1991/index.php?id=246222
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_jeevan.png" group-title="General" tvg-name="Indregional Jeevan" tvg-language="Unknown",Indregional Jeevan
-https://allinonereborn.fun/opplex1991/index.php?id=246223
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_jaihind.png" group-title="General" tvg-name="Indregional Jaihind" tvg-language="Unknown",Indregional Jaihind
-https://allinonereborn.fun/opplex1991/index.php?id=246224
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_amrita.png" group-title="General" tvg-name="Indregional Amrita" tvg-language="Unknown",Indregional Amrita
-https://allinonereborn.fun/opplex1991/index.php?id=246225
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_survana_news.png" group-title="News" tvg-name="Indregional Survana_News" tvg-language="Unknown",Indregional Survana_News
-https://allinonereborn.fun/opplex1991/index.php?id=246226
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_we.png" group-title="General" tvg-name="Indregional We" tvg-language="Unknown",Indregional We
-https://allinonereborn.fun/opplex1991/index.php?id=246227
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_win_tv.png" group-title="General" tvg-name="Indregional Win_Tv" tvg-language="Unknown",Indregional Win_Tv
-https://allinonereborn.fun/opplex1991/index.php?id=246228
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_yonetv.png" group-title="General" tvg-name="Indregional Yonetv" tvg-language="Unknown",Indregional Yonetv
-https://allinonereborn.fun/opplex1991/index.php?id=246229
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/indregional_mazhavil_manorama.png" group-title="General" tvg-name="Indregional Mazhavil Manorama" tvg-language="Unknown",Indregional Mazhavil Manorama
-https://allinonereborn.fun/opplex1991/index.php?id=246230
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_gold_4k.png" group-title="Movies" tvg-name="Cinemania Gold 4K" tvg-language="Unknown",Cinemania Gold 4K
-https://allinonereborn.fun/opplex1991/index.php?id=389027
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_bollywood_4k.png" group-title="Movies" tvg-name="Cinemania Bollywood 4K" tvg-language="Unknown",Cinemania Bollywood 4K
-https://allinonereborn.fun/opplex1991/index.php?id=389030
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_punjabi_4k.png" group-title="Movies" tvg-name="Cinemania Punjabi 4K" tvg-language="Punjabi",Cinemania Punjabi 4K
-https://allinonereborn.fun/opplex1991/index.php?id=389031
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_netfilx_fhd.png" group-title="Movies" tvg-name="Cinemania Netfilx Fhd" tvg-language="Unknown",Cinemania Netfilx Fhd
-https://allinonereborn.fun/opplex1991/index.php?id=389028
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_hollywood_4k.png" group-title="Movies" tvg-name="Cinemania Hollywood 4K" tvg-language="Unknown",Cinemania Hollywood 4K
-https://allinonereborn.fun/opplex1991/index.php?id=389029
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_telugu_4k.png" group-title="Movies" tvg-name="Cinemania Telugu 4K" tvg-language="Telugu",Cinemania Telugu 4K
-https://allinonereborn.fun/opplex1991/index.php?id=389033
-#EXTINF:-1 tvg-logo="https://github.com/iptv-org/iptv/tree/master/logos/cinemania_tamil_4k.png" group-title="Movies" tvg-name="Cinemania Tamil 4K" tvg-language="Tamil",Cinemania Tamil 4K
-https://allinonereborn.fun/opplex1991/index.php?id=389032
-
