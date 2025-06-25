@@ -1,225 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M3U Playlist Player</title>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced M3U Playlist Player</title>
   <style>
-    body {
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #fff;
-    }
+      padding: 0;
+    }body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 10px;
-    }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #00d9ff;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00ffe1;
+}
 
-    .input-group {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    .input-group input {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background: #1e1e1e;
-      color: #fff;
-    }
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1f1f1f;
+  color: #fff;
+}
 
-    .input-group button {
-      padding: 10px 20px;
-      background-color: #00d9ff;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ffe1;
+  color: #000;
+  cursor: pointer;
+}
 
-    .input-group button:hover {
-      background-color: #00aacc;
-    }
+button:hover {
+  background-color: #00c8b0;
+}
 
-    .video-wrapper {
-      margin-bottom: 20px;
-      position: relative;
-    }
+.video-player {
+  width: 100%;
+  height: 500px;
+  background: black;
+  margin-bottom: 20px;
+}
 
-    video {
-      width: 100%;
-      height: auto;
-      background: #000;
-      border-radius: 10px;
-    }
+.channel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
 
-    .error {
-      color: #ff4c4c;
-      margin-top: 10px;
-      font-size: 14px;
-    }
+.channel {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
 
-    .channel-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+.channel:hover {
+  background-color: #2b2b2b;
+}
 
-    .channel-item {
-      padding: 10px;
-      background: #1e1e1e;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.2s;
-      display: flex;
-      align-items: center;
-    }
+.channel img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 
-    .channel-item:hover {
-      background: #2a2a2a;
-    }
+.group-title {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #00ffe1;
+}
 
-    .channel-item img {
-      height: 24px;
-      margin-right: 10px;
-      border-radius: 4px;
-    }
+.error-message {
+  color: #ff4c4c;
+  margin-top: 10px;
+}
 
-    .placeholder {
-      color: #999;
-      text-align: center;
-    }
-
-    h3 {
-      margin: 15px 0 5px;
-      color: #00ffc3;
-    }
   </style>
-</head>
-<body>
+</head><body>
   <div class="container">
-    <h1>M3U Playlist Player</h1>
+    <h1>Advanced M3U Playlist Player</h1><div class="controls">
+  <input type="text" id="playlist-url" placeholder="Paste M3U or M3U8 URL here...">
+  <button onclick="loadPlaylist()">Load Playlist</button>
+</div>
 
-    <div class="input-group">
-      <input type="text" id="m3u-url" placeholder="Enter M3U/M3U8 URL (e.g. https://is.gd/zU7pjg.m3u)" />
-      <button onclick="loadPlaylist()">Load Playlist</button>
-    </div>
+<video id="video" class="video-player" controls autoplay></video>
+<p id="error-message" class="error-message"></p>
 
-    <div class="video-wrapper">
-      <video id="videoPlayer" controls autoplay></video>
-      <p id="error-message" class="error"></p>
-    </div>
+<div id="channel-container"></div>
 
-    <div id="channel-list" class="channel-list">
-      <p class="placeholder">Channel list will appear here after loading a playlist.</p>
-    </div>
-  </div>
+  </div>  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>  <script>
+    let channels = [];
 
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script>
     async function loadPlaylist() {
-      const url = document.getElementById('m3u-url').value.trim();
-      const errorMsg = document.getElementById('error-message');
-      const channelList = document.getElementById('channel-list');
-      errorMsg.textContent = '';
-      channelList.innerHTML = '';
-
-      if (!url) {
-        errorMsg.textContent = 'Please enter a valid M3U URL.';
-        return;
-      }
+      const url = document.getElementById("playlist-url").value;
+      const errorMessage = document.getElementById("error-message");
+      const channelContainer = document.getElementById("channel-container");
+      errorMessage.textContent = "";
+      channelContainer.innerHTML = "";
+      channels = [];
 
       try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Failed to fetch playlist.');
-        const text = await response.text();
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("Unable to fetch M3U file.");
+        const text = await res.text();
         const lines = text.split('\n');
-        const channels = [];
+        let currentGroup = "Ungrouped";
 
         for (let i = 0; i < lines.length; i++) {
-          if (lines[i].startsWith('#EXTINF')) {
+          if (lines[i].startsWith("#EXTINF")) {
             const info = lines[i];
-            const nameMatch = info.match(/,(.*)$/);
-            const name = nameMatch ? nameMatch[1].trim() : `Channel ${channels.length + 1}`;
-            const logoMatch = info.match(/tvg-logo="(.*?)"/);
-            const logo = logoMatch ? logoMatch[1] : '';
-            const groupMatch = info.match(/group-title="(.*?)"/);
-            const group = groupMatch ? groupMatch[1] : 'Other';
-            const streamUrl = lines[i + 1] ? lines[i + 1].trim() : '';
-
-            if (streamUrl) {
-              channels.push({ name, logo, group, url: streamUrl });
-            }
+            const name = (info.match(/,(.*)/) || [])[1] || "Unknown Channel";
+            const logo = (info.match(/tvg-logo="(.*?)"/) || [])[1] || "";
+            const group = (info.match(/group-title="(.*?)"/) || [])[1] || currentGroup;
+            const streamUrl = lines[i + 1] || "";
+            channels.push({ name, logo, group, streamUrl });
           }
         }
 
-        if (channels.length === 0) {
-          channelList.innerHTML = '<p class="placeholder">No channels found in the playlist.</p>';
-          return;
-        }
-
-        const groups = {};
+        const grouped = {};
         channels.forEach(ch => {
-          if (!groups[ch.group]) groups[ch.group] = [];
-          groups[ch.group].push(ch);
+          if (!grouped[ch.group]) grouped[ch.group] = [];
+          grouped[ch.group].push(ch);
         });
 
-        for (const group in groups) {
-          const groupTitle = document.createElement('h3');
-          groupTitle.textContent = group;
-          channelList.appendChild(groupTitle);
+        for (const group in grouped) {
+          const groupHeader = document.createElement("div");
+          groupHeader.className = "group-title";
+          groupHeader.textContent = group;
+          channelContainer.appendChild(groupHeader);
 
-          groups[group].forEach(channel => {
-            const item = document.createElement('div');
-            item.className = 'channel-item';
-            item.innerHTML = `
-              ${channel.logo ? `<img src="${channel.logo}" alt="Logo" />` : ''}
-              <span>${channel.name}</span>
-            `;
-            item.onclick = () => playStream(channel.url);
-            channelList.appendChild(item);
+          const grid = document.createElement("div");
+          grid.className = "channel-list";
+
+          grouped[group].forEach(ch => {
+            const div = document.createElement("div");
+            div.className = "channel";
+            div.onclick = () => playStream(ch.streamUrl);
+
+            if (ch.logo) {
+              const img = document.createElement("img");
+              img.src = ch.logo;
+              div.appendChild(img);
+            }
+
+            const span = document.createElement("span");
+            span.textContent = ch.name;
+            div.appendChild(span);
+
+            grid.appendChild(div);
           });
+
+          channelContainer.appendChild(grid);
         }
 
-        playStream(channels[0].url); // Auto-play first
+        if (channels.length > 0) {
+          playStream(channels[0].streamUrl);
+        } else {
+          errorMessage.textContent = "No channels found in playlist.";
+        }
       } catch (err) {
-        errorMsg.textContent = 'Error loading playlist: ' + err.message;
+        errorMessage.textContent = "Error: " + err.message;
       }
     }
 
     function playStream(url) {
-      const video = document.getElementById('videoPlayer');
-      const errorMsg = document.getElementById('error-message');
-      errorMsg.textContent = '';
-
+      const video = document.getElementById("video");
       if (Hls.isSupported()) {
         if (window.hls) window.hls.destroy();
         window.hls = new Hls();
         window.hls.loadSource(url);
         window.hls.attachMedia(video);
-        window.hls.on(Hls.Events.ERROR, function (event, data) {
-          errorMsg.textContent = 'Error playing stream.';
-        });
-      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
         video.src = url;
       } else {
-        errorMsg.textContent = 'Your browser does not support HLS.';
+        document.getElementById("error-message").textContent = "HLS not supported on this browser.";
       }
-
-      video.play();
     }
-  </script>
-</body>
-</html>
+  </script></body></html>
