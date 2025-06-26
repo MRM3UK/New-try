@@ -55,8 +55,8 @@ https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1705/output/index.m3u8
 https://ap02.iqplay.tv:8082/iqb8002/mec31mhtvtv/playlist.m3u8
 #EXTINF:-1 group-title="Sports ⚽🏏🏆" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/RTA_Afghanistan_Logo_%282021%E2%80%93%29_blue.svg/1200px-RTA_Afghanistan_Logo_%282021%E2%80%93%29_blue.svg.png",RTA Sports
 https://rtatv.akamaized.net/Content/HLS/Live/channel(RTA3)/variant.m3u8
-#EXTINF:-1 group-title="Sports ⚽🏏🏆" tvg-logo="https://seeklogo.com/images/T/tennis-channel-logo-912C418E99-seeklogo.com.png",Tennis Channel
-http://tv.cloudcdn.me:80/live.ts?channelId=124665&uid=16068&deviceMac=00:1A:79:ED:10:29
+#EXTINF:-1 group-title="Sports ⚽🏏🏆" tvg-logo="https://seeklogo.com/images/T/tennis-channel-logo-912C418E99-seeklogo.com.png",star jalsha
+http://stvlive.net:8080/starjalsha/index.m3u8
 #EXTINF:-1 group-title="Kids🍭🎯🎉" tvg-logo="https://kidscreation.tv/wp-content/uploads/2022/11/KidsCreation-Logo-1.png",Kids Creation
 https://flc2.technohaat.com/kidscreation_test/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co.com/Q3F9JyKH/T-Sports.jpg",T Sports HD
