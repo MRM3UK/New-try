@@ -50,7 +50,19 @@ https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
 https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
 #EXTINF:-1 group-title="Bangladeshi News 🇧🇩" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Ekattor_TV_logo.svg/800px-Ekattor_TV_logo.svg.png",Ekattor Tv
 https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1705/output/index.m3u8
+#movies
 
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/zeH5oAM1A3zgXbvQ3L9GiDs3ldQ.jpg" group-title="Movies",Robinhood
+https://pixeldrain.dev/api/file/3udaKu5Q?download
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/2kLF0pHfWtafdYRhoJO0tnmK1Pp.jpg" group-title="Movies",Kaabil
+https://pixeldrain.dev/api/file/9aBwNJ8D?download
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/7sqFr9mgd12waluFfajmzLiukE.jpg" group-title="Movies",3 idiots
+https://pixeldrain.dev/api/file/2hFnMc1e?download
+
+#more2
 #EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://aloula.faulio.com/storage/mediagallery/d3/41/small_31890d483ad4fcf4b142406c9cfa1cb16ca0ddb6.png", AL QURAN 
 https://ap02.iqplay.tv:8082/iqb8002/mec31mhtvtv/playlist.m3u8
 #EXTINF:-1 group-title="Sports ⚽🏏🏆" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/RTA_Afghanistan_Logo_%282021%E2%80%93%29_blue.svg/1200px-RTA_Afghanistan_Logo_%282021%E2%80%93%29_blue.svg.png",RTA Sports
