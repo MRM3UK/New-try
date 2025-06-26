@@ -76,3 +76,6 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF9
 
 #EXTINF:-1 group-title="Indian Bangla" tvg-logo="https://i.postimg.cc/qvPXDQ68/Enter10-Bangla.jpg",Enter 10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
+
+#EXTINF:-1 tvg-id="ARYDigital.pk" tvg-name="ARY DIGITAL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ary_Digital_Logo.png/1086px-Ary_Digital_Logo.png?20241116152452" group-title="Pakistani",ARY DIGITAL
+https://arydigital.aryzap.com/14dfcdd505545b71eed360bd13a5556e/685e1cbd/v1/0183ea2408f90b8ed5941a38bc72/0183ea24302d0b8ed5941a38bc75/ARYDigitalHDh264_1080p.m3u8?uuid=43964f5d-63eb-4877-aaf7-e73d2c045ba0&isSubM3u8=1
