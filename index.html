@@ -3,35 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MR X TV Live</title> <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
+  <title>MR X TV Live</title>
+  <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #181818; color: #fff; text-align: center; }
+    body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; /* Add padding for logo */ }
 
-    /* Container for the Title/Logo - New */
-    .title-logo-container {
-      margin: 30px auto;
-      padding: 10px 20px;
-      border-radius: 15px;
-      background: linear-gradient(145deg, #252525, #151515);
-      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
-      transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
-      transition: all 0.3s ease;
-      display: inline-block; /* Makes background fit content */
-      position: relative; /* For absolute positioning of children if needed */
-      overflow: hidden; /* Ensure content doesn't spill out */
-      min-width: 200px; /* Ensure it doesn't collapse too much */
-      min-height: 50px; /* Ensure it has some height */
-      display: flex; /* Use flexbox to center content */
-      align-items: center;
-      justify-content: center;
+    /* Top-Left Logo Styling - NEW */
+    #topLeftLogo {
+      position: absolute;
+      top: 15px; /* Adjust as needed */
+      left: 15px; /* Adjust as needed */
+      height: 50px; /* Adjust logo size */
+      width: auto;
+      z-index: 1000; /* Ensure it's on top */
+      border-radius: 8px; /* Optional: subtle rounded corners */
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Optional: a slight glow */
+      transition: transform 0.3s ease-in-out;
     }
-    .title-logo-container:hover {
-        transform: perspective(500px) rotateX(0deg) rotateY(0deg);
-        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
+    #topLeftLogo:hover {
+        transform: scale(1.05); /* Slightly enlarge on hover */
     }
 
-    /* 3D Title Styling (inside the new container) */
+    /* 3D Title Styling (back to original structure) */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -40,32 +34,18 @@
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
       text-align: center;
-      margin: 0; /* Remove margin as parent container handles it */
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out; /* Smooth fade */
-      white-space: nowrap; /* Prevents text from wrapping if it gets too long for container */
+      margin: 30px auto; /* Centered with auto margins */
+      padding: 10px 20px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #252525, #151515);
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+      transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
+      transition: all 0.3s ease;
+      display: inline-block; /* Makes background fit text */
     }
-
-    /* Logo Styling (inside the new container) */
-    #websiteLogo {
-      max-height: 70px; /* Recommended height, adjust as needed */
-      width: auto; /* Maintain aspect ratio */
-      display: block; /* Ensure it behaves like a block element */
-      opacity: 0; /* Start hidden */
-      transition: opacity 0.5s ease-in-out; /* Smooth fade */
-      position: absolute; /* Position over the text */
-    }
-
-    #typingTitle.hidden,
-    #websiteLogo.hidden {
-      opacity: 0;
-      pointer-events: none; /* Prevent interaction when hidden */
-    }
-
-    #typingTitle.visible,
-    #websiteLogo.visible {
-      opacity: 1;
-      pointer-events: all; /* Allow interaction when visible */
+    #typingTitle:hover {
+        transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
     .player-container { background: black; width: 100%; position: relative; }
@@ -238,8 +218,12 @@
     }
 
     @media (max-width: 768px) {
+      #topLeftLogo {
+        height: 40px; /* Adjust for smaller screens */
+        top: 10px;
+        left: 10px;
+      }
       #typingTitle { font-size: 24px; }
-      #websiteLogo { max-height: 60px; }
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
@@ -248,8 +232,12 @@
     }
 
     @media (max-width: 480px) {
+      #topLeftLogo {
+        height: 35px; /* Adjust for very small screens */
+        top: 8px;
+        left: 8px;
+      }
       #typingTitle { font-size: 20px; }
-      #websiteLogo { max-height: 50px; }
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
@@ -260,10 +248,9 @@
 </head>
 <body>
 
-<div class="title-logo-container">
-  <h1 id="typingTitle" class="visible">MR X TV</h1>
-  <img id="websiteLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="Website Logo" class="hidden">
-</div>
+<img id="topLeftLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
+
+<h1 id="typingTitle">MR X TV</h1>
 
   <div class="player-container">
     <div class="video-container">
@@ -292,34 +279,9 @@
     let allChannels = [];
     let displayedChannelElements = [];
 
-    // --- Logo and Title Toggling ---
-    const typingTitle = document.getElementById('typingTitle');
-    const websiteLogo = document.getElementById('websiteLogo');
-    const toggleInterval = 5000; // Time in milliseconds (e.g., 5000ms = 5 seconds)
-    let isTitleVisible = true;
+    // --- Removed Logo/Title Toggling Logic ---
+    // The previous JavaScript for toggleTitleLogo and setInterval/setTimeout has been removed.
 
-    function toggleTitleLogo() {
-      if (isTitleVisible) {
-        typingTitle.classList.remove('visible');
-        typingTitle.classList.add('hidden');
-        websiteLogo.classList.remove('hidden');
-        websiteLogo.classList.add('visible');
-      } else {
-        websiteLogo.classList.remove('visible');
-        websiteLogo.classList.add('hidden');
-        typingTitle.classList.remove('hidden');
-        typingTitle.classList.add('visible');
-      }
-      isTitleVisible = !isTitleVisible; // Toggle the state
-    }
-
-    // Start toggling after a short delay
-    // This ensures the initial "MR X TV" text is visible for a moment
-    setTimeout(() => {
-        setInterval(toggleTitleLogo, toggleInterval);
-    }, 1000); // Wait 1 second before starting the toggle animation
-
-    // --- Existing Functions ---
     async function fetchM3U(url) {
       try {
         const response = await fetch(url);
