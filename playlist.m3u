@@ -118,7 +118,7 @@ https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1709/output/1709.m3u8
 https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
 
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSODXopSh2u8VcsSla7jVngvcZ0V5XA-sZsXA&usqp=CAU"group-title="Kolkata Bangla Movies",Sananda TV
-https://pixeldrain.dev/api/file/11Y9YBR7?download
+https://pixeldrain.dev/api/file/pj4wctgm?download
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/KjjqnRH/Picsart-23-06-30-21-35-20-283.png" group-title="Hindi Movies",Sheemaroo Bollywood
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Eurosports.png"group-title="Sports",Eurosports
@@ -137,7 +137,7 @@ https://amg01448-samsungin-pogo-samsungin-dzccl.amagi.tv/playlist/amg01448-samsu
 
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/2G99FfWYCAdsmAIZO8zGFjcDidY.jpg" group-title="K-Drama",Karma
-http://103.175.242.10:8080/zeebangla/index.m3u8
+https://pixeldrain.dev/u/1p4fC5Se
 
 
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/aW7mGixv2dZdQtbve4deYyfewHH.jpg" group-title="K-Drama",Weak Hero S2
