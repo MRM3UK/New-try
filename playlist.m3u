@@ -135,14 +135,10 @@ https://dplus.gammacdn.workers.dev/videos/113.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/POGO.jpeg"group-title="KIDS",Pogo
 https://amg01448-samsungin-pogo-samsungin-dzccl.amagi.tv/playlist/amg01448-samsungin-pogo-samsungin/playlist.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Al%20Jazeera%20.png"group-title="English News",Aljazeera
-https://live-hls-web-aje.getaj.net/AJE/01.m3u8
-#https://live-hls-web-aje.getaj.net/AJE/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/BBC%20World%20News.png"group-title="English News",BBC World
-https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/2G99FfWYCAdsmAIZO8zGFjcDidY.jpg" group-title="K-Drama",Karma
-https://image.tmdb.org/t/p/original/2G99FfWYCAdsmAIZO8zGFjcDidY.jpg
+http://103.175.242.10:8080/zeebangla/index.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/aW7mGixv2dZdQtbve4deYyfewHH.jpg" group-title="K-Drama",Weak Hero S2
 https://pixeldrain.dev/api/file/deNz3Fqb?download
@@ -154,7 +150,7 @@ https://pixeldrain.dev/api/file/7hPbBdRT?download
 https://pixeldrain.dev/api/file/11Y9YBR7?download
 
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/3pMVihtAeHz6jgN49MKAvbe31wX.jpg" group-title="K-Drama",Squid Game
-https://pixeldrain.dev/u/1p4fC5Se
+https://pixeldrain.dev/api/file/1p4fC5Se
 
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/QhrnJeKM2jOQ77myYEeC5locGQ.jpg" group-title="WWE",Money in the Bank 2025
 https://pixeldrain.dev/api/file/e6q1r56R?download
