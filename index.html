@@ -116,11 +116,13 @@
       transform: translateY(1px); /* Slight press effect */
     }
     #sideMenu li.active {
-        color: #0ff;
+        color: #0ff; /* Keep neon text color for active state */
         font-weight: bold;
         text-shadow: 0 0 5px #0ff;
-        background: linear-gradient(145deg, #00bfff, #0ff); /* Highlight active category */
-        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
+        /* UPDATED: Changed background to match a "pressed" neumorphic look for active state */
+        background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Darker, pressed look */
+        /* UPDATED: Deeper inset shadow for active state */
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
     /* 3D Title Styling */
