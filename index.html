@@ -573,7 +573,7 @@
         const li = document.createElement('li');
         li.textContent = playlist.name;
         li.onclick = () => {
-          fetchM3U(playlist.url);
+          fetchM3U(playlist.url); // Load the playlist when clicked
           toggleMenu();
         };
         // Add a delete button
@@ -744,9 +744,9 @@
     });
 
     addPlaylistOption.addEventListener('click', () => {
-        const playlistName = prompt("Enter the name for your playlist:");
+        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন:");
         if (playlistName) {
-            const playlistUrl = prompt("Enter the Direct Link (URL) for your playlist (e.g., is.gd/m3u/Direct link):");
+            const playlistUrl = prompt("আপনার প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: is.gd/m3u/Direct link):");
             if (playlistUrl) {
                 addCustomPlaylist(playlistName, playlistUrl);
             }
@@ -842,7 +842,7 @@
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            alert("⚠️ No live TV link found! Please provide a 'link' parameter in the URL or add a custom playlist from the menu.");
+            alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন।");
         }
     });
   </script>
