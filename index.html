@@ -7,18 +7,33 @@
   <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; }
+    body {
+      background: #181818;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      padding-top: 20px;
+      /* Background gradient animation */
+      background: linear-gradient(90deg, #181818, #2a2a2a, #181818);
+      background-size: 400% 400%;
+      animation: backgroundGradient 15s ease infinite;
+    }
+
+    @keyframes backgroundGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
     /* Top-Right Permanent Logo */
     #topRightLogo {
       position: absolute;
       top: 15px;
-      right: 15px; /* Changed from left to right */
+      right: 15px;
       height: 50px;
       width: auto;
       z-index: 1000;
       border-radius: 8px;
-      /* Neon green glow */
       box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
       transition: transform 0.3s ease-in-out;
     }
@@ -26,11 +41,11 @@
         transform: scale(1.05);
     }
 
-    /* Top-Right Menu Button (Hamburger) */
+    /* Top-Left Menu Button (Hamburger) */
     #menuButton {
       position: absolute;
-      top: 15px; /* Adjusted to align with logo */
-      right: 90px; /* Adjusted position to make space for the logo */
+      top: 15px;
+      left: 15px; /* Changed from right to left */
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       border: none;
       border-radius: 12px;
@@ -66,12 +81,12 @@
     #sideMenu {
       position: fixed;
       top: 0;
-      right: -300px;
+      left: -300px; /* Changed from right to left */
       width: 280px;
       height: 100%;
       background: linear-gradient(145deg, #252525, #151515);
-      box-shadow: -10px 0 20px rgba(0, 0, 0, 0.7);
-      transition: right 0.3s ease-in-out;
+      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7); /* Adjusted shadow for left side */
+      transition: left 0.3s ease-in-out; /* Changed from right to left */
       z-index: 1000;
       padding: 20px;
       padding-top: 70px;
@@ -79,7 +94,7 @@
       text-align: left;
     }
     #sideMenu.open {
-      right: 0;
+      left: 0; /* Changed from right to left */
     }
     #sideMenu h3 {
       color: #0ff;
@@ -128,7 +143,6 @@
     #typingTitle {
       font-size: 28px;
       color: #fff;
-      /* Neon green glow for text border */
       text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.3),
                    3px 3px 7px rgba(0, 0, 0, 0.8),
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
@@ -215,6 +229,7 @@
       overflow-y: auto;
       max-height: 500px; /* Keep vertical scroll if many channels */
       margin-top: 30px;
+      perspective: 1000px; /* Enable 3D perspective for child elements */
     }
 
     #channelList li {
@@ -222,18 +237,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* Adjusted padding and width for a more compact, card-like look */
-      padding: 10px; /* Reduced padding */
-      width: 130px; /* Fixed width for consistent sizing */
-      min-height: 120px; /* Ensure consistent height */
+      padding: 10px;
+      width: 130px;
+      min-height: 120px;
       cursor: pointer;
       border-radius: 12px;
-      transition: 0.3s;
-      background: #444;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease; /* Smooth transition for 3D effects */
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Adjust background for 3D */
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       position: relative;
       text-align: center;
-      flex-shrink: 0; /* Prevent items from shrinking below their width */
+      flex-shrink: 0;
+      transform-style: preserve-3d; /* Preserve 3D transformations for children */
+      transform: rotateX(5deg) rotateY(-5deg); /* Initial 3D tilt */
     }
 
     #channelList li.hidden {
@@ -241,16 +257,18 @@
     }
 
     #channelList img {
-      width: 60px; /* Kept image size */
-      height: 60px; /* Kept image size */
-      margin-bottom: 5px; /* Reduced margin below image */
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
       border-radius: 10px;
+      transform: translateZ(10px); /* Move image slightly forward in 3D space */
     }
     
     #channelList li span {
-        font-size: 14px; /* Adjust font size for channel name if needed */
-        word-break: break-word; /* Ensure long names wrap */
+        font-size: 14px;
+        word-break: break-word;
         line-height: 1.2;
+        transform: translateZ(5px); /* Move text slightly forward in 3D space */
     }
 
     /* Status Dot with Neon Glow */
@@ -263,9 +281,9 @@
       height: 10px;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-      /* Default to red for offline (or loading state) */
       background: #e74c3c;
       box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c; /* Red neon glow */
+      transform: translateZ(15px); /* Move dot further forward */
     }
 
     #channelList li.online:before {
@@ -274,9 +292,9 @@
     }
 
     #channelList li:hover {
-      background: #555;
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Adjust hover background */
+      transform: scale(1.05) rotateX(0deg) rotateY(0deg); /* Straighten on hover */
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2); /* Inset shadow on hover */
     }
 
     /* Progress Bar Styles */
@@ -352,7 +370,7 @@
       }
       #menuButton {
         top: 15px;
-        right: 70px; /* Adjusted */
+        left: 10px; /* Adjusted for smaller screens */
         width: 40px;
         height: 40px;
       }
@@ -362,7 +380,7 @@
       #progressContainer { width: 90%; max-width: 350px; }
       /* Adjusted for smaller screens */
       #channelList {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Allow smaller cards */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 10px;
         padding: 15px;
       }
@@ -378,7 +396,7 @@
       }
       #menuButton {
         top: 10px;
-        right: 60px; /* Adjusted */
+        left: 8px; /* Adjusted for very small screens */
         width: 35px;
         height: 35px;
       }
@@ -397,7 +415,7 @@
       #progressContainer { width: 95%; max-width: 300px; }
       /* Adjusted for very small screens */
       #channelList {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller cards */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 8px;
         padding: 10px;
       }
@@ -815,7 +833,7 @@
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
-        renderCustomPlaylists(); // Load and render custom playlists on startup
+        renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
 
