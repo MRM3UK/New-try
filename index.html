@@ -95,33 +95,31 @@
     }
     /* 3D Styling for Menu List Items */
     #sideMenu li {
-      padding: 10px 15px; /* Increased padding for better touch */
-      margin-bottom: 8px; /* Space between items */
+      padding: 10px 15px;
+      margin-bottom: 8px;
       cursor: pointer;
       color: #ccc;
       font-size: 15px;
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-      border-radius: 10px; /* Rounded corners */
+      border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(50, 50, 50, 0.2);
       transition: all 0.2s ease;
-      display: flex; /* For alignment of text */
+      display: flex;
       align-items: center;
-      justify-content: flex-start; /* Align text to left */
+      justify-content: flex-start;
     }
     #sideMenu li:hover {
-      background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Inverted gradient for pressed effect */
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
       box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
       color: #fff;
       text-shadow: 0 0 3px #0ff;
-      transform: translateY(1px); /* Slight press effect */
+      transform: translateY(1px);
     }
     #sideMenu li.active {
-        color: #0ff; /* Keep neon text color for active state */
+        color: #0ff;
         font-weight: bold;
         text-shadow: 0 0 5px #0ff;
-        /* UPDATED: Changed background to match a "pressed" neumorphic look for active state */
-        background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Darker, pressed look */
-        /* UPDATED: Deeper inset shadow for active state */
+        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
@@ -200,46 +198,57 @@
       transform: rotateX(5deg);
     }
 
+    /* UPDATED: Channel List Styles for side-by-side display */
     #channelList {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background: #333;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-            overflow-y: auto;
-            max-height: 500px;
-            margin-top: 30px;
-        }
+      display: flex; /* Use flexbox for horizontal layout */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center items horizontally */
+      gap: 15px; /* Spacing between items */
+      padding: 20px;
+      max-width: 900px; /* Keep max-width */
+      margin: auto;
+      background: #333;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+      max-height: 500px; /* Keep vertical scroll if many channels */
+      margin-top: 30px;
+    }
 
-        #channelList li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            cursor: pointer;
-            border-radius: 12px;
-            transition: 0.3s;
-            background: #444;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            position: relative;
-            text-align: center;
-            display: flex;
-        }
+    #channelList li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* Adjusted padding and width for a more compact, card-like look */
+      padding: 10px; /* Reduced padding */
+      width: 130px; /* Fixed width for consistent sizing */
+      min-height: 120px; /* Ensure consistent height */
+      cursor: pointer;
+      border-radius: 12px;
+      transition: 0.3s;
+      background: #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      position: relative;
+      text-align: center;
+      flex-shrink: 0; /* Prevent items from shrinking below their width */
+    }
 
-        #channelList li.hidden {
-            display: none;
-        }
+    #channelList li.hidden {
+      display: none;
+    }
 
     #channelList img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
+      width: 60px; /* Kept image size */
+      height: 60px; /* Kept image size */
+      margin-bottom: 5px; /* Reduced margin below image */
       border-radius: 10px;
+    }
+    
+    #channelList li span {
+        font-size: 14px; /* Adjust font size for channel name if needed */
+        word-break: break-word; /* Ensure long names wrap */
+        line-height: 1.2;
     }
 
     /* Neon Glow Styles */
@@ -346,8 +355,14 @@
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
-      #channelList li { padding: 15px; }
-      #channelList img { width: 60px; height: 60px; }
+      /* Adjusted for smaller screens */
+      #channelList {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Allow smaller cards */
+        gap: 10px;
+        padding: 15px;
+      }
+      #channelList li { padding: 8px; width: 110px; min-height: 100px; }
+      #channelList img { width: 50px; height: 50px; }
     }
 
     @media (max-width: 480px) {
@@ -375,8 +390,15 @@
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
-      #channelList li { padding: 12px; }
-      #channelList img { width: 50px; height: 50px; }
+      /* Adjusted for very small screens */
+      #channelList {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller cards */
+        gap: 8px;
+        padding: 10px;
+      }
+      #channelList li { padding: 6px; width: 90px; min-height: 90px; font-size: 13px;}
+      #channelList img { width: 45px; height: 45px; }
+      #channelList li span { font-size: 12px; }
     }
   </style>
 </head>
