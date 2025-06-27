@@ -36,7 +36,7 @@
       padding: 10px;
       cursor: pointer;
       z-index: 1001;
-      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8-px 15px rgba(50, 50, 50, 0.3);
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -93,24 +93,35 @@
       padding: 0;
       margin-bottom: 20px;
     }
+    /* 3D Styling for Menu List Items */
     #sideMenu li {
-      padding: 8px 0;
+      padding: 10px 15px; /* Increased padding for better touch */
+      margin-bottom: 8px; /* Space between items */
       cursor: pointer;
       color: #ccc;
-      transition: color 0.2s ease;
       font-size: 15px;
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(50, 50, 50, 0.2);
+      transition: all 0.2s ease;
+      display: flex; /* For alignment of text */
+      align-items: center;
+      justify-content: flex-start; /* Align text to left */
     }
     #sideMenu li:hover {
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Inverted gradient for pressed effect */
+      box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
       color: #fff;
       text-shadow: 0 0 3px #0ff;
+      transform: translateY(1px); /* Slight press effect */
     }
     #sideMenu li.active {
         color: #0ff;
         font-weight: bold;
         text-shadow: 0 0 5px #0ff;
+        background: linear-gradient(145deg, #00bfff, #0ff); /* Highlight active category */
+        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
     }
-
-    /* Removed #sideMenu input and button styling as they are no longer needed */
 
     /* 3D Title Styling */
     #typingTitle {
@@ -423,7 +434,7 @@
     const m3uUrl = urlParams.get('link');
     let allChannels = [];
     let displayedChannelElements = [];
-    let categories = new Set(); // To store unique categories
+    let categories = new Set();
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -431,7 +442,6 @@
     const menuOverlay = document.getElementById('menuOverlay');
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryList = document.getElementById('categoryList');
-    // Removed references to savedPlaylistsList, newPlaylistInput, savePlaylistBtn
     const fullScreenOption = document.getElementById('fullScreenOption');
     const unmuteOption = document.getElementById('unmuteOption');
 
@@ -455,8 +465,8 @@
       // Remove if already exists to bring to front
       history = history.filter(item => item.url !== channel.url);
       history.unshift(channel); // Add to the beginning
-      // Limit history to, say, 10 items
-      history = history.slice(0, 10);
+      // Limit history to only 5 items
+      history = history.slice(0, 5);
       localStorage.setItem('recentHistory', JSON.stringify(history));
       renderRecentHistory();
     }
@@ -478,9 +488,6 @@
         recentHistoryList.appendChild(li);
       });
     }
-
-    // Removed getSavedPlaylists, savePlaylist, renderSavedPlaylists, deletePlaylist functions
-    // Removed event listener for savePlaylistBtn
 
     // --- Channel Fetching and Parsing ---
     async function fetchM3U(url) {
@@ -708,14 +715,12 @@
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
-        // Removed renderSavedPlaylists()
         updateClock();
         setInterval(updateClock, 1000);
 
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            // Since saving playlist is removed, we just alert if no link is provided
             alert("⚠️ No live TV link found! Please provide a 'link' parameter in the URL.");
         }
     });
