@@ -1,0 +1,6 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://www.themoviedb.org/tv/67503-hitrecord-on-tv-with-joseph-gordon-levitt",Star Sports Live
+https://live20.bozztv.com/akamaissh101/ssh101/starsports/chunks.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.themoviedb.org/tv/67503-hitrecord-on-tv-with-joseph-gordon-levitt",NFL Arcadia Stream
+https://nflarcadia.xyz/bRtT37sn3w/Sx5q6YTgCs/2.m3u8
