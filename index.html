@@ -9,27 +9,28 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; }
 
-    /* Top-Left Permanent Logo */
-    #topLeftLogo {
+    /* Top-Right Permanent Logo (Moved from left) */
+    #topLeftLogo { /* Renamed ID to topRightLogo in HTML, but keeping this for now */
       position: absolute;
       top: 15px;
-      left: 15px;
+      right: 15px; /* Moved to right */
       height: 50px;
       width: auto;
       z-index: 1000;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      /* Changed neon color to green */
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green neon */
       transition: transform 0.3s ease-in-out;
     }
     #topLeftLogo:hover {
         transform: scale(1.05);
     }
 
-    /* Right-Corner Menu Button (Hamburger) */
+    /* Left-Corner Menu Button (Hamburger) (Moved from right) */
     #menuButton {
       position: absolute;
       top: 20px;
-      right: 20px;
+      left: 20px; /* Moved to left */
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       border: none;
       border-radius: 12px;
@@ -52,16 +53,16 @@
     #menuButton .line {
       width: 70%;
       height: 3px;
-      background-color: #0ff;
-      border-radius: 2px;
-      box-shadow: 0 0 5px #0ff;
+      /* Changed neon color to green */
+      background-color: #0f0; /* Green */
+      box-shadow: 0 0 5px #0f0; /* Green */
       transition: all 0.3s ease;
     }
     #menuButton.open .line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     #menuButton.open .line:nth-child(2) { opacity: 0; }
     #menuButton.open .line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-    /* Side Menu Container */
+    /* Side Menu Container (Stays on right, opens from right) */
     #sideMenu {
       position: fixed;
       top: 0;
@@ -81,11 +82,12 @@
       right: 0;
     }
     #sideMenu h3 {
-      color: #0ff;
+      /* Changed neon color to green */
+      color: #0f0; /* Green */
       margin-top: 20px;
       margin-bottom: 10px;
-      text-shadow: 0 0 5px #0ff;
-      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+      text-shadow: 0 0 5px #0f0; /* Green */
+      border-bottom: 1px solid rgba(0, 255, 0, 0.3); /* Green */
       padding-bottom: 5px;
     }
     #sideMenu ul {
@@ -112,13 +114,15 @@
       background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
       box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
       color: #fff;
-      text-shadow: 0 0 3px #0ff;
+      /* Changed neon color to green */
+      text-shadow: 0 0 3px #0f0; /* Green */
       transform: translateY(1px);
     }
     #sideMenu li.active {
-        color: #0ff;
+        /* Changed neon color to green */
+        color: #0f0; /* Green */
         font-weight: bold;
-        text-shadow: 0 0 5px #0ff;
+        text-shadow: 0 0 5px #0f0; /* Green */
         background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
@@ -127,7 +131,8 @@
     #typingTitle {
       font-size: 28px;
       color: #fff;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff,
+      /* Changed neon color to green */
+      text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0, /* Green neon */
                    3px 3px 7px rgba(0, 0, 0, 0.8),
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
@@ -220,7 +225,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* Adjusted padding and width for a more compact, card-like look */
       padding: 10px; /* Reduced padding */
       width: 130px; /* Fixed width for consistent sizing */
       min-height: 120px; /* Ensure consistent height */
@@ -228,6 +232,7 @@
       border-radius: 12px;
       transition: 0.3s;
       background: #444;
+      /* Existing shadow for the neumorphic effect */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       position: relative;
       text-align: center;
@@ -239,27 +244,27 @@
     }
 
     #channelList img {
-      width: 60px; /* Kept image size */
-      height: 60px; /* Kept image size */
-      margin-bottom: 5px; /* Reduced margin below image */
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
       border-radius: 10px;
     }
     
     #channelList li span {
-        font-size: 14px; /* Adjust font size for channel name if needed */
-        word-break: break-word; /* Ensure long names wrap */
+        font-size: 14px;
+        word-break: break-word;
         line-height: 1.2;
     }
 
-    /* Neon Glow Styles */
-    .channel-box.online {
-      border: 2px solid #39ff14;
-      box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    /* ADDED: Neon Glow Styles for channel box borders */
+    #channelList li.online {
+      border: 2px solid #39ff14; /* Green border */
+      box-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14; /* Green neon glow */
     }
 
-    .channel-box.offline {
-      border: 2px solid #ff0033;
-      box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
+    #channelList li.offline {
+      border: 2px solid #ff0033; /* Red border */
+      box-shadow: 0 0 5px #ff0033, 0 0 15px #ff0033; /* Red neon glow */
     }
 
     #channelList li:hover {
@@ -268,6 +273,7 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     }
 
+    /* Existing dot for online/offline status - remains unchanged */
     #channelList li:before {
       content: '';
       position: absolute;
@@ -338,16 +344,100 @@
         display: none;
     }
 
+    /* ADDED: Modal Styles for Add Playlist/Login/Signup */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 2000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+        margin: auto;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+        width: 80%;
+        max-width: 400px;
+        text-align: left;
+        color: #fff;
+        position: relative;
+    }
+
+    .close-button {
+        color: #aaa;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-content label {
+        display: block;
+        margin-bottom: 8px;
+        color: #0f0; /* Green neon for labels */
+        text-shadow: 0 0 3px #0f0;
+    }
+
+    .modal-content input[type="text"],
+    .modal-content input[type="email"],
+    .modal-content input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 8px;
+        background: #1a1a1a;
+        color: #fff;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(50, 50, 50, 0.2);
+        outline: none;
+    }
+
+    .modal-content button {
+        background: linear-gradient(145deg, #00bfff, #0ff); /* Blue/Cyan for action buttons */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5), -3px -3px 7px rgba(50, 50, 50, 0.2);
+        transition: all 0.2s ease;
+    }
+
+    .modal-content button:hover {
+        background: linear-gradient(145deg, #0ff, #00bfff);
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(50, 50, 50, 0.2);
+        transform: translateY(1px);
+    }
+
 
     @media (max-width: 768px) {
       #topLeftLogo {
         height: 40px;
         top: 10px;
-        left: 10px;
+        right: 10px; /* Adjusted for right */
       }
       #menuButton {
         top: 15px;
-        right: 15px;
+        left: 15px; /* Adjusted for left */
         width: 40px;
         height: 40px;
       }
@@ -355,9 +445,8 @@
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
-      /* Adjusted for smaller screens */
       #channelList {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Allow smaller cards */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 10px;
         padding: 15px;
       }
@@ -369,11 +458,11 @@
       #topLeftLogo {
         height: 35px;
         top: 8px;
-        left: 8px;
+        right: 8px; /* Adjusted for right */
       }
       #menuButton {
         top: 10px;
-        right: 10px;
+        left: 10px; /* Adjusted for left */
         width: 35px;
         height: 35px;
       }
@@ -390,9 +479,8 @@
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
-      /* Adjusted for very small screens */
       #channelList {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller cards */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 8px;
         padding: 10px;
       }
@@ -404,7 +492,7 @@
 </head>
 <body>
 
-<img id="topLeftLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
+<img id="topRightLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
 
 <button id="menuButton">
   <div class="line"></div>
@@ -443,15 +531,70 @@
     <ul id="categoryList">
       <li data-category="All" class="active">All Channels</li>
       </ul>
+
+    <h3>My Playlists</h3>
+    <ul id="myPlaylists">
+      </ul>
     
     <h3>Player Options</h3>
     <ul>
       <li id="fullScreenOption">Toggle Full Screen</li>
       <li id="unmuteOption">Unmute Player</li>
     </ul>
+
+    <h3>Utilities</h3>
+    <ul>
+      <li id="settingsOption">Settings</li>
+      <li id="addPlaylistOption">Add Playlist</li>
+      <li id="loginOption">Login</li>
+      <li id="signupOption">Sign Up</li>
+    </ul>
   </div>
 
   <div id="menuOverlay"></div>
+
+  <div id="addPlaylistModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('addPlaylistModal')">&times;</span>
+      <h2>Add New Playlist</h2>
+      <label for="playlistName">Playlist Name:</label>
+      <input type="text" id="playlistName" placeholder="e.g., My Favorite Channels">
+      <label for="playlistUrl">M3U Link (Direct Link):</label>
+      <input type="text" id="playlistUrl" placeholder="e.g., is.gd/yourplaylist.m3u">
+      <button onclick="saveUserPlaylist()">Save Playlist</button>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <label for="loginEmail">Email / Phone:</label>
+      <input type="text" id="loginEmail" placeholder="Your email or phone number">
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" placeholder="Your password">
+      <button onclick="handleLogin()">Login</button>
+      <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
+        *Note: This is a client-side placeholder. Real login requires a backend.
+      </p>
+    </div>
+  </div>
+
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('signupModal')">&times;</span>
+      <h2>Sign Up</h2>
+      <label for="signupEmail">Email / Phone:</label>
+      <input type="text" id="signupEmail" placeholder="Your email or phone number">
+      <label for="signupPassword">Password:</label>
+      <input type="password" id="signupPassword" placeholder="Choose a password">
+      <button onclick="handleSignup()">Sign Up</button>
+      <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
+        *Note: This is a client-side placeholder. Real signup requires a backend.
+        User info cannot be sent to an email directly from here.
+      </p>
+    </div>
+  </div>
   
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -459,6 +602,136 @@
     let allChannels = [];
     let displayedChannelElements = [];
     let categories = new Set();
+
+    // Default channels to load if no 'link' parameter is provided
+    const defaultM3UContent = `#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Movies
+https://cloudfrontnet.vercel.app/tplay/playout/209612/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Movies
+https://cloudfrontnet.vercel.app/tplay/playout/209627/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Dubbed Movies
+https://cloudfrontnet.vercel.app/tplay/playout/209593/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Waz
+https://cloudfrontnet.vercel.app/tplay/playout/209617/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bantul The Great
+https://cloudfrontnet.vercel.app/tplay/playout/209869/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Gopal Bhar
+https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Motu Patlu
+https://cloudfrontnet.vercel.app/tplay/playout/209622/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Shinchan
+https://cloudfrontnet.vercel.app/tplay/playout/209901/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",4/7 Doraemon
+https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Songs
+https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Songs
+https://cloudfrontnet.vercel.app/tplay/playout/209587/master.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/byte-capsule/TSports-m3u8-Grabber/refs/heads/main/images/TSports-logo.jpeg",T-Sports
+https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
+#EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Bangla
+https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
+#EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Urdu
+https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
+#EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace English
+https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png",HUM TV
+https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1721/output/1721-audio_113512_eng=113200-video=1692000.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png" group-title="Indian",Star Jalsha
+https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
+#MORE
+#EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://aloula.faulio.com/storage/mediagallery/33/92/fullhd_879e557011826f507a045b4e0b4c3b57ba93edae.png",AL SUNNAH SAUDI Backup
+https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
+#from playlist 4&5
+#EXTINF:-1 group-title="Bangladeshi 🇧🇩" tvg-logo="https://i.postimg.cc/g27Qp4RD/Background-Eraser-20240628-105829130.png",NTV EUROPE
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/ntvuk00332211.stream/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 group-title="Bangladeshi 🇧🇩" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Boishaki%20TV.png",Boishakhi Tv
+https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
+#EXTINF:-1 group-title="Bangladeshi 🇧🇩" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Logo_of_Deepto_TV.svg/1200px-Logo_of_Deepto_TV.svg.png",Deepto Tv
+https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8
+#EXTINF:-1 group-title="Bangladeshi News 🇧🇩" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Ekattor_TV_logo.svg/800px-Ekattor_TV_logo.svg.png",Ekattor Tv
+https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1705/output/index.m3u8
+#movies
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/zeH5oAM1A3zgXbvQ3L9GiDs3ldQ.jpg" group-title="Movies",Robinhood
+https://pixeldrain.dev/api/file/3udaKu5Q?download
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/2kLF0pHfWtafdYRhoJO0tnmK1Pp.jpg" group-title="Movies",Kaabil
+https://pixeldrain.dev/api/file/9aBwNJ8D?download
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/7sqFr9mgd12waluFfajmzLiukE.jpg" group-title="Movies",3 idiots
+https://pixeldrain.dev/api/file/2hFnMc1e?download
+#more2
+#EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://aloula.faulio.com/storage/mediagallery/d3/41/small_31890d483ad4fcf4b142406c9cfa1cb16ca0ddb6.png", AL QURAN 
+https://ap02.iqplay.tv:8082/iqb8002/mec31mhtvtv/playlist.m3u8
+#EXTINF:-1 group-title="Sports ⚽🏏🏆" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/RTA_Afghanistan_Logo_%282021%E2%80%93%29_blue.svg/1200px-RTA_Afghanistan_Logo_%282021%E2%80%93%29_blue.svg.png",RTA Sports
+https://rtatv.akamaized.net/Content/HLS/Live/channel(RTA3)/variant.m3u8
+#EXTINF:-1 group-title="Sports ⚽🏏🏆" tvg-logo="https://seeklogo.com/images/T/tennis-channel-logo-912C418E99-seeklogo.com.png",Random
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index_3.m3u8
+#EXTINF:-1 group-title="Kids🍭🎯🎉" tvg-logo="https://kidscreation.tv/wp-content/uploads/2022/11/KidsCreation-Logo-1.png",Kids Creation
+https://flc2.technohaat.com/kidscreation_test/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co.com/Q3F9JyKH/T-Sports.jpg",T Sports HD
+https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
+#EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co.com/Q3F9JyKH/T-Sports.jpg",T Sports HD
+https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/bVr21IBRc8HW1zRcKKGensPldFz.jpg" group-title="Swap",swap
+https://pixeldrain.dev/api/file/hyaYKpcK?download
+#EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.postimg.cc/4NVxpW6t/Maasranga.jpg",Me TV
+https://iptvbd.live/metv1080/1080.m3u8
+#EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.postimg.cc/FzJdfnyk/Millenium-TV.jpg",Millenium TV
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/millenniumtv-odr-up2.stream/playlist.m3u8
+#EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.ibb.co.com/spw1Vz7q/Mohona-TV.jpg",Mohona TV 
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/mohonatv.stream/playlist.m3u8
+#EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.postimg.cc/Qdr7mnkW/RTV.jpg",RTV
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/rtv-sg.stream/playlist.m3u8
+#EXTINF:-1 group-title="Indian Bangla" tvg-logo="https://i.postimg.cc/qvPXDQ68/Enter10-Bangla.jpg",Enter 10 Bangla
+https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/7a/Borbaad_2025_film.jpg" group-title="Borbaad",Borbaad
+https://pixeldrain.dev/api/file/sFdR8xr3?download
+#From playlist 2&3 logo
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKyMNNb_SRC2dnm7IW84llAJ9aO5Zb7V4jdjHaweOo58tzrc9pSsRv85-TZD1w4L57nc4&usqp=CAU" group-title="MUSIC",Music India
+https://cdn-2.pishow.tv/live/226/226_1.m3u8
+#EXTINF:-0 tvg-logo="https://yt3.ggpht.com/ytc/AMLnZu_Gxy8ywjMY6_YPX-1uYtUGA56FOfDoBsH62-ekNA=s900-c-k-c0x00ffffff-no-rj",Al Quran Al Kareem
+https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8
+#EXTINF:-0 tvg-logo="https://media.licdn.com/dms/image/D5622AQEP42TrSTZe9A/feedshare-shrink_800/0/1694197197757?e=2147483647&v=beta&t=po0fbWVIZAVBRE2i3xIULMu2FVxDtMVP8CVNXQdgU_Y",Amar Bangla Digital
+https://live-stream.utkalbongo.com/utkalbongo/stream2/hls/amarbanglatwolivestream.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/CPmLfGs/Amar-Bangla.png" group-title="Bangla Movies",Amar Bangla  
+https://live-stream.utkalbongo.com/utkalbongo/stream10/hls/amarbangla.m3u8
+#EXTINF:-1 group-title="KOLKATA" tvg-logo="https://i.postimg.cc/Z51VChst/IMG-20240308-055223.jpg",Bangla+
+https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisiK50nT9KXOAVZcRYy4aTrv4cVP9btrY4_s2KvXzXaSzGeUEmvgE3Gj4&s=10" group-title="Hindi Movies",Joo Music
+https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/BTV%20National.png"group-title="Bangla",BTV World
+https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1709/output/1709.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Colors%20Bangla.png"group-title="Kolkata Bangla",Colors Bangla HD
+https://catchup.yuppcdn.net/amazonv2/36/preview/colorsbanglahd/master/chunklist.m3u8
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSODXopSh2u8VcsSla7jVngvcZ0V5XA-sZsXA&usqp=CAU"group-title="Kolkata Bangla Movies",Sananda TV
+https://pixeldrain.dev/api/file/pj4wctgm?download
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/KjjqnRH/Picsart-23-06-30-21-35-20-283.png" group-title="Hindi Movies",Sheemaroo Bollywood
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Eurosports.png"group-title="Sports",Eurosports
+https://raw.githubusercontent.com/subirkumarpaul/My-iptv/main/Eurosport.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Animal%20Planet.png"group-title="Information",Animal Planet
+https://raw.githubusercontent.com/subirkumarpaul/My-iptv/main/Animal-Planet.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Travel%20XP.png" group-title="Information",Travel XP English EU
+https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Travel%20XP.png" group-title="Information",Travel XP English NZ
+https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Discovery%20Kids.png"group-title="KIDS",Discovery Kids
+https://raw.githubusercontent.com/kaziemamul/html1/main/KaziTV/Discovery_Kids.m3u8
+https://dplus.gammacdn.workers.dev/videos/113.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/POGO.jpeg"group-title="KIDS",Pogo
+https://amg01448-samsungin-pogo-samsungin-dzccl.amagi.tv/playlist/amg01448-samsungin-pogo-samsungin/playlist.m3u8
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/2G99FfWYCAdsmAIZO8zGFjcDidY.jpg" group-title="K-Drama",Karma
+https://pixeldrain.dev/u/1p4fC5Se
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/aW7mGixv2dZdQtbve4deYyfewHH.jpg" group-title="K-Drama",Weak Hero S2
+https://pixeldrain.dev/api/file/deNz3Fqb?download
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/q29q6AByug53pnylCytwLA7m6AY.jpg" group-title="K-Drama",When Life Gives You Tangerines
+https://pixeldrain.dev/api/file/7hPbBdRT?download
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/3pMVihtAeHz6jgN49MKAvbe31wX.jpg" group-title="K-Drama",Squid Game S2
+https://pixeldrain.dev/api/file/11Y9YBR7?download
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/3pMVihtAeHz6jgN49MKAvbe31wX.jpg" group-title="K-Drama",Squid Game
+https://pixeldrain.dev/api/file/1p4fC5Se
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/QhrnJeKM2jOQ77myYEeC5locGQ.jpg" group-title="WWE",Money in the Bank 2025
+https://pixeldrain.dev/api/file/e6q1r56R?download`;
+
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -468,6 +741,18 @@
     const categoryList = document.getElementById('categoryList');
     const fullScreenOption = document.getElementById('fullScreenOption');
     const unmuteOption = document.getElementById('unmuteOption');
+
+    // ADDED: New menu options
+    const settingsOption = document.getElementById('settingsOption');
+    const addPlaylistOption = document.getElementById('addPlaylistOption');
+    const myPlaylistsList = document.getElementById('myPlaylists'); // For user-added playlists
+    const loginOption = document.getElementById('loginOption');
+    const signupOption = document.getElementById('signupOption');
+
+    // ADDED: Modal Elements
+    const addPlaylistModal = document.getElementById('addPlaylistModal');
+    const loginModal = document.getElementById('loginModal');
+    const signupModal = document.getElementById('signupModal');
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -479,6 +764,34 @@
     menuButton.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
 
+    // --- Modal Functions ---
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex'; // Use flex to center
+        toggleMenu(); // Close side menu when opening modal
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // --- Event Listeners for new menu options ---
+    settingsOption.addEventListener('click', () => {
+        alert('Settings options would go here! (e.g., Theme, Player Quality)');
+        toggleMenu();
+    });
+
+    addPlaylistOption.addEventListener('click', () => {
+        openModal('addPlaylistModal');
+    });
+
+    loginOption.addEventListener('click', () => {
+        openModal('loginModal');
+    });
+
+    signupOption.addEventListener('click', () => {
+        openModal('signupModal');
+    });
+
     // --- Local Storage Management ---
     function getRecentHistory() {
       return JSON.parse(localStorage.getItem('recentHistory')) || [];
@@ -486,13 +799,35 @@
 
     function saveRecentHistory(channel) {
       let history = getRecentHistory();
-      // Remove if already exists to bring to front
       history = history.filter(item => item.url !== channel.url);
-      history.unshift(channel); // Add to the beginning
-      // Limit history to only 5 items
+      history.unshift(channel);
       history = history.slice(0, 5);
       localStorage.setItem('recentHistory', JSON.stringify(history));
       renderRecentHistory();
+    }
+
+    function getMyPlaylists() {
+        return JSON.parse(localStorage.getItem('myPlaylists')) || [];
+    }
+
+    function saveUserPlaylist() {
+        const nameInput = document.getElementById('playlistName');
+        const urlInput = document.getElementById('playlistUrl');
+        const playlistName = nameInput.value.trim();
+        const playlistUrl = urlInput.value.trim();
+
+        if (playlistName && playlistUrl) {
+            let playlists = getMyPlaylists();
+            playlists.push({ name: playlistName, url: playlistUrl });
+            localStorage.setItem('myPlaylists', JSON.stringify(playlists));
+            renderMyPlaylists();
+            alert('Playlist saved locally!');
+            closeModal('addPlaylistModal');
+            nameInput.value = ''; // Clear inputs
+            urlInput.value = '';
+        } else {
+            alert('Please enter both playlist name and URL.');
+        }
     }
 
     function renderRecentHistory() {
@@ -513,16 +848,62 @@
       });
     }
 
+    // ADDED: Render My Playlists
+    function renderMyPlaylists() {
+        const playlists = getMyPlaylists();
+        myPlaylistsList.innerHTML = '';
+        if (playlists.length === 0) {
+            myPlaylistsList.innerHTML = '<li>No saved playlists.</li>';
+            return;
+        }
+        playlists.forEach(playlist => {
+            const li = document.createElement('li');
+            li.textContent = playlist.name;
+            li.onclick = () => {
+                closeModal('addPlaylistModal'); // Close any open modal
+                toggleMenu(); // Close side menu
+                fetchM3U(playlist.url); // Load channels from this playlist
+            };
+            myPlaylistsList.appendChild(li);
+        });
+    }
+
+    // --- Authentication Placeholders (Client-Side Only) ---
+    function handleLogin() {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        alert(`Login Attempt (Client-Side): Email/Phone: ${email}, Password: ${password}\n\n*NOTE: This is a placeholder. Real login requires a backend to verify credentials securely.`);
+        closeModal('loginModal');
+        // In a real app, you'd send this to a server for authentication.
+    }
+
+    function handleSignup() {
+        const email = document.getElementById('signupEmail').value;
+        const password = document.getElementById('signupPassword').value;
+        alert(`Sign Up Attempt (Client-Side): Email/Phone: ${email}, Password: ${password}\n\n*NOTE: This is a placeholder. Real signup requires a backend to save user data securely. User information cannot be sent to mynewp570@gmail.com directly from client-side JavaScript.`);
+        closeModal('signupModal');
+        // In a real app, you'd send this to a server for user registration.
+    }
+
+
     // --- Channel Fetching and Parsing ---
-    async function fetchM3U(url) {
-      try {
-        const response = await fetch(url);
-        const data = await response.text();
-        parseM3U(data);
-      } catch (error) {
-        alert('⚠️ Error loading M3U file!');
-        console.error('Error fetching M3U:', error);
+    async function fetchM3U(urlOrContent) {
+      let data;
+      if (urlOrContent.startsWith('#EXTM3U')) {
+        // It's direct M3U content
+        data = urlOrContent;
+      } else {
+        // It's a URL, fetch it
+        try {
+          const response = await fetch(urlOrContent);
+          data = await response.text();
+        } catch (error) {
+          alert('⚠️ Error loading M3U file!');
+          console.error('Error fetching M3U:', error);
+          return; // Stop execution if fetch fails
+        }
       }
+      parseM3U(data);
     }
 
     function parseM3U(data) {
@@ -597,7 +978,11 @@
           li.dataset.channelName = channel.name.toLowerCase();
 
           const status = await checkChannelStatus(channel.url);
-          if (status) li.classList.add("online");
+          if (status) {
+            li.classList.add("online");
+          } else {
+            li.classList.add("offline"); // Ensure offline channels also get the class
+          }
 
           return li;
         });
@@ -739,13 +1124,15 @@
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
+        renderMyPlaylists(); // Render user's custom playlists
         updateClock();
         setInterval(updateClock, 1000);
 
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            alert("⚠️ No live TV link found! Please provide a 'link' parameter in the URL.");
+            // Load default channels if no link parameter is provided
+            fetchM3U(defaultM3UContent);
         }
     });
   </script>
