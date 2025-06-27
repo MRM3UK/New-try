@@ -10,7 +10,7 @@
     body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; }
 
     /* Top-Right Permanent Logo (Moved from left) */
-    #topLeftLogo { /* Renamed ID to topRightLogo in HTML, but keeping this for now */
+    #topRightLogo { /* Corrected ID in CSS to match HTML */
       position: absolute;
       top: 15px;
       right: 15px; /* Moved to right */
@@ -22,7 +22,7 @@
       box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Green neon */
       transition: transform 0.3s ease-in-out;
     }
-    #topLeftLogo:hover {
+    #topRightLogo:hover {
         transform: scale(1.05);
     }
 
@@ -430,7 +430,7 @@
 
 
     @media (max-width: 768px) {
-      #topLeftLogo {
+      #topRightLogo {
         height: 40px;
         top: 10px;
         right: 10px; /* Adjusted for right */
@@ -455,7 +455,7 @@
     }
 
     @media (max-width: 480px) {
-      #topLeftLogo {
+      #topRightLogo {
         height: 35px;
         top: 8px;
         right: 8px; /* Adjusted for right */
@@ -532,7 +532,7 @@
       <li data-category="All" class="active">All Channels</li>
       </ul>
 
-    <h3>My Playlists</h3>
+    <h3>Your Choices</h3>
     <ul id="myPlaylists">
       </ul>
     
@@ -555,7 +555,7 @@
 
   <div id="addPlaylistModal" class="modal">
     <div class="modal-content">
-      <span class="close-button" onclick="closeModal('addPlaylistModal')">&times;</span>
+      <span class="close-button" onclick="closeModal('addPlaylistModal')">×</span>
       <h2>Add New Playlist</h2>
       <label for="playlistName">Playlist Name:</label>
       <input type="text" id="playlistName" placeholder="e.g., My Favorite Channels">
@@ -565,33 +565,48 @@
     </div>
   </div>
 
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal('settingsModal')">×</span>
+        <h2>Settings</h2>
+        <ul>
+            <li><button onclick="alert('Theme options would go here!');">Change Theme</button></li>
+            <li><button onclick="alert('Player quality settings would go here!');">Player Quality</button></li>
+            <li><button onclick="alert('Language settings would go here!');">Language</button></li>
+            </ul>
+        <p style="margin-top: 20px; font-size: 12px; color: #aaa;">
+            *Note: These settings are placeholders. Full functionality may require a backend or more complex client-side logic.
+        </p>
+    </div>
+  </div>
+
+
   <div id="loginModal" class="modal">
     <div class="modal-content">
-      <span class="close-button" onclick="closeModal('loginModal')">&times;</span>
-      <h2>Login</h2>
+      <span class="close-button" onclick="closeModal('loginModal')">×</span>
+      <h2>Login to Your Account</h2>
       <label for="loginEmail">Email / Phone:</label>
-      <input type="text" id="loginEmail" placeholder="Your email or phone number">
+      <input type="text" id="loginEmail" placeholder="Enter your email or phone number">
       <label for="loginPassword">Password:</label>
-      <input type="password" id="loginPassword" placeholder="Your password">
+      <input type="password" id="loginPassword" placeholder="Enter your password">
       <button onclick="handleLogin()">Login</button>
       <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
-        *Note: This is a client-side placeholder. Real login requires a backend.
+        *Note: This is a client-side demo. Real login requires a backend to verify credentials securely and manage user data.
       </p>
     </div>
   </div>
 
   <div id="signupModal" class="modal">
     <div class="modal-content">
-      <span class="close-button" onclick="closeModal('signupModal')">&times;</span>
-      <h2>Sign Up</h2>
+      <span class="close-button" onclick="closeModal('signupModal')">×</span>
+      <h2>Create New Account</h2>
       <label for="signupEmail">Email / Phone:</label>
-      <input type="text" id="signupEmail" placeholder="Your email or phone number">
+      <input type="text" id="signupEmail" placeholder="Enter your email or phone number">
       <label for="signupPassword">Password:</label>
-      <input type="password" id="signupPassword" placeholder="Choose a password">
+      <input type="password" id="signupPassword" placeholder="Choose a strong password">
       <button onclick="handleSignup()">Sign Up</button>
       <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
-        *Note: This is a client-side placeholder. Real signup requires a backend.
-        User info cannot be sent to an email directly from here.
+        *Note: This is a client-side demo. Real signup requires a backend to store user data securely. User information cannot be sent to an email directly from here due to security restrictions.
       </p>
     </div>
   </div>
@@ -620,7 +635,7 @@ https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8
 https://cloudfrontnet.vercel.app/tplay/playout/209622/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Shinchan
 https://cloudfrontnet.vercel.app/tplay/playout/209901/master.m3u8
-#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",4/7 Doraemon
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_0269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",4/7 Doraemon
 https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Songs
 https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
@@ -679,7 +694,7 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF9
 #EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.ibb.co.com/spw1Vz7q/Mohona-TV.jpg",Mohona TV 
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/mohonatv.stream/playlist.m3u8
 #EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.postimg.cc/Qdr7mnkW/RTV.jpg",RTV
-https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/rtv-sg.stream/playlist.m3u8
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaC5nuaiPhnPTI2/rtv-sg.stream/playlist.m3u8
 #EXTINF:-1 group-title="Indian Bangla" tvg-logo="https://i.postimg.cc/qvPXDQ68/Enter10-Bangla.jpg",Enter 10 Bangla
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/7a/Borbaad_2025_film.jpg" group-title="Borbaad",Borbaad
@@ -751,8 +766,10 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
 
     // ADDED: Modal Elements
     const addPlaylistModal = document.getElementById('addPlaylistModal');
+    const settingsModal = document.getElementById('settingsModal'); // NEW settings modal
     const loginModal = document.getElementById('loginModal');
     const signupModal = document.getElementById('signupModal');
+
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -776,8 +793,7 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
 
     // --- Event Listeners for new menu options ---
     settingsOption.addEventListener('click', () => {
-        alert('Settings options would go here! (e.g., Theme, Player Quality)');
-        toggleMenu();
+        openModal('settingsModal'); // Open settings modal
     });
 
     addPlaylistOption.addEventListener('click', () => {
@@ -821,7 +837,7 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
             playlists.push({ name: playlistName, url: playlistUrl });
             localStorage.setItem('myPlaylists', JSON.stringify(playlists));
             renderMyPlaylists();
-            alert('Playlist saved locally!');
+            alert('Playlist saved locally to your browser!');
             closeModal('addPlaylistModal');
             nameInput.value = ''; // Clear inputs
             urlInput.value = '';
@@ -872,17 +888,29 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
     function handleLogin() {
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
-        alert(`Login Attempt (Client-Side): Email/Phone: ${email}, Password: ${password}\n\n*NOTE: This is a placeholder. Real login requires a backend to verify credentials securely.`);
+
+        if (!email || !password) {
+            alert('Please enter both email/phone and password.');
+            return;
+        }
+        
+        alert(`LOGIN (Demo Mode):\nEmail/Phone: ${email}\nPassword: ${password}\n\nNOTE: This login is for demonstration purposes only. Your credentials are NOT saved or verified on a server. For real accounts and data persistence, a backend server is required.`);
         closeModal('loginModal');
-        // In a real app, you'd send this to a server for authentication.
+        // In a real application, this is where you'd send data to a backend for authentication.
     }
 
     function handleSignup() {
         const email = document.getElementById('signupEmail').value;
         const password = document.getElementById('signupPassword').value;
-        alert(`Sign Up Attempt (Client-Side): Email/Phone: ${email}, Password: ${password}\n\n*NOTE: This is a placeholder. Real signup requires a backend to save user data securely. User information cannot be sent to mynewp570@gmail.com directly from client-side JavaScript.`);
+
+        if (!email || !password) {
+            alert('Please enter both email/phone and a password.');
+            return;
+        }
+
+        alert(`SIGN UP (Demo Mode):\nEmail/Phone: ${email}\nPassword: ${password}\n\nNOTE: This signup is for demonstration purposes only. Your information is NOT saved, and no email notification can be sent from here. A secure backend server is required to create actual user accounts and handle data.`);
         closeModal('signupModal');
-        // In a real app, you'd send this to a server for user registration.
+        // In a real application, this is where you'd send data to a backend for user registration.
     }
 
 
@@ -1117,7 +1145,7 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
       mins = mins < 10 ? "0" + mins : mins;
       secs = secs < 10 ? "0" + secs : secs;
 
-      const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+      const timeStr = `${hrs}:${mins}:${secs} ${amppm}`;
       document.getElementById("ammBtn").innerText = timeStr;
     }
 
