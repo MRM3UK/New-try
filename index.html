@@ -250,6 +250,15 @@
       flex-shrink: 0;
       transform-style: preserve-3d; /* Preserve 3D transformations for children */
       transform: rotateX(5deg) rotateY(-5deg); /* Initial 3D tilt */
+      border: 1px solid transparent; /* Initial transparent border */
+      animation: neonBorderPulse 3s infinite alternate; /* Neon border animation */
+    }
+
+    /* Neon Border Pulse Animation */
+    @keyframes neonBorderPulse {
+      0% { border-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.2); }
+      50% { border-color: rgba(0, 255, 255, 0.7); box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5); }
+      100% { border-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 5px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.2); }
     }
 
     #channelList li.hidden {
@@ -295,6 +304,8 @@
       background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Adjust hover background */
       transform: scale(1.05) rotateX(0deg) rotateY(0deg); /* Straighten on hover */
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2); /* Inset shadow on hover */
+      animation: none; /* Stop neon pulse on hover */
+      border-color: transparent; /* Remove border on hover */
     }
 
     /* Progress Bar Styles */
