@@ -345,7 +345,7 @@
         display: none;
     }
 
-    /* ADDED: Modal Styles for Add Playlist/Login/Signup */
+    /* ADDED: Modal Styles for Add Server/Playlist */
     .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -533,10 +533,6 @@
       <li data-category="All" class="active">All Channels</li>
       </ul>
 
-    <h3>Your Choices</h3>
-    <ul id="myPlaylists">
-      </ul>
-    
     <h3>Player Options</h3>
     <ul>
       <li id="fullScreenOption">Toggle Full Screen</li>
@@ -545,71 +541,21 @@
 
     <h3>Utilities</h3>
     <ul>
-      <li id="settingsOption">Settings</li>
-      <li id="addPlaylistOption" style="display: none;">Add Playlist</li> <li id="loginOption">Login</li>
-      <li id="signupOption">Sign Up</li>
-      <li id="logoutOption" style="display: none;">Logout</li> </ul>
+      <li id="addServerOption">Add Server (M3U Link)</li>
+    </ul>
   </div>
 
   <div id="menuOverlay"></div>
 
-  <div id="addPlaylistModal" class="modal">
+  <div id="addServerModal" class="modal">
     <div class="modal-content">
-      <span class="close-button" onclick="closeModal('addPlaylistModal')">×</span>
-      <h2>Add New Playlist</h2>
-      <label for="playlistName">Playlist Name:</label>
-      <input type="text" id="playlistName" placeholder="e.g., My Favorite Channels">
-      <label for="playlistUrl">M3U Link (Direct Link):</label>
-      <input type="text" id="playlistUrl" placeholder="e.g., is.gd/yourplaylist.m3u">
-      <button onclick="saveUserPlaylist()">Save Playlist</button>
+      <span class="close-button" onclick="closeModal('addServerModal')">×</span>
+      <h2>Add New Server/Playlist</h2>
+      <label for="serverUrl">M3U Link (Direct URL):</label>
+      <input type="text" id="serverUrl" placeholder="e.g., https://example.com/yourlist.m3u" autofocus>
+      <button onclick="handleAddServer()">Load Server</button>
       <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
-        *Your playlists are saved per account and will be available after login.
-      </p>
-    </div>
-  </div>
-
-  <div id="settingsModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button" onclick="closeModal('settingsModal')">×</span>
-        <h2>Settings</h2>
-        <ul>
-            <li><button onclick="alert('Theme options would go here!');">Change Theme</button></li>
-            <li><button onclick="alert('Player quality settings would go here!');">Player Quality</button></li>
-            <li><button onclick="alert('Language settings would go here!');">Language</button></li>
-            </ul>
-        <p style="margin-top: 20px; font-size: 12px; color: #aaa;">
-            *Note: These settings are placeholders. Full functionality may require a backend or more complex client-side logic.
-        </p>
-    </div>
-  </div>
-
-
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal('loginModal')">×</span>
-      <h2>Login to Your Account</h2>
-      <label for="loginEmail">Email / Phone:</label>
-      <input type="text" id="loginEmail" placeholder="Enter your email or phone number">
-      <label for="loginPassword">Password:</label>
-      <input type="password" id="loginPassword" placeholder="Enter your password">
-      <button onclick="handleLogin()">Login</button>
-      <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
-        *This login connects to a server. Your credentials will be verified.
-      </p>
-    </div>
-  </div>
-
-  <div id="signupModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal('signupModal')">×</span>
-      <h2>Create New Account</h2>
-      <label for="signupEmail">Email / Phone:</label>
-      <input type="text" id="signupEmail" placeholder="Enter your email or phone number">
-      <label for="signupPassword">Password:</label>
-      <input type="password" id="signupPassword" placeholder="Choose a strong password">
-      <button onclick="handleSignup()">Sign Up</button>
-      <p style="margin-top: 15px; font-size: 12px; color: #aaa;">
-        *This signup creates an account on the server. Your information will be stored securely.
+        *Enter a direct M3U link to load new channels.
       </p>
     </div>
   </div>
@@ -620,11 +566,6 @@
     let allChannels = [];
     let displayedChannelElements = [];
     let categories = new Set();
-
-    // --- Backend API Configuration ---
-    // IMPORTANT: Change this if your backend is deployed to a different URL!
-    const BACKEND_API_URL = 'http://localhost:3000/api';
-    let currentUserEmail = null; // Stores the email of the currently logged-in user
 
     // Default channels to load if no 'link' parameter is provided
     const defaultM3UContent = `#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Movies
@@ -693,7 +634,7 @@ https://flc2.technohaat.com/kidscreation_test/tracks-v1a1/mono.m3u8
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
 #EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co.com/Q3F9JyKH/T-Sports.jpg",T Sports HD
 https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/bVr21IBRc8HW1zRcKCGFgensPldFz.jpg" group-title="Swap",swap
+#EXTINF:-1 tvg-logo="https://i.ibb.co/L5rK0yS/Picsart-23-06-30-21-35-20-283.png" group-title="Swap",swap
 https://pixeldrain.dev/api/file/hyaYKpcK?download
 #EXTINF:-1 group-title="Bangladesh" tvg-logo="https://i.postimg.cc/4NVxpW6t/Maasranga.jpg",Me TV
 https://iptvbd.live/metv1080/1080.m3u8
@@ -718,7 +659,7 @@ https://live-stream.utkalbongo.com/utkalbongo/stream2/hls/amarbanglatwolivestrea
 https://live-stream.utkalbongo.com/utkalbongo/stream10/hls/amarbangla.m3u8
 #EXTINF:-1 group-title="KOLKATA" tvg-logo="https://i.postimg.cc/Z51VChst/IMG-20240308-055223.jpg",Bangla+
 https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisiK50nT9KXOAVZcRYy4aTrv4cVP9btrY4_s2KvXzXaSzGeUEmvgE3Gj4&s=10" group-title="Hindi Movies",Joo Music
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisiK50nT9KXOAVZcRYy4aTrv4cVP9btrY4cVP9btrY4cVP9btrY4_s2KvXzXaSzGeUEmvgE3Gj4&s=10" group-title="Hindi Movies",Joo Music
 https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/BTV%20National.png"group-title="Bangla",BTV World
 https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1709/output/1709.m3u8
@@ -765,20 +706,11 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
     const fullScreenOption = document.getElementById('fullScreenOption');
     const unmuteOption = document.getElementById('unmuteOption');
 
-    // ADDED: New menu options
-    const settingsOption = document.getElementById('settingsOption');
-    const addPlaylistOption = document.getElementById('addPlaylistOption');
-    const myPlaylistsList = document.getElementById('myPlaylists'); // For user-added playlists
-    const loginOption = document.getElementById('loginOption');
-    const signupOption = document.getElementById('signupOption');
-    const logoutOption = document.getElementById('logoutOption');
-
+    // UPDATED: Only "Add Server" option
+    const addServerOption = document.getElementById('addServerOption');
 
     // ADDED: Modal Elements
-    const addPlaylistModal = document.getElementById('addPlaylistModal');
-    const settingsModal = document.getElementById('settingsModal'); // NEW settings modal
-    const loginModal = document.getElementById('loginModal');
-    const signupModal = document.getElementById('signupModal');
+    const addServerModal = document.getElementById('addServerModal');
 
 
     // --- Menu Toggle Functionality ---
@@ -801,24 +733,10 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
         document.getElementById(modalId).style.display = 'none';
     }
 
-    // --- Event Listeners for new menu options ---
-    settingsOption.addEventListener('click', () => {
-        openModal('settingsModal'); // Open settings modal
+    // --- Event Listener for "Add Server" ---
+    addServerOption.addEventListener('click', () => {
+        openModal('addServerModal');
     });
-
-    addPlaylistOption.addEventListener('click', () => {
-        openModal('addPlaylistModal');
-    });
-
-    loginOption.addEventListener('click', () => {
-        openModal('loginModal');
-    });
-
-    signupOption.addEventListener('click', () => {
-        openModal('signupModal');
-    });
-
-    logoutOption.addEventListener('click', handleLogout);
 
     // --- Local Storage Management ---
     function getRecentHistory() {
@@ -834,185 +752,23 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
       renderRecentHistory();
     }
 
-    // --- Authentication Functions (Now interacting with Backend) ---
-    async function handleLogin() {
-        const email = document.getElementById('loginEmail').value.trim();
-        const password = document.getElementById('loginPassword').value.trim();
+    // --- Add Server Functionality ---
+    async function handleAddServer() {
+        const urlInput = document.getElementById('serverUrl');
+        const serverUrl = urlInput.value.trim();
 
-        if (!email || !password) {
-            alert('Please enter both email/phone and password.');
+        if (!serverUrl) {
+            alert('Please enter an M3U link.');
             return;
         }
 
-        try {
-            const response = await fetch(`${BACKEND_API_URL}/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
+        closeModal('addServerModal'); // Close modal immediately
 
-            const data = await response.json();
+        // Attempt to fetch and parse the new M3U
+        await fetchM3U(serverUrl);
+        urlInput.value = ''; // Clear input
 
-            if (response.ok) {
-                alert(`Login successful! ${data.message}`);
-                currentUserEmail = email; // Store logged-in user's email
-                localStorage.setItem('loggedInUserEmail', email); // Persist login state in browser
-                closeModal('loginModal');
-                updateAuthUI(true); // Update UI based on login status
-                renderMyPlaylists(); // Load user-specific playlists from backend
-            } else {
-                alert(`Login failed: ${data.message || 'Invalid credentials.'}`);
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-            alert('An error occurred. Please check your network connection and try again. Ensure the backend server is running.');
-        }
-    }
-
-    async function handleSignup() {
-        const email = document.getElementById('signupEmail').value.trim();
-        const password = document.getElementById('signupPassword').value.trim();
-
-        if (!email || !password) {
-            alert('Please enter both email/phone and a password.');
-            return;
-        }
-
-        try {
-            const response = await fetch(`${BACKEND_API_URL}/signup`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                alert(`Sign up successful! ${data.message}`);
-                closeModal('signupModal');
-                openModal('loginModal'); // Suggest login after signup
-            } else {
-                alert(`Sign up failed: ${data.message || 'Unknown error occurred.'}`);
-            }
-        } catch (error) {
-            console.error('Error during signup:', error);
-            alert('An error occurred. Please check your network connection and try again. Ensure the backend server is running.');
-        }
-    }
-
-    function handleLogout() {
-        currentUserEmail = null;
-        localStorage.removeItem('loggedInUserEmail'); // Clear stored login state
-        alert('You have been logged out.');
-        updateAuthUI(false); // Update UI
-        renderMyPlaylists(); // Render a message for guests
-        toggleMenu(); // Close menu after logout
-    }
-
-    function updateAuthUI(isLoggedIn) {
-        if (isLoggedIn) {
-            loginOption.style.display = 'none';
-            signupOption.style.display = 'none';
-            logoutOption.style.display = 'list-item';
-            addPlaylistOption.style.display = 'list-item'; // Make add playlist visible
-            myPlaylistsList.previousElementSibling.textContent = 'Your Choices'; // Change heading
-        } else {
-            loginOption.style.display = 'list-item';
-            signupOption.style.display = 'list-item';
-            logoutOption.style.display = 'none';
-            addPlaylistOption.style.display = 'none'; // Hide add playlist for guests
-            myPlaylistsList.previousElementSibling.textContent = 'Guest Choices'; // Change heading
-        }
-    }
-
-
-    // --- User Playlist Management (Now interacting with Backend) ---
-    async function saveUserPlaylist() {
-        const nameInput = document.getElementById('playlistName');
-        const urlInput = document.getElementById('playlistUrl');
-        const playlistName = nameInput.value.trim();
-        const playlistUrl = urlInput.value.trim();
-
-        if (!currentUserEmail) {
-            alert('Please log in to save your playlists.');
-            return;
-        }
-
-        if (!playlistName || !playlistUrl) {
-            alert('Please enter both playlist name and M3U URL.');
-            return;
-        }
-
-        try {
-            const response = await fetch(`${BACKEND_API_URL}/playlists/save`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    userEmail: currentUserEmail,
-                    playlistName: playlistName,
-                    playlistUrl: playlistUrl
-                })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                alert(`Playlist saved successfully: ${data.message}`);
-                closeModal('addPlaylistModal');
-                nameInput.value = ''; // Clear inputs
-                urlInput.value = '';
-                renderMyPlaylists(); // Re-render playlists to show the new one
-            } else {
-                alert(`Failed to save playlist: ${data.message || 'Unknown error'}`);
-            }
-        } catch (error) {
-            console.error('Error saving playlist:', error);
-            alert('An error occurred while saving the playlist. Please check your network connection and backend server.');
-        }
-    }
-
-    async function renderMyPlaylists() {
-        myPlaylistsList.innerHTML = ''; // Clear existing lists
-
-        if (!currentUserEmail) {
-            myPlaylistsList.innerHTML = '<li>Log in to see your saved choices.</li>';
-            return;
-        }
-
-        try {
-            const response = await fetch(`${BACKEND_API_URL}/playlists/${currentUserEmail}`);
-            const data = await response.json();
-
-            if (response.ok) {
-                const playlists = data.playlists || [];
-                if (playlists.length === 0) {
-                    myPlaylistsList.innerHTML = '<li>No saved choices yet. Add one!</li>';
-                    return;
-                }
-                playlists.forEach(playlist => {
-                    const li = document.createElement('li');
-                    li.textContent = playlist.name;
-                    li.onclick = () => {
-                        closeModal('addPlaylistModal');
-                        toggleMenu();
-                        fetchM3U(playlist.url); // Load channels from this playlist
-                    };
-                    myPlaylistsList.appendChild(li);
-                });
-            } else {
-                myPlaylistsList.innerHTML = `<li>Error loading choices: ${data.message || 'Error'}</li>`;
-                console.error('Error fetching playlists:', data.message);
-            }
-        } catch (error) {
-            console.error('Network error fetching playlists:', error);
-            myPlaylistsList.innerHTML = '<li>Could not load choices. Network error.</li>';
-        }
+        alert('Channels from your server loaded. Please search or browse the categories.');
     }
 
 
@@ -1026,9 +782,13 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
         // It's a URL, fetch it
         try {
           const response = await fetch(urlOrContent);
+          // Check for network errors or non-200 status codes
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
           data = await response.text();
         } catch (error) {
-          alert('⚠️ Error loading M3U file!');
+          alert('⚠️ Error loading M3U file from the provided URL. Please check the link and ensure CORS is allowed if it\'s an external server.');
           console.error('Error fetching M3U:', error);
           return; // Stop execution if fetch fails
         }
@@ -1071,10 +831,15 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
     async function checkChannelStatus(url) {
       try {
         const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000));
-        const fetchPromise = fetch(url, { method: 'HEAD', mode: 'no-cors' });
+        // Use a small-scale proxy to bypass some CORS restrictions for testing if needed
+        // For production, the M3U server itself must have proper CORS headers or you need a backend proxy
+        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`; // Example proxy (use with caution, not for sensitive data)
+        
+        const fetchPromise = fetch(proxyUrl, { method: 'HEAD', mode: 'cors' }); // Changed to 'cors' mode
         await Promise.race([fetchPromise, timeout]);
         return true;
       } catch (e) {
+        console.warn(`Channel ${url} failed status check:`, e.message);
         return false;
       }
     }
@@ -1247,7 +1012,7 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
       mins = mins < 10 ? "0" + mins : mins;
       secs = secs < 10 ? "0" + secs : secs;
 
-      const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+      const timeStr = `${hrs}:${mins}:${secs} ${amppm}`;
       document.getElementById("ammBtn").innerText = timeStr;
     }
 
@@ -1256,11 +1021,6 @@ https://pixeldrain.dev/api/file/e6q1r56R?download`;
         renderRecentHistory();
         updateClock();
         setInterval(updateClock, 1000);
-
-        // Check if user was previously logged in (from localStorage)
-        currentUserEmail = localStorage.getItem('loggedInUserEmail');
-        updateAuthUI(!!currentUserEmail); // Update UI based on current user status
-        renderMyPlaylists(); // Render playlists specific to the logged-in user or guest message
 
         if (m3uUrl) {
             fetchM3U(m3uUrl);
