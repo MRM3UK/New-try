@@ -9,7 +9,22 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background: #181818; color: #fff; text-align: center; }
 
-    h1 { margin: 20px 0; font-size: 26px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); }
+    /* 3D Title Styling */
+    #typingTitle {
+      font-size: 28px;
+      color: #fff;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff,
+                   2px 2px 5px rgba(0, 0, 0, 0.7); /* Added for 3D depth */
+      letter-spacing: 2px;
+      text-align: center;
+      margin: 30px 0;
+      /* Optional: subtle transform for more 3D feel */
+      transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
+      transition: transform 0.3s ease;
+    }
+    #typingTitle:hover {
+        transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+    }
 
     .player-container { background: black; width: 100%; position: relative; }
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
@@ -74,7 +89,7 @@
 
         #channelList li {
             display: flex;
-            flex-direction: column; /* Changed to column for better alignment of image and text */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
@@ -85,6 +100,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             position: relative;
             text-align: center;
+            display: flex; /* Ensure visibility for filtering */
+        }
+
+        #channelList li.hidden { /* New class to hide elements */
+            display: none;
         }
 
     #channelList img {
@@ -171,20 +191,11 @@
       #channelList li { padding: 12px; }
       #channelList img { width: 50px; height: 50px; }
     }
-
-    #typingTitle {
-      font-size: 28px;
-      color: #fff;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
-      letter-spacing: 2px;
-      text-align: center;
-      margin: 30px 0;
-    }
   </style>
 </head>
 <body>
 
-<h1 id="typingTitle">MASUM TV</h1>
+<h1 id="typingTitle">MR X TV</h1>
 
   <div class="player-container">
     <div class="video-container">
@@ -220,6 +231,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const m3uUrl = urlParams.get('link');
     let allChannels = [];
+    let displayedChannelElements = []; // Store references to channel list items
 
     async function fetchM3U(url) {
       try {
@@ -252,7 +264,7 @@
       });
 
       allChannels = channels;
-      displayChannels(channels);
+      initializeChannelDisplay(channels); // Call a new function for initial display
     }
 
     async function checkChannelStatus(url) {
@@ -266,15 +278,16 @@
       }
     }
 
-    async function displayChannels(channels) {
+    async function initializeChannelDisplay(channels) {
       const list = document.getElementById("channelList");
       const progressBar = document.getElementById("progressBar");
       const progressFill = document.getElementById("progressFill");
       const progressText = document.getElementById("progressText");
       const progressContainer = document.getElementById("progressContainer");
 
-      list.innerHTML = "";
-      // Only show progress bar if there are channels to load
+      list.innerHTML = ""; // Clear existing channels
+      displayedChannelElements = []; // Clear stored elements
+
       if (channels.length > 0) {
         progressContainer.style.display = "block";
       } else {
@@ -292,6 +305,7 @@
         li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
         li.onclick = () => playChannel(channel.url);
         list.appendChild(li);
+        displayedChannelElements.push({ element: li, name: channel.name.toLowerCase() }); // Store element and its lowercase name
 
         loaded++;
         const progress = Math.round((loaded / total) * 100);
@@ -300,6 +314,19 @@
 
         if (loaded === total) progressContainer.style.display = "none";
       }
+    }
+
+    // Optimized filterChannels to prevent screen flickering
+    function filterChannels() {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      
+      displayedChannelElements.forEach(item => {
+        if (item.name.includes(searchTerm)) {
+          item.element.classList.remove('hidden'); // Show if matches
+        } else {
+          item.element.classList.add('hidden'); // Hide if not matches
+        }
+      });
     }
 
     function playChannel(url) {
@@ -313,12 +340,6 @@
 
     function unmutePlayer() {
       if (window.player) player.api("volume", 100);
-    }
-
-    function filterChannels() {
-      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-      const filtered = allChannels.filter(ch => ch.name.toLowerCase().includes(searchTerm));
-      displayChannels(filtered);
     }
 
     if (m3uUrl) {
