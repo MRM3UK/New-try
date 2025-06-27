@@ -7,9 +7,9 @@
   <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; /* Add padding for logo */ }
+    body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; /* Add padding for top elements */ }
 
-    /* Top-Left Logo Styling - NEW */
+    /* Top-Left Permanent Logo */
     #topLeftLogo {
       position: absolute;
       top: 15px; /* Adjust as needed */
@@ -25,7 +25,124 @@
         transform: scale(1.05); /* Slightly enlarge on hover */
     }
 
-    /* 3D Title Styling (back to original structure) */
+    /* Right-Corner Menu Button (Hamburger) - NEW */
+    #menuButton {
+      position: absolute;
+      top: 20px; /* Aligned with top-left logo, adjust as needed */
+      right: 20px; /* Adjust as needed */
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      border: none;
+      border-radius: 12px; /* Rounded corners for 3D effect */
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1001; /* Above logo and other content */
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+      transition: all 0.3s ease;
+      display: flex; /* For centering lines */
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 45px; /* Size of the button */
+      height: 45px; /* Size of the button */
+    }
+    #menuButton:hover {
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
+      transform: translateY(1px); /* Mimic slight press */
+    }
+    #menuButton .line {
+      width: 70%;
+      height: 3px;
+      background-color: #0ff; /* Neon color */
+      border-radius: 2px;
+      box-shadow: 0 0 5px #0ff; /* Neon glow for lines */
+      transition: all 0.3s ease;
+    }
+    /* Animation for closing X */
+    #menuButton.open .line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #menuButton.open .line:nth-child(2) { opacity: 0; }
+    #menuButton.open .line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Side Menu Container - NEW */
+    #sideMenu {
+      position: fixed;
+      top: 0;
+      right: -300px; /* Start off-screen */
+      width: 280px; /* Width of the menu */
+      height: 100%;
+      background: linear-gradient(145deg, #252525, #151515);
+      box-shadow: -10px 0 20px rgba(0, 0, 0, 0.7);
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+      padding: 20px;
+      padding-top: 70px; /* Space for top button */
+      overflow-y: auto; /* Scroll if content is long */
+      text-align: left;
+    }
+    #sideMenu.open {
+      right: 0; /* Slide in */
+    }
+    #sideMenu h3 {
+      color: #0ff;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #0ff;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+      padding-bottom: 5px;
+    }
+    #sideMenu ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    #sideMenu li {
+      padding: 8px 0;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.2s ease;
+      font-size: 15px;
+    }
+    #sideMenu li:hover {
+      color: #fff;
+      text-shadow: 0 0 3px #0ff;
+    }
+    #sideMenu li.active { /* For current category */
+        color: #0ff;
+        font-weight: bold;
+        text-shadow: 0 0 5px #0ff;
+    }
+
+    /* Menu Input/Button Styling - NEW */
+    #sideMenu input[type="text"] {
+      width: calc(100% - 20px); /* Adjust width */
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background-color: #2a2a2a;
+      color: #fff;
+      outline: none;
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    #sideMenu button {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(145deg, #0ff, #00bfff); /* Blueish neon */
+      color: #181818;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    }
+    #sideMenu button:hover {
+      background: linear-gradient(145deg, #00bfff, #0ff);
+      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3), 1px 1px 3px rgba(0,0,0,0.3);
+      transform: translateY(1px);
+    }
+
+
+    /* 3D Title Styling */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -34,14 +151,14 @@
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
       text-align: center;
-      margin: 30px auto; /* Centered with auto margins */
+      margin: 30px auto;
       padding: 10px 20px;
       border-radius: 15px;
       background: linear-gradient(145deg, #252525, #151515);
       box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
       transition: all 0.3s ease;
-      display: inline-block; /* Makes background fit text */
+      display: inline-block;
     }
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
@@ -217,11 +334,30 @@
       color: #39b54a;
     }
 
+    /* Overlay for clicking outside menu */
+    #menuOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        z-index: 999; /* Below menu, above everything else */
+        display: none; /* Hidden by default */
+    }
+
+
     @media (max-width: 768px) {
       #topLeftLogo {
-        height: 40px; /* Adjust for smaller screens */
+        height: 40px;
         top: 10px;
         left: 10px;
+      }
+      #menuButton {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
       }
       #typingTitle { font-size: 24px; }
       #ammBtn { font-size: 20px; padding: 8px 15px; }
@@ -233,9 +369,24 @@
 
     @media (max-width: 480px) {
       #topLeftLogo {
-        height: 35px; /* Adjust for very small screens */
+        height: 35px;
         top: 8px;
         left: 8px;
+      }
+      #menuButton {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+      }
+      #menuButton .line {
+        height: 2px;
+      }
+      #menuButton.open .line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+      #menuButton.open .line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+      #sideMenu {
+        width: 240px; /* Smaller menu for small screens */
+        padding-top: 60px;
       }
       #typingTitle { font-size: 20px; }
       #ammBtn { font-size: 18px; padding: 6px 12px; }
@@ -249,6 +400,12 @@
 <body>
 
 <img id="topLeftLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
+
+<button id="menuButton">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</button>
 
 <h1 id="typingTitle">MR X TV</h1>
 
@@ -272,16 +429,159 @@
   </div>
 
   <ul id="channelList"></ul>
+
+  <div id="sideMenu">
+    <h3>Saved Playlists</h3>
+    <ul id="savedPlaylists"></ul>
+    <input type="text" id="newPlaylistInput" placeholder="Paste is.gd/m3u link here">
+    <button id="savePlaylistBtn">Save New Playlist</button>
+
+    <h3>Recent History</h3>
+    <ul id="recentHistory"></ul>
+
+    <h3>Categories</h3>
+    <ul id="categoryList">
+      <li data-category="All" class="active">All Channels</li>
+      </ul>
+    
+    <h3>Player Options</h3>
+    <ul>
+      <li id="fullScreenOption">Toggle Full Screen</li>
+      <li id="unmuteOption">Unmute Player</li>
+    </ul>
+  </div>
+
+  <div id="menuOverlay"></div>
   
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const m3uUrl = urlParams.get('link');
     let allChannels = [];
     let displayedChannelElements = [];
+    let categories = new Set(); // To store unique categories
 
-    // --- Removed Logo/Title Toggling Logic ---
-    // The previous JavaScript for toggleTitleLogo and setInterval/setTimeout has been removed.
+    // --- Menu Elements ---
+    const menuButton = document.getElementById('menuButton');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const recentHistoryList = document.getElementById('recentHistory');
+    const categoryList = document.getElementById('categoryList');
+    const savedPlaylistsList = document.getElementById('savedPlaylists');
+    const newPlaylistInput = document.getElementById('newPlaylistInput');
+    const savePlaylistBtn = document.getElementById('savePlaylistBtn');
+    const fullScreenOption = document.getElementById('fullScreenOption');
+    const unmuteOption = document.getElementById('unmuteOption');
 
+    // --- Menu Toggle Functionality ---
+    function toggleMenu() {
+      sideMenu.classList.toggle('open');
+      menuButton.classList.toggle('open');
+      menuOverlay.style.display = sideMenu.classList.contains('open') ? 'block' : 'none';
+    }
+
+    menuButton.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu); // Close menu when clicking outside
+
+    // --- Local Storage Management ---
+    function getRecentHistory() {
+      return JSON.parse(localStorage.getItem('recentHistory')) || [];
+    }
+
+    function saveRecentHistory(channel) {
+      let history = getRecentHistory();
+      // Remove if already exists to bring to front
+      history = history.filter(item => item.url !== channel.url);
+      history.unshift(channel); // Add to the beginning
+      // Limit history to, say, 10 items
+      history = history.slice(0, 10);
+      localStorage.setItem('recentHistory', JSON.stringify(history));
+      renderRecentHistory();
+    }
+
+    function renderRecentHistory() {
+      const history = getRecentHistory();
+      recentHistoryList.innerHTML = '';
+      if (history.length === 0) {
+        recentHistoryList.innerHTML = '<li>No recent channels.</li>';
+        return;
+      }
+      history.forEach(channel => {
+        const li = document.createElement('li');
+        li.textContent = channel.name;
+        li.onclick = () => {
+          playChannel(channel.url);
+          toggleMenu(); // Close menu after selection
+        };
+        recentHistoryList.appendChild(li);
+      });
+    }
+
+    function getSavedPlaylists() {
+        return JSON.parse(localStorage.getItem('savedPlaylists')) || [];
+    }
+
+    function savePlaylist(name, url) {
+        let playlists = getSavedPlaylists();
+        // Check if playlist already exists
+        if (!playlists.some(p => p.url === url)) {
+            playlists.push({ name: name, url: url });
+            localStorage.setItem('savedPlaylists', JSON.stringify(playlists));
+            renderSavedPlaylists();
+            return true; // Indicate success
+        }
+        return false; // Indicate it already exists
+    }
+
+    function renderSavedPlaylists() {
+        const playlists = getSavedPlaylists();
+        savedPlaylistsList.innerHTML = '';
+        if (playlists.length === 0) {
+            savedPlaylistsList.innerHTML = '<li>No saved playlists.</li>';
+            return;
+        }
+        playlists.forEach((playlist, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${playlist.name || playlist.url}</span>
+                <button style="background: none; border: none; color: #ff0033; font-size: 1em; cursor: pointer; float: right;" data-index="${index}">&times;</button>
+            `;
+            li.querySelector('span').onclick = () => {
+                window.location.search = `?link=${encodeURIComponent(playlist.url)}`;
+                toggleMenu(); // Close menu after selecting
+            };
+            li.querySelector('button').onclick = (e) => {
+                e.stopPropagation(); // Prevent li click
+                deletePlaylist(parseInt(e.target.dataset.index));
+            };
+            savedPlaylistsList.appendChild(li);
+        });
+    }
+
+    function deletePlaylist(index) {
+        let playlists = getSavedPlaylists();
+        playlists.splice(index, 1);
+        localStorage.setItem('savedPlaylists', JSON.stringify(playlists));
+        renderSavedPlaylists();
+    }
+
+    savePlaylistBtn.addEventListener('click', () => {
+        const link = newPlaylistInput.value.trim();
+        if (link) {
+            let playlistName = prompt("Enter a name for this playlist (optional):", link);
+            playlistName = playlistName || link; // Use link if no name is provided
+            if(savePlaylist(playlistName, link)) {
+                alert('Playlist saved!');
+                newPlaylistInput.value = '';
+            } else {
+                alert('This playlist is already saved!');
+            }
+        } else {
+            alert('Please enter a valid link.');
+        }
+    });
+
+
+    // --- Channel Fetching and Parsing ---
     async function fetchM3U(url) {
       try {
         const response = await fetch(url);
@@ -289,6 +589,7 @@
         parseM3U(data);
       } catch (error) {
         alert('⚠️ Error loading M3U file!');
+        console.error('Error fetching M3U:', error);
       }
     }
 
@@ -296,16 +597,22 @@
       const lines = data.split("\n");
       const channels = [];
       let channel = {};
+      categories.clear(); // Clear existing categories
+      categories.add('All'); // Add default 'All' category
 
       lines.forEach(line => {
         line = line.trim();
         if (line.startsWith("#EXTINF")) {
           const nameMatch = line.match(/,(.+)/);
           const logoMatch = line.match(/tvg-logo="(.*?)"/);
+          const groupMatch = line.match(/group-title="([^"]*)"/); // Extract group-title
+
           channel = {
             name: nameMatch ? nameMatch[1] : "Unknown Channel",
-            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70"
+            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70",
+            category: groupMatch ? groupMatch[1] : "Others" // Default category
           };
+          categories.add(channel.category); // Add category to set
         } else if (line && !line.startsWith("#")) {
           channel.url = line;
           channels.push({...channel});
@@ -314,15 +621,19 @@
 
       allChannels = channels;
       initializeChannelDisplay(channels);
+      renderCategories(); // Render categories after parsing
     }
 
+    // --- Channel Status Check (Optimized for speed) ---
     async function checkChannelStatus(url) {
       try {
-        const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 10000));
-        const fetchPromise = fetch(url, { method: 'HEAD' });
-        const response = await Promise.race([fetchPromise, timeout]);
-        return response && response.ok;
-      } catch {
+        // Use a shorter timeout for status checks to not delay loading too much
+        const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000)); // 5 seconds
+        const fetchPromise = fetch(url, { method: 'HEAD', mode: 'no-cors' }); // no-cors to avoid CORS errors on HEAD requests
+        await Promise.race([fetchPromise, timeout]);
+        return true; // If fetch completes (even no-cors opaque response), consider it reachable
+      } catch (e) {
+        // console.warn(`Channel ${url} failed status check:`, e.message);
         return false;
       }
     }
@@ -345,30 +656,127 @@
       const total = channels.length;
       let loaded = 0;
 
-      for (const channel of channels) {
-        const li = document.createElement("li");
-        const status = await checkChannelStatus(channel.url);
-        if (status) li.classList.add("online");
+      // Group channels into chunks to update UI more frequently
+      const chunkSize = 20; // Process 20 channels at a time
+      for (let i = 0; i < total; i += chunkSize) {
+        const chunk = channels.slice(i, i + chunkSize);
+        const promises = chunk.map(async (channel) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
+          li.onclick = () => playChannel(channel.url, channel.name, channel.logo); // Pass name and logo for history
+          li.dataset.category = channel.category; // Store category for filtering
+          li.dataset.channelName = channel.name.toLowerCase(); // Store for search filter
 
-        li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
-        li.onclick = () => playChannel(channel.url);
-        list.appendChild(li);
-        displayedChannelElements.push({ element: li, name: channel.name.toLowerCase() });
+          // Perform status check
+          const status = await checkChannelStatus(channel.url);
+          if (status) li.classList.add("online");
 
-        loaded++;
+          return li; // Return the fully constructed li element
+        });
+
+        const lis = await Promise.all(promises); // Wait for all in chunk to complete
+
+        lis.forEach(li => {
+          list.appendChild(li);
+          displayedChannelElements.push({
+            element: li,
+            name: li.dataset.channelName,
+            category: li.dataset.category
+          });
+        });
+
+        loaded += chunk.length;
         const progress = Math.round((loaded / total) * 100);
         progressFill.style.width = `${progress}%`;
         progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
-        
-        updateProgressBarColor(progress); // Update color based on percentage
+        updateProgressBarColor(progress);
 
-        if (loaded === total) {
+        if (loaded >= total) { // Check if loading is complete
           progressContainer.style.display = "none";
         }
       }
     }
 
-    // Function to update progress bar color based on percentage
+    // --- Player Control Functions ---
+    function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
+      window.player = new Playerjs({
+        id: "videoPlayer",
+        file: url,
+        autoplay: 1,
+        muted: 1
+      });
+      saveRecentHistory({ name, url, logo }); // Save to history
+    }
+
+    function unmutePlayer() {
+      if (window.player) player.api("volume", 100);
+    }
+
+    fullScreenOption.addEventListener('click', () => {
+        const playerContainer = document.querySelector('.player-container');
+        if (playerContainer.requestFullscreen) {
+            playerContainer.requestFullscreen();
+        } else if (playerContainer.mozRequestFullScreen) { /* Firefox */
+            playerContainer.mozRequestFullScreen();
+        } else if (playerContainer.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            playerContainer.webkitRequestFullscreen();
+        } else if (playerContainer.msRequestFullscreen) { /* IE/Edge */
+            playerContainer.msRequestFullscreen();
+        }
+        toggleMenu();
+    });
+
+    unmuteOption.addEventListener('click', () => {
+        unmutePlayer();
+        toggleMenu();
+    });
+
+    // --- Search and Category Filtering ---
+    function filterChannels(category = 'All') {
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      
+      displayedChannelElements.forEach(item => {
+        const isMatchingSearch = item.name.includes(searchTerm);
+        const isMatchingCategory = (category === 'All' || item.category === category);
+
+        if (isMatchingSearch && isMatchingCategory) {
+          item.element.classList.remove('hidden');
+        } else {
+          item.element.classList.add('hidden');
+        }
+      });
+      // Update active category in menu
+      document.querySelectorAll('#categoryList li').forEach(li => {
+        if (li.dataset.category === category) {
+            li.classList.add('active');
+        } else {
+            li.classList.remove('active');
+        }
+      });
+    }
+
+    // --- Category Rendering ---
+    function renderCategories() {
+        categoryList.innerHTML = '';
+        const allLi = document.createElement('li');
+        allLi.textContent = 'All Channels';
+        allLi.dataset.category = 'All';
+        allLi.classList.add('active'); // Initially active
+        allLi.onclick = () => filterChannels('All');
+        categoryList.appendChild(allLi);
+
+        Array.from(categories).sort().forEach(cat => {
+            if (cat !== 'All') { // Skip 'All' if already added
+                const li = document.createElement('li');
+                li.textContent = cat;
+                li.dataset.category = cat;
+                li.onclick = () => filterChannels(cat);
+                categoryList.appendChild(li);
+            }
+        });
+    }
+
+    // --- Progress Bar Color Update ---
     function updateProgressBarColor(percentage) {
       const progressFill = document.getElementById("progressFill");
       const progressText = document.getElementById("progressText");
@@ -382,41 +790,10 @@
         color = '#39b54a'; // Green
       }
       progressFill.style.backgroundColor = color;
-      progressText.style.color = color; // Also update text color
+      progressText.style.color = color;
     }
 
-    // Optimized filterChannels to prevent screen flickering
-    function filterChannels() {
-      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-      
-      displayedChannelElements.forEach(item => {
-        if (item.name.includes(searchTerm)) {
-          item.element.classList.remove('hidden');
-        } else {
-          item.element.classList.add('hidden');
-        }
-      });
-    }
-
-    function playChannel(url) {
-      window.player = new Playerjs({
-        id: "videoPlayer",
-        file: url,
-        autoplay: 1,
-        muted: 1
-      });
-    }
-
-    function unmutePlayer() {
-      if (window.player) player.api("volume", 100);
-    }
-
-    if (m3uUrl) {
-      fetchM3U(m3uUrl);
-    } else {
-      alert("⚠️ No live TV link found! Please provide a 'link' parameter in the URL.");
-    }
-
+    // --- Clock Update ---
     function updateClock() {
       const now = new Date();
       let hrs = now.getHours();
@@ -432,9 +809,26 @@
       document.getElementById("ammBtn").innerText = timeStr;
     }
 
-    setInterval(updateClock, 1000);
-    updateClock();
-    
+    // --- Initializations ---
+    document.addEventListener('DOMContentLoaded', () => {
+        renderRecentHistory();
+        renderSavedPlaylists();
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        if (m3uUrl) {
+            fetchM3U(m3uUrl);
+        } else {
+            // Check if there are any saved playlists to load a default
+            const saved = getSavedPlaylists();
+            if (saved.length > 0) {
+                alert("No live TV link found in URL, loading first saved playlist.");
+                window.location.search = `?link=${encodeURIComponent(saved[0].url)}`;
+            } else {
+                alert("⚠️ No live TV link found! Please provide a 'link' parameter in the URL or save a playlist.");
+            }
+        }
+    });
   </script>
 
 </body>
