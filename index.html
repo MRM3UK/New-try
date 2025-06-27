@@ -13,35 +13,53 @@
     #typingTitle {
       font-size: 28px;
       color: #fff;
+      /* Original neon glow */
       text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff,
-                   2px 2px 5px rgba(0, 0, 0, 0.7); /* Added for 3D depth */
+                   /* Added for 3D depth and shadow */
+                   3px 3px 7px rgba(0, 0, 0, 0.8),
+                   -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
       text-align: center;
-      margin: 30px 0;
-      /* Optional: subtle transform for more 3D feel */
+      margin: 30px auto; /* Centered with auto margins */
+      padding: 10px 20px; /* Added padding for background effect */
+      border-radius: 15px; /* Rounded corners for the "block" */
+      background: linear-gradient(145deg, #252525, #151515); /* Darker background for depth */
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3); /* Similar to search bar */
       transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease; /* Smooth transition for hover */
+      display: inline-block; /* Makes background fit text */
     }
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
+
 
     .player-container { background: black; width: 100%; position: relative; }
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
     #videoPlayer { width: 100%; height: 100%; }
 
-    button {
-      background: #39b54a;
+    /* 3D Style for the Clock Button */
+    #ammBtn {
+      font-weight: bold;
+      font-size: 24px;
+      color: #ffffff;
+      /* Existing background removed, new 3D background */
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Darker background */
       border: none;
+      border-radius: 12px;
       padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      border-radius: 8px;
-      margin: 20px auto;
-      cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s ease; /* Smooth transition */
+      cursor: default; /* No pointer for a non-clickable button */
+      /* 3D shadows */
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+      transform: perspective(500px) rotateX(5deg); /* Subtle 3D tilt */
     }
-    button:hover { background: #2e9840; }
+    #ammBtn:hover {
+      /* Inset effect on hover, mimicking pressing a button */
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
+      transform: perspective(500px) rotateX(2deg); /* Reduce tilt slightly */
+    }
 
     /* Search Bar Styles */
     .search-container {
@@ -180,6 +198,7 @@
 
     @media (max-width: 768px) {
       h1 { font-size: 24px; }
+      #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #channelList li { padding: 15px; }
       #channelList img { width: 60px; height: 60px; }
@@ -187,6 +206,7 @@
 
     @media (max-width: 480px) {
       h1 { font-size: 20px; }
+      #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #channelList li { padding: 12px; }
       #channelList img { width: 50px; height: 50px; }
@@ -203,16 +223,7 @@
     </div>
   </div>
 
-  <button id="ammBtn" style="
-  font-weight: bold;
-  font-size: 24px;
-  color: #ffffff;
-  background-color: #333;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-">
+  <button id="ammBtn">
   Loading Time...
   </button>
   
