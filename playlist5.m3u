@@ -50,3 +50,23 @@ https://0472.org/hls/cgtnf.m3u8
 https://0472.org/hls/cgtnx.m3u8
 #EXTINF:-1 tvg-name="CGTN阿语" tvg-logo="https://live.fanmingming.cn/tv/CGTN阿语.png" group-title="央视频道",CGTN阿语
 https://0472.org/hls/cgtna.m3u8
+EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m131/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m30/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m32/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m31/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m135/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m136/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m138/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m33/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m34/index.m3u8
+#EXTINF:-1,ADULT XXX
+http://v2.14mp4.com:80/av-hls/20160713/m35/index.m3u8
