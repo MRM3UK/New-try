@@ -4,3 +4,5 @@ https://live20.bozztv.com/akamaissh101/ssh101/starsports/chunks.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.themoviedb.org/tv/67503-hitrecord-on-tv-with-joseph-gordon-levitt",NFL Arcadia Stream
 https://nflarcadia.xyz/bRtT37sn3w/Sx5q6YTgCs/2.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Asian" tvg-language="English" tvg-logo="https://files.adultiptv.net/adultiptvnet.jpg" group-title="成人频道",Asian
+http://cdn.adultiptv.net/asian.m3u8
