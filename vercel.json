@@ -1,20 +1,8 @@
 {
-  "headers": [
+  "rewrites": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://new-try-theta.vercel.app/?link=https://new-try-theta.vercel.app/playlist.m3u",
-      "permanent": true
+      "source": "/playlist.m3u",
+      "destination": "/public/playlist.m3u"
     }
   ]
 }
