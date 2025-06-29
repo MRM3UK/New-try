@@ -25,7 +25,7 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Now Playing Banner */
+    /* Now Playing Banner - Reduced Height & Continuous Scroll */
     #nowPlayingBanner {
         position: fixed;
         top: 0;
@@ -33,8 +33,8 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
         color: #fff;
-        font-size: 1.1em;
-        padding: 5px 0;
+        font-size: 1em; /* Reduced font size */
+        padding: 3px 0; /* Reduced padding */
         overflow: hidden;
         white-space: nowrap;
         box-sizing: border-box;
@@ -45,12 +45,12 @@
     #nowPlayingText {
         display: inline-block;
         padding-left: 100%; /* Start off-screen to the right */
-        animation: marquee 15s linear infinite;
+        animation: marquee 25s linear infinite; /* Increased duration for smoother, continuous scroll */
     }
 
     @keyframes marquee {
-        0% { transform: translate(0, 0); }
-        100% { transform: translate(-100%, 0); } /* Move fully off-screen to the left */
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); } /* Move fully off-screen to the left */
     }
     
     /* Top-Right Permanent Logo */
@@ -167,7 +167,7 @@
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
-    /* Animated Title Styling (MR X TV) */
+    /* Animated Title Styling (MR X TV) - Enhanced */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -184,23 +184,36 @@
       transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
       transition: all 0.3s ease;
       display: inline-block;
-      white-space: nowrap; /* Keep text on one line */
-      overflow: hidden; /* Hide overflow */
-      border-right: .15em solid orange; /* The blinking cursor */
+      white-space: nowrap;
+      overflow: hidden;
+      /* Enhanced animation */
       animation: 
-        typing 3.5s steps(20, end) infinite alternate, 
-        blink-caret .75s step-end infinite;
+        glitch 1.5s infinite alternate,
+        shine 3s linear infinite,
+        pulsate 2s infinite alternate;
+      position: relative;
     }
-    /* Typing animation */
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+
+    @keyframes glitch {
+      0% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); }
+      20% { text-shadow: 2px 0 5px rgba(255, 0, 0, 0.7), -2px 0 5px rgba(0, 255, 0, 0.7); }
+      40% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); }
+      60% { text-shadow: -1px 0 5px rgba(0, 0, 255, 0.7), 1px 0 5px rgba(0, 255, 0, 0.7); }
+      80% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); }
+      100% { text-shadow: 2px 0 5px rgba(255, 0, 0, 0.7), -2px 0 5px rgba(0, 255, 0, 0.7); }
     }
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: orange; }
+
+    @keyframes shine {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
     }
+
+    @keyframes pulsate {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.02); opacity: 0.9; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
 
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
@@ -429,8 +442,8 @@
     
     @media (max-width: 768px) {
       #nowPlayingBanner {
-          font-size: 1em;
-          padding: 4px 0;
+          font-size: 0.9em;
+          padding: 2px 0;
       }
       #topRightLogo {
         height: 40px;
@@ -459,8 +472,8 @@
 
     @media (max-width: 480px) {
       #nowPlayingBanner {
-          font-size: 0.9em;
-          padding: 3px 0;
+          font-size: 0.8em;
+          padding: 2px 0;
       }
       #topRightLogo {
         height: 35px;
@@ -501,7 +514,7 @@
 <body>
 
 <div id="nowPlayingBanner">
-    <span id="nowPlayingText">Loading Channel...</span>
+    <span id="nowPlayingText">Now Playing: Loading Channel...</span>
 </div>
 
 <img id="topRightLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
@@ -563,7 +576,7 @@
     let categories = new Set();
     let customPlaylists = [];
     let playerInstance = null; // Store player instance
-    let currentPlayingChannelName = "No Channel Playing"; // Track current channel for banner
+    let currentPlayingChannelName = "Channel 24"; // Track current channel for banner, default to Channel 24
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -571,13 +584,6 @@
     const menuOverlay = document.getElementById('menuOverlay');
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryList = document.getElementById('categoryList');
-    // Removed player options from menu, so these are commented out/removed
-    // const fullScreenOption = document.getElementById('fullScreenOption'); 
-    // const toggleMuteOption = document.getElementById('toggleMuteOption');
-    // const setVolume50Option = document.getElementById('setVolume50');
-    // const setVolume100Option = document.getElementById('setVolume100');
-    // const pipOption = document.getElementById('pipOption');
-    // const reloadPlayerOption = document.getElementById('reloadPlayer');
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
     const typingTitle = document.getElementById('typingTitle'); 
@@ -801,6 +807,7 @@
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
       currentPlayingChannelName = name; // Update current playing channel for banner
+      updateNowPlayingBanner(); // Update banner immediately when channel changes
 
       // Get saved volume and mute state
       let savedVolume = localStorage.getItem('playerVolume');
@@ -946,10 +953,15 @@
     // --- Now Playing Banner Update ---
     function updateNowPlayingBanner() {
         nowPlayingText.textContent = `Now Playing: ${currentPlayingChannelName}`;
-        // Restart animation
-        nowPlayingText.style.animation = 'none';
-        nowPlayingText.offsetHeight; // Trigger reflow
-        nowPlayingText.style.animation = null; 
+        // To restart the animation, you need to remove and re-add the animation property
+        // This forces the browser to re-render and restart the marquee animation from the beginning.
+        const clone = nowPlayingText.cloneNode(true);
+        nowPlayingText.parentNode.replaceChild(clone, nowPlayingText);
+        // Re-assign the new cloned element to the variable
+        nowPlayingText = clone;
+        nowPlayingText.textContent = `Now Playing: ${currentPlayingChannelName}`;
+        // Add the animation class back.
+        nowPlayingText.style.animation = 'marquee 25s linear infinite';
     }
 
 
@@ -959,8 +971,7 @@
         renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
-        updateNowPlayingBanner(); // Initial update
-        setInterval(updateNowPlayingBanner, 5000); // Update every 5 seconds
+        updateNowPlayingBanner(); // Initial update with default text
 
         // Autoplay Channel 24 on load if no specific link is provided in URL
         if (m3uUrl) {
