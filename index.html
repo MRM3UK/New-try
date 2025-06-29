@@ -226,63 +226,11 @@
         font-size: 20px;
         transition: color 0.2s ease;
         z-index: 10; /* Ensure it's above input */
+        display: none; /* Hidden by default */
     }
     #clearSearch:hover {
         color: #fff;
     }
-
-
-    /* Quick Recent Channels */
-    #quickRecentChannels {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 900px;
-      background: linear-gradient(145deg, #252525, #151515);
-      border-radius: 15px;
-      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
-      transform: perspective(500px) rotateX(5deg);
-      transition: all 0.3s ease;
-      display: none; /* Hidden by default, show when items are present */
-    }
-    #quickRecentChannels.active {
-      display: flex;
-    }
-    #quickRecentChannels:hover {
-        transform: perspective(500px) rotateX(2deg);
-        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
-    }
-    #quickRecentChannels li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 8px;
-        width: 100px;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: all 0.2s ease;
-        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(50, 50, 50, 0.2);
-        color: #ccc;
-        font-size: 13px;
-        text-align: center;
-    }
-    #quickRecentChannels li:hover {
-        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
-        color: #fff;
-        transform: translateY(1px);
-    }
-    #quickRecentChannels img {
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        margin-bottom: 5px;
-    }
-
 
     /* UPDATED: Channel List Styles for side-by-side display */
     #channelList {
@@ -458,9 +406,6 @@
       }
       #channelList li { padding: 8px; width: 110px; min-height: 100px; }
       #channelList img { width: 50px; height: 50px; }
-      #quickRecentChannels li { width: 90px; padding: 6px; }
-      #quickRecentChannels img { width: 35px; height: 35px; }
-      #quickRecentChannels li span { font-size: 12px; }
     }
 
     @media (max-width: 480px) {
@@ -497,9 +442,6 @@
       #channelList li { padding: 6px; width: 90px; min-height: 90px; font-size: 13px;}
       #channelList img { width: 45px; height: 45px; }
       #channelList li span { font-size: 12px; }
-      #quickRecentChannels li { width: 80px; padding: 5px; }
-      #quickRecentChannels img { width: 30px; height: 30px; }
-      #quickRecentChannels li span { font-size: 11px; }
     }
   </style>
 </head>
@@ -535,9 +477,6 @@
     <span id="clearSearch">✖</span>
   </div>
 
-  <div id="quickRecentChannels">
-    </div>
-
   <ul id="channelList"></ul>
 
   <div id="sideMenu">
@@ -552,7 +491,10 @@
     <h3>Player Options</h3>
     <ul>
       <li id="fullScreenOption">Toggle Full Screen</li>
-      <li id="unmuteOption">Unmute Player</li>
+      <li id="toggleMuteOption">Toggle Mute</li> <li id="setVolume50">Set Volume to 50%</li>
+      <li id="setVolume100">Set Volume to 100%</li>
+      <li id="pipOption">Picture-in-Picture</li>
+      <li id="reloadPlayer">Reload Player</li>
     </ul>
 
     <h3>Add Custom Playlist</h3>
@@ -581,13 +523,24 @@
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryList = document.getElementById('categoryList');
     const fullScreenOption = document.getElementById('fullScreenOption');
-    const unmuteOption = document.getElementById('unmuteOption');
+    const toggleMuteOption = document.getElementById('toggleMuteOption'); // Renamed
+    const setVolume50Option = document.getElementById('setVolume50'); // New
+    const setVolume100Option = document.getElementById('setVolume100'); // New
+    const pipOption = document.getElementById('pipOption'); // New
+    const reloadPlayerOption = document.getElementById('reloadPlayer'); // New
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
-    const typingTitle = document.getElementById('typingTitle'); // Added for dynamic title
-    const searchInput = document.getElementById('searchInput'); // Added for search clear
-    const clearSearchBtn = document.getElementById('clearSearch'); // Added for search clear
-    const quickRecentChannelsDiv = document.getElementById('quickRecentChannels'); // Added for quick recent channels
+    const typingTitle = document.getElementById('typingTitle'); 
+    const searchInput = document.getElementById('searchInput'); 
+    const clearSearchBtn = document.getElementById('clearSearch'); 
+
+    // Default Channel 24 details for autoplay
+    const channel24 = {
+        name: "Channel 24",
+        url: "https://dkn1.bdix.cloud/live/channel24/playlist.m3u8", // Example URL, replace with actual if different
+        logo: "https://www.channel24bd.tv/media/img/2023/10/channel-24-logo-20231005165239.png", // Example logo
+        category: "News"
+    };
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -613,7 +566,6 @@
       history = history.slice(0, 5);
       localStorage.setItem('recentHistory', JSON.stringify(history));
       renderRecentHistory();
-      renderQuickRecentChannels(); // Update quick access
     }
 
     function renderRecentHistory() {
@@ -631,23 +583,6 @@
           toggleMenu();
         };
         recentHistoryList.appendChild(li);
-      });
-    }
-
-    function renderQuickRecentChannels() {
-      const history = getRecentHistory();
-      quickRecentChannelsDiv.innerHTML = '';
-      if (history.length === 0) {
-        quickRecentChannelsDiv.classList.remove('active');
-        return;
-      }
-      quickRecentChannelsDiv.classList.add('active'); // Show the div
-
-      history.slice(0, 5).forEach(channel => { // Display up to 5 recent channels
-        const li = document.createElement('li');
-        li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
-        li.onclick = () => playChannel(channel.url, channel.name, channel.logo);
-        quickRecentChannelsDiv.appendChild(li);
       });
     }
 
@@ -814,8 +749,8 @@
 
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
-      // Set the dynamic title
-      typingTitle.textContent = `Now Playing: ${name}`;
+      // Don't update typingTitle anymore, keep it static "MR X TV"
+      // typingTitle.textContent = `Now Playing: ${name}`; 
 
       // Get saved volume and mute state
       let savedVolume = localStorage.getItem('playerVolume');
@@ -835,6 +770,12 @@
       } else { // Default to muted if no state saved
           playerOptions.muted = 1;
       }
+      
+      // Destroy existing player instance if it exists to prevent conflicts
+      if (playerInstance) {
+          playerInstance.api("destroy");
+          playerInstance = null;
+      }
 
       playerInstance = new Playerjs(playerOptions);
 
@@ -844,26 +785,92 @@
           localStorage.setItem('playerMuted', volume === 0 ? 'true' : 'false');
       });
 
-      playerInstance.api("on", "play", function() {
-          // If player started muted due to initial load, but saved state says not muted, unmute it
-          if (savedMuted && playerInstance.api("muted")) {
-              // Do nothing, keep muted if that was the saved state
-          } else if (!savedMuted && playerInstance.api("muted") && savedVolume > 0) {
-              playerInstance.api("volume", savedVolume);
-          }
-      });
+      // Add event listener for mute/unmute changes to save state (Player.js handles this via volume event typically)
+      // playerInstance.api("on", "mute", function(muted) {
+      //    localStorage.setItem('playerMuted', muted ? 'true' : 'false');
+      // });
 
       saveRecentHistory({ name, url, logo });
     }
 
-    function unmutePlayer() {
-      if (playerInstance) {
-          playerInstance.api("volume", 100);
-          playerInstance.api("muted", false); // Explicitly unmute
-          localStorage.setItem('playerVolume', 100);
-          localStorage.setItem('playerMuted', 'false');
-      }
-    }
+    // New: Toggle Mute
+    toggleMuteOption.addEventListener('click', () => {
+        if (playerInstance) {
+            const isMuted = playerInstance.api("muted");
+            playerInstance.api("muted", !isMuted);
+            localStorage.setItem('playerMuted', !isMuted ? 'true' : 'false');
+            if (!isMuted) { // If it was unmuted, and now muted, save current volume
+                localStorage.setItem('playerVolume', playerInstance.api("volume"));
+            } else { // If it was muted, and now unmuted, set to last volume or default
+                const lastVolume = parseInt(localStorage.getItem('playerVolume') || '100', 10);
+                if (lastVolume === 0) playerInstance.api("volume", 50); // Prevent setting to 0 if last was 0
+                else playerInstance.api("volume", lastVolume);
+            }
+        }
+        toggleMenu();
+    });
+
+    // New: Set Volume to 50%
+    setVolume50Option.addEventListener('click', () => {
+        if (playerInstance) {
+            playerInstance.api("volume", 50);
+            playerInstance.api("muted", false);
+            localStorage.setItem('playerVolume', 50);
+            localStorage.setItem('playerMuted', 'false');
+        }
+        toggleMenu();
+    });
+
+    // New: Set Volume to 100%
+    setVolume100Option.addEventListener('click', () => {
+        if (playerInstance) {
+            playerInstance.api("volume", 100);
+            playerInstance.api("muted", false);
+            localStorage.setItem('playerVolume', 100);
+            localStorage.setItem('playerMuted', 'false');
+        }
+        toggleMenu();
+    });
+
+    // New: Picture-in-Picture
+    pipOption.addEventListener('click', () => {
+        if (playerInstance) {
+            const videoElement = document.querySelector('#videoPlayer video'); // Assuming playerjs uses a standard video tag
+            if (videoElement && document.pictureInPictureEnabled) {
+                if (document.pictureInPictureElement) {
+                    document.exitPictureInPicture();
+                } else {
+                    videoElement.requestPictureInPicture();
+                }
+            } else {
+                alert('Picture-in-Picture is not supported by your browser or the current player.');
+            }
+        }
+        toggleMenu();
+    });
+
+    // New: Reload Player
+    reloadPlayerOption.addEventListener('click', () => {
+        if (playerInstance) {
+            const currentFile = playerInstance.api("file");
+            if (currentFile) {
+                // Get current channel details from allChannels for a proper reload
+                const currentChannel = allChannels.find(ch => ch.url === currentFile);
+                if (currentChannel) {
+                    playChannel(currentChannel.url, currentChannel.name, currentChannel.logo);
+                } else {
+                    // Fallback if channel not found in allChannels (e.g., direct link from URL param)
+                    playChannel(currentFile, typingTitle.textContent.replace('Now Playing: ', ''));
+                }
+            } else {
+                alert('No current channel to reload.');
+            }
+        } else {
+            alert('No player instance to reload.');
+        }
+        toggleMenu();
+    });
+
 
     fullScreenOption.addEventListener('click', () => {
         const playerContainer = document.querySelector('.player-container');
@@ -876,11 +883,6 @@
         } else if (playerContainer.msRequestFullscreen) {
             playerContainer.msRequestFullscreen();
         }
-        toggleMenu();
-    });
-
-    unmuteOption.addEventListener('click', () => {
-        unmutePlayer();
         toggleMenu();
     });
 
@@ -992,15 +994,18 @@
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
-        renderQuickRecentChannels(); // Render quick recent channels on load
         renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
 
+        // Autoplay Channel 24 on load if no specific link is provided in URL
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন।");
+            // No M3U URL provided, so load the default Channel 24
+            playChannel(channel24.url, channel24.name, channel24.logo);
+            // Optionally, load a default full M3U list for categories/search later
+            // fetchM3U("YOUR_DEFAULT_FULL_M3U_LINK_HERE"); 
         }
     });
   </script>
