@@ -9,5 +9,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://new-try-theta.vercel.app/?link=https://new-try-theta.vercel.app/playlist.m3u",
+      "permanent": true
+    }
   ]
 }
