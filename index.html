@@ -207,12 +207,82 @@
       transition: all 0.3s ease;
       transform-style: preserve-3d;
       transform: rotateX(0deg);
+      padding-right: 40px; /* Make space for the clear button */
     }
 
     .search-input:focus {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
       transform: rotateX(5deg);
     }
+
+    #clearSearch {
+        position: absolute;
+        right: 25px; /* Adjust based on padding of input */
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #aaa;
+        font-weight: bold;
+        font-size: 20px;
+        transition: color 0.2s ease;
+        z-index: 10; /* Ensure it's above input */
+    }
+    #clearSearch:hover {
+        color: #fff;
+    }
+
+
+    /* Quick Recent Channels */
+    #quickRecentChannels {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 900px;
+      background: linear-gradient(145deg, #252525, #151515);
+      border-radius: 15px;
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+      transform: perspective(500px) rotateX(5deg);
+      transition: all 0.3s ease;
+      display: none; /* Hidden by default, show when items are present */
+    }
+    #quickRecentChannels.active {
+      display: flex;
+    }
+    #quickRecentChannels:hover {
+        transform: perspective(500px) rotateX(2deg);
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
+    }
+    #quickRecentChannels li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        width: 100px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(50, 50, 50, 0.2);
+        color: #ccc;
+        font-size: 13px;
+        text-align: center;
+    }
+    #quickRecentChannels li:hover {
+        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
+        color: #fff;
+        transform: translateY(1px);
+    }
+    #quickRecentChannels img {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+    }
+
 
     /* UPDATED: Channel List Styles for side-by-side display */
     #channelList {
@@ -388,6 +458,9 @@
       }
       #channelList li { padding: 8px; width: 110px; min-height: 100px; }
       #channelList img { width: 50px; height: 50px; }
+      #quickRecentChannels li { width: 90px; padding: 6px; }
+      #quickRecentChannels img { width: 35px; height: 35px; }
+      #quickRecentChannels li span { font-size: 12px; }
     }
 
     @media (max-width: 480px) {
@@ -424,6 +497,9 @@
       #channelList li { padding: 6px; width: 90px; min-height: 90px; font-size: 13px;}
       #channelList img { width: 45px; height: 45px; }
       #channelList li span { font-size: 12px; }
+      #quickRecentChannels li { width: 80px; padding: 5px; }
+      #quickRecentChannels img { width: 30px; height: 30px; }
+      #quickRecentChannels li span { font-size: 11px; }
     }
   </style>
 </head>
@@ -456,7 +532,11 @@
 
   <div class="search-container">
     <input type="text" id="searchInput" class="search-input" placeholder="Search channels..." onkeyup="filterChannels()">
+    <span id="clearSearch">✖</span>
   </div>
+
+  <div id="quickRecentChannels">
+    </div>
 
   <ul id="channelList"></ul>
 
@@ -492,6 +572,7 @@
     let displayedChannelElements = [];
     let categories = new Set();
     let customPlaylists = [];
+    let playerInstance = null; // Store player instance
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -503,6 +584,10 @@
     const unmuteOption = document.getElementById('unmuteOption');
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
+    const typingTitle = document.getElementById('typingTitle'); // Added for dynamic title
+    const searchInput = document.getElementById('searchInput'); // Added for search clear
+    const clearSearchBtn = document.getElementById('clearSearch'); // Added for search clear
+    const quickRecentChannelsDiv = document.getElementById('quickRecentChannels'); // Added for quick recent channels
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -528,6 +613,7 @@
       history = history.slice(0, 5);
       localStorage.setItem('recentHistory', JSON.stringify(history));
       renderRecentHistory();
+      renderQuickRecentChannels(); // Update quick access
     }
 
     function renderRecentHistory() {
@@ -541,10 +627,27 @@
         const li = document.createElement('li');
         li.textContent = channel.name;
         li.onclick = () => {
-          playChannel(channel.url);
+          playChannel(channel.url, channel.name, channel.logo);
           toggleMenu();
         };
         recentHistoryList.appendChild(li);
+      });
+    }
+
+    function renderQuickRecentChannels() {
+      const history = getRecentHistory();
+      quickRecentChannelsDiv.innerHTML = '';
+      if (history.length === 0) {
+        quickRecentChannelsDiv.classList.remove('active');
+        return;
+      }
+      quickRecentChannelsDiv.classList.add('active'); // Show the div
+
+      history.slice(0, 5).forEach(channel => { // Display up to 5 recent channels
+        const li = document.createElement('li');
+        li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
+        li.onclick = () => playChannel(channel.url, channel.name, channel.logo);
+        quickRecentChannelsDiv.appendChild(li);
       });
     }
 
@@ -603,7 +706,7 @@
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert('⚠️ Error loading M3U file!');
+        alert('⚠️ Error loading M3U file! Please check the URL.');
         console.error('Error fetching M3U:', error);
       }
     }
@@ -711,17 +814,55 @@
 
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
-      window.player = new Playerjs({
+      // Set the dynamic title
+      typingTitle.textContent = `Now Playing: ${name}`;
+
+      // Get saved volume and mute state
+      let savedVolume = localStorage.getItem('playerVolume');
+      let savedMuted = localStorage.getItem('playerMuted') === 'true';
+
+      const playerOptions = {
         id: "videoPlayer",
         file: url,
         autoplay: 1,
-        muted: 1
+        muted: savedMuted // Apply saved muted state
+      };
+
+      if (savedVolume !== null && !savedMuted) { // Apply volume only if not muted and volume was saved
+          playerOptions.volume = parseInt(savedVolume, 10);
+      } else if (savedMuted) { // Ensure muted if saved as such
+          playerOptions.muted = 1;
+      } else { // Default to muted if no state saved
+          playerOptions.muted = 1;
+      }
+
+      playerInstance = new Playerjs(playerOptions);
+
+      // Add event listener for volume changes to save state
+      playerInstance.api("on", "volume", function(volume) {
+          localStorage.setItem('playerVolume', volume);
+          localStorage.setItem('playerMuted', volume === 0 ? 'true' : 'false');
       });
+
+      playerInstance.api("on", "play", function() {
+          // If player started muted due to initial load, but saved state says not muted, unmute it
+          if (savedMuted && playerInstance.api("muted")) {
+              // Do nothing, keep muted if that was the saved state
+          } else if (!savedMuted && playerInstance.api("muted") && savedVolume > 0) {
+              playerInstance.api("volume", savedVolume);
+          }
+      });
+
       saveRecentHistory({ name, url, logo });
     }
 
     function unmutePlayer() {
-      if (window.player) player.api("volume", 100);
+      if (playerInstance) {
+          playerInstance.api("volume", 100);
+          playerInstance.api("muted", false); // Explicitly unmute
+          localStorage.setItem('playerVolume', 100);
+          localStorage.setItem('playerMuted', 'false');
+      }
     }
 
     fullScreenOption.addEventListener('click', () => {
@@ -756,8 +897,24 @@
 
 
     // --- Search and Category Filtering ---
+    searchInput.addEventListener('input', () => {
+        filterChannels();
+        if (searchInput.value.length > 0) {
+            clearSearchBtn.style.display = 'inline';
+        } else {
+            clearSearchBtn.style.display = 'none';
+        }
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearSearchBtn.style.display = 'none';
+        filterChannels();
+    });
+
+
     function filterChannels(category = 'All') {
-      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const searchTerm = searchInput.value.toLowerCase();
       
       displayedChannelElements.forEach(item => {
         const isMatchingSearch = item.name.includes(searchTerm);
@@ -835,6 +992,7 @@
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
+        renderQuickRecentChannels(); // Render quick recent channels on load
         renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
