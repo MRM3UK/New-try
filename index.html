@@ -604,13 +604,17 @@
     const clearSearchBtn = document.getElementById('clearSearch'); 
     let nowPlayingText = document.getElementById('nowPlayingText'); // Changed to `let` as it will be reassigned
 
-    // Default Somoy TV details for autoplay
+    // Default Somoy TV details for autoplay (Highly unreliable direct link, for testing only)
     const somoyTv = {
-        name: "Somoy TV",
+        name: "Somoy TV (Unreliable)",
         url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/1702-audio_113322_eng=113200-video=1692000.m3u8",
         logo: "https://www.somoynews.tv/assets/logo/somoy-digital-logo-small.png", // Example logo
         category: "News"
     };
+
+    // Fallback/Demo M3U for testing channel list loading if default Somoy TV fails
+    const defaultM3UListUrl = "https://raw.githubusercontent.com/iptv-org/iptv/master/channels/bd.m3u";
+
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -714,10 +718,9 @@
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert('⚠️ Error loading M3U file! Please check the URL and ensure it\'s publicly accessible. Some direct stream links may not work due to security policies (CORS) or geo-restrictions.');
+        alert('⚠️ Error loading M3U file! Please check the URL and ensure it\'s publicly accessible and supports CORS (Cross-Origin Resource Sharing).');
         console.error('Error fetching M3U:', error);
-        // If a custom playlist fails, clear channel list
-        document.getElementById("channelList").innerHTML = '<li>Failed to load channels from this playlist.</li>';
+        document.getElementById("channelList").innerHTML = '<li>Failed to load channels from this playlist. Please check the URL.</li>';
         document.getElementById("progressContainer").style.display = "none";
       }
     }
@@ -727,7 +730,7 @@
       const channels = [];
       let channel = {};
       categories.clear();
-      categories.add('All');
+      categories.add('All'); // Ensure 'All' category is always present
 
       lines.forEach(line => {
         line = line.trim();
@@ -737,13 +740,13 @@
           const groupMatch = line.match(/group-title="([^"]*)"/);
 
           channel = {
-            name: nameMatch ? nameMatch[1] : "Unknown Channel",
+            name: nameMatch ? nameMatch[1].trim() : "Unknown Channel",
             logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70", // Default logo
-            category: groupMatch ? groupMatch[1] : "Others"
+            category: groupMatch ? groupMatch[1].trim() : "Others"
           };
           categories.add(channel.category);
         } else if (line && !line.startsWith("#")) {
-          channel.url = line;
+          channel.url = line.trim();
           channels.push({...channel});
         }
       });
@@ -753,7 +756,74 @@
       renderCategories();
     }
 
-    // --- Channel Status Check (Re-enabled and enhanced for better client-side accuracy) ---
-    async function checkChannelStatus(url) {
-        return new Promise(resolve => {
-            if
+    // --- Channel Status Check (Simplified for display purposes - Green by default) ---
+    // Note: A truly accurate 'online/offline' status for many streams requires a backend service.
+    // For client-side display, we'll assume online unless an error occurs during playback.
+    async function initializeChannelDisplay(channels) {
+      const list = document.getElementById("channelList");
+      const progressFill = document.getElementById("progressFill");
+      const progressText = document.getElementById("progressText");
+      const progressContainer = document.getElementById("progressContainer");
+
+      list.innerHTML = ""; // Clear existing channels
+      displayedChannelElements = []; // Reset array
+
+      if (channels.length === 0) {
+        progressContainer.style.display = "none";
+        list.innerHTML = '<li>No channels found.</li>';
+        return;
+      }
+      
+      progressContainer.style.display = "block";
+      progressFill.style.width = `0%`;
+      progressText.innerText = `Loading 0/${channels.length} (0%)`;
+      updateProgressBarColor(0);
+
+      // Create all list items first, then update progress
+      channels.forEach((channel, index) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
+          li.onclick = () => playChannel(channel.url, channel.name, channel.logo);
+          li.dataset.category = channel.category;
+          li.dataset.channelName = channel.name.toLowerCase();
+          li.classList.add("online"); // Assume online by default for display
+
+          list.appendChild(li); // Add to DOM
+          displayedChannelElements.push({
+            element: li,
+            name: li.dataset.channelName,
+            category: li.dataset.category
+          });
+
+          // Update progress bar
+          const progress = Math.round(((index + 1) / channels.length) * 100);
+          progressFill.style.width = `${progress}%`;
+          progressText.innerText = `Loading ${index + 1}/${channels.length} (${progress}%)`;
+          updateProgressBarColor(progress);
+      });
+      
+      // Once all are loaded, hide the progress bar
+      progressContainer.style.display = "none";
+    }
+
+    // --- Player Control Functions ---
+    function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
+      currentPlayingChannelName = name; // Update current playing channel for banner
+      updateNowPlayingBanner(); // Update banner immediately when channel changes
+
+      // Get saved volume and mute state
+      let savedVolume = localStorage.getItem('playerVolume');
+      let savedMuted = localStorage.getItem('playerMuted') === 'true';
+
+      const playerOptions = {
+        id: "videoPlayer",
+        file: url,
+        autoplay: 1,
+        muted: savedMuted // Apply saved muted state
+      };
+
+      if (savedVolume !== null && !savedMuted) { // Apply volume only if not muted and volume was saved
+          playerOptions.volume = parseInt(savedVolume, 10);
+      } else if (savedMuted) { // Ensure muted if saved as such
+          playerOptions.muted = 1;
+      } else { //
