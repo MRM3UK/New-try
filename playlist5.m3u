@@ -1,6 +1,7 @@
-EXTM3U
+#EXTM3U
 #EXTINF:-1 tvg-logo="https://www.themoviedb.org/tv/67503-hitrecord-on-tv-with-joseph-gordon-levitt",Star Sports Live
 https://live20.bozztv.com/akamaissh101/ssh101/starsports/chunks.m3u8
-#EXTM3U
 #EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://live.fanmingming.cn/tv/CCTV1.png" group-title="TEST",TESTING...
 http://tv.bdiptv.store/live/restream/restreamkk/98.m3u8
+#EXTINF:-1 tvg-logo="https://www.themoviedb.org/tv/67503-hitrecord-on-tv-with-joseph-gordon-levitt",TEST 2
+https://tvsen6.aynaott.com/channeli/index.m3u8
