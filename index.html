@@ -6,14 +6,14 @@
   <title>MR X TV Live</title>
   <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
+    /* General Body and Background */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body {
       background: #181818;
       color: #fff;
       text-align: center;
       position: relative;
-      padding-top: 20px; /* Space for menu button and logo */
-      /* Background gradient animation */
+      padding-top: 20px;
       background: linear-gradient(90deg, #181818, #2a2a2a, #181818);
       background-size: 400% 400%;
       animation: backgroundGradient 15s ease infinite;
@@ -25,7 +25,7 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Top-Right Permanent Logo */
+    /* Top Elements: Logo and Menu Button */
     #topRightLogo {
       position: absolute;
       top: 15px;
@@ -41,7 +41,6 @@
         transform: scale(1.05);
     }
 
-    /* Top-Left Menu Button (Hamburger) */
     #menuButton {
       position: absolute;
       top: 15px;
@@ -77,7 +76,7 @@
     #menuButton.open .line:nth-child(2) { opacity: 0; }
     #menuButton.open .line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-    /* Side Menu Container */
+    /* Side Menu */
     #sideMenu {
       position: fixed;
       top: 0;
@@ -109,7 +108,6 @@
       padding: 0;
       margin-bottom: 20px;
     }
-    /* 3D Styling for Menu List Items */
     #sideMenu li {
       padding: 10px 15px;
       margin-bottom: 8px;
@@ -138,8 +136,15 @@
         background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
+    #sideMenu ul.playlist-list li {
+        color: #fff;
+        text-shadow: 0 0 3px #0ff;
+    }
+    #sideMenu ul.playlist-list li:hover {
+        color: #0ff;
+    }
 
-    /* Animated Title Styling (MR X TV) - ENHANCED */
+    /* Animated Title */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -148,7 +153,7 @@
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
       text-align: center;
-      margin: 30px auto 10px; /* Reduced bottom margin */
+      margin: 30px auto 10px;
       padding: 10px 20px;
       border-radius: 15px;
       background: linear-gradient(145deg, #252525, #151515);
@@ -159,59 +164,30 @@
       white-space: nowrap;
       overflow: hidden;
       position: relative;
-      /* ENHANCED ANIMATION */
-      animation: 
-        glitch 1.5s infinite alternate,
-        shine 3s linear infinite,
-        pulsate 2s infinite alternate,
-        flicker 0.8s infinite alternate; /* New flicker animation */
+      animation: glitch 1.5s infinite alternate, shine 3s linear infinite, pulsate 2s infinite alternate, flicker 0.8s infinite alternate;
       background-image: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
       background-size: 200% 100%;
     }
-
-    @keyframes glitch {
-      0% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); }
-      20% { text-shadow: 2px 0 5px rgba(255, 0, 0, 0.7), -2px 0 5px rgba(0, 255, 0, 0.7); }
-      40% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); }
-      60% { text-shadow: -1px 0 5px rgba(0, 0, 255, 0.7), 1px 0 5px rgba(0, 255, 0, 0.7); }
-      80% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); }
-      100% { text-shadow: 2px 0 5px rgba(255, 0, 0, 0.7), -2px 0 5px rgba(0, 255, 0, 0.7); }
-    }
-
-    @keyframes shine {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
-    }
-
-    @keyframes pulsate {
-        0% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.02); opacity: 0.9; }
-        100% { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes flicker {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.95; }
-        52% { opacity: 1; }
-        54% { opacity: 0.9; }
-        56% { opacity: 1; }
-    }
-
+    @keyframes glitch { 0% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); } 20% { text-shadow: 2px 0 5px rgba(255, 0, 0, 0.7), -2px 0 5px rgba(0, 255, 0, 0.7); } 40% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); } 60% { text-shadow: -1px 0 5px rgba(0, 0, 255, 0.7), 1px 0 5px rgba(0, 255, 0, 0.7); } 80% { text-shadow: 0 0 5px rgba(0, 255, 0, 0.7); } 100% { text-shadow: 2px 0 5px rgba(255, 0, 0, 0.7), -2px 0 5px rgba(0, 255, 0, 0.7); } }
+    @keyframes shine { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    @keyframes pulsate { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.02); opacity: 0.9; } 100% { transform: scale(1); opacity: 1; } }
+    @keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: 0.95; } 52% { opacity: 1; } 54% { opacity: 0.9; } 56% { opacity: 1; } }
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
+    /* Player Container */
     .player-container { background: black; width: 100%; position: relative; }
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
     #videoPlayer { width: 100%; height: 100%; }
 
-    /* Now Playing Banner - Adjusted Position */
+    /* Now Playing Banner */
     #nowPlayingBanner {
-        position: relative; /* Changed from fixed to relative */
-        margin: 10px auto; /* Center it below the title, above player */
+        position: relative;
+        margin: 10px auto;
         width: 90%;
-        max-width: 800px; /* Match video player width */
+        max-width: 800px;
         background-color: rgba(0, 0, 0, 0.8);
         color: #fff;
         font-size: 1em;
@@ -221,24 +197,19 @@
         box-sizing: border-box;
         z-index: 1002;
         border-bottom: 1px solid red;
-        border-top: 1px solid red; /* Added top border for symmetry */
-        border-radius: 5px; /* Slight rounding */
-        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Subtle glow */
+        border-top: 1px solid red;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
     }
-
     #nowPlayingText {
         display: inline-block;
         padding-left: 100%;
         animation: marquee 25s linear infinite;
         animation-fill-mode: forwards;
     }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
 
-    @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
-
-    /* 3D Style for the Clock Button */
+    /* Clock Button */
     #ammBtn {
       font-weight: bold;
       font-size: 24px;
@@ -251,14 +222,14 @@
       cursor: default;
       box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       transform: perspective(500px) rotateX(5deg);
-      margin-top: 10px; /* Space from player */
+      margin-top: 10px;
     }
     #ammBtn:hover {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
       transform: perspective(500px) rotateX(2deg);
     }
 
-    /* Search Bar Styles */
+    /* Search Bar */
     .search-container {
       margin: 20px auto;
       width: 90%;
@@ -266,7 +237,6 @@
       position: relative;
       perspective: 1000px;
     }
-
     .search-input {
       width: 100%;
       padding: 12px 20px;
@@ -280,17 +250,15 @@
       transition: all 0.3s ease;
       transform-style: preserve-3d;
       transform: rotateX(0deg);
-      padding-right: 40px; /* Make space for the clear button */
+      padding-right: 40px;
     }
-
     .search-input:focus {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
       transform: rotateX(5deg);
     }
-
     #clearSearch {
         position: absolute;
-        right: 25px; /* Adjust based on padding of input */
+        right: 25px;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
@@ -298,31 +266,30 @@
         font-weight: bold;
         font-size: 20px;
         transition: color 0.2s ease;
-        z-index: 10; /* Ensure it's above input */
-        display: none; /* Hidden by default */
+        z-index: 10;
+        display: none;
     }
     #clearSearch:hover {
         color: #fff;
     }
 
-    /* UPDATED: Channel List Styles for side-by-side display */
+    /* Channel List */
     #channelList {
-      display: flex; /* Use flexbox for horizontal layout */
-      flex-wrap: wrap; /* Allow items to wrap to the next line */
-      justify-content: center; /* Center items horizontally */
-      gap: 15px; /* Spacing between items */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       padding: 20px;
-      max-width: 900px; /* Keep max-width */
+      max-width: 900px;
       margin: auto;
       background: #333;
       border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
       overflow-y: auto;
-      max-height: 500px; /* Keep vertical scroll if many channels */
+      max-height: 500px;
       margin-top: 30px;
-      perspective: 1000px; /* Enable 3D perspective for child elements */
+      perspective: 1000px;
     }
-
     #channelList li {
       display: flex;
       flex-direction: column;
@@ -333,37 +300,31 @@
       min-height: 120px;
       cursor: pointer;
       border-radius: 12px;
-      transition: all 0.3s ease; /* Smooth transition for 3D effects */
-      background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Adjust background for 3D */
+      transition: all 0.3s ease;
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       position: relative;
       text-align: center;
       flex-shrink: 0;
-      transform-style: preserve-3d; /* Preserve 3D transformations for children */
-      transform: rotateX(5deg) rotateY(-5deg); /* Initial 3D tilt */
-      border: 1px solid #ff0000; /* Solid red border */
+      transform-style: preserve-3d;
+      transform: rotateX(5deg) rotateY(-5deg);
+      border: 1px solid #ff0000;
     }
-
-    #channelList li.hidden {
-      display: none;
-    }
-
+    #channelList li.hidden { display: none; }
     #channelList img {
       width: 60px;
       height: 60px;
       margin-bottom: 5px;
       border-radius: 10px;
-      transform: translateZ(10px); /* Move image slightly forward in 3D space */
+      transform: translateZ(10px);
     }
-    
     #channelList li span {
         font-size: 14px;
         word-break: break-word;
         line-height: 1.2;
-        transform: translateZ(5px); /* Move text slightly forward in 3D space */
+        transform: translateZ(5px);
     }
-
-    /* Status Dot with Neon Glow */
+    /* Status Dot - Green by default, red on detected error if implemented */
     #channelList li:before {
       content: '';
       position: absolute;
@@ -372,26 +333,22 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-      /* Default to red for offline or unknown */
+      background: #39b54a; /* Default to green (online) */
+      box-shadow: 0 0 5px #39b54a, 0 0 10px #39b54a, 0 0 15px #39b54a; /* Green neon glow */
+      transform: translateZ(15px);
+    }
+    #channelList li.offline:before { /* If you later implement a robust offline check */
       background: #e74c3c;
       box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c; /* Red neon glow */
-      transform: translateZ(15px); /* Move dot further forward */
     }
-
-    #channelList li.online:before {
-      background: #39b54a;
-      box-shadow: 0 0 5px #39b54a, 0 0 10px #39b54a, 0 0 15px #39b54a; /* Green neon glow */
-    }
-
     #channelList li:hover {
-      background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Adjust hover background */
-      transform: scale(1.05) rotateX(0deg) rotateY(0deg); /* Straighten on hover */
-      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2); /* Inset shadow on hover */
-      border-color: #ff0000; /* Keep red border on hover */
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+      transform: scale(1.05) rotateX(0deg) rotateY(0deg);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
+      border-color: #ff0000;
     }
 
-    /* Progress Bar Styles */
+    /* Progress Bar */
     #progressContainer {
       width: 90%;
       max-width: 400px;
@@ -407,7 +364,6 @@
         transform: perspective(500px) rotateX(2deg);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
-
     #progressBar {
       width: 100%;
       height: 10px;
@@ -417,7 +373,6 @@
       overflow: hidden;
       position: relative;
     }
-
     #progressBar div {
       height: 100%;
       position: absolute;
@@ -427,7 +382,6 @@
       border-radius: 15px;
       transition: background-color 0.5s ease-in-out;
     }
-
     #progressText {
       margin-top: 10px;
       font-size: 18px;
@@ -446,78 +400,33 @@
         z-index: 999;
         display: none;
     }
-
-    /* Playlist Section Styling */
-    #sideMenu ul.playlist-list li {
-        color: #fff;
-        text-shadow: 0 0 3px #0ff;
-    }
-    #sideMenu ul.playlist-list li:hover {
-        color: #0ff;
-    }
     
+    /* Responsive Design */
     @media (max-width: 768px) {
-      /* Adjust top padding for smaller screens */
-      body {
-        padding-top: 15px;
-      }
-      #topRightLogo {
-        height: 40px;
-        top: 10px;
-        right: 10px;
-      }
-      #menuButton {
-        top: 15px;
-        left: 10px;
-        width: 40px;
-        height: 40px;
-      }
+      body { padding-top: 15px; }
+      #topRightLogo { height: 40px; top: 10px; right: 10px; }
+      #menuButton { top: 15px; left: 10px; width: 40px; height: 40px; }
       #typingTitle { font-size: 24px; }
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
-      #channelList {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 10px;
-        padding: 15px;
-      }
+      #channelList { gap: 10px; padding: 15px; }
       #channelList li { padding: 8px; width: 110px; min-height: 100px; }
       #channelList img { width: 50px; height: 50px; }
     }
-
     @media (max-width: 480px) {
-      body {
-        padding-top: 10px;
-      }
-      #topRightLogo {
-        height: 35px;
-        top: 8px;
-        right: 8px;
-      }
-      #menuButton {
-        top: 10px;
-        left: 8px;
-        width: 35px;
-        height: 35px;
-      }
-      #menuButton .line {
-        height: 2px;
-      }
+      body { padding-top: 10px; }
+      #topRightLogo { height: 35px; top: 8px; right: 8px; }
+      #menuButton { top: 10px; left: 8px; width: 35px; height: 35px; }
+      #menuButton .line { height: 2px; }
       #menuButton.open .line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
       #menuButton.open .line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-      #sideMenu {
-        width: 240px;
-        padding-top: 60px;
-      }
+      #sideMenu { width: 240px; padding-top: 60px; }
       #typingTitle { font-size: 20px; }
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
-      #channelList {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 8px;
-        padding: 10px;
-      }
+      #channelList { gap: 8px; padding: 10px; }
       #channelList li { padding: 6px; width: 90px; min-height: 90px; font-size: 13px;}
       #channelList img { width: 45px; height: 45px; }
       #channelList li span { font-size: 12px; }
@@ -583,15 +492,16 @@
   
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const m3uUrl = urlParams.get('link');
+    const m3uUrlParam = urlParams.get('link'); // Renamed to avoid conflict
+
     let allChannels = [];
     let displayedChannelElements = [];
     let categories = new Set();
     let customPlaylists = [];
-    let playerInstance = null; // Store player instance
-    let currentPlayingChannelName = "Somoy TV"; // Track current channel for banner, default to Somoy TV
+    let playerInstance = null;
+    let currentPlayingChannelName = "Loading Channel...";
 
-    // --- Menu Elements ---
+    // DOM Element References
     const menuButton = document.getElementById('menuButton');
     const sideMenu = document.getElementById('sideMenu');
     const menuOverlay = document.getElementById('menuOverlay');
@@ -599,22 +509,25 @@
     const categoryList = document.getElementById('categoryList');
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
-    const typingTitle = document.getElementById('typingTitle'); 
     const searchInput = document.getElementById('searchInput'); 
     const clearSearchBtn = document.getElementById('clearSearch'); 
-    let nowPlayingText = document.getElementById('nowPlayingText'); // Changed to `let` as it will be reassigned
+    const nowPlayingTextSpan = document.getElementById('nowPlayingText'); // Updated name for clarity
+    const ammBtn = document.getElementById('ammBtn'); // Added this
+    const channelListDiv = document.getElementById("channelList"); // Updated name for clarity
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+    const progressContainer = document.getElementById("progressContainer");
 
-    // Default Somoy TV details for autoplay (Highly unreliable direct link, for testing only)
-    const somoyTv = {
-        name: "Somoy TV (Unreliable)",
-        url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/1702-audio_113322_eng=113200-video=1692000.m3u8",
-        logo: "https://www.somoynews.tv/assets/logo/somoy-digital-logo-small.png", // Example logo
-        category: "News"
-    };
-
-    // Fallback/Demo M3U for testing channel list loading if default Somoy TV fails
+    // Default M3U playlist for initial load if no URL parameter is provided
     const defaultM3UListUrl = "https://raw.githubusercontent.com/iptv-org/iptv/master/channels/bd.m3u";
 
+    // A more reliable (but still subject to change) Somoy TV direct stream example, if needed for initial play
+    const somoyTvDefault = {
+        name: "Somoy TV",
+        url: "https://dknl59j06w62x.cloudfront.net/out/v1/409a807d478e47f9b88e10c71a398c8c/index.m3u8", // Example: This URL might change or fail
+        logo: "https://www.somoynews.tv/assets/logo/somoy-digital-logo-small.png",
+        category: "News"
+    };
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -633,10 +546,8 @@
 
     function saveRecentHistory(channel) {
       let history = getRecentHistory();
-      // Remove if already exists to bring to front
       history = history.filter(item => item.url !== channel.url);
-      history.unshift(channel); // Add to the beginning
-      // Limit history to only 5 items
+      history.unshift(channel);
       history = history.slice(0, 5);
       localStorage.setItem('recentHistory', JSON.stringify(history));
       renderRecentHistory();
@@ -675,7 +586,7 @@
     }
 
     function renderCustomPlaylists() {
-      customPlaylists = getCustomPlaylists();
+      customPlayplaylists = getCustomPlaylists(); // Ensure customPlaylists is updated from storage
       customPlaylistsList.innerHTML = '';
       if (customPlaylists.length === 0) {
         customPlaylistsList.innerHTML = '<li>No custom playlists added.</li>';
@@ -685,17 +596,16 @@
         const li = document.createElement('li');
         li.textContent = playlist.name;
         li.onclick = () => {
-          fetchM3U(playlist.url); // Load the playlist when clicked
+          fetchM3U(playlist.url);
           toggleMenu();
         };
-        // Add a delete button
         const deleteBtn = document.createElement('span');
         deleteBtn.textContent = ' ✖';
         deleteBtn.style.cursor = 'pointer';
         deleteBtn.style.color = 'red';
         deleteBtn.style.marginLeft = '10px';
         deleteBtn.onclick = (e) => {
-          e.stopPropagation(); // Prevent the li click event
+          e.stopPropagation();
           deleteCustomPlaylist(index);
         };
         li.appendChild(deleteBtn);
@@ -710,6 +620,13 @@
 
     // --- Channel Fetching and Parsing ---
     async function fetchM3U(url) {
+      console.log(`Attempting to fetch M3U from: ${url}`);
+      channelListDiv.innerHTML = ''; // Clear previous channels
+      progressContainer.style.display = "block";
+      progressFill.style.width = `0%`;
+      progressText.innerText = `Loading M3U... (0%)`;
+      updateProgressBarColor(0);
+
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -718,10 +635,10 @@
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert('⚠️ Error loading M3U file! Please check the URL and ensure it\'s publicly accessible and supports CORS (Cross-Origin Resource Sharing).');
         console.error('Error fetching M3U:', error);
-        document.getElementById("channelList").innerHTML = '<li>Failed to load channels from this playlist. Please check the URL.</li>';
-        document.getElementById("progressContainer").style.display = "none";
+        alert('⚠️ Error loading channels! Please check the playlist URL, network connection, and ensure it supports CORS.');
+        channelListDiv.innerHTML = '<li>Failed to load channels.</li>';
+        progressContainer.style.display = "none";
       }
     }
 
@@ -730,7 +647,7 @@
       const channels = [];
       let channel = {};
       categories.clear();
-      categories.add('All'); // Ensure 'All' category is always present
+      categories.add('All');
 
       lines.forEach(line => {
         line = line.trim();
@@ -741,13 +658,16 @@
 
           channel = {
             name: nameMatch ? nameMatch[1].trim() : "Unknown Channel",
-            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70", // Default logo
+            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70",
             category: groupMatch ? groupMatch[1].trim() : "Others"
           };
           categories.add(channel.category);
         } else if (line && !line.startsWith("#")) {
           channel.url = line.trim();
-          channels.push({...channel});
+          if (channel.name && channel.url) { // Ensure both name and URL are present
+            channels.push({...channel});
+          }
+          channel = {}; // Reset for next channel
         }
       });
 
@@ -756,39 +676,32 @@
       renderCategories();
     }
 
-    // --- Channel Status Check (Simplified for display purposes - Green by default) ---
-    // Note: A truly accurate 'online/offline' status for many streams requires a backend service.
-    // For client-side display, we'll assume online unless an error occurs during playback.
+    // --- Channel Display and Progress Bar ---
     async function initializeChannelDisplay(channels) {
-      const list = document.getElementById("channelList");
-      const progressFill = document.getElementById("progressFill");
-      const progressText = document.getElementById("progressText");
-      const progressContainer = document.getElementById("progressContainer");
-
-      list.innerHTML = ""; // Clear existing channels
-      displayedChannelElements = []; // Reset array
+      channelListDiv.innerHTML = "";
+      displayedChannelElements = [];
 
       if (channels.length === 0) {
         progressContainer.style.display = "none";
-        list.innerHTML = '<li>No channels found.</li>';
+        channelListDiv.innerHTML = '<li>No channels found in this playlist.</li>';
         return;
       }
       
+      // Update progress bar immediately before rendering
       progressContainer.style.display = "block";
       progressFill.style.width = `0%`;
-      progressText.innerText = `Loading 0/${channels.length} (0%)`;
+      progressText.innerText = `Loading Channels... 0/${channels.length} (0%)`;
       updateProgressBarColor(0);
 
-      // Create all list items first, then update progress
       channels.forEach((channel, index) => {
           const li = document.createElement("li");
           li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
           li.onclick = () => playChannel(channel.url, channel.name, channel.logo);
           li.dataset.category = channel.category;
           li.dataset.channelName = channel.name.toLowerCase();
-          li.classList.add("online"); // Assume online by default for display
+          li.classList.add("online"); // Default to online for display
 
-          list.appendChild(li); // Add to DOM
+          channelListDiv.appendChild(li); // Add to DOM
           displayedChannelElements.push({
             element: li,
             name: li.dataset.channelName,
@@ -798,20 +711,18 @@
           // Update progress bar
           const progress = Math.round(((index + 1) / channels.length) * 100);
           progressFill.style.width = `${progress}%`;
-          progressText.innerText = `Loading ${index + 1}/${channels.length} (${progress}%)`;
+          progressText.innerText = `Loading Channels... ${index + 1}/${channels.length} (${progress}%)`;
           updateProgressBarColor(progress);
       });
       
-      // Once all are loaded, hide the progress bar
-      progressContainer.style.display = "none";
+      progressContainer.style.display = "none"; // Hide after all are added
     }
 
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
-      currentPlayingChannelName = name; // Update current playing channel for banner
-      updateNowPlayingBanner(); // Update banner immediately when channel changes
+      currentPlayingChannelName = name;
+      updateNowPlayingBanner();
 
-      // Get saved volume and mute state
       let savedVolume = localStorage.getItem('playerVolume');
       let savedMuted = localStorage.getItem('playerMuted') === 'true';
 
@@ -819,11 +730,177 @@
         id: "videoPlayer",
         file: url,
         autoplay: 1,
-        muted: savedMuted // Apply saved muted state
+        muted: savedMuted
       };
 
-      if (savedVolume !== null && !savedMuted) { // Apply volume only if not muted and volume was saved
+      if (savedVolume !== null && !savedMuted) {
           playerOptions.volume = parseInt(savedVolume, 10);
-      } else if (savedMuted) { // Ensure muted if saved as such
-          playerOptions.muted = 1;
-      } else { //
+      } else {
+          playerOptions.muted = 1; // Default to muted if no state saved or if muted was true
+      }
+      
+      if (playerInstance) {
+          playerInstance.api("destroy");
+          playerInstance = null;
+      }
+
+      playerInstance = new Playerjs(playerOptions);
+
+      playerInstance.api("on", "volume", function(volume) {
+          localStorage.setItem('playerVolume', volume);
+          localStorage.setItem('playerMuted', volume === 0 ? 'true' : 'false');
+      });
+
+      playerInstance.api("on", "error", function(error) {
+        console.error("Player Error:", error);
+        alert(`Player Error for ${currentPlayingChannelName}: The stream might be offline, geo-restricted, or the link is invalid. Please try another channel.`);
+        nowPlayingTextSpan.textContent = `Now Playing: Failed to load ${currentPlayingChannelName}`;
+        updateNowPlayingBanner(); // Re-trigger animation for error message
+      });
+
+      saveRecentHistory({ name, url, logo });
+    }
+
+    addPlaylistOption.addEventListener('click', () => {
+        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন:");
+        if (playlistName) {
+            const playlistUrl = prompt("আপনার প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: is.gd/m3u/Direct link):");
+            if (playlistUrl) {
+                if (!playlistUrl.startsWith('http://') && !playlistUrl.startsWith('https://')) {
+                    alert("Invalid URL. Please enter a full URL starting with http:// or https://");
+                    return;
+                }
+                addCustomPlaylist(playlistName, playlistUrl);
+            }
+        }
+        toggleMenu();
+    });
+
+
+    // --- Search and Category Filtering ---
+    searchInput.addEventListener('input', () => {
+        filterChannels();
+        if (searchInput.value.length > 0) {
+            clearSearchBtn.style.display = 'inline';
+        } else {
+            clearSearchBtn.style.display = 'none';
+        }
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearSearchBtn.style.display = 'none';
+        filterChannels();
+    });
+
+    function filterChannels(category = 'All') {
+      const searchTerm = searchInput.value.toLowerCase();
+      
+      displayedChannelElements.forEach(item => {
+        const isMatchingSearch = item.name.includes(searchTerm);
+        const isMatchingCategory = (category === 'All' || item.category === category);
+
+        if (isMatchingSearch && isMatchingCategory) {
+          item.element.classList.remove('hidden');
+        } else {
+          item.element.classList.add('hidden');
+        }
+      });
+      document.querySelectorAll('#categoryList li').forEach(li => {
+        if (li.dataset.category === category) {
+            li.classList.add('active');
+        } else {
+            li.classList.remove('active');
+        }
+      });
+    }
+
+    // --- Category Rendering ---
+    function renderCategories() {
+        categoryList.innerHTML = '';
+        const allLi = document.createElement('li');
+        allLi.textContent = 'All Channels';
+        allLi.dataset.category = 'All';
+        allLi.classList.add('active');
+        allLi.onclick = () => filterChannels('All');
+        categoryList.appendChild(allLi);
+
+        Array.from(categories).sort().forEach(cat => {
+            if (cat && cat !== 'All') { // Ensure category is not empty string or 'All'
+                const li = document.createElement('li');
+                li.textContent = cat;
+                li.dataset.category = cat;
+                li.onclick = () => filterChannels(cat);
+                categoryList.appendChild(li);
+            }
+        });
+    }
+
+    // --- Progress Bar Color Update ---
+    function updateProgressBarColor(percentage) {
+      let color;
+      if (percentage < 30) {
+        color = '#ff0033';
+      } else if (percentage < 70) {
+        color = '#ffbc00';
+      } else {
+        color = '#39b54a';
+      }
+      progressFill.style.backgroundColor = color;
+      progressText.style.color = color;
+    }
+
+    // --- Clock Update ---
+    function updateClock() {
+      const now = new Date();
+      let hrs = now.getHours();
+      let mins = now.getMinutes();
+      let secs = now.getSeconds();
+      const ampm = hrs >= 12 ? "PM" : "AM";
+
+      hrs = hrs % 12 || 12;
+      mins = mins < 10 ? "0" + mins : mins;
+      secs = secs < 10 ? "0" + secs : secs;
+
+      const timeStr = `${hrs}:${mins}:${secs} ${ampm}`;
+      ammBtn.innerText = timeStr;
+    }
+
+    // --- Now Playing Banner Update ---
+    function updateNowPlayingBanner() {
+        const bannerContainer = document.getElementById('nowPlayingBanner');
+        let currentNowPlayingText = document.getElementById('nowPlayingText');
+
+        // Remove the existing element if it exists to restart the animation
+        if (currentNowPlayingText) {
+            bannerContainer.removeChild(currentNowPlayingText);
+        }
+
+        // Recreate the element with updated text
+        const newNowPlayingText = document.createElement('span');
+        newNowPlayingText.id = 'nowPlayingText';
+        newNowPlayingText.textContent = `Now Playing: ${currentPlayingChannelName}`;
+        bannerContainer.appendChild(newNowPlayingText);
+    }
+
+
+    // --- Initializations on Document Load ---
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log("DOM Content Loaded. Initializing...");
+        renderRecentHistory();
+        renderCustomPlaylists();
+        updateClock();
+        setInterval(updateClock, 1000);
+        updateNowPlayingBanner();
+
+        // Determine which M3U to load initially
+        if (m3uUrlParam) {
+            console.log(`Loading M3U from URL parameter: ${m3uUrlParam}`);
+            fetchM3U(m3uUrlParam);
+            // Do NOT autoplay somoyTvDefault here if a custom m3u is provided,
+            // as the custom m3u might load its own channels.
+        } else {
+            console.log(`No M3U URL parameter. Loading default M3U: ${defaultM3UListUrl}`);
+            fetchM3U(defaultM3UListUrl);
+            // Optionally, autoplay a specific channel from your default setup
+            // This is for demonstration. You
