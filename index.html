@@ -7,79 +7,94 @@
   <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #181818; color: #fff; text-align: center; position: relative; padding-top: 20px; /* Add padding for top elements */ }
+    body {
+      background: #181818;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      padding-top: 20px;
+      /* Background gradient animation */
+      background: linear-gradient(90deg, #181818, #2a2a2a, #181818);
+      background-size: 400% 400%;
+      animation: backgroundGradient 15s ease infinite;
+    }
 
-    /* Top-Left Permanent Logo */
-    #topLeftLogo {
+    @keyframes backgroundGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Top-Right Permanent Logo */
+    #topRightLogo {
       position: absolute;
-      top: 15px; /* Adjust as needed */
-      left: 15px; /* Adjust as needed */
-      height: 50px; /* Adjust logo size */
+      top: 15px;
+      right: 15px;
+      height: 50px;
       width: auto;
-      z-index: 1000; /* Ensure it's on top */
-      border-radius: 8px; /* Optional: subtle rounded corners */
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Optional: a slight glow */
+      z-index: 1000;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5);
       transition: transform 0.3s ease-in-out;
     }
-    #topLeftLogo:hover {
-        transform: scale(1.05); /* Slightly enlarge on hover */
+    #topRightLogo:hover {
+        transform: scale(1.05);
     }
 
-    /* Right-Corner Menu Button (Hamburger) - NEW */
+    /* Top-Left Menu Button (Hamburger) */
     #menuButton {
       position: absolute;
-      top: 20px; /* Aligned with top-left logo, adjust as needed */
-      right: 20px; /* Adjust as needed */
+      top: 15px;
+      left: 15px; /* Changed from right to left */
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       border: none;
-      border-radius: 12px; /* Rounded corners for 3D effect */
+      border-radius: 12px;
       padding: 10px;
       cursor: pointer;
-      z-index: 1001; /* Above logo and other content */
+      z-index: 1001;
       box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       transition: all 0.3s ease;
-      display: flex; /* For centering lines */
+      display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      width: 45px; /* Size of the button */
-      height: 45px; /* Size of the button */
+      width: 45px;
+      height: 45px;
     }
     #menuButton:hover {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
-      transform: translateY(1px); /* Mimic slight press */
+      transform: translateY(1px);
     }
     #menuButton .line {
       width: 70%;
       height: 3px;
-      background-color: #0ff; /* Neon color */
+      background-color: #0ff;
       border-radius: 2px;
-      box-shadow: 0 0 5px #0ff; /* Neon glow for lines */
+      box-shadow: 0 0 5px #0ff;
       transition: all 0.3s ease;
     }
-    /* Animation for closing X */
     #menuButton.open .line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     #menuButton.open .line:nth-child(2) { opacity: 0; }
     #menuButton.open .line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-    /* Side Menu Container - NEW */
+    /* Side Menu Container */
     #sideMenu {
       position: fixed;
       top: 0;
-      right: -300px; /* Start off-screen */
-      width: 280px; /* Width of the menu */
+      left: -300px; /* Changed from right to left */
+      width: 280px;
       height: 100%;
       background: linear-gradient(145deg, #252525, #151515);
-      box-shadow: -10px 0 20px rgba(0, 0, 0, 0.7);
-      transition: right 0.3s ease-in-out;
+      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7); /* Adjusted shadow for left side */
+      transition: left 0.3s ease-in-out; /* Changed from right to left */
       z-index: 1000;
       padding: 20px;
-      padding-top: 70px; /* Space for top button */
-      overflow-y: auto; /* Scroll if content is long */
+      padding-top: 70px;
+      overflow-y: auto;
       text-align: left;
     }
     #sideMenu.open {
-      right: 0; /* Slide in */
+      left: 0; /* Changed from right to left */
     }
     #sideMenu h3 {
       color: #0ff;
@@ -94,59 +109,41 @@
       padding: 0;
       margin-bottom: 20px;
     }
+    /* 3D Styling for Menu List Items */
     #sideMenu li {
-      padding: 8px 0;
+      padding: 10px 15px;
+      margin-bottom: 8px;
       cursor: pointer;
       color: #ccc;
-      transition: color 0.2s ease;
       font-size: 15px;
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(50, 50, 50, 0.2);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
     #sideMenu li:hover {
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+      box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
       color: #fff;
       text-shadow: 0 0 3px #0ff;
+      transform: translateY(1px);
     }
-    #sideMenu li.active { /* For current category */
+    #sideMenu li.active {
         color: #0ff;
         font-weight: bold;
         text-shadow: 0 0 5px #0ff;
+        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
-    /* Menu Input/Button Styling - NEW */
-    #sideMenu input[type="text"] {
-      width: calc(100% - 20px); /* Adjust width */
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #333;
-      border-radius: 8px;
-      background-color: #2a2a2a;
-      color: #fff;
-      outline: none;
-      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
-    }
-    #sideMenu button {
-      width: 100%;
-      padding: 10px;
-      background: linear-gradient(145deg, #0ff, #00bfff); /* Blueish neon */
-      color: #181818;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.2s ease;
-      box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
-    }
-    #sideMenu button:hover {
-      background: linear-gradient(145deg, #00bfff, #0ff);
-      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3), 1px 1px 3px rgba(0,0,0,0.3);
-      transform: translateY(1px);
-    }
-
-
-    /* 3D Title Styling */
+    /* 3D Title Styling (MR X TV) */
     #typingTitle {
       font-size: 28px;
       color: #fff;
-      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff,
+      text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.3),
                    3px 3px 7px rgba(0, 0, 0, 0.8),
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
@@ -217,65 +214,65 @@
       transform: rotateX(5deg);
     }
 
+    /* UPDATED: Channel List Styles for side-by-side display */
     #channelList {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background: #333;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-            overflow-y: auto;
-            max-height: 500px;
-            margin-top: 30px;
-        }
+      display: flex; /* Use flexbox for horizontal layout */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; /* Center items horizontally */
+      gap: 15px; /* Spacing between items */
+      padding: 20px;
+      max-width: 900px; /* Keep max-width */
+      margin: auto;
+      background: #333;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+      overflow-y: auto;
+      max-height: 500px; /* Keep vertical scroll if many channels */
+      margin-top: 30px;
+      perspective: 1000px; /* Enable 3D perspective for child elements */
+    }
 
-        #channelList li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            cursor: pointer;
-            border-radius: 12px;
-            transition: 0.3s;
-            background: #444;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            position: relative;
-            text-align: center;
-            display: flex;
-        }
+    #channelList li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      width: 130px;
+      min-height: 120px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: all 0.3s ease; /* Smooth transition for 3D effects */
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Adjust background for 3D */
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+      position: relative;
+      text-align: center;
+      flex-shrink: 0;
+      transform-style: preserve-3d; /* Preserve 3D transformations for children */
+      transform: rotateX(5deg) rotateY(-5deg); /* Initial 3D tilt */
+      border: 1px solid #ff0000; /* Solid red border */
+    }
 
-        #channelList li.hidden {
-            display: none;
-        }
+    #channelList li.hidden {
+      display: none;
+    }
 
     #channelList img {
       width: 60px;
       height: 60px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       border-radius: 10px;
+      transform: translateZ(10px); /* Move image slightly forward in 3D space */
+    }
+    
+    #channelList li span {
+        font-size: 14px;
+        word-break: break-word;
+        line-height: 1.2;
+        transform: translateZ(5px); /* Move text slightly forward in 3D space */
     }
 
-    /* Neon Glow Styles */
-    .channel-box.online {
-      border: 2px solid #39ff14;
-      box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
-    }
-
-    .channel-box.offline {
-      border: 2px solid #ff0033;
-      box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033, 0 0 30px #ff0033;
-    }
-
-    #channelList li:hover {
-      background: #555;
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    }
-
+    /* Status Dot with Neon Glow */
     #channelList li:before {
       content: '';
       position: absolute;
@@ -283,12 +280,24 @@
       left: 10px;
       width: 10px;
       height: 10px;
-      background: #e74c3c;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      background: #e74c3c;
+      box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c; /* Red neon glow */
+      transform: translateZ(15px); /* Move dot further forward */
     }
 
-    #channelList li.online:before { background: #39b54a; }
+    #channelList li.online:before {
+      background: #39b54a;
+      box-shadow: 0 0 5px #39b54a, 0 0 10px #39b54a, 0 0 15px #39b54a; /* Green neon glow */
+    }
+
+    #channelList li:hover {
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Adjust hover background */
+      transform: scale(1.05) rotateX(0deg) rotateY(0deg); /* Straighten on hover */
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2); /* Inset shadow on hover */
+      border-color: #ff0000; /* Keep red border on hover */
+    }
 
     /* Progress Bar Styles */
     #progressContainer {
@@ -341,21 +350,29 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-        z-index: 999; /* Below menu, above everything else */
-        display: none; /* Hidden by default */
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
     }
 
-
+    /* Playlist Section Styling */
+    #sideMenu ul.playlist-list li {
+        color: #fff;
+        text-shadow: 0 0 3px #0ff;
+    }
+    #sideMenu ul.playlist-list li:hover {
+        color: #0ff;
+    }
+    
     @media (max-width: 768px) {
-      #topLeftLogo {
+      #topRightLogo {
         height: 40px;
         top: 10px;
-        left: 10px;
+        right: 10px;
       }
       #menuButton {
         top: 15px;
-        right: 15px;
+        left: 10px; /* Adjusted for smaller screens */
         width: 40px;
         height: 40px;
       }
@@ -363,19 +380,25 @@
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
-      #channelList li { padding: 15px; }
-      #channelList img { width: 60px; height: 60px; }
+      /* Adjusted for smaller screens */
+      #channelList {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+        padding: 15px;
+      }
+      #channelList li { padding: 8px; width: 110px; min-height: 100px; }
+      #channelList img { width: 50px; height: 50px; }
     }
 
     @media (max-width: 480px) {
-      #topLeftLogo {
+      #topRightLogo {
         height: 35px;
         top: 8px;
-        left: 8px;
+        right: 8px;
       }
       #menuButton {
         top: 10px;
-        right: 10px;
+        left: 8px; /* Adjusted for very small screens */
         width: 35px;
         height: 35px;
       }
@@ -385,21 +408,28 @@
       #menuButton.open .line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
       #menuButton.open .line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
       #sideMenu {
-        width: 240px; /* Smaller menu for small screens */
+        width: 240px;
         padding-top: 60px;
       }
       #typingTitle { font-size: 20px; }
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
-      #channelList li { padding: 12px; }
-      #channelList img { width: 50px; height: 50px; }
+      /* Adjusted for very small screens */
+      #channelList {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+        padding: 10px;
+      }
+      #channelList li { padding: 6px; width: 90px; min-height: 90px; font-size: 13px;}
+      #channelList img { width: 45px; height: 45px; }
+      #channelList li span { font-size: 12px; }
     }
   </style>
 </head>
 <body>
 
-<img id="topLeftLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
+<img id="topRightLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
 
 <button id="menuButton">
   <div class="line"></div>
@@ -431,24 +461,26 @@
   <ul id="channelList"></ul>
 
   <div id="sideMenu">
-    <h3>Saved Playlists</h3>
-    <ul id="savedPlaylists"></ul>
-    <input type="text" id="newPlaylistInput" placeholder="Paste is.gd/m3u link here">
-    <button id="savePlaylistBtn">Save New Playlist</button>
-
     <h3>Recent History</h3>
     <ul id="recentHistory"></ul>
 
     <h3>Categories</h3>
     <ul id="categoryList">
       <li data-category="All" class="active">All Channels</li>
-      </ul>
+    </ul>
     
     <h3>Player Options</h3>
     <ul>
       <li id="fullScreenOption">Toggle Full Screen</li>
       <li id="unmuteOption">Unmute Player</li>
     </ul>
+
+    <h3>Add Custom Playlist</h3>
+    <ul>
+      <li id="addPlaylistOption">Add New Playlist</li>
+    </ul>
+    <ul id="customPlaylists" class="playlist-list">
+      </ul>
   </div>
 
   <div id="menuOverlay"></div>
@@ -458,7 +490,8 @@
     const m3uUrl = urlParams.get('link');
     let allChannels = [];
     let displayedChannelElements = [];
-    let categories = new Set(); // To store unique categories
+    let categories = new Set();
+    let customPlaylists = [];
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -466,11 +499,10 @@
     const menuOverlay = document.getElementById('menuOverlay');
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryList = document.getElementById('categoryList');
-    const savedPlaylistsList = document.getElementById('savedPlaylists');
-    const newPlaylistInput = document.getElementById('newPlaylistInput');
-    const savePlaylistBtn = document.getElementById('savePlaylistBtn');
     const fullScreenOption = document.getElementById('fullScreenOption');
     const unmuteOption = document.getElementById('unmuteOption');
+    const addPlaylistOption = document.getElementById('addPlaylistOption');
+    const customPlaylistsList = document.getElementById('customPlaylists');
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -480,7 +512,7 @@
     }
 
     menuButton.addEventListener('click', toggleMenu);
-    menuOverlay.addEventListener('click', toggleMenu); // Close menu when clicking outside
+    menuOverlay.addEventListener('click', toggleMenu);
 
     // --- Local Storage Management ---
     function getRecentHistory() {
@@ -492,8 +524,8 @@
       // Remove if already exists to bring to front
       history = history.filter(item => item.url !== channel.url);
       history.unshift(channel); // Add to the beginning
-      // Limit history to, say, 10 items
-      history = history.slice(0, 10);
+      // Limit history to only 5 items
+      history = history.slice(0, 5);
       localStorage.setItem('recentHistory', JSON.stringify(history));
       renderRecentHistory();
     }
@@ -510,76 +542,59 @@
         li.textContent = channel.name;
         li.onclick = () => {
           playChannel(channel.url);
-          toggleMenu(); // Close menu after selection
+          toggleMenu();
         };
         recentHistoryList.appendChild(li);
       });
     }
 
-    function getSavedPlaylists() {
-        return JSON.parse(localStorage.getItem('savedPlaylists')) || [];
+    function getCustomPlaylists() {
+      return JSON.parse(localStorage.getItem('customPlaylists')) || [];
     }
 
-    function savePlaylist(name, url) {
-        let playlists = getSavedPlaylists();
-        // Check if playlist already exists
-        if (!playlists.some(p => p.url === url)) {
-            playlists.push({ name: name, url: url });
-            localStorage.setItem('savedPlaylists', JSON.stringify(playlists));
-            renderSavedPlaylists();
-            return true; // Indicate success
-        }
-        return false; // Indicate it already exists
+    function saveCustomPlaylists() {
+      localStorage.setItem('customPlaylists', JSON.stringify(customPlaylists));
+      renderCustomPlaylists();
     }
 
-    function renderSavedPlaylists() {
-        const playlists = getSavedPlaylists();
-        savedPlaylistsList.innerHTML = '';
-        if (playlists.length === 0) {
-            savedPlaylistsList.innerHTML = '<li>No saved playlists.</li>';
-            return;
-        }
-        playlists.forEach((playlist, index) => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <span>${playlist.name || playlist.url}</span>
-                <button style="background: none; border: none; color: #ff0033; font-size: 1em; cursor: pointer; float: right;" data-index="${index}">&times;</button>
-            `;
-            li.querySelector('span').onclick = () => {
-                window.location.search = `?link=${encodeURIComponent(playlist.url)}`;
-                toggleMenu(); // Close menu after selecting
-            };
-            li.querySelector('button').onclick = (e) => {
-                e.stopPropagation(); // Prevent li click
-                deletePlaylist(parseInt(e.target.dataset.index));
-            };
-            savedPlaylistsList.appendChild(li);
-        });
+    function addCustomPlaylist(name, url) {
+      customPlaylists.push({ name, url });
+      saveCustomPlaylists();
     }
 
-    function deletePlaylist(index) {
-        let playlists = getSavedPlaylists();
-        playlists.splice(index, 1);
-        localStorage.setItem('savedPlaylists', JSON.stringify(playlists));
-        renderSavedPlaylists();
+    function renderCustomPlaylists() {
+      customPlaylists = getCustomPlaylists();
+      customPlaylistsList.innerHTML = '';
+      if (customPlaylists.length === 0) {
+        customPlaylistsList.innerHTML = '<li>No custom playlists added.</li>';
+        return;
+      }
+      customPlaylists.forEach((playlist, index) => {
+        const li = document.createElement('li');
+        li.textContent = playlist.name;
+        li.onclick = () => {
+          fetchM3U(playlist.url); // Load the playlist when clicked
+          toggleMenu();
+        };
+        // Add a delete button
+        const deleteBtn = document.createElement('span');
+        deleteBtn.textContent = ' ✖';
+        deleteBtn.style.cursor = 'pointer';
+        deleteBtn.style.color = 'red';
+        deleteBtn.style.marginLeft = '10px';
+        deleteBtn.onclick = (e) => {
+          e.stopPropagation(); // Prevent the li click event
+          deleteCustomPlaylist(index);
+        };
+        li.appendChild(deleteBtn);
+        customPlaylistsList.appendChild(li);
+      });
     }
 
-    savePlaylistBtn.addEventListener('click', () => {
-        const link = newPlaylistInput.value.trim();
-        if (link) {
-            let playlistName = prompt("Enter a name for this playlist (optional):", link);
-            playlistName = playlistName || link; // Use link if no name is provided
-            if(savePlaylist(playlistName, link)) {
-                alert('Playlist saved!');
-                newPlaylistInput.value = '';
-            } else {
-                alert('This playlist is already saved!');
-            }
-        } else {
-            alert('Please enter a valid link.');
-        }
-    });
-
+    function deleteCustomPlaylist(index) {
+        customPlaylists.splice(index, 1);
+        saveCustomPlaylists();
+    }
 
     // --- Channel Fetching and Parsing ---
     async function fetchM3U(url) {
@@ -597,22 +612,22 @@
       const lines = data.split("\n");
       const channels = [];
       let channel = {};
-      categories.clear(); // Clear existing categories
-      categories.add('All'); // Add default 'All' category
+      categories.clear();
+      categories.add('All');
 
       lines.forEach(line => {
         line = line.trim();
         if (line.startsWith("#EXTINF")) {
           const nameMatch = line.match(/,(.+)/);
           const logoMatch = line.match(/tvg-logo="(.*?)"/);
-          const groupMatch = line.match(/group-title="([^"]*)"/); // Extract group-title
+          const groupMatch = line.match(/group-title="([^"]*)"/);
 
           channel = {
             name: nameMatch ? nameMatch[1] : "Unknown Channel",
             logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70",
-            category: groupMatch ? groupMatch[1] : "Others" // Default category
+            category: groupMatch ? groupMatch[1] : "Others"
           };
-          categories.add(channel.category); // Add category to set
+          categories.add(channel.category);
         } else if (line && !line.startsWith("#")) {
           channel.url = line;
           channels.push({...channel});
@@ -621,19 +636,17 @@
 
       allChannels = channels;
       initializeChannelDisplay(channels);
-      renderCategories(); // Render categories after parsing
+      renderCategories();
     }
 
     // --- Channel Status Check (Optimized for speed) ---
     async function checkChannelStatus(url) {
       try {
-        // Use a shorter timeout for status checks to not delay loading too much
-        const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000)); // 5 seconds
-        const fetchPromise = fetch(url, { method: 'HEAD', mode: 'no-cors' }); // no-cors to avoid CORS errors on HEAD requests
+        const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000));
+        const fetchPromise = fetch(url, { method: 'HEAD', mode: 'no-cors' });
         await Promise.race([fetchPromise, timeout]);
-        return true; // If fetch completes (even no-cors opaque response), consider it reachable
+        return true;
       } catch (e) {
-        // console.warn(`Channel ${url} failed status check:`, e.message);
         return false;
       }
     }
@@ -655,26 +668,25 @@
 
       const total = channels.length;
       let loaded = 0;
+      const chunkSize = 20;
 
-      // Group channels into chunks to update UI more frequently
-      const chunkSize = 20; // Process 20 channels at a time
       for (let i = 0; i < total; i += chunkSize) {
         const chunk = channels.slice(i, i + chunkSize);
         const promises = chunk.map(async (channel) => {
           const li = document.createElement("li");
           li.innerHTML = `<img src="${channel.logo}" alt="Logo"><span>${channel.name}</span>`;
-          li.onclick = () => playChannel(channel.url, channel.name, channel.logo); // Pass name and logo for history
-          li.dataset.category = channel.category; // Store category for filtering
-          li.dataset.channelName = channel.name.toLowerCase(); // Store for search filter
+          li.onclick = () => playChannel(channel.url, channel.name, channel.logo);
+          li.dataset.category = channel.category;
+          li.dataset.channelName = channel.name.toLowerCase();
 
-          // Perform status check
           const status = await checkChannelStatus(channel.url);
           if (status) li.classList.add("online");
+          else li.classList.add("offline"); // Add offline class for red dot
 
-          return li; // Return the fully constructed li element
+          return li;
         });
 
-        const lis = await Promise.all(promises); // Wait for all in chunk to complete
+        const lis = await Promise.all(promises);
 
         lis.forEach(li => {
           list.appendChild(li);
@@ -691,7 +703,7 @@
         progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
         updateProgressBarColor(progress);
 
-        if (loaded >= total) { // Check if loading is complete
+        if (loaded >= total) {
           progressContainer.style.display = "none";
         }
       }
@@ -705,7 +717,7 @@
         autoplay: 1,
         muted: 1
       });
-      saveRecentHistory({ name, url, logo }); // Save to history
+      saveRecentHistory({ name, url, logo });
     }
 
     function unmutePlayer() {
@@ -716,11 +728,11 @@
         const playerContainer = document.querySelector('.player-container');
         if (playerContainer.requestFullscreen) {
             playerContainer.requestFullscreen();
-        } else if (playerContainer.mozRequestFullScreen) { /* Firefox */
+        } else if (playerContainer.mozRequestFullScreen) {
             playerContainer.mozRequestFullScreen();
-        } else if (playerContainer.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        } else if (playerContainer.webkitRequestFullscreen) {
             playerContainer.webkitRequestFullscreen();
-        } else if (playerContainer.msRequestFullscreen) { /* IE/Edge */
+        } else if (playerContainer.msRequestFullscreen) {
             playerContainer.msRequestFullscreen();
         }
         toggleMenu();
@@ -730,6 +742,18 @@
         unmutePlayer();
         toggleMenu();
     });
+
+    addPlaylistOption.addEventListener('click', () => {
+        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন:");
+        if (playlistName) {
+            const playlistUrl = prompt("আপনার প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: is.gd/m3u/Direct link):");
+            if (playlistUrl) {
+                addCustomPlaylist(playlistName, playlistUrl);
+            }
+        }
+        toggleMenu();
+    });
+
 
     // --- Search and Category Filtering ---
     function filterChannels(category = 'All') {
@@ -745,7 +769,6 @@
           item.element.classList.add('hidden');
         }
       });
-      // Update active category in menu
       document.querySelectorAll('#categoryList li').forEach(li => {
         if (li.dataset.category === category) {
             li.classList.add('active');
@@ -761,12 +784,12 @@
         const allLi = document.createElement('li');
         allLi.textContent = 'All Channels';
         allLi.dataset.category = 'All';
-        allLi.classList.add('active'); // Initially active
+        allLi.classList.add('active');
         allLi.onclick = () => filterChannels('All');
         categoryList.appendChild(allLi);
 
         Array.from(categories).sort().forEach(cat => {
-            if (cat !== 'All') { // Skip 'All' if already added
+            if (cat !== 'All') {
                 const li = document.createElement('li');
                 li.textContent = cat;
                 li.dataset.category = cat;
@@ -783,11 +806,11 @@
       let color;
 
       if (percentage < 30) {
-        color = '#ff0033'; // Red
+        color = '#ff0033';
       } else if (percentage < 70) {
-        color = '#ffbc00'; // Orange/Yellow
+        color = '#ffbc00';
       } else {
-        color = '#39b54a'; // Green
+        color = '#39b54a';
       }
       progressFill.style.backgroundColor = color;
       progressText.style.color = color;
@@ -812,21 +835,14 @@
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
-        renderSavedPlaylists();
+        renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
 
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            // Check if there are any saved playlists to load a default
-            const saved = getSavedPlaylists();
-            if (saved.length > 0) {
-                alert("No live TV link found in URL, loading first saved playlist.");
-                window.location.search = `?link=${encodeURIComponent(saved[0].url)}`;
-            } else {
-                alert("⚠️ No live TV link found! Please provide a 'link' parameter in the URL or save a playlist.");
-            }
+            alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন।");
         }
     });
   </script>
