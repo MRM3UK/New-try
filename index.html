@@ -12,7 +12,7 @@
       color: #fff;
       text-align: center;
       position: relative;
-      padding-top: 20px;
+      padding-top: 20px; /* Space for menu button and logo */
       /* Background gradient animation */
       background: linear-gradient(90deg, #181818, #2a2a2a, #181818);
       background-size: 400% 400%;
@@ -25,35 +25,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Now Playing Banner - Reduced Height & Continuous Scroll */
-    #nowPlayingBanner {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        font-size: 1em; /* Reduced font size */
-        padding: 3px 0; /* Reduced padding */
-        overflow: hidden;
-        white-space: nowrap;
-        box-sizing: border-box;
-        z-index: 1002; /* Higher than menu button/logo */
-        border-bottom: 1px solid red; /* Thin red border */
-    }
-
-    #nowPlayingText {
-        display: inline-block;
-        padding-left: 100%; /* Start off-screen to the right */
-        animation: marquee 25s linear infinite; /* Increased duration for smoother, continuous scroll */
-        animation-fill-mode: forwards; /* Ensures it stays at the end of the animation */
-    }
-
-    @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); } /* Move fully off-screen to the left */
-    }
-    
     /* Top-Right Permanent Logo */
     #topRightLogo {
       position: absolute;
@@ -74,7 +45,7 @@
     #menuButton {
       position: absolute;
       top: 15px;
-      left: 15px; /* Changed from right to left */
+      left: 15px;
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       border: none;
       border-radius: 12px;
@@ -110,12 +81,12 @@
     #sideMenu {
       position: fixed;
       top: 0;
-      left: -300px; /* Changed from right to left */
+      left: -300px;
       width: 280px;
       height: 100%;
       background: linear-gradient(145deg, #252525, #151515);
-      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7); /* Adjusted shadow for left side */
-      transition: left 0.3s ease-in-out; /* Changed from right to left */
+      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7);
+      transition: left 0.3s ease-in-out;
       z-index: 1000;
       padding: 20px;
       padding-top: 70px;
@@ -123,7 +94,7 @@
       text-align: left;
     }
     #sideMenu.open {
-      left: 0; /* Changed from right to left */
+      left: 0;
     }
     #sideMenu h3 {
       color: #0ff;
@@ -168,7 +139,7 @@
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
-    /* Animated Title Styling (MR X TV) - Enhanced */
+    /* Animated Title Styling (MR X TV) - ENHANCED */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -177,7 +148,7 @@
                    -3px -3px 7px rgba(50, 50, 50, 0.2);
       letter-spacing: 2px;
       text-align: center;
-      margin: 30px auto;
+      margin: 30px auto 10px; /* Reduced bottom margin */
       padding: 10px 20px;
       border-radius: 15px;
       background: linear-gradient(145deg, #252525, #151515);
@@ -187,12 +158,15 @@
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
-      /* Enhanced animation */
+      position: relative;
+      /* ENHANCED ANIMATION */
       animation: 
         glitch 1.5s infinite alternate,
         shine 3s linear infinite,
-        pulsate 2s infinite alternate;
-      position: relative;
+        pulsate 2s infinite alternate,
+        flicker 0.8s infinite alternate; /* New flicker animation */
+      background-image: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      background-size: 200% 100%;
     }
 
     @keyframes glitch {
@@ -215,6 +189,13 @@
         100% { transform: scale(1); opacity: 1; }
     }
 
+    @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.95; }
+        52% { opacity: 1; }
+        54% { opacity: 0.9; }
+        56% { opacity: 1; }
+    }
 
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
@@ -224,6 +205,38 @@
     .player-container { background: black; width: 100%; position: relative; }
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
     #videoPlayer { width: 100%; height: 100%; }
+
+    /* Now Playing Banner - Adjusted Position */
+    #nowPlayingBanner {
+        position: relative; /* Changed from fixed to relative */
+        margin: 10px auto; /* Center it below the title, above player */
+        width: 90%;
+        max-width: 800px; /* Match video player width */
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        font-size: 1em;
+        padding: 3px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        z-index: 1002;
+        border-bottom: 1px solid red;
+        border-top: 1px solid red; /* Added top border for symmetry */
+        border-radius: 5px; /* Slight rounding */
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Subtle glow */
+    }
+
+    #nowPlayingText {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 25s linear infinite;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
 
     /* 3D Style for the Clock Button */
     #ammBtn {
@@ -238,6 +251,7 @@
       cursor: default;
       box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       transform: perspective(500px) rotateX(5deg);
+      margin-top: 10px; /* Space from player */
     }
     #ammBtn:hover {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
@@ -442,9 +456,9 @@
     }
     
     @media (max-width: 768px) {
-      #nowPlayingBanner {
-          font-size: 0.9em;
-          padding: 2px 0;
+      /* Adjust top padding for smaller screens */
+      body {
+        padding-top: 15px;
       }
       #topRightLogo {
         height: 40px;
@@ -453,7 +467,7 @@
       }
       #menuButton {
         top: 15px;
-        left: 10px; /* Adjusted for smaller screens */
+        left: 10px;
         width: 40px;
         height: 40px;
       }
@@ -461,7 +475,6 @@
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
-      /* Adjusted for smaller screens */
       #channelList {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 10px;
@@ -472,9 +485,8 @@
     }
 
     @media (max-width: 480px) {
-      #nowPlayingBanner {
-          font-size: 0.8em;
-          padding: 2px 0;
+      body {
+        padding-top: 10px;
       }
       #topRightLogo {
         height: 35px;
@@ -483,7 +495,7 @@
       }
       #menuButton {
         top: 10px;
-        left: 8px; /* Adjusted for very small screens */
+        left: 8px;
         width: 35px;
         height: 35px;
       }
@@ -500,7 +512,6 @@
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
-      /* Adjusted for very small screens */
       #channelList {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 8px;
@@ -514,10 +525,6 @@
 </head>
 <body>
 
-<div id="nowPlayingBanner">
-    <span id="nowPlayingText">Now Playing: Loading Channel...</span>
-</div>
-
 <img id="topRightLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
 
 <button id="menuButton">
@@ -527,6 +534,10 @@
 </button>
 
 <h1 id="typingTitle">MR X TV</h1>
+
+  <div id="nowPlayingBanner">
+      <span id="nowPlayingText">Now Playing: Loading Channel...</span>
+  </div>
 
   <div class="player-container">
     <div class="video-container">
@@ -577,7 +588,7 @@
     let categories = new Set();
     let customPlaylists = [];
     let playerInstance = null; // Store player instance
-    let currentPlayingChannelName = "Channel 24"; // Track current channel for banner, default to Channel 24
+    let currentPlayingChannelName = "Somoy TV"; // Track current channel for banner, default to Somoy TV
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -592,11 +603,11 @@
     const clearSearchBtn = document.getElementById('clearSearch'); 
     let nowPlayingText = document.getElementById('nowPlayingText'); // Changed to `let` as it will be reassigned
 
-    // Default Channel 24 details for autoplay
-    const channel24 = {
-        name: "Channel 24",
-        url: "https://dkn1.bdix.cloud/live/channel24/playlist.m3u8", // Example URL, replace with actual if different
-        logo: "https://www.channel24bd.tv/media/img/2023/10/channel-24-logo-20231005165239.png", // Example logo
+    // Default Somoy TV details for autoplay
+    const somoyTv = {
+        name: "Somoy TV",
+        url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/1702-audio_113322_eng=113200-video=1692000.m3u8",
+        logo: "https://www.somoynews.tv/assets/logo/somoy-digital-logo-small.png", // Example logo
         category: "News"
     };
 
@@ -696,11 +707,17 @@
     async function fetchM3U(url) {
       try {
         const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert('⚠️ Error loading M3U file! Please check the URL and ensure it supports CORS (Cross-Origin Resource Sharing).');
+        alert('⚠️ Error loading M3U file! Please check the URL and ensure it supports CORS (Cross-Origin Resource Sharing). Some direct stream links may not work due to security policies or geo-restrictions.');
         console.error('Error fetching M3U:', error);
+        // If a custom playlist fails, clear channel list
+        document.getElementById("channelList").innerHTML = '<li>Failed to load channels from this playlist.</li>';
+        document.getElementById("progressContainer").style.display = "none";
       }
     }
 
@@ -720,7 +737,7 @@
 
           channel = {
             name: nameMatch ? nameMatch[1] : "Unknown Channel",
-            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70",
+            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70", // Default logo
             category: groupMatch ? groupMatch[1] : "Others"
           };
           categories.add(channel.category);
@@ -777,10 +794,15 @@
           li.dataset.category = channel.category;
           li.dataset.channelName = channel.name.toLowerCase();
 
-          const status = await checkChannelStatus(channel.url);
-          if (status) li.classList.add("online");
-          else li.classList.add("offline"); // Add offline class for red dot
+          // Only check status for online/offline if it's a small list or critical
+          // For very large lists, this can be slow.
+          // const status = await checkChannelStatus(channel.url);
+          // if (status) li.classList.add("online");
+          // else li.classList.add("offline");
 
+          // For now, default to online. If the stream doesn't play, the player will show an error.
+          li.classList.add("online"); // Assume online for now to speed up loading
+          
           return li;
         });
 
@@ -845,6 +867,14 @@
           localStorage.setItem('playerMuted', volume === 0 ? 'true' : 'false');
       });
 
+      // Add event listener for player errors
+      playerInstance.api("on", "error", function(error) {
+        console.error("Player Error:", error);
+        alert(`Player Error for ${currentPlayingChannelName}: The stream might be offline, geo-restricted, or the link is invalid. Please try another channel.`);
+        nowPlayingText.textContent = `Now Playing: Failed to load ${currentPlayingChannelName}`;
+        updateNowPlayingBanner(); // Re-trigger banner animation for error message
+      });
+
       saveRecentHistory({ name, url, logo });
     }
 
@@ -853,6 +883,11 @@
         if (playlistName) {
             const playlistUrl = prompt("আপনার প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: is.gd/m3u/Direct link):");
             if (playlistUrl) {
+                // Basic URL validation
+                if (!playlistUrl.startsWith('http://') && !playlistUrl.startsWith('https://')) {
+                    alert("Invalid URL. Please enter a full URL starting with http:// or https://");
+                    return;
+                }
                 addCustomPlaylist(playlistName, playlistUrl);
             }
         }
@@ -975,14 +1010,14 @@
         setInterval(updateClock, 1000);
         updateNowPlayingBanner(); // Initial update with default text
 
-        // Autoplay Channel 24 on load if no specific link is provided in URL
+        // Autoplay Somoy TV on load if no specific link is provided in URL
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            // No M3U URL provided, so load the default Channel 24
-            playChannel(channel24.url, channel24.name, channel24.logo);
-            // Optionally, load a default full M3U list for categories/search later
-            // fetchM3U("YOUR_DEFAULT_FULL_M3U_LINK_HERE"); 
+            // No M3U URL provided, so load the default Somoy TV
+            playChannel(somoyTv.url, somoyTv.name, somoyTv.logo);
+            // Example of loading a default M3U list (e.g., if you have a public one)
+            // fetchM3U("https://iptv-org.github.io/iptv/countries/bd.m3u"); 
         }
     });
   </script>
