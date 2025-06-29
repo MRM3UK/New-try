@@ -96,7 +96,7 @@
     #sideMenu.open {
       left: 0;
     }
-    /* Side Menu Logo */
+    /* NEW: Side Menu Logo */
     #sideMenuLogo {
         position: absolute;
         top: 15px;
@@ -114,7 +114,7 @@
       text-shadow: 0 0 5px #0ff;
       border-bottom: 1px solid rgba(0, 255, 255, 0.3);
       padding-bottom: 5px;
-      cursor: pointer;
+      cursor: pointer; /* NEW: Add cursor for collapsible categories */
     }
     #sideMenu ul {
       list-style: none;
@@ -151,7 +151,7 @@
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
-    /* Collapsible categories */
+    /* NEW: Collapsible categories */
     #categoryList {
         max-height: 0;
         overflow: hidden;
@@ -162,7 +162,7 @@
     }
 
 
-    /* 3D Title Styling (MR X TV) with Typing Animation */
+    /* NEW: 3D Title Styling (MR X TV) with Typing Animation */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -216,7 +216,7 @@
       padding: 10px 20px;
       transition: all 0.3s ease;
       cursor: default;
-      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8-8px 15px rgba(50, 50, 50, 0.3);
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       transform: perspective(500px) rotateX(5deg);
     }
     #ammBtn:hover {
@@ -253,7 +253,7 @@
       transform: rotateX(5deg);
     }
 
-    /* Currently Playing Channel Display */
+    /* NEW: Currently Playing Channel Display */
     #nowPlaying {
       margin: 15px auto;
       padding: 10px 20px;
@@ -443,109 +443,7 @@
     #sideMenu ul.playlist-list li:hover {
         color: #0ff;
     }
-
-    /* NEW: Custom Add Playlist Modal Styles */
-    #addPlaylistModal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 2000; /* Above everything else */
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-    #addPlaylistModal.show {
-        opacity: 1;
-        visibility: visible;
-    }
-    #addPlaylistModal.hide {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .modal-content {
-        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 0 25px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 255, 0, 0.4);
-        width: 90%;
-        max-width: 450px;
-        text-align: center;
-        transform: translateY(-50px) scale(0.9);
-        opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    #addPlaylistModal.show .modal-content {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-    #addPlaylistModal.hide .modal-content {
-        transform: translateY(-50px) scale(0.9);
-        opacity: 0;
-    }
-
-    .modal-content h3 {
-        color: #0ff;
-        margin-bottom: 20px;
-        text-shadow: 0 0 8px #0ff;
-    }
-    .modal-content input {
-        width: calc(100% - 20px);
-        padding: 12px 15px;
-        margin-bottom: 15px;
-        border: none;
-        border-radius: 10px;
-        background: #1f1f1f;
-        color: #eee;
-        font-size: 16px;
-        outline: none;
-        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
-        transition: box-shadow 0.2s ease;
-    }
-    .modal-content input:focus {
-        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.7), inset -3px -3px 7px rgba(50, 50, 50, 0.3), 0 0 8px #0ff;
-    }
-    .modal-buttons {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-        gap: 10px;
-    }
-    .modal-buttons button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(50, 50, 50, 0.2);
-        color: #fff;
-    }
-    .modal-buttons button:hover {
-        background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
-        transform: translateY(1px);
-    }
-    .modal-buttons button#addPlaylistBtn {
-        color: #0ff;
-        text-shadow: 0 0 5px #0ff;
-    }
-    .modal-message {
-        color: #ff0000;
-        margin-top: 10px;
-        font-size: 14px;
-        min-height: 20px; /* Reserve space for message */
-    }
-
-
+    
     @media (max-width: 768px) {
       #topRightLogo {
         height: 40px;
@@ -570,9 +468,6 @@
       #channelList li { padding: 8px; width: 110px; min-height: 100px; }
       #channelList img { width: 50px; height: 50px; }
       #nowPlaying { font-size: 16px; padding: 8px 15px; }
-      .modal-content { padding: 20px; }
-      .modal-content input { font-size: 14px; padding: 10px 12px; }
-      .modal-buttons button { font-size: 14px; padding: 8px 15px; }
     }
 
     @media (max-width: 480px) {
@@ -610,7 +505,6 @@
       #channelList li span { font-size: 12px; }
       #nowPlaying { font-size: 14px; padding: 6px 10px; }
       #nowPlaying img { height: 25px; width: 25px; }
-      .modal-content { padding: 15px; }
     }
   </style>
 </head>
@@ -658,7 +552,7 @@
     <h3 id="categoryToggle">Categories</h3>
     <ul id="categoryList">
       <li data-category="All" class="active">All Channels</li>
-    </ul>
+      </ul>
     
     <h3>Player Options</h3>
     <ul>
@@ -671,7 +565,7 @@
       <li id="addPlaylistOption">Add New Playlist (M3U)</li>
     </ul>
     <ul id="customPlaylists" class="playlist-list">
-    </ul>
+      </ul>
 
     <h3>Direct Play</h3>
     <ul>
@@ -680,19 +574,6 @@
   </div>
 
   <div id="menuOverlay"></div>
-
-  <div id="addPlaylistModal">
-    <div class="modal-content">
-      <h3>নতুন প্লেলিস্ট যোগ করুন</h3>
-      <input type="text" id="playlistNameInput" placeholder="প্লেলিস্টের নাম লিখুন..." required>
-      <input type="url" id="playlistUrlInput" placeholder="M3U প্লেলিস্টের URL দিন (যেমন: https://example.com/list.m3u)" required>
-      <div id="modalMessage" class="modal-message"></div>
-      <div class="modal-buttons">
-        <button id="addPlaylistBtn">যোগ করুন</button>
-        <button id="cancelPlaylistBtn">বাতিল করুন</button>
-      </div>
-    </div>
-  </div>
   
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -708,23 +589,14 @@
     const sideMenu = document.getElementById('sideMenu');
     const menuOverlay = document.getElementById('menuOverlay');
     const recentHistoryList = document.getElementById('recentHistory');
-    const categoryToggle = document.getElementById('categoryToggle');
+    const categoryToggle = document.getElementById('categoryToggle'); // NEW
     const categoryList = document.getElementById('categoryList');
     const fullScreenOption = document.getElementById('fullScreenOption');
     const unmuteOption = document.getElementById('unmuteOption');
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
-    const directPlayOption = document.getElementById('directPlayOption');
-    const nowPlayingDisplay = document.getElementById('nowPlaying');
-
-    // NEW: Modal elements
-    const addPlaylistModal = document.getElementById('addPlaylistModal');
-    const playlistNameInput = document.getElementById('playlistNameInput');
-    const playlistUrlInput = document.getElementById('playlistUrlInput');
-    const addPlaylistBtn = document.getElementById('addPlaylistBtn');
-    const cancelPlaylistBtn = document.getElementById('cancelPlaylistBtn');
-    const modalMessage = document.getElementById('modalMessage');
-
+    const directPlayOption = document.getElementById('directPlayOption'); // NEW
+    const nowPlayingDisplay = document.getElementById('nowPlaying'); // NEW
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -736,66 +608,9 @@
     menuButton.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
 
-    // Toggle category list visibility
+    // NEW: Toggle category list visibility
     categoryToggle.addEventListener('click', () => {
         categoryList.classList.toggle('open');
-    });
-
-    // --- Custom Add Playlist Modal Functions ---
-    function showAddPlaylistModal() {
-        // Clear previous input and message
-        playlistNameInput.value = '';
-        playlistUrlInput.value = '';
-        modalMessage.textContent = '';
-        addPlaylistModal.classList.add('show');
-        addPlaylistModal.classList.remove('hide');
-        toggleMenu(); // Close side menu when modal opens
-    }
-
-    function hideAddPlaylistModal() {
-        addPlaylistModal.classList.add('hide');
-        addPlaylistModal.classList.remove('show');
-    }
-
-    addPlaylistOption.addEventListener('click', showAddPlaylistModal);
-
-    cancelPlaylistBtn.addEventListener('click', hideAddPlaylistModal);
-
-    addPlaylistBtn.addEventListener('click', () => {
-        const name = playlistNameInput.value.trim();
-        const url = playlistUrlInput.value.trim();
-
-        modalMessage.textContent = ''; // Clear previous message
-
-        if (!name) {
-            modalMessage.textContent = 'প্লেলিস্টের নাম লিখুন।';
-            return;
-        }
-        if (!url) {
-            modalMessage.textContent = 'M3U প্লেলিস্টের URL দিন।';
-            return;
-        }
-        
-        // Basic validation for M3U URL
-        if (!url.match(/\.(m3u|m3u8|pls)$/i) && !url.startsWith('http://') && !url.startsWith('https://')) {
-            modalMessage.textContent = 'সঠিক M3U/M3U8/PLS বা HTTP/HTTPS লিঙ্ক দিন।';
-            return;
-        }
-
-        // Check if playlist with same URL already exists
-        const exists = customPlaylists.some(p => p.url === url);
-        if (exists) {
-            modalMessage.textContent = 'এই প্লেলিস্টটি ইতিমধ্যেই যোগ করা আছে!';
-            return;
-        }
-
-        addCustomPlaylist(name, url);
-        modalMessage.style.color = '#39b54a';
-        modalMessage.textContent = `প্লেলিস্ট "${name}" যোগ করা হয়েছে!`;
-        // Optionally, hide after a short delay
-        setTimeout(() => {
-            hideAddPlaylistModal();
-        }, 1500); 
     });
 
 
@@ -819,7 +634,7 @@
       const history = getRecentHistory();
       recentHistoryList.innerHTML = '';
       if (history.length === 0) {
-        recentHistoryList.innerHTML = '<li>কোনো সাম্প্রতিক চ্যানেল নেই।</li>';
+        recentHistoryList.innerHTML = '<li>No recent channels.</li>';
         return;
       }
       history.forEach(channel => {
@@ -843,15 +658,21 @@
     }
 
     function addCustomPlaylist(name, url) {
+      // Basic validation for M3U URL
+      if (!url.match(/\.(m3u|m3u8|pls)$/i)) {
+          alert("Invalid M3U/Playlist URL. Please provide a direct link to an M3U, M3U8, or PLS file.");
+          return;
+      }
       customPlaylists.push({ name, url });
       saveCustomPlaylists();
+      alert(`Playlist "${name}" added successfully!`);
     }
 
     function renderCustomPlaylists() {
       customPlaylists = getCustomPlaylists();
       customPlaylistsList.innerHTML = '';
       if (customPlaylists.length === 0) {
-        customPlaylistsList.innerHTML = '<li>কোনো কাস্টম প্লেলিস্ট যোগ করা হয়নি।</li>';
+        customPlaylistsList.innerHTML = '<li>No custom playlists added.</li>';
         return;
       }
       customPlaylists.forEach((playlist, index) => {
@@ -869,7 +690,7 @@
         deleteBtn.style.marginLeft = '10px';
         deleteBtn.onclick = (e) => {
           e.stopPropagation(); // Prevent the li click event
-          if (confirm(`আপনি কি "${playlist.name}" প্লেলিস্টটি মুছে ফেলতে চান?`)) {
+          if (confirm(`Are you sure you want to delete playlist "${playlist.name}"?`)) {
               deleteCustomPlaylist(index);
           }
         };
@@ -893,7 +714,7 @@
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert(`⚠️ M3U ফাইল লোড করতে সমস্যা হয়েছে ${url}! অনুগ্রহ করে লিঙ্কটি পরীক্ষা করুন। বিস্তারিত: ${error.message}`);
+        alert(`⚠️ Error loading M3U file from ${url}! Please check the link. Details: ${error.message}`);
         console.error('Error fetching M3U:', error);
       }
     }
@@ -927,22 +748,25 @@
       allChannels = channels;
       initializeChannelDisplay(channels);
       renderCategories();
-      // Removed the alert here
+      alert(`Loaded ${channels.length} channels.`);
     }
 
     // --- Channel Status Check (Optimized for speed) ---
     async function checkChannelStatus(url) {
       try {
         const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000));
+        // Use a small range request for video/audio URLs, HEAD for images/other
         const fetchOptions = {
             method: 'GET',
-            headers: { 'Range': 'bytes=0-0' },
+            headers: { 'Range': 'bytes=0-0' }, // Request only 1 byte
             mode: 'no-cors'
         };
+        // Some URLs might not support range requests or HEAD, fall back to GET if necessary
         const fetchPromise = fetch(url, fetchOptions);
         await Promise.race([fetchPromise, timeout]);
         return true;
       } catch (e) {
+        // console.warn(`Channel check failed for ${url}:`, e.message); // Log for debugging if needed
         return false;
       }
     }
@@ -960,12 +784,12 @@
         progressContainer.style.display = "block";
       } else {
         progressContainer.style.display = "none";
-        return;
+        return; // No channels to process
       }
 
       const total = channels.length;
       let loaded = 0;
-      const chunkSize = 20;
+      const chunkSize = 20; // Process 20 channels at a time
 
       for (let i = 0; i < total; i += chunkSize) {
         const chunk = channels.slice(i, i + chunkSize);
@@ -976,6 +800,7 @@
           li.dataset.category = channel.category;
           li.dataset.channelName = channel.name.toLowerCase();
 
+          // Check status asynchronously but append to list only after status is known
           const status = await checkChannelStatus(channel.url);
           if (status) li.classList.add("online");
           else li.classList.add("offline");
@@ -997,9 +822,10 @@
         loaded += chunk.length;
         const progress = Math.round((loaded / total) * 100);
         progressFill.style.width = `${progress}%`;
-        progressText.innerText = `লোডিং হচ্ছে ${loaded}/${total} (${progress}%)`;
+        progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
         updateProgressBarColor(progress);
 
+        // Allow UI to update before processing next chunk
         await new Promise(resolve => setTimeout(resolve, 50));
       }
 
@@ -1009,17 +835,17 @@
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
         if (player) {
-            player.api("destroy");
+            player.api("destroy"); // Destroy existing player instance
         }
         player = new Playerjs({
             id: "videoPlayer",
             file: url,
             autoplay: 1,
-            muted: 0
+            muted: 0 // Start unmuted, as requested by 'Unmute Player' option
         });
         saveRecentHistory({ name, url, logo });
-        updateNowPlayingDisplay(name, logo);
-        document.title = `চলছে: ${name} - MR X TV Live`;
+        updateNowPlayingDisplay(name, logo); // NEW: Update the display
+        document.title = `Now Playing: ${name} - MR X TV Live`; // Update page title
     }
 
     function unmutePlayer() {
@@ -1030,11 +856,11 @@
         const playerContainer = document.querySelector('.player-container');
         if (playerContainer.requestFullscreen) {
             playerContainer.requestFullscreen();
-        } else if (playerContainer.mozRequestFullScreen) {
+        } else if (playerContainer.mozRequestFullScreen) { /* Firefox */
             playerContainer.mozRequestFullScreen();
-        } else if (playerContainer.webkitRequestFullscreen) {
+        } else if (playerContainer.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
             playerContainer.webkitRequestFullscreen();
-        } else if (playerContainer.msRequestFullscreen) {
+        } else if (playerContainer.msRequestFullscreen) { /* IE/Edge */
             playerContainer.msRequestFullscreen();
         }
         toggleMenu();
@@ -1045,11 +871,23 @@
         toggleMenu();
     });
 
-    // Direct Play Option Event Listener
+    addPlaylistOption.addEventListener('click', () => {
+        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন (যেমন: My Movies):");
+        if (playlistName) {
+            const playlistUrl = prompt("আপনার M3U প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: https://example.com/playlist.m3u):");
+            if (playlistUrl) {
+                addCustomPlaylist(playlistName, playlistUrl);
+            }
+        }
+        toggleMenu();
+    });
+
+    // NEW: Direct Play Option Event Listener
     directPlayOption.addEventListener('click', () => {
         const videoLink = prompt("ভিডিও বা চ্যানেল এর সরাসরি লিঙ্ক (URL) দিন (YouTube লিঙ্কও কাজ করবে):");
         if (videoLink) {
-            playChannel(videoLink, "সরাসরি প্লে ভিডিও", "https://via.placeholder.com/70");
+            // Player.js can directly handle YouTube links
+            playChannel(videoLink, "Direct Play Video", "https://via.placeholder.com/70"); // Use a generic logo
         }
         toggleMenu();
     });
@@ -1082,14 +920,14 @@
     function renderCategories() {
         categoryList.innerHTML = '';
         const allLi = document.createElement('li');
-        allLi.textContent = 'সমস্ত চ্যানেল';
+        allLi.textContent = 'All Channels';
         allLi.dataset.category = 'All';
-        allLi.classList.add('active');
+        allLi.classList.add('active'); // Keep 'All' active by default
         allLi.onclick = () => filterChannels('All');
         categoryList.appendChild(allLi);
 
         Array.from(categories).sort().forEach(cat => {
-            if (cat && cat !== 'All') {
+            if (cat && cat !== 'All') { // Ensure category is not empty string and not 'All'
                 const li = document.createElement('li');
                 li.textContent = cat;
                 li.dataset.category = cat;
@@ -1132,9 +970,9 @@
       document.getElementById("ammBtn").innerText = timeStr;
     }
 
-    // Update Now Playing Display
+    // NEW: Update Now Playing Display
     function updateNowPlayingDisplay(channelName, channelLogo) {
-        nowPlayingDisplay.innerHTML = '';
+        nowPlayingDisplay.innerHTML = ''; // Clear previous content
         if (channelName && channelName !== "Unknown Channel") {
             const img = document.createElement('img');
             img.src = channelLogo;
@@ -1142,7 +980,7 @@
             nowPlayingDisplay.appendChild(img);
 
             const span = document.createElement('span');
-            span.textContent = `চলছে: ${channelName}`;
+            span.textContent = `Playing: ${channelName}`;
             nowPlayingDisplay.appendChild(span);
             nowPlayingDisplay.classList.add('active');
         } else {
@@ -1150,22 +988,24 @@
         }
     }
 
-    // Typing effect for MR X TV title
+    // NEW: Typing effect for MR X TV title
     function typeWriterEffect() {
         const titleElement = document.getElementById('typingTitle');
         const text = titleElement.getAttribute('data-text');
         let i = 0;
+        // Remove existing text to apply typing effect
         titleElement.textContent = ''; 
-        titleElement.classList.add('typing');
+        titleElement.classList.add('typing'); // Add typing class for animation
         
         function type() {
             if (i < text.length) {
                 titleElement.textContent += text.charAt(i);
                 i++;
-                setTimeout(type, 100);
+                setTimeout(type, 100); // Adjust typing speed here
             } else {
+                // Once typed, stop the animation and set static width
                 titleElement.classList.remove('typing'); 
-                titleElement.style.width = 'auto';
+                titleElement.style.width = 'auto'; // Let width adjust to content
             }
         }
         type();
@@ -1178,13 +1018,12 @@
         renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
-        typeWriterEffect();
+        typeWriterEffect(); // Start the typing animation
 
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন।
-Instead open this:https://new-try-theta.vercel.app/?link=https%3A%2F%2Fnew-try-theta.vercel.app%2Fplaylist.m3u");
+            alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন");
         }
     });
   </script>
