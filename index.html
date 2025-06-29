@@ -665,7 +665,7 @@
       }
       customPlaylists.push({ name, url });
       saveCustomPlaylists();
-      alert(`Playlist "${name}" added successfully!`);
+      alert(`Playlist "${name}" added successfully!`); // Keep this one for user feedback
     }
 
     function renderCustomPlaylists() {
@@ -714,7 +714,7 @@
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert(`⚠️ Error loading M3U file from ${url}! Please check the link. Details: ${error.message}`);
+        alert(`⚠️ Error loading M3U file from ${url}! Please check the link. Details: ${error.message}`); // Keep this one for error feedback
         console.error('Error fetching M3U:', error);
       }
     }
@@ -748,7 +748,7 @@
       allChannels = channels;
       initializeChannelDisplay(channels);
       renderCategories();
-      alert(`Loaded ${channels.length} channels.`);
+      // alert(`Loaded ${channels.length} channels.`); // This is the alert you wanted removed
     }
 
     // --- Channel Status Check (Optimized for speed) ---
@@ -1023,6 +1023,7 @@
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
+            // The alert below was removed as requested.
             // alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন");
         }
     });
