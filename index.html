@@ -46,6 +46,7 @@
         display: inline-block;
         padding-left: 100%; /* Start off-screen to the right */
         animation: marquee 25s linear infinite; /* Increased duration for smoother, continuous scroll */
+        animation-fill-mode: forwards; /* Ensures it stays at the end of the animation */
     }
 
     @keyframes marquee {
@@ -589,7 +590,7 @@
     const typingTitle = document.getElementById('typingTitle'); 
     const searchInput = document.getElementById('searchInput'); 
     const clearSearchBtn = document.getElementById('clearSearch'); 
-    const nowPlayingText = document.getElementById('nowPlayingText'); // Added for banner
+    let nowPlayingText = document.getElementById('nowPlayingText'); // Changed to `let` as it will be reassigned
 
     // Default Channel 24 details for autoplay
     const channel24 = {
@@ -698,7 +699,7 @@
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert('⚠️ Error loading M3U file! Please check the URL.');
+        alert('⚠️ Error loading M3U file! Please check the URL and ensure it supports CORS (Cross-Origin Resource Sharing).');
         console.error('Error fetching M3U:', error);
       }
     }
@@ -738,6 +739,8 @@
     async function checkChannelStatus(url) {
       try {
         const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000));
+        // Use a more robust check: attempt to fetch a small part of the stream (if possible) or just HEAD request
+        // For simplicity, sticking to HEAD request for now, but be aware it might not always reflect stream health.
         const fetchPromise = fetch(url, { method: 'HEAD', mode: 'no-cors' });
         await Promise.race([fetchPromise, timeout]);
         return true;
@@ -952,16 +955,15 @@
 
     // --- Now Playing Banner Update ---
     function updateNowPlayingBanner() {
+        const parent = nowPlayingText.parentNode;
+        // Remove the existing element
+        parent.removeChild(nowPlayingText);
+
+        // Recreate the element to restart the animation
+        nowPlayingText = document.createElement('span');
+        nowPlayingText.id = 'nowPlayingText';
         nowPlayingText.textContent = `Now Playing: ${currentPlayingChannelName}`;
-        // To restart the animation, you need to remove and re-add the animation property
-        // This forces the browser to re-render and restart the marquee animation from the beginning.
-        const clone = nowPlayingText.cloneNode(true);
-        nowPlayingText.parentNode.replaceChild(clone, nowPlayingText);
-        // Re-assign the new cloned element to the variable
-        nowPlayingText = clone;
-        nowPlayingText.textContent = `Now Playing: ${currentPlayingChannelName}`;
-        // Add the animation class back.
-        nowPlayingText.style.animation = 'marquee 25s linear infinite';
+        parent.appendChild(nowPlayingText);
     }
 
 
