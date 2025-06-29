@@ -25,6 +25,34 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* Now Playing Banner */
+    #nowPlayingBanner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        font-size: 1.1em;
+        padding: 5px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        z-index: 1002; /* Higher than menu button/logo */
+        border-bottom: 1px solid red; /* Thin red border */
+    }
+
+    #nowPlayingText {
+        display: inline-block;
+        padding-left: 100%; /* Start off-screen to the right */
+        animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); } /* Move fully off-screen to the left */
+    }
+    
     /* Top-Right Permanent Logo */
     #topRightLogo {
       position: absolute;
@@ -139,7 +167,7 @@
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
-    /* 3D Title Styling (MR X TV) */
+    /* Animated Title Styling (MR X TV) */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -156,7 +184,24 @@
       transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
       transition: all 0.3s ease;
       display: inline-block;
+      white-space: nowrap; /* Keep text on one line */
+      overflow: hidden; /* Hide overflow */
+      border-right: .15em solid orange; /* The blinking cursor */
+      animation: 
+        typing 3.5s steps(20, end) infinite alternate, 
+        blink-caret .75s step-end infinite;
     }
+    /* Typing animation */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
@@ -383,6 +428,10 @@
     }
     
     @media (max-width: 768px) {
+      #nowPlayingBanner {
+          font-size: 1em;
+          padding: 4px 0;
+      }
       #topRightLogo {
         height: 40px;
         top: 10px;
@@ -409,6 +458,10 @@
     }
 
     @media (max-width: 480px) {
+      #nowPlayingBanner {
+          font-size: 0.9em;
+          padding: 3px 0;
+      }
       #topRightLogo {
         height: 35px;
         top: 8px;
@@ -446,6 +499,10 @@
   </style>
 </head>
 <body>
+
+<div id="nowPlayingBanner">
+    <span id="nowPlayingText">Loading Channel...</span>
+</div>
 
 <img id="topRightLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
 
@@ -488,15 +545,6 @@
       <li data-category="All" class="active">All Channels</li>
     </ul>
     
-    <h3>Player Options</h3>
-    <ul>
-      <li id="fullScreenOption">Toggle Full Screen</li>
-      <li id="toggleMuteOption">Toggle Mute</li> <li id="setVolume50">Set Volume to 50%</li>
-      <li id="setVolume100">Set Volume to 100%</li>
-      <li id="pipOption">Picture-in-Picture</li>
-      <li id="reloadPlayer">Reload Player</li>
-    </ul>
-
     <h3>Add Custom Playlist</h3>
     <ul>
       <li id="addPlaylistOption">Add New Playlist</li>
@@ -515,6 +563,7 @@
     let categories = new Set();
     let customPlaylists = [];
     let playerInstance = null; // Store player instance
+    let currentPlayingChannelName = "No Channel Playing"; // Track current channel for banner
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
@@ -522,17 +571,19 @@
     const menuOverlay = document.getElementById('menuOverlay');
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryList = document.getElementById('categoryList');
-    const fullScreenOption = document.getElementById('fullScreenOption');
-    const toggleMuteOption = document.getElementById('toggleMuteOption'); // Renamed
-    const setVolume50Option = document.getElementById('setVolume50'); // New
-    const setVolume100Option = document.getElementById('setVolume100'); // New
-    const pipOption = document.getElementById('pipOption'); // New
-    const reloadPlayerOption = document.getElementById('reloadPlayer'); // New
+    // Removed player options from menu, so these are commented out/removed
+    // const fullScreenOption = document.getElementById('fullScreenOption'); 
+    // const toggleMuteOption = document.getElementById('toggleMuteOption');
+    // const setVolume50Option = document.getElementById('setVolume50');
+    // const setVolume100Option = document.getElementById('setVolume100');
+    // const pipOption = document.getElementById('pipOption');
+    // const reloadPlayerOption = document.getElementById('reloadPlayer');
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
     const typingTitle = document.getElementById('typingTitle'); 
     const searchInput = document.getElementById('searchInput'); 
     const clearSearchBtn = document.getElementById('clearSearch'); 
+    const nowPlayingText = document.getElementById('nowPlayingText'); // Added for banner
 
     // Default Channel 24 details for autoplay
     const channel24 = {
@@ -749,8 +800,7 @@
 
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
-      // Don't update typingTitle anymore, keep it static "MR X TV"
-      // typingTitle.textContent = `Now Playing: ${name}`; 
+      currentPlayingChannelName = name; // Update current playing channel for banner
 
       // Get saved volume and mute state
       let savedVolume = localStorage.getItem('playerVolume');
@@ -785,106 +835,8 @@
           localStorage.setItem('playerMuted', volume === 0 ? 'true' : 'false');
       });
 
-      // Add event listener for mute/unmute changes to save state (Player.js handles this via volume event typically)
-      // playerInstance.api("on", "mute", function(muted) {
-      //    localStorage.setItem('playerMuted', muted ? 'true' : 'false');
-      // });
-
       saveRecentHistory({ name, url, logo });
     }
-
-    // New: Toggle Mute
-    toggleMuteOption.addEventListener('click', () => {
-        if (playerInstance) {
-            const isMuted = playerInstance.api("muted");
-            playerInstance.api("muted", !isMuted);
-            localStorage.setItem('playerMuted', !isMuted ? 'true' : 'false');
-            if (!isMuted) { // If it was unmuted, and now muted, save current volume
-                localStorage.setItem('playerVolume', playerInstance.api("volume"));
-            } else { // If it was muted, and now unmuted, set to last volume or default
-                const lastVolume = parseInt(localStorage.getItem('playerVolume') || '100', 10);
-                if (lastVolume === 0) playerInstance.api("volume", 50); // Prevent setting to 0 if last was 0
-                else playerInstance.api("volume", lastVolume);
-            }
-        }
-        toggleMenu();
-    });
-
-    // New: Set Volume to 50%
-    setVolume50Option.addEventListener('click', () => {
-        if (playerInstance) {
-            playerInstance.api("volume", 50);
-            playerInstance.api("muted", false);
-            localStorage.setItem('playerVolume', 50);
-            localStorage.setItem('playerMuted', 'false');
-        }
-        toggleMenu();
-    });
-
-    // New: Set Volume to 100%
-    setVolume100Option.addEventListener('click', () => {
-        if (playerInstance) {
-            playerInstance.api("volume", 100);
-            playerInstance.api("muted", false);
-            localStorage.setItem('playerVolume', 100);
-            localStorage.setItem('playerMuted', 'false');
-        }
-        toggleMenu();
-    });
-
-    // New: Picture-in-Picture
-    pipOption.addEventListener('click', () => {
-        if (playerInstance) {
-            const videoElement = document.querySelector('#videoPlayer video'); // Assuming playerjs uses a standard video tag
-            if (videoElement && document.pictureInPictureEnabled) {
-                if (document.pictureInPictureElement) {
-                    document.exitPictureInPicture();
-                } else {
-                    videoElement.requestPictureInPicture();
-                }
-            } else {
-                alert('Picture-in-Picture is not supported by your browser or the current player.');
-            }
-        }
-        toggleMenu();
-    });
-
-    // New: Reload Player
-    reloadPlayerOption.addEventListener('click', () => {
-        if (playerInstance) {
-            const currentFile = playerInstance.api("file");
-            if (currentFile) {
-                // Get current channel details from allChannels for a proper reload
-                const currentChannel = allChannels.find(ch => ch.url === currentFile);
-                if (currentChannel) {
-                    playChannel(currentChannel.url, currentChannel.name, currentChannel.logo);
-                } else {
-                    // Fallback if channel not found in allChannels (e.g., direct link from URL param)
-                    playChannel(currentFile, typingTitle.textContent.replace('Now Playing: ', ''));
-                }
-            } else {
-                alert('No current channel to reload.');
-            }
-        } else {
-            alert('No player instance to reload.');
-        }
-        toggleMenu();
-    });
-
-
-    fullScreenOption.addEventListener('click', () => {
-        const playerContainer = document.querySelector('.player-container');
-        if (playerContainer.requestFullscreen) {
-            playerContainer.requestFullscreen();
-        } else if (playerContainer.mozRequestFullScreen) {
-            playerContainer.mozRequestFullScreen();
-        } else if (playerContainer.webkitRequestFullscreen) {
-            playerContainer.webkitRequestFullscreen();
-        } else if (playerContainer.msRequestFullscreen) {
-            playerContainer.msRequestFullscreen();
-        }
-        toggleMenu();
-    });
 
     addPlaylistOption.addEventListener('click', () => {
         const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন:");
@@ -991,12 +943,24 @@
       document.getElementById("ammBtn").innerText = timeStr;
     }
 
+    // --- Now Playing Banner Update ---
+    function updateNowPlayingBanner() {
+        nowPlayingText.textContent = `Now Playing: ${currentPlayingChannelName}`;
+        // Restart animation
+        nowPlayingText.style.animation = 'none';
+        nowPlayingText.offsetHeight; // Trigger reflow
+        nowPlayingText.style.animation = null; 
+    }
+
+
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
         renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
+        updateNowPlayingBanner(); // Initial update
+        setInterval(updateNowPlayingBanner, 5000); // Update every 5 seconds
 
         // Autoplay Channel 24 on load if no specific link is provided in URL
         if (m3uUrl) {
