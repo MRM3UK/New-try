@@ -68,9 +68,9 @@
     #menuButton .line {
       width: 70%;
       height: 3px;
-      background-color: #0ff;
+      background-color: #5ac8fa; /* Eye-comfort blue */
       border-radius: 2px;
-      box-shadow: 0 0 5px #0ff;
+      box-shadow: 0 0 5px #5ac8fa; /* Eye-comfort blue shadow */
       transition: all 0.3s ease;
     }
     #menuButton.open .line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
@@ -108,11 +108,11 @@
     }
 
     #sideMenu h3 {
-      color: #0ff;
+      color: #78a2eb; /* Eye-comfort blue */
       margin-top: 20px;
       margin-bottom: 10px;
-      text-shadow: 0 0 5px #0ff;
-      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+      text-shadow: 0 0 5px #78a2eb; /* Eye-comfort blue shadow */
+      border-bottom: 1px solid rgba(120, 162, 235, 0.3); /* Match border color */
       padding-bottom: 5px;
       cursor: pointer; /* NEW: Add cursor for collapsible categories */
     }
@@ -140,13 +140,13 @@
       background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
       box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(50, 50, 50, 0.2);
       color: #fff;
-      text-shadow: 0 0 3px #0ff;
+      text-shadow: 0 0 3px #78a2eb; /* Eye-comfort blue shadow */
       transform: translateY(1px);
     }
     #sideMenu li.active {
-        color: #0ff;
+        color: #78a2eb; /* Eye-comfort blue */
         font-weight: bold;
-        text-shadow: 0 0 5px #0ff;
+        text-shadow: 0 0 5px #78a2eb; /* Eye-comfort blue shadow */
         background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
@@ -181,7 +181,7 @@
       display: inline-block;
       white-space: nowrap; /* Keep text on one line for typing effect */
       overflow: hidden; /* Hide overflow for typing effect */
-      border-right: .15em solid #0ff; /* The caret */
+      border-right: .15em solid #5ac8fa; /* The caret, eye-comfort blue */
     }
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
@@ -197,7 +197,7 @@
     }
     @keyframes blink-caret {
       from, to { border-color: transparent }
-      50% { border-color: #0ff; }
+      50% { border-color: #5ac8fa; } /* Eye-comfort blue */
     }
 
 
@@ -207,6 +207,8 @@
 
     /* New: Fullscreen Rotation Style */
     .player-container.rotate-on-fullscreen {
+        /* When in portrait mode (typical for mobile), rotate and adjust dimensions */
+        /* This applies when the device is held portrait and fullscreen is entered */
         transform: rotate(90deg); /* Rotate 90 degrees */
         transform-origin: center center; /* Ensure it rotates from its center */
         width: 100vh; /* Swap width/height for landscape on portrait screens */
@@ -256,7 +258,7 @@
       border-radius: 30px;
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       color: #fff;
-      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8-px 15px rgba(50, 50, 50, 0.3);
       outline: none;
       transition: all 0.3s ease;
       transform-style: preserve-3d;
@@ -275,7 +277,7 @@
       background: linear-gradient(145deg, #1f1f1f, #0d0d0d);
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
-      color: #0ff;
+      color: #78a2eb; /* Eye-comfort blue */
       font-size: 18px;
       font-weight: bold;
       max-width: 450px;
@@ -300,12 +302,12 @@
         height: 30px;
         width: 30px;
         border-radius: 5px;
-        box-shadow: 0 0 5px #0ff;
+        box-shadow: 0 0 5px #78a2eb; /* Eye-comfort blue shadow */
     }
 
     @keyframes neonPulse {
-        from { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.2); }
-        to { box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.4); }
+        from { box-shadow: 0 0 10px rgba(120, 162, 235, 0.5), 0 0 20px rgba(120, 162, 235, 0.2); } /* Eye-comfort blue */
+        to { box-shadow: 0 0 20px rgba(120, 162, 235, 0.7), 0 0 30px rgba(120, 162, 235, 0.4); } /* Eye-comfort blue */
     }
 
 
@@ -453,10 +455,10 @@
     /* Playlist Section Styling */
     #sideMenu ul.playlist-list li {
         color: #fff;
-        text-shadow: 0 0 3px #0ff;
+        text-shadow: 0 0 3px #78a2eb; /* Eye-comfort blue */
     }
     #sideMenu ul.playlist-list li:hover {
-        color: #0ff;
+        color: #78a2eb; /* Eye-comfort blue */
     }
     
     @media (max-width: 768px) {
@@ -626,8 +628,6 @@
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryToggle = document.getElementById('categoryToggle'); // NEW
     const categoryList = document.getElementById('categoryList');
-    // const fullScreenOption = document.getElementById('fullScreenOption'); // Removed
-    // const unmuteOption = document.getElementById('unmuteOption'); // Removed
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
     const directPlayOption = document.getElementById('directPlayOption'); // NEW
@@ -693,15 +693,45 @@
       renderCustomPlaylists();
     }
 
-    function addCustomPlaylist(name, url) {
-      // Basic validation for M3U URL
-      if (!url.match(/\.(m3u|m3u8|pls)$/i)) {
-          alert("Invalid M3U/Playlist URL. Please provide a direct link to an M3U, M3U8, or PLS file.");
-          return;
-      }
-      customPlaylists.push({ name, url });
-      saveCustomPlaylists();
-      alert(`Playlist "${name}" added successfully!`); // Keep this one for user feedback
+    async function addCustomPlaylist(name, url) {
+        if (!url) {
+            alert("Playlist URL cannot be empty.");
+            return;
+        }
+
+        // Validate if it looks like a URL (basic check)
+        try {
+            new URL(url); // Attempt to create a URL object
+        } catch (_) {
+            alert("Please enter a valid URL for the playlist.");
+            return;
+        }
+
+        // Check if playlist already exists to prevent duplicates
+        if (customPlaylists.some(p => p.url === url)) {
+            alert(`Playlist "${name}" (URL: ${url}) already exists.`);
+            return;
+        }
+        
+        // Attempt to fetch the playlist to ensure it's accessible before saving
+        try {
+            const response = await fetch(url, { method: 'HEAD', mode: 'cors' }); // Use HEAD request for faster check
+            if (!response.ok) {
+                // If HEAD fails, try GET. Some servers don't allow HEAD but allow GET.
+                const fallbackResponse = await fetch(url, { mode: 'cors' });
+                if (!fallbackResponse.ok) {
+                     throw new Error(`HTTP Status: ${fallbackResponse.status}`);
+                }
+            }
+        } catch (error) {
+            alert(`Failed to verify playlist URL "${url}". It might be invalid, or there are network/CORS issues. Error: ${error.message}`);
+            console.error('Failed to verify custom playlist URL:', error);
+            return;
+        }
+
+        customPlaylists.push({ name, url });
+        saveCustomPlaylists();
+        alert(`Playlist "${name}" added successfully! You can now select it from the "Custom Playlists" section.`);
     }
 
     function renderCustomPlaylists() {
@@ -715,7 +745,7 @@
         const li = document.createElement('li');
         li.textContent = playlist.name;
         li.onclick = () => {
-          fetchM3U(playlist.url); // Load the playlist when clicked
+          fetchM3U(playlist.url, true); // Pass true to indicate it's a custom playlist fetch
           toggleMenu();
         };
         // Add a delete button
@@ -741,7 +771,7 @@
     }
 
     // --- Channel Fetching and Parsing ---
-    async function fetchM3U(url) {
+    async function fetchM3U(url, isCustomPlaylist = false) {
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -749,8 +779,11 @@
         }
         const data = await response.text();
         parseM3U(data);
+        if (isCustomPlaylist) {
+            alert("Custom playlist loaded successfully!");
+        }
       } catch (error) {
-        alert(`⚠️ Error loading M3U file from ${url}! Please check the link. Details: ${error.message}`); // Keep this one for error feedback
+        alert(`⚠️ Error loading playlist from ${url}! Please check the link or try another. Details: ${error.message}`); // Keep this one for error feedback
         console.error('Error fetching M3U:', error);
       }
     }
@@ -784,25 +817,21 @@
       allChannels = channels;
       initializeChannelDisplay(channels);
       renderCategories();
-      // alert(`Loaded ${channels.length} channels.`); // This is the alert you wanted removed
     }
 
     // --- Channel Status Check (Optimized for speed) ---
     async function checkChannelStatus(url) {
       try {
         const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000));
-        // Use a small range request for video/audio URLs, HEAD for images/other
         const fetchOptions = {
             method: 'GET',
-            headers: { 'Range': 'bytes=0-0' }, // Request only 1 byte
+            headers: { 'Range': 'bytes=0-0' },
             mode: 'no-cors'
         };
-        // Some URLs might not support range requests or HEAD, fall back to GET if necessary
         const fetchPromise = fetch(url, fetchOptions);
         await Promise.race([fetchPromise, timeout]);
         return true;
       } catch (e) {
-        // console.warn(`Channel check failed for ${url}:`, e.message); // Log for debugging if needed
         return false;
       }
     }
@@ -836,7 +865,6 @@
           li.dataset.category = channel.category;
           li.dataset.channelName = channel.name.toLowerCase();
 
-          // Check status asynchronously but append to list only after status is known
           const status = await checkChannelStatus(channel.url);
           if (status) li.classList.add("online");
           else li.classList.add("offline");
@@ -861,7 +889,6 @@
         progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
         updateProgressBarColor(progress);
 
-        // Allow UI to update before processing next chunk
         await new Promise(resolve => setTimeout(resolve, 50));
       }
 
@@ -889,9 +916,12 @@
         if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
             // Player is now in fullscreen
             playerContainer.classList.add('rotate-on-fullscreen');
+            // For mobile, you might want to force landscape if supported by the device API
+            // screen.orientation.lock('landscape').catch(e => console.log('Orientation lock failed:', e));
         } else {
             // Player exited fullscreen
             playerContainer.classList.remove('rotate-on-fullscreen');
+            // screen.orientation.unlock(); // Unlock orientation
         }
     }
 
@@ -900,13 +930,20 @@
     document.addEventListener('mozfullscreenchange', handleFullscreenChange);
     document.addEventListener('MSFullscreenChange', handleFullscreenChange);
 
-    // addPlaylistOption.addEventListener('click', removed as Player Options menu is removed)
+    addPlaylistOption.addEventListener('click', () => {
+        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন (যেমন: My Movies):");
+        if (playlistName) {
+            const playlistUrl = prompt("আপনার M3U প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: https://example.com/playlist.m3u):");
+            if (playlistUrl) {
+                addCustomPlaylist(playlistName, playlistUrl);
+            }
+        }
+        toggleMenu();
+    });
 
-    // NEW: Direct Play Option Event Listener
     directPlayOption.addEventListener('click', () => {
         const videoLink = prompt("ভিডিও বা চ্যানেল এর সরাসরি লিঙ্ক (URL) দিন (YouTube, MP4, MKV লিঙ্কও কাজ করবে):");
         if (videoLink) {
-            // Player.js can directly handle YouTube links, and typically MP4. MKV depends on browser support.
             playChannel(videoLink, "Direct Play Video", "https://via.placeholder.com/70"); // Use a generic logo
         }
         toggleMenu();
@@ -1043,8 +1080,8 @@
         if (m3uUrl) {
             fetchM3U(m3uUrl);
         } else {
-            // The alert below was removed as requested.
-            // alert("⚠️ কোনো লাইভ টিভি লিঙ্ক পাওয়া যায়নি! অনুগ্রহ করে URL-এ একটি 'link' প্যারামিটার যোগ করুন অথবা মেনু থেকে একটি কাস্টম প্লেলিস্ট যোগ করুন");
+            // No initial M3U link provided by URL parameter.
+            // Consider displaying a message or guiding the user to add one via menu.
         }
     });
   </script>
