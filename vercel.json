@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/playlist.m3u",
-      "destination": "/public/playlist.m3u"
+      "source": "/playlist",
+      "destination": "/?link=https://new-try-theta.vercel.app/playlist.m3u"
     }
   ]
 }
