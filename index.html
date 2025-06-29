@@ -205,6 +205,21 @@
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
     #videoPlayer { width: 100%; height: 100%; }
 
+    /* New: Fullscreen Rotation Style */
+    .player-container.rotate-on-fullscreen {
+        transform: rotate(90deg); /* Rotate 90 degrees */
+        transform-origin: center center; /* Ensure it rotates from its center */
+        width: 100vh; /* Swap width/height for landscape on portrait screens */
+        height: 100vw;
+        max-width: 100vh; /* Restrict max width */
+        max-height: 100vw;
+        margin: auto; /* Center it */
+        position: fixed; /* Fix position for fullscreen */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg); /* Center and rotate */
+    }
+
     /* 3D Style for the Clock Button */
     #ammBtn {
       font-weight: bold;
@@ -468,6 +483,19 @@
       #channelList li { padding: 8px; width: 110px; min-height: 100px; }
       #channelList img { width: 50px; height: 50px; }
       #nowPlaying { font-size: 16px; padding: 8px 15px; }
+
+      /* Apply rotation for mobile fullscreen only, if desired */
+      .player-container.rotate-on-fullscreen {
+        transform: rotate(90deg);
+        transform-origin: center center;
+        width: 100vh;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
     }
 
     @media (max-width: 480px) {
@@ -505,6 +533,19 @@
       #channelList li span { font-size: 12px; }
       #nowPlaying { font-size: 14px; padding: 6px 10px; }
       #nowPlaying img { height: 25px; width: 25px; }
+
+      /* Apply rotation for mobile fullscreen only, if desired */
+      .player-container.rotate-on-fullscreen {
+        transform: rotate(90deg);
+        transform-origin: center center;
+        width: 100vh;
+        height: 100vw;
+        max-width: 100vh;
+        max-height: 100vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
     }
   </style>
 </head>
@@ -554,12 +595,6 @@
       <li data-category="All" class="active">All Channels</li>
       </ul>
     
-    <h3>Player Options</h3>
-    <ul>
-      <li id="fullScreenOption">Toggle Full Screen</li>
-      <li id="unmuteOption">Unmute Player</li>
-    </ul>
-
     <h3>Add Custom Playlist</h3>
     <ul>
       <li id="addPlaylistOption">Add New Playlist (M3U)</li>
@@ -569,7 +604,7 @@
 
     <h3>Direct Play</h3>
     <ul>
-      <li id="directPlayOption">Play Link / YouTube</li>
+      <li id="directPlayOption">Play Link / YouTube / MP4 / MKV</li>
     </ul>
   </div>
 
@@ -591,12 +626,13 @@
     const recentHistoryList = document.getElementById('recentHistory');
     const categoryToggle = document.getElementById('categoryToggle'); // NEW
     const categoryList = document.getElementById('categoryList');
-    const fullScreenOption = document.getElementById('fullScreenOption');
-    const unmuteOption = document.getElementById('unmuteOption');
+    // const fullScreenOption = document.getElementById('fullScreenOption'); // Removed
+    // const unmuteOption = document.getElementById('unmuteOption'); // Removed
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
     const directPlayOption = document.getElementById('directPlayOption'); // NEW
     const nowPlayingDisplay = document.getElementById('nowPlaying'); // NEW
+    const playerContainer = document.querySelector('.player-container'); // Get player container
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -841,52 +877,36 @@
             id: "videoPlayer",
             file: url,
             autoplay: 1,
-            muted: 0 // Start unmuted, as requested by 'Unmute Player' option
+            muted: 0 // Start unmuted
         });
         saveRecentHistory({ name, url, logo });
         updateNowPlayingDisplay(name, logo); // NEW: Update the display
         document.title = `Now Playing: ${name} - MR X TV Live`; // Update page title
     }
 
-    function unmutePlayer() {
-      if (player) player.api("volume", 100);
+    // --- Fullscreen Rotation Logic ---
+    function handleFullscreenChange() {
+        if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+            // Player is now in fullscreen
+            playerContainer.classList.add('rotate-on-fullscreen');
+        } else {
+            // Player exited fullscreen
+            playerContainer.classList.remove('rotate-on-fullscreen');
+        }
     }
 
-    fullScreenOption.addEventListener('click', () => {
-        const playerContainer = document.querySelector('.player-container');
-        if (playerContainer.requestFullscreen) {
-            playerContainer.requestFullscreen();
-        } else if (playerContainer.mozRequestFullScreen) { /* Firefox */
-            playerContainer.mozRequestFullScreen();
-        } else if (playerContainer.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            playerContainer.webkitRequestFullscreen();
-        } else if (playerContainer.msRequestFullscreen) { /* IE/Edge */
-            playerContainer.msRequestFullscreen();
-        }
-        toggleMenu();
-    });
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
 
-    unmuteOption.addEventListener('click', () => {
-        unmutePlayer();
-        toggleMenu();
-    });
-
-    addPlaylistOption.addEventListener('click', () => {
-        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন (যেমন: My Movies):");
-        if (playlistName) {
-            const playlistUrl = prompt("আপনার M3U প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: https://example.com/playlist.m3u):");
-            if (playlistUrl) {
-                addCustomPlaylist(playlistName, playlistUrl);
-            }
-        }
-        toggleMenu();
-    });
+    // addPlaylistOption.addEventListener('click', removed as Player Options menu is removed)
 
     // NEW: Direct Play Option Event Listener
     directPlayOption.addEventListener('click', () => {
-        const videoLink = prompt("ভিডিও বা চ্যানেল এর সরাসরি লিঙ্ক (URL) দিন (YouTube লিঙ্কও কাজ করবে):");
+        const videoLink = prompt("ভিডিও বা চ্যানেল এর সরাসরি লিঙ্ক (URL) দিন (YouTube, MP4, MKV লিঙ্কও কাজ করবে):");
         if (videoLink) {
-            // Player.js can directly handle YouTube links
+            // Player.js can directly handle YouTube links, and typically MP4. MKV depends on browser support.
             playChannel(videoLink, "Direct Play Video", "https://via.placeholder.com/70"); // Use a generic logo
         }
         toggleMenu();
