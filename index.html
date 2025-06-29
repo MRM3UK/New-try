@@ -6,6 +6,7 @@
   <title>MR X TV Live</title>
   <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js"></script>
   <style>
+    /* General styles, already good */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body {
       background: #181818;
@@ -13,7 +14,6 @@
       text-align: center;
       position: relative;
       padding-top: 20px;
-      /* Background gradient animation */
       background: linear-gradient(90deg, #181818, #2a2a2a, #181818);
       background-size: 400% 400%;
       animation: backgroundGradient 15s ease infinite;
@@ -45,7 +45,7 @@
     #menuButton {
       position: absolute;
       top: 15px;
-      left: 15px; /* Changed from right to left */
+      left: 15px;
       background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       border: none;
       border-radius: 12px;
@@ -81,12 +81,12 @@
     #sideMenu {
       position: fixed;
       top: 0;
-      left: -300px; /* Changed from right to left */
+      left: -300px;
       width: 280px;
       height: 100%;
       background: linear-gradient(145deg, #252525, #151515);
-      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7); /* Adjusted shadow for left side */
-      transition: left 0.3s ease-in-out; /* Changed from right to left */
+      box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7);
+      transition: left 0.3s ease-in-out;
       z-index: 1000;
       padding: 20px;
       padding-top: 70px;
@@ -94,8 +94,19 @@
       text-align: left;
     }
     #sideMenu.open {
-      left: 0; /* Changed from right to left */
+      left: 0;
     }
+    /* NEW: Side Menu Logo */
+    #sideMenuLogo {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: 30px; /* Smaller size for menu */
+        width: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.3);
+    }
+
     #sideMenu h3 {
       color: #0ff;
       margin-top: 20px;
@@ -103,6 +114,7 @@
       text-shadow: 0 0 5px #0ff;
       border-bottom: 1px solid rgba(0, 255, 255, 0.3);
       padding-bottom: 5px;
+      cursor: pointer; /* NEW: Add cursor for collapsible categories */
     }
     #sideMenu ul {
       list-style: none;
@@ -139,7 +151,18 @@
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
 
-    /* 3D Title Styling (MR X TV) */
+    /* NEW: Collapsible categories */
+    #categoryList {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    #categoryList.open {
+        max-height: 500px; /* Adjust as needed for content */
+    }
+
+
+    /* NEW: 3D Title Styling (MR X TV) with Typing Animation */
     #typingTitle {
       font-size: 28px;
       color: #fff;
@@ -156,11 +179,27 @@
       transform: perspective(500px) rotateX(7deg) rotateY(-5deg);
       transition: all 0.3s ease;
       display: inline-block;
+      white-space: nowrap; /* Keep text on one line for typing effect */
+      overflow: hidden; /* Hide overflow for typing effect */
+      border-right: .15em solid #0ff; /* The caret */
     }
     #typingTitle:hover {
         transform: perspective(500px) rotateX(0deg) rotateY(0deg);
         box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
     }
+    /* Typing animation */
+    #typingTitle.typing {
+        animation: typing 3.5s steps(30, end) infinite, blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #0ff; }
+    }
+
 
     .player-container { background: black; width: 100%; position: relative; }
     .video-container { width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; }
@@ -214,22 +253,63 @@
       transform: rotateX(5deg);
     }
 
+    /* NEW: Currently Playing Channel Display */
+    #nowPlaying {
+      margin: 15px auto;
+      padding: 10px 20px;
+      background: linear-gradient(145deg, #1f1f1f, #0d0d0d);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
+      color: #0ff;
+      font-size: 18px;
+      font-weight: bold;
+      max-width: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      overflow: hidden; /* For text truncation */
+      text-overflow: ellipsis; /* For text truncation */
+      white-space: nowrap; /* For text truncation */
+      animation: neonPulse 1.5s infinite alternate; /* Subtle pulse animation */
+      min-height: 50px; /* Ensure visible even when empty */
+      opacity: 0; /* Initially hidden, show when content is there */
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #nowPlaying.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #nowPlaying img {
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #0ff;
+    }
+
+    @keyframes neonPulse {
+        from { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.2); }
+        to { box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.4); }
+    }
+
+
     /* UPDATED: Channel List Styles for side-by-side display */
     #channelList {
-      display: flex; /* Use flexbox for horizontal layout */
-      flex-wrap: wrap; /* Allow items to wrap to the next line */
-      justify-content: center; /* Center items horizontally */
-      gap: 15px; /* Spacing between items */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       padding: 20px;
-      max-width: 900px; /* Keep max-width */
+      max-width: 900px;
       margin: auto;
       background: #333;
       border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
       overflow-y: auto;
-      max-height: 500px; /* Keep vertical scroll if many channels */
+      max-height: 500px;
       margin-top: 30px;
-      perspective: 1000px; /* Enable 3D perspective for child elements */
+      perspective: 1000px;
     }
 
     #channelList li {
@@ -242,15 +322,15 @@
       min-height: 120px;
       cursor: pointer;
       border-radius: 12px;
-      transition: all 0.3s ease; /* Smooth transition for 3D effects */
-      background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Adjust background for 3D */
+      transition: all 0.3s ease;
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
       box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6), -8px -8px 15px rgba(50, 50, 50, 0.3);
       position: relative;
       text-align: center;
       flex-shrink: 0;
-      transform-style: preserve-3d; /* Preserve 3D transformations for children */
-      transform: rotateX(5deg) rotateY(-5deg); /* Initial 3D tilt */
-      border: 1px solid #ff0000; /* Solid red border */
+      transform-style: preserve-3d;
+      transform: rotateX(5deg) rotateY(-5deg);
+      border: 1px solid #ff0000;
     }
 
     #channelList li.hidden {
@@ -262,14 +342,14 @@
       height: 60px;
       margin-bottom: 5px;
       border-radius: 10px;
-      transform: translateZ(10px); /* Move image slightly forward in 3D space */
+      transform: translateZ(10px);
     }
     
     #channelList li span {
         font-size: 14px;
         word-break: break-word;
         line-height: 1.2;
-        transform: translateZ(5px); /* Move text slightly forward in 3D space */
+        transform: translateZ(5px);
     }
 
     /* Status Dot with Neon Glow */
@@ -283,20 +363,20 @@
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
       background: #e74c3c;
-      box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c; /* Red neon glow */
-      transform: translateZ(15px); /* Move dot further forward */
+      box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c;
+      transform: translateZ(15px);
     }
 
     #channelList li.online:before {
       background: #39b54a;
-      box-shadow: 0 0 5px #39b54a, 0 0 10px #39b54a, 0 0 15px #39b54a; /* Green neon glow */
+      box-shadow: 0 0 5px #39b54a, 0 0 10px #39b54a, 0 0 15px #39b54a;
     }
 
     #channelList li:hover {
-      background: linear-gradient(145deg, #1a1a1a, #2a2a2a); /* Adjust hover background */
-      transform: scale(1.05) rotateX(0deg) rotateY(0deg); /* Straighten on hover */
-      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2); /* Inset shadow on hover */
-      border-color: #ff0000; /* Keep red border on hover */
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+      transform: scale(1.05) rotateX(0deg) rotateY(0deg);
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset -5px -5px 10px rgba(50, 50, 50, 0.2);
+      border-color: #ff0000;
     }
 
     /* Progress Bar Styles */
@@ -372,7 +452,7 @@
       }
       #menuButton {
         top: 15px;
-        left: 10px; /* Adjusted for smaller screens */
+        left: 10px;
         width: 40px;
         height: 40px;
       }
@@ -380,7 +460,6 @@
       #ammBtn { font-size: 20px; padding: 8px 15px; }
       .search-input { font-size: 16px; }
       #progressContainer { width: 90%; max-width: 350px; }
-      /* Adjusted for smaller screens */
       #channelList {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: 10px;
@@ -388,6 +467,7 @@
       }
       #channelList li { padding: 8px; width: 110px; min-height: 100px; }
       #channelList img { width: 50px; height: 50px; }
+      #nowPlaying { font-size: 16px; padding: 8px 15px; }
     }
 
     @media (max-width: 480px) {
@@ -398,7 +478,7 @@
       }
       #menuButton {
         top: 10px;
-        left: 8px; /* Adjusted for very small screens */
+        left: 8px;
         width: 35px;
         height: 35px;
       }
@@ -415,7 +495,6 @@
       #ammBtn { font-size: 18px; padding: 6px 12px; }
       .search-input { font-size: 14px; width: 90%; }
       #progressContainer { width: 95%; max-width: 300px; }
-      /* Adjusted for very small screens */
       #channelList {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 8px;
@@ -424,6 +503,8 @@
       #channelList li { padding: 6px; width: 90px; min-height: 90px; font-size: 13px;}
       #channelList img { width: 45px; height: 45px; }
       #channelList li span { font-size: 12px; }
+      #nowPlaying { font-size: 14px; padding: 6px 10px; }
+      #nowPlaying img { height: 25px; width: 25px; }
     }
   </style>
 </head>
@@ -437,7 +518,7 @@
   <div class="line"></div>
 </button>
 
-<h1 id="typingTitle">MR X TV</h1>
+<h1 id="typingTitle" data-text="MR X TV">MR X TV</h1>
 
   <div class="player-container">
     <div class="video-container">
@@ -458,16 +539,20 @@
     <input type="text" id="searchInput" class="search-input" placeholder="Search channels..." onkeyup="filterChannels()">
   </div>
 
+  <div id="nowPlaying"></div>
+
   <ul id="channelList"></ul>
 
   <div id="sideMenu">
+    <img id="sideMenuLogo" src="https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/MRXTV_logo_60x80.png" alt="MR X TV Logo">
+
     <h3>Recent History</h3>
     <ul id="recentHistory"></ul>
 
-    <h3>Categories</h3>
+    <h3 id="categoryToggle">Categories</h3>
     <ul id="categoryList">
       <li data-category="All" class="active">All Channels</li>
-    </ul>
+      </ul>
     
     <h3>Player Options</h3>
     <ul>
@@ -477,10 +562,15 @@
 
     <h3>Add Custom Playlist</h3>
     <ul>
-      <li id="addPlaylistOption">Add New Playlist</li>
+      <li id="addPlaylistOption">Add New Playlist (M3U)</li>
     </ul>
     <ul id="customPlaylists" class="playlist-list">
       </ul>
+
+    <h3>Direct Play</h3>
+    <ul>
+      <li id="directPlayOption">Play Link / YouTube</li>
+    </ul>
   </div>
 
   <div id="menuOverlay"></div>
@@ -492,17 +582,21 @@
     let displayedChannelElements = [];
     let categories = new Set();
     let customPlaylists = [];
+    let player; // Declare player globally
 
     // --- Menu Elements ---
     const menuButton = document.getElementById('menuButton');
     const sideMenu = document.getElementById('sideMenu');
     const menuOverlay = document.getElementById('menuOverlay');
     const recentHistoryList = document.getElementById('recentHistory');
+    const categoryToggle = document.getElementById('categoryToggle'); // NEW
     const categoryList = document.getElementById('categoryList');
     const fullScreenOption = document.getElementById('fullScreenOption');
     const unmuteOption = document.getElementById('unmuteOption');
     const addPlaylistOption = document.getElementById('addPlaylistOption');
     const customPlaylistsList = document.getElementById('customPlaylists');
+    const directPlayOption = document.getElementById('directPlayOption'); // NEW
+    const nowPlayingDisplay = document.getElementById('nowPlaying'); // NEW
 
     // --- Menu Toggle Functionality ---
     function toggleMenu() {
@@ -513,6 +607,12 @@
 
     menuButton.addEventListener('click', toggleMenu);
     menuOverlay.addEventListener('click', toggleMenu);
+
+    // NEW: Toggle category list visibility
+    categoryToggle.addEventListener('click', () => {
+        categoryList.classList.toggle('open');
+    });
+
 
     // --- Local Storage Management ---
     function getRecentHistory() {
@@ -541,7 +641,7 @@
         const li = document.createElement('li');
         li.textContent = channel.name;
         li.onclick = () => {
-          playChannel(channel.url);
+          playChannel(channel.url, channel.name, channel.logo);
           toggleMenu();
         };
         recentHistoryList.appendChild(li);
@@ -558,8 +658,14 @@
     }
 
     function addCustomPlaylist(name, url) {
+      // Basic validation for M3U URL
+      if (!url.match(/\.(m3u|m3u8|pls)$/i)) {
+          alert("Invalid M3U/Playlist URL. Please provide a direct link to an M3U, M3U8, or PLS file.");
+          return;
+      }
       customPlaylists.push({ name, url });
       saveCustomPlaylists();
+      alert(`Playlist "${name}" added successfully!`);
     }
 
     function renderCustomPlaylists() {
@@ -584,7 +690,9 @@
         deleteBtn.style.marginLeft = '10px';
         deleteBtn.onclick = (e) => {
           e.stopPropagation(); // Prevent the li click event
-          deleteCustomPlaylist(index);
+          if (confirm(`Are you sure you want to delete playlist "${playlist.name}"?`)) {
+              deleteCustomPlaylist(index);
+          }
         };
         li.appendChild(deleteBtn);
         customPlaylistsList.appendChild(li);
@@ -600,10 +708,13 @@
     async function fetchM3U(url) {
       try {
         const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.text();
         parseM3U(data);
       } catch (error) {
-        alert('⚠️ Error loading M3U file!');
+        alert(`⚠️ Error loading M3U file from ${url}! Please check the link. Details: ${error.message}`);
         console.error('Error fetching M3U:', error);
       }
     }
@@ -613,7 +724,7 @@
       const channels = [];
       let channel = {};
       categories.clear();
-      categories.add('All');
+      categories.add('All'); // Ensure 'All' is always present
 
       lines.forEach(line => {
         line = line.trim();
@@ -624,7 +735,7 @@
 
           channel = {
             name: nameMatch ? nameMatch[1] : "Unknown Channel",
-            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70",
+            logo: logoMatch ? logoMatch[1] : "https://via.placeholder.com/70", // Default logo
             category: groupMatch ? groupMatch[1] : "Others"
           };
           categories.add(channel.category);
@@ -637,16 +748,25 @@
       allChannels = channels;
       initializeChannelDisplay(channels);
       renderCategories();
+      alert(`Loaded ${channels.length} channels.`);
     }
 
     // --- Channel Status Check (Optimized for speed) ---
     async function checkChannelStatus(url) {
       try {
         const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 5000));
-        const fetchPromise = fetch(url, { method: 'HEAD', mode: 'no-cors' });
+        // Use a small range request for video/audio URLs, HEAD for images/other
+        const fetchOptions = {
+            method: 'GET',
+            headers: { 'Range': 'bytes=0-0' }, // Request only 1 byte
+            mode: 'no-cors'
+        };
+        // Some URLs might not support range requests or HEAD, fall back to GET if necessary
+        const fetchPromise = fetch(url, fetchOptions);
         await Promise.race([fetchPromise, timeout]);
         return true;
       } catch (e) {
+        // console.warn(`Channel check failed for ${url}:`, e.message); // Log for debugging if needed
         return false;
       }
     }
@@ -664,11 +784,12 @@
         progressContainer.style.display = "block";
       } else {
         progressContainer.style.display = "none";
+        return; // No channels to process
       }
 
       const total = channels.length;
       let loaded = 0;
-      const chunkSize = 20;
+      const chunkSize = 20; // Process 20 channels at a time
 
       for (let i = 0; i < total; i += chunkSize) {
         const chunk = channels.slice(i, i + chunkSize);
@@ -679,9 +800,10 @@
           li.dataset.category = channel.category;
           li.dataset.channelName = channel.name.toLowerCase();
 
+          // Check status asynchronously but append to list only after status is known
           const status = await checkChannelStatus(channel.url);
           if (status) li.classList.add("online");
-          else li.classList.add("offline"); // Add offline class for red dot
+          else li.classList.add("offline");
 
           return li;
         });
@@ -703,36 +825,42 @@
         progressText.innerText = `Loading ${loaded}/${total} (${progress}%)`;
         updateProgressBarColor(progress);
 
-        if (loaded >= total) {
-          progressContainer.style.display = "none";
-        }
+        // Allow UI to update before processing next chunk
+        await new Promise(resolve => setTimeout(resolve, 50));
       }
+
+      progressContainer.style.display = "none";
     }
 
     // --- Player Control Functions ---
     function playChannel(url, name = "Unknown Channel", logo = "https://via.placeholder.com/70") {
-      window.player = new Playerjs({
-        id: "videoPlayer",
-        file: url,
-        autoplay: 1,
-        muted: 1
-      });
-      saveRecentHistory({ name, url, logo });
+        if (player) {
+            player.api("destroy"); // Destroy existing player instance
+        }
+        player = new Playerjs({
+            id: "videoPlayer",
+            file: url,
+            autoplay: 1,
+            muted: 0 // Start unmuted, as requested by 'Unmute Player' option
+        });
+        saveRecentHistory({ name, url, logo });
+        updateNowPlayingDisplay(name, logo); // NEW: Update the display
+        document.title = `Now Playing: ${name} - MR X TV Live`; // Update page title
     }
 
     function unmutePlayer() {
-      if (window.player) player.api("volume", 100);
+      if (player) player.api("volume", 100);
     }
 
     fullScreenOption.addEventListener('click', () => {
         const playerContainer = document.querySelector('.player-container');
         if (playerContainer.requestFullscreen) {
             playerContainer.requestFullscreen();
-        } else if (playerContainer.mozRequestFullScreen) {
+        } else if (playerContainer.mozRequestFullScreen) { /* Firefox */
             playerContainer.mozRequestFullScreen();
-        } else if (playerContainer.webkitRequestFullscreen) {
+        } else if (playerContainer.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
             playerContainer.webkitRequestFullscreen();
-        } else if (playerContainer.msRequestFullscreen) {
+        } else if (playerContainer.msRequestFullscreen) { /* IE/Edge */
             playerContainer.msRequestFullscreen();
         }
         toggleMenu();
@@ -744,12 +872,22 @@
     });
 
     addPlaylistOption.addEventListener('click', () => {
-        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন:");
+        const playlistName = prompt("আপনার প্লেলিস্টের জন্য একটি নাম লিখুন (যেমন: My Movies):");
         if (playlistName) {
-            const playlistUrl = prompt("আপনার প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: is.gd/m3u/Direct link):");
+            const playlistUrl = prompt("আপনার M3U প্লেলিস্টের সরাসরি লিঙ্ক (URL) লিখুন (যেমন: https://example.com/playlist.m3u):");
             if (playlistUrl) {
                 addCustomPlaylist(playlistName, playlistUrl);
             }
+        }
+        toggleMenu();
+    });
+
+    // NEW: Direct Play Option Event Listener
+    directPlayOption.addEventListener('click', () => {
+        const videoLink = prompt("ভিডিও বা চ্যানেল এর সরাসরি লিঙ্ক (URL) দিন (YouTube লিঙ্কও কাজ করবে):");
+        if (videoLink) {
+            // Player.js can directly handle YouTube links
+            playChannel(videoLink, "Direct Play Video", "https://via.placeholder.com/70"); // Use a generic logo
         }
         toggleMenu();
     });
@@ -784,12 +922,12 @@
         const allLi = document.createElement('li');
         allLi.textContent = 'All Channels';
         allLi.dataset.category = 'All';
-        allLi.classList.add('active');
+        allLi.classList.add('active'); // Keep 'All' active by default
         allLi.onclick = () => filterChannels('All');
         categoryList.appendChild(allLi);
 
         Array.from(categories).sort().forEach(cat => {
-            if (cat !== 'All') {
+            if (cat && cat !== 'All') { // Ensure category is not empty string and not 'All'
                 const li = document.createElement('li');
                 li.textContent = cat;
                 li.dataset.category = cat;
@@ -832,12 +970,55 @@
       document.getElementById("ammBtn").innerText = timeStr;
     }
 
+    // NEW: Update Now Playing Display
+    function updateNowPlayingDisplay(channelName, channelLogo) {
+        nowPlayingDisplay.innerHTML = ''; // Clear previous content
+        if (channelName && channelName !== "Unknown Channel") {
+            const img = document.createElement('img');
+            img.src = channelLogo;
+            img.alt = 'Channel Logo';
+            nowPlayingDisplay.appendChild(img);
+
+            const span = document.createElement('span');
+            span.textContent = `Playing: ${channelName}`;
+            nowPlayingDisplay.appendChild(span);
+            nowPlayingDisplay.classList.add('active');
+        } else {
+            nowPlayingDisplay.classList.remove('active');
+        }
+    }
+
+    // NEW: Typing effect for MR X TV title
+    function typeWriterEffect() {
+        const titleElement = document.getElementById('typingTitle');
+        const text = titleElement.getAttribute('data-text');
+        let i = 0;
+        // Remove existing text to apply typing effect
+        titleElement.textContent = ''; 
+        titleElement.classList.add('typing'); // Add typing class for animation
+        
+        function type() {
+            if (i < text.length) {
+                titleElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 100); // Adjust typing speed here
+            } else {
+                // Once typed, stop the animation and set static width
+                titleElement.classList.remove('typing'); 
+                titleElement.style.width = 'auto'; // Let width adjust to content
+            }
+        }
+        type();
+    }
+
+
     // --- Initializations ---
     document.addEventListener('DOMContentLoaded', () => {
         renderRecentHistory();
         renderCustomPlaylists();
         updateClock();
         setInterval(updateClock, 1000);
+        typeWriterEffect(); // Start the typing animation
 
         if (m3uUrl) {
             fetchM3U(m3uUrl);
