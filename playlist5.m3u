@@ -7,3 +7,6 @@ https://tv.mymoviebazar.net/stream/stream203.m3u8?asd=olafhgbhkkgkbbonieapkchffa
 https://tvsen5.aynaott.com/gUX8BJmNc2yF/index.m3u8
 #EXTINF:-1 tvg-id="sangeetbangla.in" tvg-name="Sangeet Bangla" tvg-logo="https://api.time.com/wp-content/uploads/2014/05/world-wrestling-entertainment.jpg" group-title="Music", wwe
 http://ky-iptv.com:80/live/Billy2023/2023Billy/2994724.m3u8
+
+#EXTINF:-1 tvg-name="Sony Aath", Sony Aath
+https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8
