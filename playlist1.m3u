@@ -1,4 +1,5 @@
-iu#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Movies
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Movies
 https://cloudfrontnet.vercel.app/tplay/playout/209612/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Movies
 https://cloudfrontnet.vercel.app/tplay/playout/209627/master.m3u8
