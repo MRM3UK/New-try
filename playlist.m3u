@@ -22,7 +22,6 @@ https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
 https://cloudfrontnet.vercel.app/tplay/playout/209587/master.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/byte-capsule/TSports-m3u8-Grabber/refs/heads/main/images/TSports-logo.jpeg",T-Sports
 https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
-https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
 #EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Bangla
 https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8
 #EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Urdu
@@ -131,7 +130,7 @@ https://flc2.technohaat.com/kidscreation_test/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co.com/Q3F9JyKH/T-Sports.jpg",T Sports HD
 https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
 #EXTINF:-1 group-title="Sports" tvg-logo="https://i.ibb.co.com/Q3F9JyKH/T-Sports.jpg",T Sports HD
-https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
+https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/bVr21IBRc8HW1zRcKKGensPldFz.jpg" group-title="Swap",swap
 https://pixeldrain.dev/api/file/hyaYKpcK?download
