@@ -15,7 +15,7 @@ https://cloudfrontnet.vercel.app/tplay/playout/209611/master.m3u8
 https://cloudfrontnet.vercel.app/tplay/playout/209622/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Shinchan
 https://cloudfrontnet.vercel.app/tplay/playout/209901/master.m3u8
-#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",4/7 Doraemon
+#EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Doraemon
 https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Hindi Songs
 https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
@@ -48,7 +48,7 @@ https://xfireflix.fun/toffeeWd/live.php?id=7e00fee81848&e=.m3u8
 https://xfireflix.fun/toffeeWd/live.php?id=3a4a0ceff620&e=.m3u8
 #EXTINF:-1 tvg-id="a40abb7586bc" tvg-logo="https://images.toffeelive.com/images/program/367/logo/115x115/mobile_logo_886909001563629905.png" group-title="",B4U Music VIP
 https://xfireflix.fun/toffeeWd/live.php?id=a40abb7586bc&e=.m3u8
-#EXTINF:-1,Zee cinema 
+#EXTINF:-1,tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/af/Zee_Cinema_logo.png?20230802074221"Zee cinema 
 http://195.181.169.162:80/ZEE_CINEMA_HD/index.mpd?token=test
 #EXTINF:-1 tvg-id="cd113761e022" tvg-logo="https://images.toffeelive.com/images/program/366/logo/240x240/mobile_logo_702115001663003759.png" group-title="",B4U Movies VIP
 https://xfireflix.fun/toffeeWd/live.php?id=cd113761e022&e=.m3u8
