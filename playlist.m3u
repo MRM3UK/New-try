@@ -21,6 +21,8 @@ https://cloudfrontnet.vercel.app/tplay/playout/209902/master.m3u8
 https://cloudfrontnet.vercel.app/tplay/playout/209592/master.m3u8
 #EXTINF:-1 tvg-logo="https://t3.ftcdn.net/jpg/02/69/95/72/360_F_269957288_QuCW1rTni1oaZYQiG2vR7KcQ8mtOfrUw.webp",24/7 Bangla Songs
 https://cloudfrontnet.vercel.app/tplay/playout/209587/master.m3u8
+#EXTINF:-1 tvg-id="b1ba8efdd99d" tvg-logo="https://images.toffeelive.com/images/program/44878/logo/240x240/mobile_logo_764950001725875605.png" group-title="",TOFFEE Dramas VIP
+https://xfireflix.fun/toffeeWd/live.php?id=b1ba8efdd99d&e=.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/byte-capsule/TSports-m3u8-Grabber/refs/heads/main/images/TSports-logo.jpeg",T-Sports
 https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8
 #EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace Bangla
