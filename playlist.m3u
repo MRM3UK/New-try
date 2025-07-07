@@ -42,6 +42,8 @@ https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
 https://xfireflix.fun/toffeeWd/live.php?id=7e00fee81848&e=.m3u8
 #EXTINF:-1 tvg-id="3a4a0ceff620" tvg-logo="https://images.toffeelive.com/images/program/403/logo/240x240/mobile_logo_368845001655891378.png" group-title="",Zee Bangla Cinema VIP
 https://xfireflix.fun/toffeeWd/live.php?id=3a4a0ceff620&e=.m3u8
+#EXTINF:-1 tvg-id="a40abb7586bc" tvg-logo="https://images.toffeelive.com/images/program/367/logo/115x115/mobile_logo_886909001563629905.png" group-title="",B4U Music VIP
+https://xfireflix.fun/toffeeWd/live.php?id=a40abb7586bc&e=.m3u8
 
 #EXTINF:-1 tvg-id="DubaiSports" tvg-name="Dubai Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e0/Dubai_Sports_logo_2023.png" group-title="Sports",Dubai Sports
 https://dmidspta.cdn.mgmlcdn.com/dubaisports/smil:dubaisports.stream.smil/chunklist_b3000000.m3u8
