@@ -277,12 +277,15 @@ https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF9
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d3/Nexus_Television_Logo.png",Nexus TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDDEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFsaWRtaW51aiPhnPTI2/nexustv.stream/playlist.m3u8
 
-Toffe
+ #EXTINF:-1 tvg-id="discovey" tvg-logo="https://d388d59m61mm0v.cloudfront.net/optimized/content/common/logos/channel/logos/nddhwf.png" group-title="Infotainment", Discovery
+https://mini1.allinonereborn.xyz/jiotv-ww192/app/ts_live_575.m3u8
 
-#EXTINF:-1 tvg-id="Sony SAB SD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj0NBCeqsaWxY3O0zNeKvGjUPXWQluRmThtQ&s" group-title="Entertainment",Sony SAB SD Toffee TV
-https://xfireflix.fun/toffeeWd/live.php?id=b7167fe646a4&e=.m3u8|Referer=https://xfireflix.fun/toffeeWd/live.php?id=b7167fe646a4&e=.m3u8
+#EXTINF:-1 tvg-id="discovery-channel" tvg-name="Discovery" tvg-language="Hindi" tvg-country="IN" tvg-logo="https://d388d59m61mm0v.cloudfront.net/optimized/content/common/logos/channel/logos/nddhwf.png" tvg-chno="discovery-channel" group-title="Infotainment",Discovery Bangla 📺📡
+#https://tiger-hub.vercel.app/Discovery-bangla/tracks-v1a1/mono.m3u8
+#http://tv.bdiptv.store/live/restreax/refstream/98.m3u8
+https://mini1.allinonereborn.xyz/jiotv-ww192/app/ts_live_573.m3u8
 
-#EXTINF:-1 tvg-id="Sony Set SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET/images/LOGO_HD/image.png" group-title="Entertainment", SET SD Toffee TV
-https://xfireflix.fun/toffeeWd/live.php?id=243771d9592c&e=.m3u8|Referer=https://xfireflix.fun/toffeeWd/live.php?id=243771d9592c&e=.m3u8
-#EXTINF:-1 tvg-id="SONY_PIX_SD" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-12078-j9obub60-v7/imageContent-12078-j9obub60-m6.jpg",SONY PIX SD English Toffee TV
-https://xfireflix.fun/toffeeWd/live.php?id=ea02096b0fbc&e=.m3u8|Referer=https://xfireflix.fun/toffeeWd/live.php?id=ea02096b0fbc&e=.m3u8
+
+#EXTINF:1 tvg-name="Animal Planet Hindi" tvg-logo="https://i.ibb.co/Kjqfp8Nd/images-2.jpg" group-title="Infotainment",Animal Planet Hindi
+https://mini1.allinonereborn.xyz/jiotv-ww192/app/ts_live_566.m3u8
+
