@@ -133,6 +133,15 @@ https://smart.bengaldigital.live/sun-bangla-paid/tracks-v1a1/mono.ts.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/9XMHindiMusicTelevisionChannelLogo.jpg" group-title="Music 🎶",9XM
 https://d14c63magvk61v.cloudfront.net/strm/channels/9xm/m4.m3u8
+
+#EXTINF:1 tvg-name="SRKTV BANGLA 📺" tvg-logo="https://i.ibb.co/VYS3Fbtj/images-8.jpg" group-title="Kids",SRKTV BANGLA 
+https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
+#EXTINF:1 tvg-name="Nick bangla" tvg-logo="https://i.ibb.co/bM1nKXrh/images-4.jpg" group-title="Kids",Nick Bangla
+#http://tv.bdiptv.store/live/restreax/refstream/96.m3u8
+https://mini1.allinonereborn.xyz/jiotv-ww192/app/ts_live_1341.m3u8
+#EXTINF:1 tvg-name="Nick Hindi" tvg-logo="https://i.ibb.co/CKtZz8M1/images.png" group-title="Kids",Nick Hindi
+https://mini1.allinonereborn.xyz/jiotv-ww192/app/ts_live_545.m3u8
+
 #from playlist 4&5
 
 #EXTINF:-1 group-title="Bangladeshi 🇧🇩" tvg-logo="https://i.postimg.cc/g27Qp4RD/Background-Eraser-20240628-105829130.png",NTV EUROPE
