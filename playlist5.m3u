@@ -1,7 +1,7 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://via.placeholder.com/30",Test FTPBD
 https://www.ftpbd.net/wp-content/hls-file/Paramporul-2023-WebRip-UNCUT-1080p-Hindi_reencoded/index.m3u8
-
+http://tv.bdiptv.store:80/live/restreax/refstream/15.m3u8
 
 
 Test:
