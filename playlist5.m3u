@@ -3,6 +3,11 @@
 https://www.ftpbd.net/wp-content/hls-file/Paramporul-2023-WebRip-UNCUT-1080p-Hindi_reencoded/index.m3u8
 http://v5on.site/mac-restream/wolftv.php?id=441082
 
+#EXTINF:-1 tvg-logo="https://via.placeholder.com/30",Test emby 1
+https://play.roarzone.info/emby/videos/932864/master.m3u8?DeviceId=eb651363-6680-4700-b57d-f7e46f5e2ca6&MediaSourceId=mediasource_932864&StartTimeTicks=37873075470&PlaySessionId=41856b88d2b74f69be2a8f68c3896284&api_key=e4e3534290b541d2bf4bb7f5d8b8e682&VideoCodec=hevc,h264,av1&AudioCodec=mp3,aac&VideoBitrate=6874412&AudioBitrate=125588&AudioStreamIndex=1&TranscodingMaxAudioChannels=2&SegmentContainer=ts&MinSegments=1&BreakOnNonKeyFrames=False&SubtitleStreamIndexes=-1&ManifestSubtitles=vtt&h264-profile=high,main,baseline,constrainedbaseline,high10&h264-level=62&hevc-codectag=hvc1,hev1,hevc,hdmv&TranscodeReasons=DirectPlayError#t=3787.307547
+
+#EXTINF:-1 tvg-logo="https://via.placeholder.com/30",Test emby 2
+https://play.roarzone.info/emby/videos/932864/stream.mp4?api_key=e4e3534290b541d2bf4bb7f5d8b8e682&Static=true&MediaSourceId=mediasource_932864&DeviceId=eb651363-6680-4700-b57d-f7e46f5e2ca6
 #EXTM3U
 #EXTINF:-1 tvg-id="134" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713000749.png" group-title="Entertainment",Deepto TV HD
 https://d1e7rcqq4o2ma.cloudfront.net/bpk-tv/1711/output/index.m3u8
