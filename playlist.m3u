@@ -35,27 +35,7 @@ https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8
 #EXTINF:-1 group-title="Islamic 🕌" tvg-logo="https://raw.githubusercontent.com/fawazahmed0/tiger/master/peace/urdu.jpg",Peace English
 https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8
 #humtvfrom starshare
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png",HUM TV EUROPE
-https://xfireflix.fun/toffeeWd/live.php?id=7c21a8ade135&e=.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png",HUM TV 
-https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
-#EXTINF:-1 tvg-id="406435b761ad" tvg-logo="https://images.toffeelive.com/images/program/303947/logo/240x240/mobile_logo_203789001738235600.png" group-title="",Hum Masala
-https://xfireflix.fun/toffeeWd/live.php?id=406435b761ad&e=.m3u8
-#EXTINF:-1 tvg-id="598a5e7df0bd" tvg-logo="https://images.toffeelive.com/images/program/303948/logo/240x240/mobile_logo_350939001738236112.png" group-title="",Hum Sitarey
-https://xfireflix.fun/toffeeWd/live.php?id=598a5e7df0bd&e=.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png" group-title="Indian",Star Jalsha
-https://catchup.yuppcdn.net/amazonv2/36/preview/starjalsha/master/chunklist.m3u8
-#EXTINF:-1 tvg-id="7e00fee81848" tvg-logo="https://images.toffeelive.com/images/program/343/logo/240x240/mobile_logo_496322001666780228.png" group-title="",Sony Aat VIP
-https://xfireflix.fun/toffeeWd/live.php?id=7e00fee81848&e=.m3u8
-#EXTINF:-1 tvg-id="3a4a0ceff620" tvg-logo="https://images.toffeelive.com/images/program/403/logo/240x240/mobile_logo_368845001655891378.png" group-title="",Zee Bangla Cinema VIP
-https://xfireflix.fun/toffeeWd/live.php?id=3a4a0ceff620&e=.m3u8
-#EXTINF:-1 tvg-id="a40abb7586bc" tvg-logo="https://images.toffeelive.com/images/program/367/logo/115x115/mobile_logo_886909001563629905.png" group-title="",B4U Music VIP
-https://xfireflix.fun/toffeeWd/live.php?id=a40abb7586bc&e=.m3u8
 
-#EXTINF:-1 tvg-id="cd113761e022" tvg-logo="https://images.toffeelive.com/images/program/366/logo/240x240/mobile_logo_702115001663003759.png" group-title="",B4U Movies VIP
-https://xfireflix.fun/toffeeWd/live.php?id=cd113761e022&e=.m3u8
-#EXTINF:-1 tvg-id="420510be5c17" tvg-logo="https://images.toffeelive.com/images/program/353/logo/240x240/mobile_logo_044841001666779831.png" group-title="",SONY MAX 2 VIP
-https://xfireflix.fun/toffeeWd/live.php?id=420510be5c17&e=.m3u8
 
 
 #EXTINF:-1 tvg-id="DubaiSports" tvg-name="Dubai Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e0/Dubai_Sports_logo_2023.png" group-title="Sports",Dubai Sports
@@ -67,16 +47,7 @@ https://tvsen5.aynaott.com/gUX8BJmNc2yF/index.m3u8
 #EXTINF:-1 tvg-id="ZeeBanglaHD" tvg-name="Zee Bangla HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5f/Zee_Bangla_logo.png?20230716130411" group-title="Entertainment",Zee Bangla HD
 https://tvsen5.aynaott.com/PNEb3v2q6GBk/index.m3u8
 
-#EXTINF:-1 tvg-id="43dcec1011e7" tvg-logo="https://images.toffeelive.com/images/program/603/logo/240x240/mobile_logo_237244001666780563.png" group-title="",SONY SPORTS TEN 1 HD
-https://xfireflix.fun/toffeeWd/live.php?id=43dcec1011e7&e=.m3u8
-#EXTINF:-1 tvg-id="abc6677968ef" tvg-logo="https://images.toffeelive.com/images/program/604/logo/240x240/mobile_logo_093449001666780976.png" group-title="",SONY SPORTS TEN 2 HD
-https://xfireflix.fun/toffeeWd/live.php?id=abc6677968ef&e=.m3u8
-#EXTINF:-1 tvg-id="fd6de8bd1666" tvg-logo="https://images.toffeelive.com/images/program/606/logo/240x240/mobile_logo_689539001672145843.png" group-title="",SONY SPORTS TEN 5 HD
-https://xfireflix.fun/toffeeWd/live.php?id=fd6de8bd1666&e=.m3u8
-#EXTINF:-1 tvg-id="f76c7eb00da0" tvg-logo="https://images.toffeelive.com/images/program/301891/logo/240x240/mobile_logo_578686001735197654.png" group-title="",SONY TEN Cricket
-https://xfireflix.fun/toffeeWd/live.php?id=f76c7eb00da0&e=.m3u8
-#EXTINF:-1 tvg-id="sony-ten-1-hd" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen3_HD_Logo_CLR.png" group-title="Sports",Sony Sports Ten 3 HD
-https://tataplay.slivcdn.com/hls/live/2020591/TEN3HD/master_3500.m3u8
+
 
 #MORE
 #EXTINF:-1 tvg-id="sangeetbangla.in" tvg-name="Sangeet Bangla" tvg-logo="https://upload.wikimedia.org/wikipedia/bn/6/65/%E0%A6%B8%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%A4_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.jpg" group-title="Music",Sangeet Bangla
