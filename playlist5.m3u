@@ -4,7 +4,7 @@ https://www.ftpbd.net/wp-content/hls-file/Paramporul-2023-WebRip-UNCUT-1080p-Hin
 http://ftp.timepassbd.live/timepassbd-data/ftp1/ENGLISH_MOVIES/2024/Get%20Fast%20%282024%29/Get.Fast.2024.1080p.BluRay.Hindi.5.1-English.5.1.ESub.x264-TimepassBD.mkv
 
 #EXTINF:-1 tvg-logo="https://via.placeholder.com/30",Test emby 1
-http://ftp.timepassbd.live/timepassbd-data/ftp1/ENGLISH_MOVIES/2024/Get%20Fast%20%282024%29/Get.Fast.2024.1080p.BluRay.Hindi.5.1-English.5.1.ESub.x264-TimepassBD.mkv68c3896284&api_key=e4e3534290b541d2bf4bb7f5d8b8e682&VideoCodec=hevc,h264,av1&AudioCodec=mp3,aac&VideoBitrate=6874412&AudioBitrate=125588&AudioStreamIndex=1&TranscodingMaxAud
+https://play.roarzone.info/emby/videos/1003031/stream.mp4?api_key=e4e3534290b541d2bf4bb7f5d8b8e682&Static=true&MediaSourceId=mediasource_1003031&DeviceId=eb651363-6680-4700-b57d-f7e46f5e2ca6c3896284&api_key=e4e3534290b541d2bf4bb7f5d8b8e682&VideoCodec=hevc,h264,av1&AudioCodec=mp3,aac&VideoBitrate=6874412&AudioBitrate=125588&AudioStreamIndex=1&TranscodingMaxAud
 
 #EXTINF:-1 tvg-logo="https://via.placeholder.com/30",Test emby 2
 https://play.roarzone.info/emby/videos/1001887/master.m3u8?DeviceId=eb651363-6680-4700-b57d-f7e46f5e2ca6&MediaSourceId=mediasource_1001887&StartTimeTicks=54606260000&PlaySessionId=5c7c3f8a8a2a45518c7ad0a924383a9d&api_key=e4e3534290b541d2bf4bb7f5d8b8e682&VideoCodec=hevc,h264,av1&AudioCodec=mp3,aac&VideoBitrate=6808000&AudioBitrate=192000&AudioStreamIndex=1&TranscodingMaxAudioChannels=2&SegmentContainer=ts&MinSegments=1&BreakOnNonKeyFrames=False&SubtitleStreamIndexes=-1&ManifestSubtitles=vtt&h264-profile=high,main,baseline,constrainedbaseline,high10&h264-level=62&hevc-codectag=hvc1,hev1,hevc,hdmv&TranscodeReasons=DirectPlayError#t=5460.6263-6680-4700-b57d-f7e46f5e2ca6
