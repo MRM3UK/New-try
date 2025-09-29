@@ -2,6 +2,27 @@
 #EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/36/1/wwe-logo-png_seeklogo-368682.png" group-title="Sports",Wwe
 https://smart.bengaldigital.live/WWE/tracks-v1a1/mono.m3u8
 
+
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP01
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%203%201080p/Alice.in.Borderland.S03E01.1080p.x264.Hindi.English.Japanese.Msubs.MoviesMod.org.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP02
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%203%201080p/Alice.in.Borderland.S03E02.1080p.x264.Hindi.English.Japanese.Msubs.MoviesMod.org.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP03
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%203%201080p/Alice.in.Borderland.S03E03.1080p.x264.Hindi.English.Japanese.Msubs.MoviesMod.org.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP04
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%203%201080p/Alice.in.Borderland.S03E04.1080p.x264.Hindi.English.Japanese.Msubs.MoviesMod.org.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP05
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%203%201080p/Alice.in.Borderland.S03E05.1080p.x264.Hindi.English.Japanese.Msubs.MoviesMod.org.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP06
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%203%201080p/Alice.in.Borderland.S03E06.1080p.x264.Hindi.English.Japanese.Msubs.MoviesMod.org.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP07
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%201%201080p/Alice.in.Borderland.S01E07.1080p.NF.WEB-DL.MULTI.DDP5.1.x264-Telly.mkv
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/original/llCdgREXybsD9oeQ8dbWOxMmIR8.png" group-title="Alice in Borderland",S3EP08
+http://ftp16.circleftp.net/FILE/Dubbed%20TV%20Series%20%26%20Shows/Alice%20in%20Borderland%20%28TV%20Series%202020-%29%20%5BMulti%20Audio%5D%20%5BHin%2BEng%2BJap%5D/Season%201%201080p/Alice.in.Borderland.S01E08.1080p.NF.WEB-DL.MULTI.DDP5.1.x264-Telly.mkv
+
+
+
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://img.jagranjosh.com/images/2025/09/28/article/image/eci-1759037108537.webp",PAK vs IND
 https://live-en.aisports.cc/moviebox/device01/playlist.m3u8
