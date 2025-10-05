@@ -976,8 +976,8 @@ http://103.78.255.178:8080/starselect1/index.m3u8
 http://stvlive.net:8080/starselect1/index.m3u8
 #EXTINF:-1 group-title="Sports" tvg-id="starsportsselect1.in" tvg-logo="https://static.epg.best/in/StarSportsSelect1.in.png",--Live(STAR SPORTS SELECT 2 HD)
 https://live.dinesh29.com.np/stream/jiotvplus/starsportsselecthd2/master.m3u8
-#EXTINF:-1 group-title="Sports" tvg-id="TSPORTS.bd" tvg-logo="https://static.wikia.nocookie.net/etv-gspn-bangla/images/6/6e/T_Sports_HD_logo_2021.png",--Live(T Sports HD)--
-http://stvlive.net:8080/tsports1/index.m3u8
+#EXTINF:-1 group-title="Sports" tvg-id="TSPORTS.bd" tvg-logo="https://static.wikia.nocookie.net/etv-gspn-bangla/images/6/6e/T_Sports_HD_logo_2021.png",--BDIX-T Sports HD
+https://cdn.bdixtv24.vip/tsports/index.m3u8
 #EXTINF:-1 group-title="Sports" tvg-id="ToffeeSportsHD" tvg-logo="https://images.toffeelive.com/images/program/304419/logo/115x115/mobile_logo_253140001742624618.png",--Live(Toffee Sports HD)--
 http://103.73.107.122:3255/TSportsHD/index.m3u8
 #EXTINF:-1 group-title="Sports" tvg-id="CricketGold" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/Cricket-Gold-Channel_black.png",CR | Cricket Gold
