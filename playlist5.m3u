@@ -364,8 +364,7 @@ https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/ETV3I79BLYUCBY8O1B27/hls3/now
 https://epg.provider.plex.tv/library/parts/5e20b730f2f8d5003d739db7-6674b68af04cf4bb9233c916.m3u8?X-Plex-Token=FwkvCmx3uzFc7eYkDe2m
 #EXTINF:-1 group-title="Movies" tvg-id="FX 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/FX_Logo_2023.svg/1200px-FX_Logo_2023.svg.png",EN | FX 1 Movies
 https://fxtvhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 group-title="Movies" tvg-id="FX2" tvg-logo="https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/m9kufdwxrebnfsaade94",EN | FX2
-https://toonixhls.wns.live/hls/stream.m3u8
+
 #EXTINF:-1 group-title="Movies" tvg-id="GrandCinema" tvg-logo="https://grandcinema.tv/logo.png",EN | Grand Cinema
 https://gcinemahls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="Movies" tvg-id="USBD700011RE" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBD700011RE_20241203T004808SQUARE.png",EN | Gravitas Movies
