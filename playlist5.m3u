@@ -1,11 +1,8 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-logo="https://d2liqplnt17rh6.cloudfront.net/coverImages/tapmadnewcoveer_e663773d-773b-41f7-a3cb-e896ad99fa55-686.jpeg" group-title="Live",Tapmad 1
-https://premierleagpl23.akamaized.net/hls/live/2107108/TapSerie-1@2025/level_1.m3u8
 #EXTINF:-1 tvg-logo="https://d2liqplnt17rh6.cloudfront.net/coverImages/tapmadnewcoveer_e663773d-773b-41f7-a3cb-e896ad99fa55-686.jpeg" group-title="Live",Tapmad
-https://premierleagpl23.akamaized.net/hls/live/2107108/Asia@cup-2025/level_1.m3u8
-
-
+https://tapmad-live.cdn.vustreams.com/live/5c71291d-018e-42d2-97b9-119854c05079/live.isml/5c71291d-018e-42d2-97b9-119854c05079.m3u8
+https://premierleagpl23.akamaized.net/hls/live/2107108/TapSerie-1@2025/level_1.m3u8
 
 
 
