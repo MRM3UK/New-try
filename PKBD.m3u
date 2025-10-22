@@ -1,5 +1,7 @@
 
 #EXTM3U
+#EXTINF:-1 tvg-name="Hum TV" tvg-logo="https://images.toffeelive.com/images/program/303937/logo/240x240/mobile_logo_880134001738072763.png" group-title="TV",Hum TV 2
+http://45.148.145.57/PAK_HUMTVG/index.m3u8
 #EXTINF:-1 tvg-logo="https://w7.pngwing.com/pngs/75/199/png-transparent-pakistan-hum-tv-television-channel-drama-hum-television-text-logo-thumbnail.png" group-title="PK DRAMA",HUM TV
 https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
 #EXTINF:-1 tvg-logo="https://arydigital.tv/img/digital-logo.gif" group-title="PK DRAMA",Ary Digital
