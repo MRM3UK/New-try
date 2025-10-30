@@ -882,6 +882,47 @@ https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg1
 #EXTINF:-1   tvg-logo="https://i.postimg.cc/8C3TkKc3/TVKUSHAREEXT.png" group-title="SPORTS",TruePremier_2
 #EXTINF:-1   tvg-logo="https://i.postimg.cc/8C3TkKc3/TVKUSHAREEXT.png" group-title="SPORTS",TruePremier_3
 
+#will add more
+
+
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/33/2/nat-geo-wild-logo-png_seeklogo-333045.png" group-title="Explore",Nat Geo Wild
+http://66.102.120.18:8000/play/a01d
+#EXTINF:-1 tvg-logo="https://www.logo.wine/a/logo/National_Geographic_(American_TV_channel)/National_Geographic_(American_TV_channel)-Logo.wine.svg" group-title="Explore",National Geographic
+http://66.102.120.18:8000/play/a01f
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/26/2/discovery-channel-logo-png_seeklogo-268048.png" group-title="Explore",Discovery HD
+http://66.102.120.18:8000/play/a01k
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/26/1/discovery-science-logo-png_seeklogo-267148.png" group-title="Explore",Discovery Science
+http://66.102.120.18:8000/play/a01l
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/24/1/history-hd-logo-png_seeklogo-246188.png" group-title="Explore",History TV HD
+http://66.102.120.18:8000/play/a01q
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/50/1/bbc-earth-logo-png_seeklogo-500667.png" group-title="Explore",Sony BBC Earth
+http://66.102.120.18:8000/play/a01r
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/31/2/sony-pix-logo-png_seeklogo-310755.png" group-title="Entertainment",Sony Pix
+http://66.102.120.18:8000/play/a01z
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/31/2/star-gold-logo-png_seeklogo-310758.png" group-title="Entertainment",Star Gold HD
+http://66.102.120.18:8000/play/a00f
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/43/2/discovery-kids-logo-png_seeklogo-430501.png" group-title="Kids",Discovery Kids
+http://66.102.120.18:8000/play/a00k
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/24/2/pogo-logo-png_seeklogo-243232.png" group-title="Kids",Pogo
+http://66.102.120.18:8000/play/a00l
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/48/2/nickelodeon-2023-logo-png_seeklogo-483139.png" group-title="Kids",Nickelodeon
+http://66.102.120.18:8000/play/a00w
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/31/2/nick-hd-logo-png_seeklogo-314639.png" group-title="Kids",Nick HD+
+http://66.102.120.18:8000/play/a07a
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/50/2/nick-jr-logo-png_seeklogo-506452.png" group-title="Kids",Nick Jr.
+http://66.102.120.18:8000/play/a00m
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/47/2/planet-hd-logo-png_seeklogo-476989.png" group-title="Kids",Planet Fun HD
+http://66.102.120.18:8000/play/a02k
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/hi/f/f8/Sony_Yay_new_logo.png?20221025103657" group-title="Kids",SONY YAY
+http://66.102.120.18:8000/play/a00s
+#EXTINF:-1 tvg-logo="https://www.animationxpress.com/wp-content/uploads/2016/05/Sonic-logo.jpg" group-title="Kids",Sonic
+http://66.102.120.18:8000/play/a00p
+#EXTINF:-1 tvg-logo="https://images.seeklogo.com/logo-png/25/2/new-disney-channel-logo-png_seeklogo-255285.png" group-title="Kids",Disney
+http://103.182.170.32:8888/play/a04g
+
+
+
+
 
 #EXTINF:-1 tvg-logo="" group-title="SPORTS",Video
 
