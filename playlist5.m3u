@@ -4,7 +4,7 @@
 #EXTINF:-1 tvg-logo="https://d2liqplnt17rh6.cloudfront.net/coverImages/tapmadnewcoveer_e663773d-773b-41f7-a3cb-e896ad99fa55-686.jpeg" group-title="Test",Tapmad (not live)
 https://tapmad-live.cdn.vustreams.com/live/5c71291d-018e-42d2-97b9-119854c05079/live.isml/5c71291d-018e-42d2-97b9-119854c05079.m3u8
 
-#EXTINF:-1 tvg-logo="https://resizer-acm.eco.astro.com.my/tr:w-750,q:75/https://s3-ap-southeast-1.amazonaws.com/ams-astro/production/resizedImages/AstroCricket_2024_IVP_LAND_1280x720.jpg" group-title="sports",Astro Cricket
+#EXTINF:-1 tvg-logo="https://resizerhttps://upload.wikimedia.org/wikipedia/commons/b/b7/Astro_Cricket.png?20240831235843" group-title="sports",Astro Cricket
 https://smart.bengaldigital.live/AstroCricket/index.m3u8
 
 
