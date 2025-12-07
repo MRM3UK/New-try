@@ -24,6 +24,29 @@ https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/400px-T_Sports_logo.svg.png" group-title="SPORTS ⚽",T SPORTS
 https://tvsen1.aynaott.com/YNMn5kZz8aLm/index.m3u8
+
+
+#EXTINF:-1 tvg-name="T SPORT HD" tvg-logo="https://cdn.i.haymarketmedia.asia/?n=campaign-india%2fcontent%2f20160517204558307572_Tencricket365.gif&h=570&w=855&q=100&v=20250320&c=1" group-title="SPORTS ⚽",Ten Cricket HD
+https://allottplay.com/tv/toffee/live.php?id=ten_cricket&e=.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_SD_Logo_CLR.png" group-title="SPORTS ⚽",SONY TEN 5
+https://allottplay.com/tv/toffee/live.php?id=sony_sports_5_hd&e=.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen2_SD_Logo_CLR.png" group-title="SPORTS ⚽",SONY TEN 2
+https://allottplay.com/tv/toffee/live.php?id=sony_sports_2_hd&e=.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen1_SD_Logo_CLR.png" group-title="SPORTS ⚽",SONY TEN 1
+https://allottplay.com/tv/toffee/live.php?id=sony_sports_1_hd&e=.m3u8
+
+#EXTINF:-1 tvg-logo="https://static.toiimg.com/thumb/msid-108693714,width-400,resizemode-4/108693714.jpg" group-title="SPORTS ⚽",Willow Sports
+https://fl1.moveonjoy.com/WILLOW_CRICKET/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/f/f4/Fox_Cricket_Logo.png" group-title="SPORTS ⚽",Fox-Sports 501-HD
+https://foxstream.pages.dev/Cricsters01.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2018/05/05/Star_Sports-Hindi.jpg" group-title="SPORTS ⚽",Star Sports 1 Hindi 🇮🇳📺
+https://starsportshindiii.pages.dev/720p.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7b/Colors_Bangla.png?20220118000106" group-title="IN। BANGLA",Colors Bangla
 https://tvsen3.aynaott.com/u3LkNQ7UHhFX/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Seven_Network_logo.svg/1024px-Seven_Network_logo.svg.png?20221008011354" group-title="SPORTS ⚽",Channel 7
