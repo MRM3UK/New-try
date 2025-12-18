@@ -42,12 +42,12 @@ https://allottplay.com/tv/toffee/live.php?id=sony_sports_2_hd&e=.m3u8
 https://allottplay.com/tv/toffee/live.php?id=sony_sports_1_hd&e=.m3u8
 
 #EXTINF:-1 tvg-logo="https://static.toiimg.com/thumb/msid-108693714,width-400,resizemode-4/108693714.jpg" group-title="SPORTS ⚽",Willow Sports
-https://fl1.moveonjoy.com/WILLOW_CRICKET/index.m3u8
+https://tvsen5.aynaott.com/willowhd/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/f/f4/Fox_Cricket_Logo.png" group-title="SPORTS ⚽",Fox-Sports 501-HD
 https://foxstream.pages.dev/Cricsters01.m3u8
 
-#EXTINF:-1 tvg-logo="https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2018/05/05/Star_Sports-Hindi.jpg" group-title="SPORTS ⚽",Star Sports 1 Hindi 🇮🇳📺
+#EXTINF:-1 tvg-logo="https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2018/05/05/Star_Sports-Hindi.jpg" group-title="SPORTS ⚽",Star Sports 1 Hindi
 https://starsportshindiii.pages.dev/720p.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7b/Colors_Bangla.png?20220118000106" group-title="IN। BANGLA",Colors Bangla
