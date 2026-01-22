@@ -169,6 +169,7 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
         }
+        .premium-tv-bar.hidden { display: none; }
         .premium-tv-bar::after {
             content: '';
             position: absolute;
@@ -187,7 +188,7 @@
         .premium-tag {
             position: absolute;
             top: -10px;
-            right: 20px;
+            right: 40px;
             background: var(--danger);
             color: white;
             font-size: 0.55rem;
@@ -197,6 +198,25 @@
             animation: float 2s infinite ease-in-out;
             box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
         }
+
+        .premium-close-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 5;
+            transition: 0.2s;
+        }
+        .premium-close-btn:hover { background: var(--danger); }
 
         .premium-icon-box {
             width: 42px;
@@ -241,6 +261,7 @@
             text-transform: uppercase;
             box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
             letter-spacing: 1px;
+            margin-right: 28px; /* Offset for close button */
         }
 
         .category-chips {
@@ -466,7 +487,10 @@
         </div>
 
         <!-- Advanced Premium TV Bar -->
-        <div class="premium-tv-bar" onclick="window.open('https://fanbaetv.vercel.app/', '_blank')">
+        <div id="premiumBar" class="premium-tv-bar" onclick="window.open('https://fanbaetv.vercel.app/', '_blank')">
+            <button class="premium-close-btn" onclick="event.stopPropagation(); dismissPremiumBar()">
+                <svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
             <div class="premium-tag">HOT</div>
             <div class="premium-icon-box">
                 <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: url(#grad1); filter: drop-shadow(0 0 4px var(--primary-glow));">
@@ -493,7 +517,7 @@
 
     <!-- Main Content -->
     <main id="mainGrid" class="channel-grid">
-        <!-- Skeleton Sceen -->
+        <!-- Skeleton Screen -->
         <div class="skeleton-card"><div class="skeleton-logo skeleton"></div><div class="skeleton-text skeleton"></div></div>
         <div class="skeleton-card"><div class="skeleton-logo skeleton"></div><div class="skeleton-text skeleton"></div></div>
         <div class="skeleton-card"><div class="skeleton-logo skeleton"></div><div class="skeleton-text skeleton"></div></div>
@@ -639,6 +663,14 @@
             render();
         };
 
+        window.dismissPremiumBar = () => {
+            const bar = $('premiumBar');
+            if (bar) {
+                bar.classList.add('hidden');
+                localStorage.setItem('v3_hide_premium_bar', '1');
+            }
+        };
+
         async function fetchWithRetry(url) {
             const proxies = ['https://corsproxy.io/?', 'https://api.allorigins.win/raw?url='];
             for (let proxy of proxies) {
@@ -655,12 +687,18 @@
 
         async function init() {
             $('searchInput').oninput = e => { state.searchQuery = e.target.value; render(); };
-            $('closeBanner').onclick = () => { $('grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-dim);').classList.add('hidden'); localStorage.setItem('v3_hide_banner', '1'); };
             
             // Fixed banner element selector
             const banner = $('nsBanner');
+            const premiumBar = $('premiumBar');
+            
             $('closeBanner').onclick = () => { banner.classList.add('hidden'); localStorage.setItem('v3_hide_banner', '1'); };
+            
             if (!localStorage.getItem('v3_hide_banner')) setTimeout(() => banner.classList.remove('hidden'), 2000);
+            
+            if (localStorage.getItem('v3_hide_premium_bar')) {
+                if (premiumBar) premiumBar.classList.add('hidden');
+            }
 
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.onclick = e => {
