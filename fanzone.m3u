@@ -1,4 +1,7 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/MRM3UK/M3U-logos/refs/heads/main/file_00000000e99c7206baee737fe6ee06b1.png" group-title="Fanzone",Intro
+https://pub-90eafaefbe22421ab45db5bb328400a2.r2.dev/Bangladeshi_Player_Video_Generated.mp4
+
 #EXTINF:-1 tvg-logo="https://ssl.com.bd/sites/default/files/BTV%20Logo%20Gallery.png" group-title="BANGLA",BTV
 https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Sony_AATH_Logo_%282022%29.png/250px-Sony_AATH_Logo_%282022%29.png" group-title="INDIAN-BANGLA",Sony Aath
