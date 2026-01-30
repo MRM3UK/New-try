@@ -549,8 +549,8 @@
 
     <script>
         const PLAYLISTS = [
-            { url: 'https://sonamul4545.vercel.app/siyam3535.m3u', isLive: true },
-            { url: 'https://raw.githubusercontent.com/MRM3UK/New-try/refs/heads/main/PKBD.m3u', isLive: false }
+            { url: 'https://raw.githubusercontent.com/munim-sah75/Cofs_TV/refs/heads/main/fancode.m3u', isLive: true },
+            { url: 'https://sonamul4545.vercel.app/siyam3535.m3u', isLive: false }
         ];
 
         const state = {
@@ -671,17 +671,67 @@
             $('premiumModal').style.display = 'none';
         };
 
-        async function fetchWithRetry(url) {
-            const proxies = ['https://corsproxy.io/?', 'https://api.allorigins.win/raw?url='];
-            for (let proxy of proxies) {
+        // FIXED: Improved fetch function with multiple fallback methods
+        async function fetchPlaylist(url) {
+            const TIMEOUT = 15000;
+            
+            // Method 1: Try direct fetch first (works for CORS-enabled sources)
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), TIMEOUT);
+                const res = await fetch(url, { 
+                    signal: controller.signal,
+                    headers: { 'Accept': '*/*' }
+                });
+                clearTimeout(timeoutId);
+                if (res.ok) {
+                    const text = await res.text();
+                    if (text && (text.includes('#EXTINF') || text.includes('#EXTM3U'))) {
+                        console.log('Direct fetch succeeded for:', url);
+                        return text;
+                    }
+                }
+            } catch(e) {
+                console.log('Direct fetch failed for:', url);
+            }
+            
+            // Method 2: Try multiple CORS proxies
+            const proxies = [
+                { prefix: 'https://api.allorigins.win/raw?url=', encode: true },
+                { prefix: 'https://corsproxy.io/?', encode: true },
+                { prefix: 'https://api.codetabs.com/v1/proxy?quest=', encode: true },
+                { prefix: 'https://thingproxy.freeboard.io/fetch/', encode: false },
+                { prefix: 'https://cors-anywhere.herokuapp.com/', encode: false }
+            ];
+            
+            for (const proxy of proxies) {
                 try {
                     const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 6000);
-                    const res = await fetch(proxy + encodeURIComponent(url), { signal: controller.signal });
+                    const timeoutId = setTimeout(() => controller.abort(), TIMEOUT);
+                    const proxyUrl = proxy.prefix + (proxy.encode ? encodeURIComponent(url) : url);
+                    
+                    const res = await fetch(proxyUrl, { 
+                        signal: controller.signal,
+                        headers: { 
+                            'Accept': '*/*',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
                     clearTimeout(timeoutId);
-                    if (res.ok) return await res.text();
-                } catch(e) {}
+                    
+                    if (res.ok) {
+                        const text = await res.text();
+                        if (text && (text.includes('#EXTINF') || text.includes('#EXTM3U'))) {
+                            console.log('Proxy fetch succeeded:', proxy.prefix);
+                            return text;
+                        }
+                    }
+                } catch(e) {
+                    console.log('Proxy failed:', proxy.prefix, e.message);
+                }
             }
+            
+            console.error('All fetch methods failed for:', url);
             return null;
         }
 
@@ -712,11 +762,32 @@
                 };
             });
 
-            // PARALLEL FETCHING
-            const fetchPromises = PLAYLISTS.map(p => fetchWithRetry(p.url).then(raw => raw ? parseM3U(raw, p.isLive) : []));
+            // FIXED: Fetch playlists with improved error handling
+            console.log('Starting to fetch playlists...');
+            
+            const fetchPromises = PLAYLISTS.map(async (p) => {
+                try {
+                    const raw = await fetchPlaylist(p.url);
+                    if (raw) {
+                        const channels = parseM3U(raw, p.isLive);
+                        console.log(`Loaded ${channels.length} channels from ${p.url}`);
+                        return channels;
+                    }
+                } catch (e) {
+                    console.error('Error processing playlist:', p.url, e);
+                }
+                return [];
+            });
+            
             const results = await Promise.all(fetchPromises);
             
-            results.forEach(channels => state.allChannels.push(...channels));
+            results.forEach(channels => {
+                if (channels && channels.length > 0) {
+                    state.allChannels.push(...channels);
+                }
+            });
+
+            console.log('Total channels loaded:', state.allChannels.length);
 
             // DEDUPLICATION
             const seen = new Set();
@@ -730,6 +801,18 @@
             state.isLoading = false;
             renderCategories();
             render();
+            
+            // Show error message if no channels loaded
+            if (state.allChannels.length === 0) {
+                $('mainGrid').innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-dim);">
+                        <p style="margin-bottom: 16px;">Unable to load channels. Please check your connection and try again.</p>
+                        <button onclick="location.reload()" style="padding: 12px 24px; background: var(--primary); color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: 600;">
+                            Retry
+                        </button>
+                    </div>
+                `;
+            }
         }
 
         init();
