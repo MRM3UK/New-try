@@ -216,9 +216,6 @@ https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8
 https://padmaonline.duckdns.org:8088/ZeeBanglaHD/index.m3u8
 
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/tVujSyj.jpg" group-title="Bangladesh Entertainment",Nagorik TV
-http://198.195.239.50:8095/nagorik/tracks-v1a1/mono.m3u8
-
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Bangladesh_Television_logo.svg/500px-Bangladesh_Television_logo.svg.png" group-title="Bangladesh Entertainment",BTV Chittagong
 https://tvsen6.aynaott.com/btvctg/tracks-v1a1/mono.ts.m3u8
 
@@ -228,8 +225,7 @@ http://116.204.149.16/mytv/index.m3u8
 #EXTINF:-1 tvg-logo="https://www.satv.tv/wp-content/uploads/2017/07/logo1.png" group-title="Bangladesh Entertainment",SATV
 http://116.204.149.16/satv/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Green_TV_Bangladesh_logo.svg/500px-Green_TV_Bangladesh_logo.svg.png" group-title="Bangladesh Entertainment",Green TV
-https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/chunks.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Al_Jazeera_Media_Network_Logo.svg/500px-Al_Jazeera_Media_Network_Logo.svg.png" group-title="Bangladesh News",Al Sunnah TV
 https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
