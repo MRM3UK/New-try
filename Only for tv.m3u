@@ -1,5 +1,292 @@
 
 #EXTM3U
+
+
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Live TV (BC)",Star Jalsha HD
+http://172.16.29.3:8090/hls/StarJalshaHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/10/Z_Bangla_logo.jpg?20250607164238" group-title="Live TV (BC)",Zee Bangla HD
+http://172.16.29.3:8090/hls/ZeeBanglaHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Live TV (BC)",Star Jalsha (BC)
+https://tvsen3.aynaott.com/n64PH4YL/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7b/Colors_Bangla.png?20220118000106" group-title="Live TV (BC)",Colors Bangla HD
+https://padmaonline.duckdns.org:8088/ColorsBanglaHD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7b/Colors_Bangla.png?20220118000106" group-title="Live TV (BC)",Colors Bangla Cinema
+http://198.195.239.50:8095/ColorsBanglaChinema/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/f/fb/Aakashaath_blue.png/revision/latest?cb=20210509111354" group-title="Live TV (BC)",Zee Bangla Cinema HD
+http://172.16.29.3:8090/hls/ZeeBanglaCinemaHD.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.smartads.in/images/product/television/Enterr10-Bangla.png" group-title="Live TV (BC)",Enterr10 Bangla
+https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/general_content/PGT_1634_2.jpg" group-title="Live TV (BC)",Sony Aath
+http://172.16.29.3:8090/hls/SonyAtth.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/da/Sangeet_Bangla_logo_2006.png/revision/latest?cb=20240322134434" group-title="Live TV (BC)",Sangeet Bangla
+http://172.16.29.3:8090/hls/SangeetBangla.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/MRM3UK/FanzoneLive/refs/heads/main/logo/file_0000000051787209ac49b199a548c78f.png" group-title="Live TV (BC)",Bengali Beats
+https://tplay.live/originals/bengali-beats/index.m3u8
+#EXTINF:-1 tvg-logo="https://bd-directory.com/Tsports-BD.JPG" group-title="Live TV (BC)",Tsports HD
+http://172.16.29.3:8090/hls/tsportshd.m3u8
+#EXTINF:-1 tvg-logo="https://ssl.com.bd/sites/default/files/BTV%20Logo%20Gallery.png" group-title="Live TV (BC)",BTV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/leielj83em5kg7h/somoy_news.png" group-title="Live TV (BC)",Somoy TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/k7z1dsec1jfjbkn/jamuna_tv_bd.png" group-title="Live TV (BC)",Jamuna TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/puf12xv5flgbnz5/channel24_bd.png" group-title="Live TV (BC)",Channel 24
+https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://s4.gifyu.com/images/imagea02f4314e761661d.png" group-title="Live TV (BC)",Ekattor TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/4ldi1dp09s8o6bm/atn_news_bd.png" group-title="Live TV (BC)",ATN News
+https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/7xwwb8hetz3w8rp/independent_tv.png" group-title="Live TV (BC)",Independent TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Channel-i.svg/384px-Channel-i.svg.png" group-title="Live TV (BC)",Channel i
+https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Star_News_Bangladesh_Logo.svg/960px-Star_News_Bangladesh_Logo.svg.png" group-title="Live TV (BC)",Star News Bangladesh
+https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/%E0%A6%A1%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%BF_%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C%E2%80%93%E0%A6%8F%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg/500px-%E0%A6%A1%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A6%BF_%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C%E2%80%93%E0%A6%8F%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.svg.png" group-title="Live TV (BC)",DBC News
+https://owrcovcrpy.gpcdn.net/bpk-tv/1728/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/bn/b/bb/%E0%A6%A8%E0%A6%BF%E0%A6%89%E0%A6%9C_%E0%A6%9F%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BF_%E0%A6%AB%E0%A7%8B%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B_%28%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8%29.webp" group-title="Live TV (BC)",News 24
+https://owrcovcrpy.gpcdn.net/bpk-tv/1708/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/BBC_News_2022_%28Alt%29.svg/330px-BBC_News_2022_%28Alt%29.svg.png" group-title="Live TV (BC)",BBC News
+http://172.16.29.3:8090/hls/bbc_world.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Al_Jazeera_Media_Network_Logo.svg/500px-Al_Jazeera_Media_Network_Logo.svg.png" group-title="Live TV (BC)",Al Jazeera English
+https://owrcovcrpy.gpcdn.net/bpk-tv/1721/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/49b496bca6d7c67d53431e9238f83397" group-title="Live TV (BC)",India Today
+https://feeds.intoday.in/hltapps/api/master.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/3/39/Maasranga_Television_Logo.jpg" group-title="Live TV (BC)",Maasranga TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Banglavision.svg/250px-Banglavision.svg.png" group-title="Live TV (BC)",Banglavision
+https://owrcovcrpy.gpcdn.net/bpk-tv/1715/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/Logo_of_Deepto_TV.svg/330px-Logo_of_Deepto_TV.svg.png" group-title="Live TV (BC)",Deepto TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://ncdn.ntvbd.com/sites/all/themes/sloth/logo.png" group-title="Live TV (BC)",NTV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Logo_of_GTV_%28Bangladesh%29.svg/500px-Logo_of_GTV_%28Bangladesh%29.svg.png" group-title="Live TV (BC)",Gazi TV HD
+http://172.16.29.3:8090/hls/gazitvhd.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Rtv_bangladesh.svg/500px-Rtv_bangladesh.svg.png" group-title="Live TV (BC)",RTV
+https://tvsen6.aynaott.com/rtv/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Channel9_bd.svg/500px-Channel9_bd.svg.png" group-title="Live TV (BC)",Channel 9
+https://owrcovcrpy.gpcdn.net/bpk-tv/1729/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_of_Desh_TV.svg/500px-Logo_of_Desh_TV.svg.png" group-title="Live TV (BC)",Desh TV
+https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://dl.dropbox.com/s/xolazzofexo6ub8/boishakhi.png" group-title="Live TV (BC)",Boishakhi TV
+https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8
+#EXTINF:-1 tvg-logo="https://s4.gifyu.com/images/image534fa27d7683f33d.png" group-title="Live TV (BC)",Ekushey TV
+http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8
+#EXTINF:-1 tvg-logo="https://www.jagobd.com/wp-content/uploads/2021/07/nexustv.png" group-title="Live TV (BC)",Nexus TV
+https://tvsen6.aynaott.com/nexustv/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Mohona_tv_Logo.svg/500px-Mohona_tv_Logo.svg.png" group-title="Live TV (BC)",Mohona TV
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/mohonatv.stream/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/DP1GSwB3/Bijoy-TV.png" group-title="Live TV (BC)",Bijoy TV
+https://stream.ottplus.live/live/bijoy_tv_abr/live/bijoy_tv_480/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Global_Television_Logo_BD.svg/500px-Global_Television_Logo_BD.svg.png" group-title="Live TV (BC)",Global TV
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/Global-tv.stream/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/N6HbH5rH/Channel-One-TV.png" group-title="Live TV (BC)",Channel 1
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/Shakil1294/pcv/main/logo/Movie_Bangla.png" group-title="Live TV (BC)",Movie Bangla
+http://alvetv.com/mbtv/8080/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/bn/1/1e/%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%95_%E0%A6%9F%E0%A6%BF%E0%A6%AD%E0%A6%BF.gif" group-title="Live TV (BC)",Islamic TV
+https://owrcovcrpy.gpcdn.net/bpk-tv/1724/output/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/fYTLgjDQ/Deen-TV.png" group-title="Live TV (BC)",Deen TV
+https://tvsen7.aynaott.com/deen/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://www.jagobd.com/wp-content/uploads/2020/05/MakkahLive.jpg" group-title="Live TV (BC)",Makkah Live
+https://owrcovcrpy.gpcdn.net/bpk-tv/1713/output/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Live TV (BC)",Islam Now
+http://157.245.116.246:8080/hls/islamnow/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/2/22/Star_Sports_Network_logo.png" group-title="Live TV (BC)",Star Sports Select 2 HD
+http://172.16.29.3:8090/hls/StarSportsSelect2HD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Sony_Sports_Network.svg/250px-Sony_Sports_Network.svg.png" group-title="Live TV (BC)",Sony Ten 5 HD
+http://172.16.29.3:8090/hls/SonyTen3hd.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BeIN_Sports_logo_%28horizontal_version%29.svg/500px-BeIN_Sports_logo_%28horizontal_version%29.svg.png" group-title="Live TV (BC)",beIN Sports 1
+http://172.16.29.3:8090/hls/BeinSports1ENG.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BeIN_Sports_logo_%28horizontal_version%29.svg/500px-BeIN_Sports_logo_%28horizontal_version%29.svg.png" group-title="Live TV (BC)",beIN Sports USA
+http://23.237.104.106:8080/USA_BEIN/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/PTV_Sports.png" group-title="Live TV (BC)",PTV Sports HD
+http://172.16.29.3:8090/hls/ptvsportshd.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/A_Sports_Logo.png" group-title="Live TV (BC)",A Sports HD
+http://172.16.29.3:8090/hls/ASportsHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Eurosport_1_Logo_2015.svg/960px-Eurosport_1_Logo_2015.svg.png" group-title="Live TV (BC)",Eurosport HD
+http://172.16.29.3:8090/hls/eurosportshd.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.freebiesupply.com/logos/thumbs/2x/red-bull-tv-logo.png" group-title="Live TV (BC)",Red Bull TV
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8
+#EXTINF:-1 tvg-logo="https://w7.pngwing.com/pngs/758/454/png-transparent-red-bull-logo-red-bull-music-academy-energy-drink-red-bull-tv-bull-mammal-animals-cat-like-mammal-thumbnail.png" group-title="Live TV (BC)",Red Bull TV UK
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/rR4bWXrY/Willow-Sports.png" group-title="Live TV (BC)",Willow HD
+https://tvsen5.aynaott.com/willowhd/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/500px-Indian_Premier_League_Official_Logo.svg.png" group-title="Live TV (BC)",Star Sports 2 Hindi
+http://103.157.248.140:8000/play/a01m/index.m3u8
+#EXTINF:-1 tvg-logo="https://cdnhost.akashbd.net/assets/uploads/channels_images/1770007467-26803465.png" group-title="Live TV (BC)",Nikky
+https://nomawnoijl.gpcdn.net/akash/nikky/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/CsvjtFmt/Funny-Junior.png" group-title="Live TV (BC)",Funny Junior HD
+https://nomawnoijl.gpcdn.net/akash/funnyjunior/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/xK5mcJjD/Joy-TV.png" group-title="Live TV (BC)",Joy TV
+https://nomawnoijl.gpcdn.net/akash/joy/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/xtLcqRGt/Buddy-Star-HD.png" group-title="Live TV (BC)",Buddy Star HD
+https://nomawnoijl.gpcdn.net/akash/buddystar/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Discovery_kids_logo.png/500px-Discovery_kids_logo.png" group-title="Live TV (BC)",Discovery Kids HD
+http://172.16.29.3:8090/hls/DiscoveryKids.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/500px-Cartoon_Network_2010_logo.svg.png" group-title="Live TV (BC)",Cartoon Network HD
+http://172.16.29.3:8090/hls/CartoonNetworkHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nickelodeon_2023_logo_%28outline%29.svg/500px-Nickelodeon_2023_logo_%28outline%29.svg.png" group-title="Live TV (BC)",Nickelodeon Hindi
+http://103.157.248.140:8000/play/a01n/index.m3u8
+#EXTINF:-1 tvg-logo="http://172.16.29.28/images/natgeo.png" group-title="Live TV (BC)",Nat Geo Wild HD
+http://172.16.29.3:8090/hls/NatGeoWild.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Discovery_Channel_-_Logo_2019.svg/500px-Discovery_Channel_-_Logo_2019.svg.png" group-title="Live TV (BC)",Discovery Channel HD
+http://172.16.29.3:8090/hls/DiscoveryHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Discovery_Channel_-_Logo_2019.svg/500px-Discovery_Channel_-_Logo_2019.svg.png" group-title="Live TV (BC)",Discovery Hindi
+http://202.70.146.135:8000/play/a05z/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d4/Geo_Entertainment.png" group-title="Live TV (BC)",GEO Entertainment
+https://ml-pull-dvc-myco.io:2096/GEO_ENTERTAINEMNT/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png" group-title="Live TV (BC)",Hum TV
+https://ml-pull-dvc-myco.io:2096/HUM_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://www.aajentertainment.tv/_img/logo.png" group-title="Live TV (BC)",AAJ Entertainment
+https://ml-pull-dvc-myco.io:2096/AAJ_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/ur/f/f4/Green_Entertainment_logo.jpg?20230702081523" group-title="Live TV (BC)",Green Entertainment
+https://ml-pull-dvc-myco.io:2096/GREEN_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Zee_TV_2025.svg/500px-Zee_TV_2025.svg.png" group-title="Live TV (BC)",Zee TV HD
+http://172.16.29.3:8090/hls/ZeeTVHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d7/StarPlus_Logo.png" group-title="Live TV (BC)",Star Plus HD
+http://172.16.29.3:8090/hls/StarPlusHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d7/StarPlus_Logo.png" group-title="Live TV (BC)",Star Plus (BC)
+https://padmaonline.duckdns.org:8088/StarPlusHD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/de/Sony_TV_new.png" group-title="Live TV (BC)",Sony Entertainment HD
+http://172.16.29.3:8090/hls/SonyHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/SONY_MAX_Logo_2022.png/500px-SONY_MAX_Logo_2022.png" group-title="Live TV (BC)",Sony Max
+https://padmaonline.duckdns.org:8088/SonyMaxHD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/SONY_MAX_Logo_2022.png/500px-SONY_MAX_Logo_2022.png" group-title="Live TV (BC)",Sony Max HD
+http://172.16.29.3:8090/hls/sonymaxhd.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Star_Gold_Network_logo.png/500px-Star_Gold_Network_logo.png" group-title="Live TV (BC)",Star Gold HD
+http://172.16.29.3:8090/hls/StarGoldHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Star_Movies_2023.svg/500px-Star_Movies_2023.svg.png" group-title="Live TV (BC)",Star Movies HD
+http://172.16.29.3:8090/hls/StarMoviesHD.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/India_film_clapperboard_%28variant%29.svg/250px-India_film_clapperboard_%28variant%29.svg.png" group-title="Live TV (BC)",Bollywood TV
+http://212.102.34.8:9080/ZeeBollywood/video.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Goldmines_logo.png/1920px-Goldmines_logo.png?20250711062922" group-title="Live TV (BC)",GoldMines
+https://cdn-2.pishow.tv/live/1459/master.m3u8
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/d66J-MMZ06-55gkF5maclPGB5f5j1L0SAs3iWnl3lhoswlWrJ67wD2a3mZGkgHgt-W3kMrIT=s900-c-k-c0x00ffffff-no-rj" group-title="Live TV (BC)",GoldMines Movies
+https://cdn-2.pishow.tv/live/1461/master.m3u8
+#EXTINF:-1 tvg-logo="https://s3.aynaott.com/storage/3132515182ec50091b496fe515564084" group-title="Live TV (BC)",Hindi Movie Classic 24
+https://vods2.aynaott.com/hindimovies/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%26TV_2025.svg/960px-%26TV_2025.svg.png" group-title="Live TV (BC)",&Pictures HD
+http://172.16.29.3:8090/hls/AndPictureHD.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/nXKXaGE0SkjvhnbFKc0dUWh1uwo.jpg" group-title="Live TV (BC)",Motu Patlu
+https://live20.bozztv.com/giatvplayout7/giatv-209622/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png" group-title="Live TV (BC)",Doraemon
+https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/aFAN9aKm0OblOr30ROejJCV8rGf.jpg" group-title="Live TV (BC)",Oggy
+https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/2YLtdalssU7ypT68jzzKyCZRfPr.jpg" group-title="Live TV (BC)",Gopal Bhar
+https://live20.bozztv.com/giatvplayout7/giatv-209611/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/zzCZIvKcfPNQ4RbaMIakmC7ISKQ.jpg" group-title="Live TV (BC)",Bantul The Great
+https://live20.bozztv.com/giatvplayout7/giatv-209869/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/pApniCXhegDnhxQda7RcpG8gFP0.jpg" group-title="Live TV (BC)",Tom & jerry
+https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://thumbs.dreamstime.com/b/bollywood-cinema-vintage-indian-movie-cinematography-theater-poster-welcome-neon-retro-d-classic-film-posters-board-gold-logo-118624129.jpg?w=768" group-title="Live TV (BC)",Bollywood
+https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://thumbs.dreamstime.com/b/bollywood-cinema-vintage-indian-movie-cinematography-theater-poster-welcome-neon-retro-d-classic-film-posters-board-gold-logo-118624129.jpg?w=768" group-title="Live TV (BC)",Bollywood OLD
+https://vods2.aynaott.com/hindimovies/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.pixabay.com/photo/2022/07/17/19/22/movie-7328179_1280.png" group-title="Live TV (BC)",Hindi Dub
+https://live20.bozztv.com/giatvplayout7/giatv-209593/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.pixabay.com/photo/2022/07/17/19/22/movie-7328179_1280.png" group-title="Live TV (BC)",Bangla Movies
+https://live20.bozztv.com/giatvplayout7/giatv-209627/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://image.winudf.com/v2/image1/Y29tLnR3b3NoYXBlLmJhbmdsYW5hdG9rX2ljb25fMTU3Nzg5NzQyOF8wMzM/icon.webp?w=280&fakeurl=1&type=.webp" group-title="Live TV (BC)",Bangla Natok
+https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://i.pinimg.com/736x/ab/38/e7/ab38e77504c56a132c57c94a5fd471c7.jpg" group-title="Live TV (BC)",Village Cooking
+https://fl1003.bozztv.com/ushba-t10/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/SONY_MAX_Logo_2022.png/500px-SONY_MAX_Logo_2022.png" group-title="Live TV (BC)",Sony Max
+https://padmaonline.duckdns.org:8088/SonyMaxHD/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/500px-Cartoon_Network_2010_logo.svg.png" group-title="Live TV (BC)",Cartoon Network
+https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%A6%9C%E0%A6%BF_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB.svg/500px-%E0%A6%9C%E0%A6%BF_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB.svg.png" group-title="Live TV (BC)",Zee Bangla (BC)
+https://padmaonline.duckdns.org:8088/ZeeBanglaHD/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Bangladesh_Television_logo.svg/500px-Bangladesh_Television_logo.svg.png" group-title="Live TV (BC)",BTV Chittagong
+https://tvsen6.aynaott.com/btvctg/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/My_TV_Bangladesh_logo.svg/500px-My_TV_Bangladesh_logo.svg.png" group-title="Live TV (BC)",My TV Bangladesh
+http://116.204.149.16/mytv/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.satv.tv/wp-content/uploads/2017/07/logo1.png" group-title="Live TV (BC)",SATV
+http://116.204.149.16/satv/index.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Al_Jazeera_Media_Network_Logo.svg/500px-Al_Jazeera_Media_Network_Logo.svg.png" group-title="Live TV (BC)",Al Sunnah TV
+https://cdn-globecast.akamaized.net/live/eds/saudi_sunnah/hls_roku/index.m3u8
+#EXTINF:-1 tvg-logo="https://a.jsrdn.com/hls/23180/cowboy-channel/poster_20250512_172554.jpg" group-title="Live TV (BC)",Cowboy Channel
+https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/BBC_Earth_2023.svg/500px-BBC_Earth_2023.svg.png" group-title="Live TV (BC)",BBC Earth
+https://amg00793-bbcstudios-amg00793c3-lg-us-2528.playouts.now.amagi.tv/playlist/amg00793-bbcstudios-bbcearta-lgus/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/5lZ8dnC.png" group-title="Live TV (BC)",Wild Earth
+https://wildearth-plex.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-logo="https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-lgdk/poster.png" group-title="Live TV (BC)",Real Wild
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-lgdk/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Horse_%26_Country_TV_logo.svg/500px-Horse_%26_Country_TV_logo.svg.png" group-title="Live TV (BC)",Horse and Country
+https://hncfree-samsungau.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://linear-174.frequency.stream/dist/localnow/174/hls/master/poster.jpg" group-title="Live TV (BC)",The Pet Collective
+https://linear-174.frequency.stream/dist/localnow/174/hls/master/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1746005940155.png" group-title="Live TV (BC)",SRK TV
+https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770347851305.png" group-title="Live TV (BC)",Cineedge HD
+https://nomawnoijl.gpcdn.net/akash/cineedge/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770347327658.png" group-title="Live TV (BC)",Uniques HD
+https://nomawnoijl.gpcdn.net/akash/uniques/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770348388925.png" group-title="Live TV (BC)",Superrix HD
+https://nomawnoijl.gpcdn.net/akash/superrix/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770312098339.png" group-title="Live TV (BC)",Screem
+https://nomawnoijl.gpcdn.net/akash/screem/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770377900139.png" group-title="Live TV (BC)",Sports Legends
+https://nomawnoijl.gpcdn.net/akash/sportslegends/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770378074527.png" group-title="Live TV (BC)",Flash Guys HD
+https://nomawnoijl.gpcdn.net/akash/flashguys/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770379038530.png" group-title="Live TV (BC)",BuddyStar HD
+https://nomawnoijl.gpcdn.net/akash/buddystar/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770378560772.png" group-title="Live TV (BC)",Luxel HD
+https://nomawnoijl.gpcdn.net/akash/luxell/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770378874717.png" group-title="Live TV (BC)",Joy
+https://nomawnoijl.gpcdn.net/akash/joy/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770379573329.png" group-title="Live TV (BC)",Funny Junior HD
+https://nomawnoijl.gpcdn.net/akash/funnyjunior/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380126540.png" group-title="Live TV (BC)",Crimes
+https://nomawnoijl.gpcdn.net/akash/crimes/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380306806.png" group-title="Live TV (BC)",True Stories
+https://nomawnoijl.gpcdn.net/akash/truestories/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380460488.png" group-title="Live TV (BC)",Intelligence
+https://nomawnoijl.gpcdn.net/akash/intelligence/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380601958.png" group-title="Live TV (BC)",Sports Range
+https://nomawnoijl.gpcdn.net/akash/sportrange/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380791303.png" group-title="Live TV (BC)",Thunder Er
+https://nomawnoijl.gpcdn.net/akash/thunder/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380942670.png" group-title="Live TV (BC)",Fighters
+https://nomawnoijl.gpcdn.net/akash/fighter/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770381107924.png" group-title="Live TV (BC)",Smarty
+https://nomawnoijl.gpcdn.net/akash/smarty/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770381248531.png" group-title="Live TV (BC)",Lucky Family
+https://nomawnoijl.gpcdn.net/akash/luckyfamily/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770381398090.png" group-title="Live TV (BC)",Kids Stars
+https://nomawnoijl.gpcdn.net/akash/kidsstars/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1778083459294.png" group-title="Live TV (BC)",Nikki
+https://nomawnoijl.gpcdn.net/akash/nikky/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1778085327477.png" group-title="Live TV (BC)",Originals
+https://nomawnoijl.gpcdn.net/akash/originals/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1778085745609.png" group-title="Live TV (BC)",Crazy Ex
+https://nomawnoijl.gpcdn.net/akash/crazy_ex/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1778086478755.png" group-title="Live TV (BC)",Delicious
+https://nomawnoijl.gpcdn.net/akash/delicious/playlist.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Live TV (BC)",IPL 2026
+http://27.124.71.27/Willow_Extra/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Live TV (BC)",Zee Cinema HD
+http://103.99.249.139/zeecinema/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Live TV (BC)",StarJalsha HD
+http://103.99.249.139/starjalsha/index.m3u8
+
+
+
+
+
+
+
+
+
+
+#MOVIES
+
+
+
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/wved9mxrbbae8eW0X5ydBfOWsba.jpg" group-title="Bangladeshi",Bonolota Express [P]
 https://pixeldrain.dev/api/file/cuJypG6s
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/x7Rze9z1tOPuFUgbAn4JpA0H4qy.jpg" group-title="Bangla Movie ЁЯЗоЁЯЗ│",Mitthye Premer Gaan
