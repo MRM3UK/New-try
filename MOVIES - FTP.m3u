@@ -13,7 +13,7 @@ http://172.16.29.3:8090/hls/SonyAtth.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7b/Colors_Bangla.png?20220118000106" group-title="Indian Bangla",Colors Bangla HD
 https://padmaonline.duckdns.org:8088/ColorsBanglaHD/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="StarJalsha HD" group-title="Indian Bangla",StarJalsha HD
-http://103.99.249.139/starjalsha/index.m3u8
+http://138.252.31.25/Star-Jalsha/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/f/fb/Aakashaath_blue.png/revision/latest?cb=20210509111354" group-title="Indian Bangla",Zee Bangla Cinema HD
 http://172.16.29.3:8090/hls/ZeeBanglaCinemaHD.m3u8
 #EXTINF:-1 tvg-logo="https://cdn.smartads.in/images/product/television/Enterr10-Bangla.png" group-title="Indian Bangla",Enterr10 Bangla
