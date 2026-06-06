@@ -25,7 +25,22 @@ https://tvsen7.aynaott.com/tsports-hd/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/rKhhy0Ks/file-00000000ad787206a873a43d715150d3.png" group-title="Sports",BTV
 https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8
 
+#EXTM3U
 
+#EXTINF:-1 tvg-id="beinsportsxtra" tvg-name="beIN Sports Xtra" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bein_Sports_logo.svg/512px-Bein_Sports_logo.svg.png" group-title="Sports",beIN Sports Xtra
+https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
+
+#EXTINF:-1 tvg-id="beinsports1" tvg-name="beIN Sports 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bein_Sports_logo.svg/512px-Bein_Sports_logo.svg.png" group-title="Sports",beIN Sports 1
+https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+
+#EXTINF:-1 tvg-id="beinsports2" tvg-name="beIN Sports 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bein_Sports_logo.svg/512px-Bein_Sports_logo.svg.png" group-title="Sports",beIN Sports 2
+https://andro.226503.xyz/checklist/androstreamlivebs2.m3u8
+
+#EXTINF:-1 tvg-id="beinsports3" tvg-name="beIN Sports 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bein_Sports_logo.svg/512px-Bein_Sports_logo.svg.png" group-title="Sports",beIN Sports 3
+https://andro.226503.xyz/checklist/androstreamlivebs3.m3u8
+
+#EXTINF:-1 tvg-id="beinsports4" tvg-name="beIN Sports 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bein_Sports_logo.svg/512px-Bein_Sports_logo.svg.png" group-title="Sports",beIN Sports 4
+https://andro.226503.xyz/checklist/androstreamlivebs4.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.sonyaath.com/assets/media/images/AathLogo.png" group-title="INDIAN BANGLA",Sony Aath (BC)
 https://ashtv.com.bd/server/channels/sony_aath.m3u8
