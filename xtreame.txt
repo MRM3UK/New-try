@@ -1,25 +1,7 @@
-Date: 07-06-2026
-
-http://innovationtv.eu:80/get.php?username=premium&password=premium1&type=m3u_plus 
-
-http://teck-tv.com/get.php?username=2605201443100597&password=C655BF416768&type=m3u
-
-http://vpn.4k-snake.xyz:80/get.php?username=e6a3cee019&password=b513d73fb343&type=m3u_plus
-http://line.ultra-flash.cc/get.php?username=f7ae97dcea&password=ef50ffd39a80&type=m3u_plus&output=ts
-
-http://line.yousfi-ln.lol/get.php?username=b5e2032a&password=9e6b9686&type=m3u_plus&output=ts
-
-
-http://bazaruto.top:8000/get.php?username=BoooStiko.SKYPE&password=vOyuXxnafa7RAnDP&type=m3u_plus
-http://bazaruto.top:8000/get.php?username=BoooStiko.SKYPE&password=vOyuXxnafa7RAnDP&type=m3u_plus&output=m3u8
-http://bazaruto.top:8000/get.php?username=DeniKadis.riki&password=d7GOVDcn5w&type=m3u_plus
-http://bazaruto.top:8000/get.php?username=ott.global.media62Bc&password=7MdvWexenF8HxqcT&type=m3u_plus&output=rtmp
-http://bazaruto.top:8000/get.php?username=ott.global.media62Bc&password=7MdvWexenF8HxqcT&type=m3u_plus&output=m3u8
-http://bazaruto.top:8000/get.php?username=userZ&password=userZ321&type=m3u_plus
-http://bazaruto.top:8000/get.php?username=BoooStiko.SKYPE&password=vOyuXxnafa7RAnDP&type=m3u_plus&output=ts
-http://bazaruto.top:8000/get.php?username=ott.global.media62Bc&password=7MdvWexenF8HxqcT&type=m3u_plus
-http://bazaruto.top:8000/get.php?username=igorTrajkaCH.riki&password=JIPVFqifza&type=m3u_plus
-http://bazaruto.top:8000/get.php?username=ott.global.media62Bc&password=7MdvWexenF8HxqcT&type=m3u_plus&output=ts
+Date: 08-06-2026
+http://line.myhd-u.com/get.php?username=rYPgKEyvaRXEkMe&password=ZhQHEQicDm&type=m3u_plus
+http://line.myhd-u.com/get.php?username=44:5c:e9:44:32:ad&password=DUYKKHERZZ&type=m3u_plus
+http://line.myhd-u.com/get.php?username=fc:03:9f:b2:7b:87&password=MVCOYGRIUS&type=m3u_plus
 
 opplex 
 
