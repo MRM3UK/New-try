@@ -1,5 +1,16 @@
 Date: 07-06-2026
 
+http://innovationtv.eu:80/get.php?username=premium&password=premium1&type=m3u_plus Expiry
+4/6/2028 (669d)
+
+http://teck-tv.com/get.php?username=2605201443100597&password=C655BF416768&type=m3u
+
+http://vpn.4k-snake.xyz:80/get.php?username=e6a3cee019&password=b513d73fb343&type=m3u_plus
+http://line.ultra-flash.cc/get.php?username=f7ae97dcea&password=ef50ffd39a80&type=m3u_plus&output=ts
+
+http://line.yousfi-ln.lol/get.php?username=b5e2032a&password=9e6b9686&type=m3u_plus&output=ts
+
+
 http://bazaruto.top:8000/get.php?username=BoooStiko.SKYPE&password=vOyuXxnafa7RAnDP&type=m3u_plus
 http://bazaruto.top:8000/get.php?username=BoooStiko.SKYPE&password=vOyuXxnafa7RAnDP&type=m3u_plus&output=m3u8
 http://bazaruto.top:8000/get.php?username=DeniKadis.riki&password=d7GOVDcn5w&type=m3u_plus
