@@ -25,7 +25,22 @@ https://tvsen7.aynaott.com/tsports-hd/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/rKhhy0Ks/file-00000000ad787206a873a43d715150d3.png" group-title="Sports",BTV
 https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8
 
+
 #EXTM3U
+#EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="Sports",FIFA World Cup 2026 🇧🇷[coming]
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://www.wwe.com/f/styles/wwe_show_logo_l/public/all/2024/09/Smackdown_LOGO--c8e0b09904cb1356d309a8ea2acb0422.png" group-title="Sports",WWE
+https://601.formaturamaxi.com.br/wwe.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://www.beinsportsxtra.com/_next/image?url=https%3A%2F%2Fresources.beinsportsxtra.com%2Fxtra%2Flogo_bein_sport_xtra_plain_55537aef6c.png&w=750&q=100" group-title="Sports",beIN sports Xtra HD
+https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/dd/DAZN_BoxedLogo_01_RGB.png?_=20211207105632" group-title="Sports",DAZN COMBAT
+https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/96/Tv2_sport.png?_=20160710152931" group-title="Sports",2TV Sport
+https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rossi_and_Lorenzo_2010_French_GP.jpg/330px-Rossi_and_Lorenzo_2010_French_GP.jpg" group-title="Sports",MTR Sports-1 🇬🇧
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8
+
+
 
 #EXTINF:-1 tvg-id="beinsportsxtra" tvg-name="beIN Sports Xtra" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BeIN_Sports_logo_%28horizontal_version%29.svg/500px-BeIN_Sports_logo_%28horizontal_version%29.svg.png" group-title="Sports",beIN Sports Xtra
 https://bein-esp-xumo.amagi.tv/playlistR720P.m3u8
