@@ -1,7 +1,6 @@
 Date: 07-06-2026
 
-http://innovationtv.eu:80/get.php?username=premium&password=premium1&type=m3u_plus Expiry
-4/6/2028 (669d)
+http://innovationtv.eu:80/get.php?username=premium&password=premium1&type=m3u_plus 
 
 http://teck-tv.com/get.php?username=2605201443100597&password=C655BF416768&type=m3u
 
@@ -21,3 +20,7 @@ http://bazaruto.top:8000/get.php?username=BoooStiko.SKYPE&password=vOyuXxnafa7RA
 http://bazaruto.top:8000/get.php?username=ott.global.media62Bc&password=7MdvWexenF8HxqcT&type=m3u_plus
 http://bazaruto.top:8000/get.php?username=igorTrajkaCH.riki&password=JIPVFqifza&type=m3u_plus
 http://bazaruto.top:8000/get.php?username=ott.global.media62Bc&password=7MdvWexenF8HxqcT&type=m3u_plus&output=ts
+
+opplex 
+
+https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playlist/main/otv.m3u
