@@ -500,6 +500,9 @@ https://cdn1.discoveryftp.net/Movies/Hindi/2026/Pati%20Patni%20Aur%20Woh%20Do/Pa
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/hKbQjE5ZcZUpuzApEjyoVCUWwdx.jpg" group-title="Hindi Dub",Daadi Ki Shaadi
 https://cdn1.discoveryftp.net/Movies/Hindi/2026/Daadi%20Ki%20Shaadi/Daadi%20Ki%20Shaadi%20.2026.1080p%20WEB-HDTC.x264.mkv
 
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/h9UWxT9eoJZoezHblCFwdFX7Zzb.jpg" group-title="Dev",Projapati 2
+https://cdn1.discoveryftp.net/Movies/Bangla/2025/Projapati%202/Projapati%202%20(2025)%20Bengali%20Zee5%20WEB-DL%20H264%20AAC%201080p.mkv
 
 #EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/qOJg5L4YXmeZxSYqpTZI8LMfdQk.jpg" group-title="Bangladeshi",Domm [P]
 https://pixeldrain.dev/api/file/ScsBMA2a
