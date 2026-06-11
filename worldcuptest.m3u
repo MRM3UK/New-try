@@ -1,9 +1,6 @@
 
 
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://i.ibb.co.com/vx0zDcY4/file-00000000a8347207a5c82d8e2c3d0f70.png" group-title="Sports",T Sports | Server 1
-https://playztv-apps.pages.dev/tsports/index.m3u8
-
 
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/5gkd3QSs/file-00000000acc0720699d7ca06851c868b.png" group-title="Sports",PTV | Server 2
