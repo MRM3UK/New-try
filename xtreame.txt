@@ -1,38 +1,40 @@
-Date: 10-06-2026
+Date: 11-06-2026
+http://tv.challenge.tn:2052/get.php?username=49459551&password=72609676&type=m3u
+http://185.134.22.131:8080/get.php?username=Naas@01182024&password=ryJ4R3HZJpB5&type=m3u&output=ts
 
 
-http://kytv.xyz//get.php?username=southworth&password=southworth&type=m3u_plus
-http://kytv.xyz//get.php?username=Aldo1234&password=Aldo1234&type=m3u_plus
-
-http://kytv.xyz//get.php?username=20022002&password=20022002&type=m3u_plus
-http://kytv.xyz//get.php?username=11110000&password=11110000&type=m3u_plus
-
-http://kytv.xyz//get.php?username=brendan1&password=brendan1&type=m3u_plus
-
-
-http://13869-ate.tx-4kott.com:80/get.php?username=thucpzp4ah&password=aba5go9g0g&type=m3u_plus
-http://deno.adilservice.com:80/get.php?username=207bc27044&password=0b77d23a44e7&type=m3u_plus
-http://802017341873.plus-26.com:80/get.php?username=w4gzmeoiw6&password=kyul5gyvkp&type=m3u_plus
-http://185.160.192.64:8789/get.php?username=hubert3&password=78282356&type=m3u_plus
-http://185.160.192.64:80/get.php?username=DAE54374785&password=DAR65386775&type=m3u_plus
-http://wx78.vpn-cloud.icu:8080/get.php?username=p3v23bcwj2&password=j9iyghyczo&type=m3u_plus&KhalilSat
-
-
-
-
-
-
-
-http://iptvh2o.com:2082/get.php?username=Salem60&password=4944286&type=m3u_plus
-
-http://cord-cutter.net:8080/get.php?username=james.gant@gmail.com1&password=4z572NSMr4&type=m3u_plus
-
-http://013tv.com:8080/get.php?username=silversatcom&password=uSKcm5tNBsrJ2HZE&type=m3u_plus
-
-http://013tv.com:8080/get.php?username=vtprotonium&password=CuUWPf5b7jywB68SxZ5&type=m3u_plus
-
-http://krooztv.cloud:80/get.php?username=a12345&password=a12345&type=m3u_plus
 
 opplex 
 
 https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playlist/main/otv.m3u
+
+
+http://mag.tivi-one-iptv.net/c | 00:1B:79:51:04:51
+
+ http://mag.tivi-one-iptv.net/c | 00:1B:79:41:3D:6F
+
+http://mag.tivi-one-iptv.net/c | 00:1B:79:F9:7B:CD
+
+http://mag.tivi-one-iptv.net/c | 00:1B:79:53:0C:31
+
+http://elt.ipfr.tv/c | 00:1A:79:C8:3F:BC
+
+http://iptv.darktv.in/c | 00:1A:79:27:1F:4D
+
+http://p2.iptvprivateserver.tv | 00:1A:79:CA:94:11
+
+http://p2.iptvprivateserver.tv | 00:1A:79:A6:4D:A2
+
+http://p2.iptvprivateserver.tv | 00:1A:79:40:13:A6
+
+http://p2.iptvprivateserver.tv | 00:1A:79:B6:FF:9C
+
+http://p2.iptvprivateserver.tv | 00:1A:79:27:38:41
+
+http://p2.iptvprivateserver.tv | 00:1A:79:34:4F:1E
+
+http://p2.iptvprivateserver.tv | 00:1A:79:B7:A3:3A
+
+http://p2.iptvprivateserver.tv | 00:1A:79:2D:5E:12
+
+http://p2.iptvprivateserver.tv | 00:1A:79:45:58:90
