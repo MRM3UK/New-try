@@ -836,10 +836,6 @@ http://main.epgmaker.com/Ali130225/Cpyej2JL56Xy/1139
 
 #EXTINF:-1 tvg-logo="http://dds.oncast.me/img/logo/sp10.png" group-title="SPORTS",Live Sports-10 (Asia Cup)
 
-#EXTINF:-1 group-title="SPORTS" tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/11/T_Sports_logo.png",T-Sports [1]
-#https://live.tsports.com/?bitrate=1024000&channel=tsports_live_2_720&res=720
-#https://aynapubluc.vercel.app/api/stream/fc95d30e-5323-4c12-bb38-7a1e3f04acc2.m3u8
-http://116.204.149.16/t_sports/index.m3u8
 
 #EXTINF:-1 group-title="SPORTS" tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/11/T_Sports_logo.png",T-Sports [2]
 #https://anywhere.pwisetthon.com/http://103.151.60.204/T-Sports/tracks-v1a1/mono.m3u8
@@ -1106,8 +1102,7 @@ https://tvsen6.aynaott.com/asports/index.m3u8
 https://stream.ottplus.bd/live/euro_sports_hd_abr/live/euro_sports_hd/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/8e08XtE.png" group-title="Sports",FIFA World Cup
 https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-id="T SPORTS" tvg-logo="https://i.imgur.com/iI17rZ3.jpeg" tvg-name="T SPORTS" group-title="Sports",T SPORTS
-https://tvsen7.aynaott.com/tsports-hd/tracks-v1a1/mono.ts.m3u8
+
 #EXTINF:-1 tvg-id="PTV SPORTS HD" tvg-logo="https://i.imgur.com/WFf2kaH.jpeg" tvg-name="PTV SPORTS HD" group-title="Sports",PTV SPORTS HD
 https://tvsen5.aynaott.com/PtvSports/index.m3u8
 #EXTINF:-1 tvg-id="STAR SPORTS 1 HD" tvg-logo="https://i.imgur.com/pBMoNL1.jpeg" tvg-name="STAR SPORTS 1 HD" group-title="Sports",STAR SPORTS 1
