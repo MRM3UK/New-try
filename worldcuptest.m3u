@@ -2,6 +2,9 @@
 
 #EXTM3U
 
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b7/Logo_beIN_SPORTS_MAX.png?_=20170227163529" group-title="",Bein Sports Max
+https://no-red.pages.dev/liveop2.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/5gkd3QSs/file-00000000acc0720699d7ca06851c868b.png" group-title="Sports",PTV | Server 2
 https://playztv-apps.pages.dev/ptvsports/index.m3u8
