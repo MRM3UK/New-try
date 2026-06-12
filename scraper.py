@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
 FIFA World Cup 2026 Match Scraper
-- Finds WC matches by searching FIFA national team names on socolive
-- Preserves manually added channels in worldcuptest.m3u
-- Only removes auto-added channels after match ends
+- Finds WC2026 matches by scanning all /truc-tiep/ links
+- Matches FIFA team names in URL slugs and page text
+- Extracts stream from match page iframes/embeds
+- Preserves manually added channels
+- Auto-removes ended matches
 """
 
 import re
@@ -29,156 +31,195 @@ WORLD_CUP_LOGO = (
     "2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png"
 )
 
-# Tag to identify auto-added entries (invisible to IPTV players)
 AUTO_TAG = "auto-added-wc2026"
 
-# ─── ALL FIFA World Cup 2026 Qualified / Likely Teams ────────────────────────
-# Using both English and Vietnamese names + common abbreviations
+# ─── FIFA Teams: slug form (as appears in URLs) + display name ───────────────
+# Key = how it appears in URL slug, Value = display name
 
-FIFA_TEAMS = [
-    # Host nations
-    "United States", "USA", "Hoa Kỳ", "Mỹ",
-    "Canada", "Ca-na-đa",
-    "Mexico", "México", "Mê-hi-cô",
+FIFA_TEAM_SLUGS = {
+    # Hosts
+    "united-states": "United States",
+    "usa": "United States",
+    "us": "United States",
+    "canada": "Canada",
+    "mexico": "Mexico",
 
     # South America
-    "Argentina", "Ác-hen-ti-na",
-    "Brazil", "Brasil", "Bra-xin",
-    "Uruguay", "U-ru-guay",
-    "Colombia", "Cô-lôm-bi-a",
-    "Ecuador", "Ê-cu-a-đo",
-    "Paraguay", "Pa-ra-guay",
-    "Chile", "Chi-lê",
-    "Peru", "Pê-ru",
-    "Venezuela", "Vê-nê-zu-ê-la",
-    "Bolivia", "Bô-li-vi-a",
+    "argentina": "Argentina",
+    "brazil": "Brazil",
+    "brasil": "Brazil",
+    "uruguay": "Uruguay",
+    "colombia": "Colombia",
+    "ecuador": "Ecuador",
+    "paraguay": "Paraguay",
+    "chile": "Chile",
+    "peru": "Peru",
+    "venezuela": "Venezuela",
+    "bolivia": "Bolivia",
 
     # Europe
-    "Germany", "Deutschland", "Đức",
-    "France", "Pháp",
-    "Spain", "España", "Tây Ban Nha",
-    "England", "Anh",
-    "Portugal", "Bồ Đào Nha",
-    "Netherlands", "Holland", "Hà Lan",
-    "Belgium", "Bỉ",
-    "Italy", "Italia", "Ý",
-    "Croatia", "Hrvatska", "Croatia",
-    "Serbia", "Séc-bi-a",
-    "Switzerland", "Thụy Sĩ",
-    "Denmark", "Danmark", "Đan Mạch",
-    "Austria", "Áo",
-    "Poland", "Ba Lan",
-    "Ukraine", "Ukraina", "U-crai-na",
-    "Turkey", "Türkiye", "Thổ Nhĩ Kỳ",
-    "Sweden", "Thụy Điển",
-    "Wales", "Xứ Wales",
-    "Scotland", "Scotland",
-    "Hungary", "Hung-ga-ri",
-    "Czech Republic", "Czechia", "Séc",
-    "Romania", "Ru-ma-ni",
-    "Slovakia", "Xlô-va-ki-a",
-    "Slovenia", "Xlô-ve-ni-a",
-    "Greece", "Hy Lạp",
-    "Norway", "Na Uy",
-    "Finland", "Phần Lan",
-    "Iceland", "Ai-xơ-len",
-    "Ireland", "Ai-len",
-    "Bosnia", "Bô-xni-a",
-    "Albania", "An-ba-ni",
-    "North Macedonia", "Bắc Macedonia",
-    "Montenegro", "Mông-tê-nê-grô",
-    "Georgia", "Gru-di-a",
-    "Luxembourg", "Lúc-xăm-bua",
-    "Kosovo", "Cô-xô-vô",
+    "germany": "Germany",
+    "france": "France",
+    "spain": "Spain",
+    "england": "England",
+    "portugal": "Portugal",
+    "netherlands": "Netherlands",
+    "holland": "Netherlands",
+    "belgium": "Belgium",
+    "italy": "Italy",
+    "croatia": "Croatia",
+    "serbia": "Serbia",
+    "switzerland": "Switzerland",
+    "denmark": "Denmark",
+    "austria": "Austria",
+    "poland": "Poland",
+    "ukraine": "Ukraine",
+    "turkey": "Turkey",
+    "turkiye": "Turkey",
+    "sweden": "Sweden",
+    "wales": "Wales",
+    "scotland": "Scotland",
+    "hungary": "Hungary",
+    "czech-republic": "Czech Republic",
+    "czechia": "Czechia",
+    "romania": "Romania",
+    "slovakia": "Slovakia",
+    "slovenia": "Slovenia",
+    "greece": "Greece",
+    "norway": "Norway",
+    "finland": "Finland",
+    "iceland": "Iceland",
+    "ireland": "Ireland",
+    "republic-of-ireland": "Ireland",
+    "bosnia": "Bosnia & Herzegovina",
+    "bosnia-herzegovina": "Bosnia & Herzegovina",
+    "albania": "Albania",
+    "north-macedonia": "North Macedonia",
+    "montenegro": "Montenegro",
+    "georgia": "Georgia",
+    "luxembourg": "Luxembourg",
+    "kosovo": "Kosovo",
+    "cyprus": "Cyprus",
+    "estonia": "Estonia",
+    "latvia": "Latvia",
+    "lithuania": "Lithuania",
+    "belarus": "Belarus",
+    "bulgaria": "Bulgaria",
+    "malta": "Malta",
+    "moldova": "Moldova",
+    "armenia": "Armenia",
+    "azerbaijan": "Azerbaijan",
+    "kazakhstan": "Kazakhstan",
+    "israel": "Israel",
+    "faroe-islands": "Faroe Islands",
 
     # Africa
-    "Morocco", "Maroc", "Ma-rốc",
-    "Senegal", "Sê-nê-gan",
-    "Nigeria", "Ni-giê-ri-a",
-    "Cameroon", "Cameroun", "Ca-mơ-run",
-    "Ghana", "Ga-na",
-    "Egypt", "Ai Cập",
-    "Algeria", "An-giê-ri",
-    "Tunisia", "Tuy-ni-di",
-    "Ivory Coast", "Côte d'Ivoire", "Bờ Biển Ngà",
-    "South Africa", "Nam Phi",
-    "DR Congo", "Congo", "Công-gô",
-    "Mali", "Ma-li",
-    "Burkina Faso",
-    "Mozambique", "Mô-dăm-bích",
-    "Tanzania", "Tan-da-ni-a",
-    "Uganda", "U-gan-đa",
-    "Benin", "Bê-nanh",
-    "Zambia", "Dăm-bi-a",
-    "Zimbabwe", "Dim-ba-bu-ê",
-    "Cape Verde",
+    "morocco": "Morocco",
+    "senegal": "Senegal",
+    "nigeria": "Nigeria",
+    "cameroon": "Cameroon",
+    "ghana": "Ghana",
+    "egypt": "Egypt",
+    "algeria": "Algeria",
+    "tunisia": "Tunisia",
+    "ivory-coast": "Ivory Coast",
+    "cote-divoire": "Ivory Coast",
+    "south-africa": "South Africa",
+    "dr-congo": "DR Congo",
+    "mali": "Mali",
+    "burkina-faso": "Burkina Faso",
+    "mozambique": "Mozambique",
+    "tanzania": "Tanzania",
+    "uganda": "Uganda",
+    "benin": "Benin",
+    "zambia": "Zambia",
+    "zimbabwe": "Zimbabwe",
+    "cape-verde": "Cape Verde",
+    "gabon": "Gabon",
+    "guinea": "Guinea",
+    "congo": "Congo",
+    "libya": "Libya",
+    "namibia": "Namibia",
+    "niger": "Niger",
+    "sudan": "Sudan",
+    "kenya": "Kenya",
+    "angola": "Angola",
+    "ethiopia": "Ethiopia",
+    "rwanda": "Rwanda",
+    "togo": "Togo",
+    "madagascar": "Madagascar",
+    "sierra-leone": "Sierra Leone",
 
     # Asia
-    "Japan", "Nhật Bản",
-    "South Korea", "Korea Republic", "Hàn Quốc",
-    "Iran", "I-ran",
-    "Australia", "Úc",
-    "Saudi Arabia", "Ả Rập Xê Út",
-    "Qatar", "Ca-ta",
-    "Iraq", "I-rắc",
-    "Jordan", "Gioóc-đa-ni",
-    "Uzbekistan", "U-dơ-bê-ki-xtan",
-    "China", "China PR", "Trung Quốc",
-    "UAE", "United Arab Emirates",
-    "Oman", "Ô-man",
-    "Bahrain", "Ba-ren",
-    "Palestine", "Pa-le-xtin",
-    "Vietnam", "Việt Nam",
-    "Thailand", "Thái Lan",
-    "Indonesia", "In-đô-nê-xi-a",
-    "Malaysia", "Ma-lay-xi-a",
-    "North Korea", "CHDCND Triều Tiên",
-    "India", "Ấn Độ",
-    "Kyrgyzstan",
-    "Tajikistan",
-    "Kuwait",
+    "japan": "Japan",
+    "south-korea": "South Korea",
+    "korea-republic": "South Korea",
+    "korea": "South Korea",
+    "iran": "Iran",
+    "australia": "Australia",
+    "saudi-arabia": "Saudi Arabia",
+    "qatar": "Qatar",
+    "iraq": "Iraq",
+    "jordan": "Jordan",
+    "uzbekistan": "Uzbekistan",
+    "china": "China",
+    "china-pr": "China",
+    "uae": "UAE",
+    "united-arab-emirates": "UAE",
+    "oman": "Oman",
+    "bahrain": "Bahrain",
+    "palestine": "Palestine",
+    "vietnam": "Vietnam",
+    "viet-nam": "Vietnam",
+    "thailand": "Thailand",
+    "indonesia": "Indonesia",
+    "malaysia": "Malaysia",
+    "north-korea": "North Korea",
+    "india": "India",
+    "kyrgyzstan": "Kyrgyzstan",
+    "tajikistan": "Tajikistan",
+    "kuwait": "Kuwait",
+    "syria": "Syria",
+    "lebanon": "Lebanon",
+    "myanmar": "Myanmar",
+    "philippines": "Philippines",
+    "singapore": "Singapore",
+    "turkmenistan": "Turkmenistan",
+    "yemen": "Yemen",
+    "hong-kong": "Hong Kong",
+    "chinese-taipei": "Chinese Taipei",
 
     # North/Central America & Caribbean
-    "Costa Rica", "Cốt-xta Ri-ca",
-    "Panama", "Pa-na-ma",
-    "Honduras", "Hôn-đu-rát",
-    "Jamaica", "Gia-mai-ca",
-    "El Salvador",
-    "Guatemala",
-    "Trinidad", "Trinidad and Tobago",
-    "Haiti", "Ha-i-ti",
-    "Curaçao", "Curacao",
-    "Suriname",
+    "costa-rica": "Costa Rica",
+    "panama": "Panama",
+    "honduras": "Honduras",
+    "jamaica": "Jamaica",
+    "el-salvador": "El Salvador",
+    "guatemala": "Guatemala",
+    "trinidad-and-tobago": "Trinidad & Tobago",
+    "trinidad": "Trinidad & Tobago",
+    "haiti": "Haiti",
+    "curacao": "Curaçao",
+    "suriname": "Suriname",
+    "nicaragua": "Nicaragua",
+    "dominican-republic": "Dominican Republic",
+    "cuba": "Cuba",
 
     # Oceania
-    "New Zealand", "Niu Di-lân",
-    "Fiji", "Fi-gi",
-    "Solomon Islands",
-    "Papua New Guinea",
-    "Tahiti",
-]
+    "new-zealand": "New Zealand",
+    "fiji": "Fiji",
+    "solomon-islands": "Solomon Islands",
+    "papua-new-guinea": "Papua New Guinea",
+    "tahiti": "Tahiti",
+}
 
-# Precompile lowercase set for fast lookup
-FIFA_TEAMS_LOWER = set()
-for team in FIFA_TEAMS:
-    FIFA_TEAMS_LOWER.add(team.lower())
-    # Also add without diacritics for matching
-    clean = team.lower()
-    FIFA_TEAMS_LOWER.add(clean)
+# Also build a text-based lookup (for page text matching)
+FIFA_TEAMS_TEXT = set()
+for display_name in FIFA_TEAM_SLUGS.values():
+    FIFA_TEAMS_TEXT.add(display_name.lower())
 
-# Match status keywords that indicate match is ENDED
-ENDED_KEYWORDS = [
-    "ft", "full time", "fulltime", "kết thúc",
-    "ended", "finished", "final", "hết giờ",
-    "pen", "aet", "after extra time",
-]
-
-# Match status keywords that indicate match is LIVE or UPCOMING
-LIVE_KEYWORDS = [
-    "live", "trực tiếp", "đang diễn ra", "đang đá",
-    "1h", "2h", "ht", "half time", "hiệp 1", "hiệp 2",
-    "sắp diễn ra", "chưa bắt đầu", "upcoming",
-]
+# Match status: ended
+ENDED_KEYWORDS = ["ft", "full time", "fulltime", "kết thúc", "ended", "finished", "hết giờ", "pen", "aet"]
 
 logging.basicConfig(
     level=logging.INFO,
@@ -188,16 +229,112 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+# ─── URL Parsing ─────────────────────────────────────────────────────────────
+
+
+def parse_match_url(url):
+    """
+    Parse match URL like:
+    /truc-tiep/south-korea-vs-czechia-12-06-2026-0900/
+
+    Returns dict with team1, team2, date, time or None
+    """
+    # Extract the slug part
+    match = re.search(r'/truc-tiep/([^/]+?)/?$', url)
+    if not match:
+        return None
+
+    slug = match.group(1).lower()
+    logger.debug(f"  Parsing slug: {slug}")
+
+    # Try to find "vs" separator
+    # Pattern: team1-vs-team2-DD-MM-YYYY-HHMM
+    vs_match = re.match(
+        r'^(.+?)-vs-(.+?)(?:-(\d{2}-\d{2}-\d{4})-?(\d{4}))?/?$',
+        slug
+    )
+
+    if not vs_match:
+        # Try without date
+        vs_match = re.match(r'^(.+?)-vs-(.+?)$', slug)
+        if not vs_match:
+            return None
+
+    team1_slug = vs_match.group(1).strip('-')
+    team2_slug = vs_match.group(2).strip('-')
+
+    # Remove date/time from team2 if it got included
+    # e.g., "czechia-12-06-2026-0900" → "czechia"
+    team2_slug = re.sub(r'-\d{2}-\d{2}-\d{4}(-\d{4})?$', '', team2_slug)
+
+    date_str = vs_match.group(3) if vs_match.lastindex and vs_match.lastindex >= 3 else None
+    time_str = vs_match.group(4) if vs_match.lastindex and vs_match.lastindex >= 4 else None
+
+    # Resolve team names
+    team1_name = resolve_team_name(team1_slug)
+    team2_name = resolve_team_name(team2_slug)
+
+    if not team1_name or not team2_name:
+        return None
+
+    result = {
+        "team1": team1_name,
+        "team2": team2_name,
+        "team1_slug": team1_slug,
+        "team2_slug": team2_slug,
+        "date": date_str,
+        "time": time_str,
+        "slug": slug,
+    }
+
+    if time_str:
+        result["time_formatted"] = f"{time_str[:2]}:{time_str[2:]}"
+
+    if date_str:
+        result["date_formatted"] = date_str  # DD-MM-YYYY
+
+    return result
+
+
+def resolve_team_name(slug):
+    """
+    Resolve a URL slug to a FIFA team display name.
+    e.g., 'south-korea' → 'South Korea'
+         'czechia' → 'Czechia'
+    """
+    slug = slug.lower().strip('-')
+
+    # Direct match
+    if slug in FIFA_TEAM_SLUGS:
+        return FIFA_TEAM_SLUGS[slug]
+
+    # Try progressively shorter prefixes
+    # For cases like "south-korea-u23" → try "south-korea"
+    parts = slug.split('-')
+    for length in range(len(parts), 0, -1):
+        candidate = '-'.join(parts[:length])
+        if candidate in FIFA_TEAM_SLUGS:
+            return FIFA_TEAM_SLUGS[candidate]
+
+    # Try title case as display name
+    # e.g., "czechia" → "Czechia" — check if it's in our text set
+    title_name = slug.replace('-', ' ').title()
+    if title_name.lower() in FIFA_TEAMS_TEXT:
+        return title_name
+
+    logger.debug(f"  Unknown team slug: {slug}")
+    return None
+
+
 # ─── Existing M3U Parser ────────────────────────────────────────────────────
 
 
 def parse_existing_m3u(filepath):
     """
-    Parse existing worldcuptest.m3u file.
-    Returns two lists:
-      - manual_entries: channels added by user (to KEEP always)
-      - auto_entries: channels added by bot (may be removed if ended)
-    Each entry = dict with 'extinf_line' and 'url_line'
+    Parse existing worldcuptest.m3u.
+    Returns:
+      manual_entries: channels without AUTO_TAG (NEVER removed)
+      auto_entries: channels with AUTO_TAG (refreshed each run)
     """
     manual_entries = []
     auto_entries = []
@@ -207,34 +344,27 @@ def parse_existing_m3u(filepath):
 
     try:
         with open(filepath, "r", encoding="utf-8") as f:
-            lines = f.readlines()
+            content = f.read()
     except Exception as e:
         logger.error(f"Error reading {filepath}: {e}")
         return manual_entries, auto_entries
 
+    lines = content.split('\n')
     i = 0
     while i < len(lines):
-        line = lines[i].rstrip("\n\r")
+        line = lines[i].strip()
 
-        # Skip headers and comments
-        if line.startswith("#EXTM3U") or line.startswith("# "):
+        if not line or line.startswith("#EXTM3U") or (line.startswith("# ") and not line.startswith("#EXTINF")):
             i += 1
             continue
 
-        # Skip empty lines
-        if not line.strip():
-            i += 1
-            continue
-
-        # Found an EXTINF line
         if line.startswith("#EXTINF"):
-            extinf_line = line
+            extinf_line = lines[i].rstrip('\n\r')
             url_line = ""
 
-            # Next non-empty line should be the URL
             j = i + 1
             while j < len(lines):
-                next_line = lines[j].rstrip("\n\r").strip()
+                next_line = lines[j].strip()
                 if next_line and not next_line.startswith("#"):
                     url_line = next_line
                     break
@@ -242,12 +372,8 @@ def parse_existing_m3u(filepath):
                     break
                 j += 1
 
-            entry = {
-                "extinf_line": extinf_line,
-                "url_line": url_line,
-            }
+            entry = {"extinf_line": extinf_line, "url_line": url_line}
 
-            # Check if this was auto-added by us
             if AUTO_TAG in extinf_line:
                 auto_entries.append(entry)
             else:
@@ -258,441 +384,384 @@ def parse_existing_m3u(filepath):
 
         i += 1
 
-    logger.info(
-        f"Existing M3U: {len(manual_entries)} manual, "
-        f"{len(auto_entries)} auto-added entries"
-    )
+    logger.info(f"Existing: {len(manual_entries)} manual, {len(auto_entries)} auto")
     return manual_entries, auto_entries
 
 
-# ─── Scraper ─────────────────────────────────────────────────────────────────
+# ─── Stream Extractor ────────────────────────────────────────────────────────
 
 
 def create_scraper_session():
-    """Create a cloudscraper session with browser-like headers."""
     scraper = cloudscraper.create_scraper(
         browser={"browser": "chrome", "platform": "windows", "desktop": True}
     )
-    scraper.headers.update(
-        {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/125.0.0.0 Safari/537.36"
-            ),
-            "Accept": (
-                "text/html,application/xhtml+xml,application/xml;"
-                "q=0.9,image/avif,image/webp,*/*;q=0.8"
-            ),
-            "Accept-Language": "en-US,en;q=0.9,vi;q=0.8",
-            "Referer": "https://socolive17.cv/",
-            "DNT": "1",
-            "Connection": "keep-alive",
-        }
-    )
+    scraper.headers.update({
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/125.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9,vi;q=0.8",
+        "Referer": "https://socolive17.cv/",
+        "DNT": "1",
+        "Connection": "keep-alive",
+    })
     return scraper
 
 
-def find_teams_in_text(text):
+def extract_stream_url(scraper, match_url):
     """
-    Find FIFA national team names in text.
-    Returns list of matched team names.
+    Visit match page and extract .m3u8 stream URL.
+    Tries multiple methods: direct regex, iframes, embedded players, room ID.
     """
-    text_lower = text.lower()
-    found = []
-    for team in FIFA_TEAMS:
-        team_lower = team.lower()
-        # Word boundary check to avoid partial matches
-        # e.g., "Jordan" shouldn't match "Jordans shoes"
-        pattern = r'(?:^|[\s,\-\.\(\)\[\]\/])' + re.escape(team_lower) + r'(?:$|[\s,\-\.\(\)\[\]\/])'
-        if re.search(pattern, text_lower):
-            found.append(team)
-        elif team_lower in text_lower:
-            # Fallback: simple substring (for Vietnamese names with spaces)
-            found.append(team)
-
-    # Deduplicate (keep longest match if overlapping)
-    if len(found) > 2:
-        # Sort by length descending, keep unique
-        found.sort(key=len, reverse=True)
-        cleaned = []
-        used_positions = set()
-        for team in found:
-            pos = text_lower.find(team.lower())
-            if pos >= 0:
-                team_range = set(range(pos, pos + len(team)))
-                if not team_range & used_positions:
-                    cleaned.append(team)
-                    used_positions.update(team_range)
-        found = cleaned
-
-    return found[:2]  # Max 2 teams per match
-
-
-def is_match_ended(element_text):
-    """Check if match status indicates it has ended."""
-    text_lower = element_text.lower().strip()
-    for keyword in ENDED_KEYWORDS:
-        if keyword in text_lower:
-            return True
-
-    # Check for final score pattern like "2 - 1 (FT)" or "2-1 FT"
-    if re.search(r'\d+\s*[-:]\s*\d+\s*\(?ft\)?', text_lower):
-        return True
-
-    return False
-
-
-def is_match_live_or_upcoming(element_text):
-    """Check if match is live or upcoming."""
-    text_lower = element_text.lower()
-    for keyword in LIVE_KEYWORDS:
-        if keyword in text_lower:
-            return True
-
-    # Time pattern like "21:00" or "19h30"
-    if re.search(r'\d{1,2}[h:]\d{2}', text_lower):
-        return True
-
-    return False
-
-
-def extract_room_id(url):
-    """Extract room/match ID from a socolive URL."""
-    patterns = [
-        r"-(\d+)\.html",
-        r"/(\d+)\.html",
-        r"/(\d+)/?$",
-        r"[-/](\d{4,})(?:\.html)?",
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, url)
-        if match:
-            return match.group(1)
-    return None
-
-
-def extract_stream_from_match_page(scraper, match_url):
-    """Visit match page and extract .m3u8 stream URL."""
     try:
-        logger.info(f"  → Fetching match page: {match_url}")
-        resp = scraper.get(match_url, timeout=15)
+        logger.info(f"  → Fetching: {match_url}")
+        resp = scraper.get(match_url, timeout=20)
         resp.raise_for_status()
-        page_content = resp.text
+        page = resp.text
+        soup = BeautifulSoup(page, "lxml")
 
-        # Method 1: Direct .m3u8 URL in page source
-        m3u8_patterns = [
-            r'(https?://[^\s"\'<>]+\.m3u8[^\s"\'<>]*)',
-            r'source\s*:\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
-            r'file\s*:\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
-            r'src\s*=\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
-            r'url\s*:\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
-            r'stream_url\s*[=:]\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
-            r'hlsUrl\s*[=:]\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
-            r'playUrl\s*[=:]\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
+        # ── Method 1: Direct m3u8 in page source ──
+        m3u8_urls = re.findall(
+            r'(https?://[^\s"\'<>\\\)]+\.m3u8[^\s"\'<>\\\)]*)',
+            page, re.IGNORECASE
+        )
+        for url in m3u8_urls:
+            if "example" not in url and "schema" not in url:
+                logger.info(f"  ✓ Direct m3u8: {url}")
+                return url
+
+        # ── Method 2: JS variables containing stream URLs ──
+        js_patterns = [
+            r'(?:source|file|src|url|stream|hls|play)[_\w]*\s*[=:]\s*["\']([^"\']+\.m3u8[^"\']*)["\']',
+            r'(?:source|file|src|url|stream|hls|play)[_\w]*\s*[=:]\s*["\']([^"\']*inplyr[^"\']*)["\']',
+            r'(?:source|file|src|url|stream|hls|play)[_\w]*\s*[=:]\s*["\']([^"\']*rfrfrf[^"\']*)["\']',
+            r'atob\(["\']([A-Za-z0-9+/=]+)["\']\)',
         ]
+        for pattern in js_patterns:
+            found = re.findall(pattern, page, re.IGNORECASE)
+            for f in found:
+                # Check if it's base64 encoded
+                if re.match(r'^[A-Za-z0-9+/=]+$', f) and len(f) > 20:
+                    try:
+                        import base64
+                        decoded = base64.b64decode(f).decode('utf-8', errors='ignore')
+                        if '.m3u8' in decoded:
+                            logger.info(f"  ✓ Base64 decoded: {decoded}")
+                            return decoded
+                    except Exception:
+                        pass
+                elif '.m3u8' in f or 'inplyr' in f or 'rfrfrf' in f:
+                    if f.startswith('http'):
+                        logger.info(f"  ✓ JS variable: {f}")
+                        return f
 
-        for pattern in m3u8_patterns:
-            matches = re.findall(pattern, page_content, re.IGNORECASE)
-            for m3u8_url in matches:
-                if "m3u8" in m3u8_url and "example" not in m3u8_url:
-                    logger.info(f"  ✓ Found stream: {m3u8_url}")
-                    return m3u8_url
-
-        # Method 2: Check iframes
-        soup = BeautifulSoup(page_content, "lxml")
+        # ── Method 3: Iframes (primary method for socolive) ──
         iframes = soup.find_all("iframe")
         for iframe in iframes:
-            iframe_src = iframe.get("src", "")
-            if iframe_src:
-                if not iframe_src.startswith("http"):
-                    iframe_src = urljoin(match_url, iframe_src)
-                try:
-                    iframe_resp = scraper.get(iframe_src, timeout=10)
-                    iframe_content = iframe_resp.text
-                    for pattern in m3u8_patterns:
-                        found = re.findall(pattern, iframe_content, re.IGNORECASE)
-                        for m3u8_url in found:
-                            if "m3u8" in m3u8_url:
-                                logger.info(f"  ✓ Found in iframe: {m3u8_url}")
-                                return m3u8_url
-                except Exception:
-                    pass
+            iframe_src = iframe.get("src", "") or iframe.get("data-src", "")
+            if not iframe_src:
+                continue
 
-        # Method 3: Find room ID and construct URL
-        room_id = extract_room_id(match_url)
+            if not iframe_src.startswith("http"):
+                iframe_src = urljoin(match_url, iframe_src)
 
+            logger.info(f"  → Checking iframe: {iframe_src}")
+
+            try:
+                iframe_resp = scraper.get(iframe_src, timeout=15, headers={
+                    "Referer": match_url,
+                })
+                iframe_page = iframe_resp.text
+
+                # Find m3u8 in iframe content
+                iframe_m3u8 = re.findall(
+                    r'(https?://[^\s"\'<>\\\)]+\.m3u8[^\s"\'<>\\\)]*)',
+                    iframe_page, re.IGNORECASE
+                )
+                for url in iframe_m3u8:
+                    if "example" not in url:
+                        logger.info(f"  ✓ iframe m3u8: {url}")
+                        return url
+
+                # Check for room ID in iframe
+                room_match = re.search(r'/room/(\d+)', iframe_page)
+                if room_match:
+                    room_id = room_match.group(1)
+                    url = f"https://live.inplyr.com/room/{room_id}.m3u8"
+                    logger.info(f"  ✓ iframe room: {url}")
+                    return url
+
+                # Check for nested iframes
+                iframe_soup = BeautifulSoup(iframe_page, "lxml")
+                nested_iframes = iframe_soup.find_all("iframe")
+                for nested in nested_iframes:
+                    nested_src = nested.get("src", "") or nested.get("data-src", "")
+                    if not nested_src:
+                        continue
+                    if not nested_src.startswith("http"):
+                        nested_src = urljoin(iframe_src, nested_src)
+
+                    logger.info(f"  → Nested iframe: {nested_src}")
+                    try:
+                        nested_resp = scraper.get(nested_src, timeout=10, headers={
+                            "Referer": iframe_src,
+                        })
+                        nested_m3u8 = re.findall(
+                            r'(https?://[^\s"\'<>\\\)]+\.m3u8[^\s"\'<>\\\)]*)',
+                            nested_resp.text, re.IGNORECASE
+                        )
+                        for url in nested_m3u8:
+                            if "example" not in url:
+                                logger.info(f"  ✓ nested m3u8: {url}")
+                                return url
+
+                        room_match = re.search(r'/room/(\d+)', nested_resp.text)
+                        if room_match:
+                            url = f"https://live.inplyr.com/room/{room_match.group(1)}.m3u8"
+                            logger.info(f"  ✓ nested room: {url}")
+                            return url
+                    except Exception as e:
+                        logger.debug(f"  nested iframe error: {e}")
+
+            except Exception as e:
+                logger.debug(f"  iframe error: {e}")
+
+        # ── Method 4: Find room/channel ID in page ──
         room_patterns = [
-            r'room[_\s]*(?:id|Id|ID)\s*[=:]\s*["\']?(\d+)',
-            r'roomId\s*[=:]\s*["\']?(\d+)',
             r'/room/(\d+)',
-            r'/live/(\d+)',
+            r'room[_\-]?[iI]d\s*[=:]\s*["\']?(\d+)',
+            r'roomId\s*[=:]\s*["\']?(\d+)',
+            r'channel[_\-]?[iI]d\s*[=:]\s*["\']?(\d+)',
+            r'data-room\s*=\s*["\'](\d+)',
             r'data-id\s*=\s*["\'](\d+)',
-            r'"id"\s*:\s*(\d{4,})',
+            r'data-channel\s*=\s*["\'](\d+)',
+            r'"room"\s*:\s*"?(\d+)',
+            r'"id"\s*:\s*(\d{5,})',
         ]
-
         for pattern in room_patterns:
-            match = re.search(pattern, page_content, re.IGNORECASE)
+            match = re.search(pattern, page, re.IGNORECASE)
             if match:
-                found_id = match.group(1)
-                if len(found_id) >= 4:
-                    room_id = found_id
-                    break
+                room_id = match.group(1)
+                if len(room_id) >= 4:
+                    url = f"https://live.inplyr.com/room/{room_id}.m3u8"
+                    logger.info(f"  ✓ Room ID {room_id}: {url}")
+                    return url
 
-        if room_id:
-            stream_url = f"https://live.inplyr.com/room/{room_id}.m3u8"
-            logger.info(f"  ✓ Constructed stream: {stream_url}")
-            return stream_url
-
-        # Method 4: Search JSON in scripts
+        # ── Method 5: Search all script tags for JSON data ──
         scripts = soup.find_all("script")
         for script in scripts:
-            script_text = script.string or ""
-            json_strs = re.findall(r'({[^{}]{50,}})', script_text)
-            for json_str in json_strs:
+            text = script.string or ""
+            if not text.strip():
+                continue
+
+            # Look for any URL containing inplyr or m3u8
+            inplyr_urls = re.findall(
+                r'(https?://[^\s"\'<>\\]+(?:inplyr|rfrfrf)[^\s"\'<>\\]*)',
+                text, re.IGNORECASE
+            )
+            for url in inplyr_urls:
+                logger.info(f"  ✓ Script URL: {url}")
+                if '.m3u8' in url:
+                    return url
+                # Might be base URL, append room ID
+                room_match = re.search(r'/room/(\d+)', url)
+                if room_match:
+                    return f"https://live.inplyr.com/room/{room_match.group(1)}.m3u8"
+
+            # Try JSON parsing
+            json_blocks = re.findall(r'(\{[^{}]{20,}\})', text)
+            for block in json_blocks:
                 try:
-                    data = json.loads(json_str)
-                    result = find_m3u8_in_dict(data)
-                    if result:
-                        logger.info(f"  ✓ Found in JSON: {result}")
-                        return result
+                    data = json.loads(block)
+                    m3u8 = find_m3u8_in_data(data)
+                    if m3u8:
+                        logger.info(f"  ✓ JSON data: {m3u8}")
+                        return m3u8
                 except (json.JSONDecodeError, TypeError):
                     pass
 
-        logger.warning(f"  ✗ No stream found for: {match_url}")
+        # ── Method 6: URL slug room ID fallback ──
+        slug_id = re.search(r'-(\d{4,})/?$', match_url)
+        if slug_id:
+            room_id = slug_id.group(1)
+            url = f"https://live.inplyr.com/room/{room_id}.m3u8"
+            logger.info(f"  ✓ Slug ID fallback: {url}")
+            return url
+
+        logger.warning(f"  ✗ No stream found")
         return None
 
     except Exception as e:
-        logger.error(f"  ✗ Error fetching match page: {e}")
+        logger.error(f"  ✗ Error: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 
-def find_m3u8_in_dict(data, depth=0):
-    """Recursively search for .m3u8 URLs in dict/list."""
-    if depth > 10:
+def find_m3u8_in_data(data, depth=0):
+    if depth > 8:
         return None
     if isinstance(data, str):
         if ".m3u8" in data:
             return data
     elif isinstance(data, dict):
-        for value in data.values():
-            result = find_m3u8_in_dict(value, depth + 1)
-            if result:
-                return result
+        for v in data.values():
+            r = find_m3u8_in_data(v, depth + 1)
+            if r:
+                return r
     elif isinstance(data, list):
         for item in data:
-            result = find_m3u8_in_dict(item, depth + 1)
-            if result:
-                return result
+            r = find_m3u8_in_data(item, depth + 1)
+            if r:
+                return r
     return None
 
 
-def extract_match_time(element, text):
-    """Extract match time from element."""
-    time_selectors = [
-        ".time", ".match-time", ".kick-off",
-        "[class*='time']", ".date", ".status",
-    ]
-    for selector in time_selectors:
-        time_elem = element.select_one(selector)
-        if time_elem:
-            t = time_elem.get_text(strip=True)
-            if t:
-                return t
-
-    # Regex for time
-    time_patterns = [
-        r"(\d{1,2}:\d{2})",
-        r"(\d{1,2}h\d{2})",
-        r"(LIVE|Live|Trực tiếp|Đang diễn ra)",
-        r"(HT|1H|2H|Hiệp \d)",
-    ]
-    for pattern in time_patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            return match.group(1)
-    return ""
+# ─── Main Scraper ────────────────────────────────────────────────────────────
 
 
 def scrape_world_cup_matches():
     """
-    Scrape socolive for matches containing FIFA national team names.
-    No World Cup category exists — we find matches by team name matching.
+    1. Fetch the main /truc-tiep/ page
+    2. Find ALL links matching pattern: /truc-tiep/teamA-vs-teamB-...
+    3. Check if both teams are FIFA national teams
+    4. Visit each match page to extract stream
     """
     scraper = create_scraper_session()
     matches = []
 
     try:
-        logger.info(f"Fetching: {BASE_URL}")
+        logger.info(f"Fetching main page: {BASE_URL}")
         response = scraper.get(BASE_URL, timeout=20)
         response.raise_for_status()
-        logger.info(f"Status: {response.status_code}")
+        logger.info(f"Status: {response.status_code}, Length: {len(response.text)}")
 
         soup = BeautifulSoup(response.text, "lxml")
 
-        # ── Find all match containers ──
-        match_selectors = [
-            ".match-item", ".match-card", ".game-item",
-            ".event-item", ".fixture-item", ".live-match",
-            ".schedule-item", ".truc-tiep-item",
-            "div[class*='match']", "div[class*='game']",
-            "div[class*='event']", "div[class*='fixture']",
-            "li[class*='match']", "tr[class*='match']",
-            "a[class*='match']",
-            ".item", ".list-item",
-        ]
+        # ── Collect ALL links on the page ──
+        all_links = soup.find_all("a", href=True)
+        logger.info(f"Total links on page: {len(all_links)}")
 
-        match_elements = []
-        for selector in match_selectors:
-            found = soup.select(selector)
-            if found:
-                logger.info(f"  Selector '{selector}': {len(found)} elements")
-                match_elements.extend(found)
+        # ── Filter for match links ──
+        match_candidates = []
+        seen_slugs = set()
 
-        # Deduplicate by text content
-        seen = set()
-        unique = []
-        for elem in match_elements:
-            text = elem.get_text(strip=True)[:200]
-            if text and text not in seen:
-                seen.add(text)
-                unique.append(elem)
-        match_elements = unique
+        for link in all_links:
+            href = link.get("href", "")
 
-        # ── Also scan all links as fallback ──
-        if not match_elements:
-            logger.info("No containers found, scanning all links...")
-            all_links = soup.find_all("a", href=True)
-            for link in all_links:
-                href = link.get("href", "")
-                if "truc-tiep" in href or "live" in href:
-                    match_elements.append(link)
+            # Normalize URL
+            if href.startswith("/"):
+                full_url = urljoin(MATCH_PAGE_BASE, href)
+            elif href.startswith("http"):
+                full_url = href
+            else:
+                continue
 
-        logger.info(f"Total elements to check: {len(match_elements)}")
+            # Must be a /truc-tiep/ match page
+            if "/truc-tiep/" not in full_url:
+                continue
 
-        # ── Check each element for FIFA team names ──
-        for element in match_elements:
-            full_text = element.get_text(separator=" ", strip=True)
+            # Skip the main listing page itself
+            if full_url.rstrip("/") == BASE_URL.rstrip("/"):
+                continue
 
-            # Also check parent context
+            # Must contain "vs"
+            if "-vs-" not in full_url.lower():
+                continue
+
+            # Deduplicate
+            slug_match = re.search(r'/truc-tiep/([^/]+)', full_url)
+            if not slug_match:
+                continue
+            slug = slug_match.group(1).lower()
+            if slug in seen_slugs:
+                continue
+            seen_slugs.add(slug)
+
+            # Parse the URL to extract teams
+            parsed = parse_match_url(full_url)
+            if not parsed:
+                logger.debug(f"  Skip (no team match): {full_url}")
+                continue
+
+            # Check link text and parent for ended status
+            link_text = link.get_text(strip=True)
             parent_text = ""
-            if element.parent:
-                parent_text = element.parent.get_text(separator=" ", strip=True)
+            if link.parent:
+                parent_text = link.parent.get_text(strip=True)
+            combined = f"{link_text} {parent_text}".lower()
 
-            combined_text = f"{full_text} {parent_text}"
+            is_ended = False
+            for kw in ENDED_KEYWORDS:
+                if kw in combined:
+                    is_ended = True
+                    break
 
-            # Find FIFA teams in this text
-            teams_found = find_teams_in_text(combined_text)
+            # Also check for score with FT
+            if re.search(r'\d+\s*[-:]\s*\d+\s*\(?ft\)?', combined):
+                is_ended = True
 
-            if len(teams_found) < 2:
-                # Need at least 2 national teams to consider it a WC match
+            if is_ended:
+                logger.info(f"  ⏹ Ended: {parsed['team1']} vs {parsed['team2']}")
                 continue
 
-            # Skip ended matches
-            if is_match_ended(combined_text):
-                logger.info(f"  ⏹ Match ended, skipping: {teams_found}")
-                continue
+            match_candidates.append({
+                "url": full_url,
+                "parsed": parsed,
+                "link_text": link_text,
+            })
+
+            logger.info(
+                f"  ✓ Found: {parsed['team1']} vs {parsed['team2']} "
+                f"→ {full_url}"
+            )
+
+        logger.info(f"\nMatch candidates: {len(match_candidates)}")
+
+        # ── Visit each match page to get stream ──
+        for i, candidate in enumerate(match_candidates):
+            parsed = candidate["parsed"]
+            url = candidate["url"]
 
             logger.info(f"\n{'='*60}")
-            logger.info(f"🏆 WC match found: {teams_found[0]} vs {teams_found[1]}")
-            logger.info(f"   Text: {full_text[:120]}")
+            logger.info(
+                f"[{i+1}/{len(match_candidates)}] "
+                f"{parsed['team1']} vs {parsed['team2']}"
+            )
 
-            # Get match link
-            match_link = None
-            if element.name == "a" and element.get("href"):
-                match_link = element.get("href")
-            else:
-                link_elem = element.find("a", href=True)
-                if link_elem:
-                    match_link = link_elem.get("href")
+            # Be respectful with delays
+            if i > 0:
+                time.sleep(2)
 
-            if match_link and not match_link.startswith("http"):
-                match_link = urljoin(MATCH_PAGE_BASE, match_link)
-
-            # Get match time
-            match_time = extract_match_time(element, full_text)
-
-            # Build title
-            title = f"⚽ {teams_found[0]} vs {teams_found[1]}"
-            if match_time:
-                title += f" ({match_time})"
-
-            # Get stream URL
-            stream_url = None
-            if match_link:
-                time.sleep(1)
-                stream_url = extract_stream_from_match_page(scraper, match_link)
-
-            if not stream_url and match_link:
-                room_id = extract_room_id(match_link)
-                if room_id:
-                    stream_url = f"https://live.inplyr.com/room/{room_id}.m3u8"
+            stream_url = extract_stream_url(scraper, url)
 
             if stream_url:
+                # Build title
+                title = f"⚽ {parsed['team1']} vs {parsed['team2']}"
+                if parsed.get("time_formatted"):
+                    title += f" ({parsed['time_formatted']})"
+                if parsed.get("date_formatted"):
+                    title += f" [{parsed['date_formatted']}]"
+
                 matches.append({
                     "title": title,
                     "stream_url": stream_url,
                     "logo": WORLD_CUP_LOGO,
-                    "teams": teams_found,
-                    "match_link": match_link,
+                    "match_url": url,
+                    "team1": parsed["team1"],
+                    "team2": parsed["team2"],
                 })
-                logger.info(f"  ✓ Added: {title}")
+                logger.info(f"  ✓ ADDED: {title}")
                 logger.info(f"    Stream: {stream_url}")
             else:
-                logger.warning(f"  ✗ No stream: {title}")
-
-        # ── Additional: Scan links text for team pairs ──
-        if not matches:
-            logger.info("\nDeep scanning all links for team names...")
-            all_links = soup.find_all("a", href=True)
-            checked = set()
-
-            for link in all_links:
-                href = link.get("href", "")
-                if not href or href in checked or href == "#":
-                    continue
-                if "javascript" in href:
-                    continue
-
-                full_url = href if href.startswith("http") else urljoin(MATCH_PAGE_BASE, href)
-                checked.add(href)
-
-                link_text = link.get_text(strip=True)
-                # Also check title attribute
-                title_attr = link.get("title", "")
-                check_text = f"{link_text} {title_attr} {href}"
-
-                teams = find_teams_in_text(check_text)
-                if len(teams) >= 2:
-                    if is_match_ended(check_text):
-                        continue
-
-                    logger.info(f"  Deep hit: {teams[0]} vs {teams[1]} → {full_url}")
-                    time.sleep(1)
-                    stream_url = extract_stream_from_match_page(scraper, full_url)
-
-                    if not stream_url:
-                        room_id = extract_room_id(full_url)
-                        if room_id:
-                            stream_url = f"https://live.inplyr.com/room/{room_id}.m3u8"
-
-                    if stream_url:
-                        match_time = extract_match_time(link, check_text)
-                        title = f"⚽ {teams[0]} vs {teams[1]}"
-                        if match_time:
-                            title += f" ({match_time})"
-
-                        matches.append({
-                            "title": title,
-                            "stream_url": stream_url,
-                            "logo": WORLD_CUP_LOGO,
-                            "teams": teams,
-                            "match_link": full_url,
-                        })
-                        logger.info(f"  ✓ Deep added: {title}")
+                logger.warning(
+                    f"  ✗ No stream: {parsed['team1']} vs {parsed['team2']}"
+                )
 
     except Exception as e:
-        logger.error(f"Error scraping: {e}")
+        logger.error(f"Fatal error: {e}")
         import traceback
         traceback.print_exc()
 
@@ -702,28 +771,29 @@ def scrape_world_cup_matches():
 # ─── M3U Generator ───────────────────────────────────────────────────────────
 
 
-def generate_m3u(manual_entries, new_auto_matches):
+def generate_m3u(manual_entries, new_matches):
     """
-    Generate M3U content:
-    - Always keep manual_entries (user-added channels)
-    - Add new auto-scraped matches (tagged so we can identify them later)
-    - Old auto entries are discarded (replaced by fresh scrape)
+    Generate M3U:
+    - Manual entries: ALWAYS kept
+    - Auto entries: replaced with fresh scrape results
+    - Ended matches: won't appear in scrape → auto removed
     """
-    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
     lines = [
         "#EXTM3U",
         f"# FIFA World Cup 2026 Live Streams",
-        f"# Auto-updated: {now_utc}",
-        f"# Source: socolive17.cv",
-        f"# Manual channels: {len(manual_entries)}",
-        f"# Live WC matches: {len(new_auto_matches)}",
+        f"# Auto-updated: {now}",
+        f"# Source: socolive17.cv/truc-tiep/",
+        f"# Manual channels: {len(manual_entries)} | Live WC matches: {len(new_matches)}",
         "",
     ]
 
-    # ── 1. Write all manual entries first (NEVER removed) ──
+    # ── Manual entries (NEVER touched) ──
     if manual_entries:
-        lines.append("# ══════ MANUALLY ADDED CHANNELS ══════")
+        lines.append("# ══════════════════════════════════════════")
+        lines.append("# ══════ MANUALLY ADDED CHANNELS ══════════")
+        lines.append("# ══════════════════════════════════════════")
         lines.append("")
         for entry in manual_entries:
             lines.append(entry["extinf_line"])
@@ -731,78 +801,72 @@ def generate_m3u(manual_entries, new_auto_matches):
                 lines.append(entry["url_line"])
             lines.append("")
 
-    # ── 2. Write auto-scraped World Cup matches ──
-    if new_auto_matches:
-        lines.append("# ══════ AUTO-DETECTED WORLD CUP 2026 MATCHES ══════")
-        lines.append(f"# Last scan: {now_utc}")
-        lines.append("")
+    # ── Auto World Cup matches ──
+    lines.append("# ══════════════════════════════════════════")
+    lines.append("# ══════ AUTO: WORLD CUP 2026 LIVE ════════")
+    lines.append("# ══════════════════════════════════════════")
+    lines.append(f"# Scanned: {now}")
+    lines.append("")
 
-        seen_streams = set()
-        for match in new_auto_matches:
-            stream_url = match["stream_url"]
-            if stream_url in seen_streams:
+    if new_matches:
+        seen = set()
+        for match in new_matches:
+            stream = match["stream_url"]
+            if stream in seen:
                 continue
-            seen_streams.add(stream_url)
+            seen.add(stream)
 
             title = f"🏆 FIFA World Cup 2026 - {match['title']}"
             logo = match.get("logo", WORLD_CUP_LOGO)
 
-            # Include AUTO_TAG in a tvg-id field so we can identify it later
-            # IPTV players ignore tvg-id, so it's invisible to users
             extinf = (
                 f'#EXTINF:-1 tvg-id="{AUTO_TAG}" '
                 f'tvg-logo="{logo}" '
                 f'group-title="FIFA World Cup 2026",'
-                f"{title}"
+                f'{title}'
             )
-
             lines.append(extinf)
-            lines.append(stream_url)
+            lines.append(stream)
             lines.append("")
     else:
-        lines.append("# ══════ AUTO-DETECTED WORLD CUP 2026 MATCHES ══════")
-        lines.append("# No live World Cup 2026 matches found at this time.")
-        lines.append(f"# Last checked: {now_utc}")
+        lines.append("# No live World Cup 2026 matches at this time.")
         lines.append("")
 
     return "\n".join(lines)
 
 
-# ─── Main ────────────────────────────────────────────────────────────────────
+# ─── Entry Point ─────────────────────────────────────────────────────────────
 
 
 def main():
     logger.info("=" * 60)
-    logger.info("🏆 FIFA World Cup 2026 Scraper Started")
+    logger.info("🏆 FIFA World Cup 2026 Scraper")
     logger.info("=" * 60)
 
-    # Step 1: Read existing M3U to preserve manual entries
-    manual_entries, old_auto_entries = parse_existing_m3u(OUTPUT_FILE)
-    logger.info(f"Preserved {len(manual_entries)} manual channel(s)")
-    logger.info(f"Found {len(old_auto_entries)} old auto entries (will refresh)")
+    # 1. Preserve manual channels from existing file
+    manual_entries, old_auto = parse_existing_m3u(OUTPUT_FILE)
+    logger.info(f"Manual channels preserved: {len(manual_entries)}")
+    logger.info(f"Old auto entries (will refresh): {len(old_auto)}")
 
-    # Step 2: Scrape fresh World Cup matches
+    # 2. Scrape fresh matches
     new_matches = scrape_world_cup_matches()
-    logger.info(f"\nTotal live WC matches found: {len(new_matches)}")
+    logger.info(f"\n{'='*60}")
+    logger.info(f"Live World Cup matches: {len(new_matches)}")
 
-    # Step 3: Generate M3U
-    # - Manual entries: KEPT always
-    # - Old auto entries: DISCARDED (replaced by fresh data)
-    # - If match ended, it won't appear in new scrape → auto removed
-    m3u_content = generate_m3u(manual_entries, new_matches)
+    # 3. Generate M3U (manual kept, auto refreshed)
+    m3u = generate_m3u(manual_entries, new_matches)
 
-    # Step 4: Write file
+    # 4. Write
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write(m3u_content)
+        f.write(m3u)
 
-    logger.info(f"\n✓ Written to: {OUTPUT_FILE}")
-    logger.info(f"  Manual channels: {len(manual_entries)}")
-    logger.info(f"  Auto WC matches: {len(new_matches)}")
+    logger.info(f"\n✅ Written: {OUTPUT_FILE}")
+    logger.info(f"   Manual: {len(manual_entries)} | Auto: {len(new_matches)}")
     logger.info("=" * 60)
 
     print("\n--- Generated Playlist ---")
-    print(m3u_content)
-    print("--- End Playlist ---\n")
+    print(m3u)
+    print("--- End ---")
 
 
 if __name__ == "__main__":
