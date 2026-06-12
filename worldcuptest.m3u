@@ -1,6 +1,9 @@
 
 
 #EXTM3U
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/06/750/422/artboard-1koreaczec.jpg?ve=1&tl=1" group-title="",South Korea vs Czechia
+https://live.inplyr.com/room/387694.m3u8
 
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b7/Logo_beIN_SPORTS_MAX.png?_=20170227163529" group-title="",Bein Sports Max
