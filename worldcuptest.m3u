@@ -5,13 +5,13 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b7/Logo_beIN_SPORTS_MAX.png?_=20170227163529" group-title="",Bein Sports Max
 https://no-red.pages.dev/liveop2.m3u8
-#EXTM3U
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Telemundo_logo_2018.svg/500px-Telemundo_logo_2018.svg.png" group-title="",Telemundo
 https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Koora City
-https://live.kooran3.cfd/live1/index.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Koora City B
 https://live.kooran3.cfd/live2/index.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",PTV
 https://tvsen5.aynaott.com/PtvSports/tracks-v1a1/mono.ts.m3u8
 
