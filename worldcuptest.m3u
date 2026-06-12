@@ -1,11 +1,12 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Auto-updated: 2026-06-12 02:50:52 UTC
-# Source: socolive17.cv
-# Manual channels: 4
-# Live WC matches: 0
+# Auto-updated: 2026-06-12 03:07:13 UTC
+# Source: socolive17.cv/truc-tiep/
+# Manual channels: 4 | Live WC matches: 0
 
-# ══════ MANUALLY ADDED CHANNELS ══════
+# ══════════════════════════════════════════
+# ══════ MANUALLY ADDED CHANNELS ══════════
+# ══════════════════════════════════════════
 
 #EXTINF:-1 tvg-logo="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/06/750/422/artboard-1koreaczec.jpg?ve=1&tl=1" group-title="",South Korea vs Czechia
 https://live.inplyr.com/room/387694.m3u8
@@ -18,6 +19,9 @@ https://no-red.pages.dev/liveop2.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Rai Italy
 https://ilglobotv-live.akamaized.net/channels/RAI1/Live.m3u8
 
-# ══════ AUTO-DETECTED WORLD CUP 2026 MATCHES ══════
-# No live World Cup 2026 matches found at this time.
-# Last checked: 2026-06-12 02:50:52 UTC
+# ══════════════════════════════════════════
+# ══════ AUTO: WORLD CUP 2026 LIVE ════════
+# ══════════════════════════════════════════
+# Scanned: 2026-06-12 03:07:13 UTC
+
+# No live World Cup 2026 matches at this time.
