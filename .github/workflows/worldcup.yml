@@ -2,9 +2,8 @@ name: FIFA World Cup 2026 M3U Updater
 
 on:
   schedule:
-    # Runs every 10 minutes
     - cron: '*/10 * * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,12 +24,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run scraper
-        run: |
-          python scraper.py
+        run: python scraper.py
 
       - name: Commit and push if changed
         run: |
@@ -38,5 +35,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add worldcuptest.m3u
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-          git diff --staged --quiet || git commit -m "🏆 Auto-update World Cup 2026 playlist - ${TIMESTAMP}"
+          git diff --staged --quiet || git commit -m "🏆 Auto-update World Cup 2026 - ${TIMESTAMP}"
           git push
