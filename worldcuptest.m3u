@@ -5,10 +5,7 @@
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Go Live
-https://d1211whpimeups.cloudfront.net/smil:rtbgo/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",RTB GO
-https://d1211whpimeups.cloudfront.net/smil:rtb2/playlist.m3u8
+
 #EXTINF:-1 tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2022/3/21/1647846719088_381.png" group-title="",CCTV 5
 https://live12.xiazhix1.top/live/85042987.m3u8
 
@@ -19,8 +16,7 @@ https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",WC2026 ARABIC
 https://s3.us-east-1.amazonaws.com/yalapro1/hls/0/stream_960x540_2000k.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b7/Logo_beIN_SPORTS_MAX.png?_=20170227163529" group-title="",Bein Sports Max
-https://vsuiaaa.yallaliveshoot.info/hls/ch1/live/index.m3u8
+
 
 #EXTINF:-1 tvg-logo="" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="Sports",Caze Tv
 
