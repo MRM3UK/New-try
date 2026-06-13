@@ -1,16 +1,15 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-06-13 00:22:59 UTC
-# Manual: 5 | Auto: 0
+# Updated: 2026-06-13 05:06:31 UTC
+# Manual: 9 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
-#EXTM3U
+
 #EXTINF:-1 tvg-logo="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=03-06-2025?w=384&q=75" group-title="",Bein Sports
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2022/3/21/1647846719088_381.png" group-title="",CCTV 5
 https://live12.xiazhix1.top/live/85042987.m3u8
-
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Go live (Test)
 https://d1211whpimeups.cloudfront.net/smil:rtbgo/playlist.m3u8
@@ -21,10 +20,9 @@ https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",WC2026 ARABIC
 https://s3.us-east-1.amazonaws.com/yalapro1/hls/0/stream_960x540_2000k.m3u8
 
-
-#EXTM3U
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",S*Omoy TV
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Tapmad
 https://premierleagpl23.akamaized.net/hls/live/2107108/tapmad-P2s6L_FiN@L-UrU/master.m3u8
 
@@ -34,6 +32,6 @@ https://premierleagpl23.akamaized.net/hls/live/2107108/tapmad-P2s6L_FiN@L-UrU/ma
 https://ilglobotv-live.akamaized.net/channels/RAI1/Live.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-06-13 00:22:59 UTC
+# Scanned: 2026-06-13 05:06:31 UTC
 
 # No live World Cup 2026 matches found right now.
