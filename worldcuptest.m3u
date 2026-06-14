@@ -11,6 +11,9 @@ https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5a/DSports.png?_=20221114223321" group-title="",Dsports
 https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 
+#EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="",TUDN
+https://1nyaler.streamhostingcdn.top/stream/52/index.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/DAZN_Logo_Master.svg/960px-DAZN_Logo_Master.svg.png?_=20220511101728" group-title="",DAZN (4K)
 https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8
 
@@ -32,8 +35,6 @@ https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 #EXTINF:-1 tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="",Caze TV
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Tapmad
-https://premierleagpl23.akamaized.net/hls/live/2107108/tapmad-P2s6L_FiN@L-UrU/master.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
 # Scanned: 2026-06-14 21:22:52 UTC
