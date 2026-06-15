@@ -1,19 +1,18 @@
-Date: 14-06-2026
+Date: 15-06-2026
+
+
+http://op.web24.live:8080/get.php?username=recycle_n24&password=network24_selfrestream&type=m3u_plus 
+
+ 
+
+http://185.134.22.150:8080/get.php?username=Noryan123&password=Noryan1234&type=m3u_plus
 http://obsfullhd.tv:25461/get.php?username=Loulou&password=Virgineddy&type=m3u_plus
 
 
-http://185.134.22.150:8080/get.php?username=Seveilasmith2014&password=F44z95R5k&type=m3u
-http://185.134.22.150:8080/get.php?username=recycle_n24&password=network24_selfrestream&type=m3u_plus
-http://cm1.portaltv.info:777/get.php?username=DritonRexhepi&password=cmVx7NZoSo&type=m3u_plus
-http://eaiptv.net:8080/get.php?username=as535643@&password=01117778297@&type=m3u_plus
-http://configuration.tn:80/get.php?username=raouef336699&password=imed336699&type=m3u_plus
+
 http://server.iptvxxx.net/get.php?username=02028596612764&password=OCT8TEEI7YNJQBL&type=m3u
 http://tv.123tv.to:8080/get.php?username=MartaZbicinskaMAMA&password=QqEUyJx1pn&type=m3u_plus
 
-http://bazaruto.top:8000/get.php?username=userZ&password=userZ321&type=m3u_plus
-http://iptvch.com:2082/get.php?username=HansNarkander12&password=HansNarkander21&type=m3u_plus
-http://iptvch.com:2082/get.php?username=MI6m7jdHNww&password=tUSgBGZcpB&type=m3u_plus
-http://iptvch.com:2082/get.php?username=Mohdarwich12&password=Mohdarwich21&type=m3u_plus
 opplex 
 
 https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playlist/main/otv.m3u
