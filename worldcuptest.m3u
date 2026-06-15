@@ -11,8 +11,8 @@ https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5a/DSports.png?_=20221114223321" group-title="",Dsports
 https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="",TUDN
-https://1nyaler.streamhostingcdn.top/stream/52/index.m3u8
+#EXTINF:-1 tvg-logo="https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/05/750/422/world-cup-26-mwc26_talent-card.jpg?ve=1&tl=1" group-title="",FOX SPORTS
+https://1nyaler.streamhostingcdn.top/stream/26/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/DAZN_Logo_Master.svg/960px-DAZN_Logo_Master.svg.png?_=20220511101728" group-title="",DAZN (4K)
 https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8
@@ -22,6 +22,9 @@ https://1nyaler.streamhostingcdn.top/stream/99/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/vnbkF0r/fifa-world-cup-2026-logo-png-seeklogo-665644.png" group-title="",FIFA
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="",TUDN
+https://1nyaler.streamhostingcdn.top/stream/52/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2022/3/21/1647846719088_381.png" group-title="",CCTV 5
 https://live12.xiazhix1.top/live/85042987.m3u8
