@@ -1,5 +1,12 @@
 Date: 17-06-2026
 
+
+http://wx-sm.co:2095/get.php?username=966551020755&password=762333837881&type=m3u
+
+http://wx-sm.co:2095/get.php?username=966555562622&password=905256269688&type=m3u
+
+http://wx-sm.co:2095/get.php?username=966554131838&password=167417548677&type=m3u
+
 http://ha1.159843.xyz/get.php?username=2319tncr&password=awpdM8y67M&type=m3u_plus
 
 http://ha1.159843.xyz/get.php?username=Koray.Bilsel&password=tsbVYGBdTw&type=m3u_plus
