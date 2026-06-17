@@ -186,3 +186,57 @@ https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
 https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 #EXTINF:-1 tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="" tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="",Caze TV
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
+
+
+
+
+#11Plus
+
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png?_=20250120073747" group-title="BDIX 11 PLUS",Tsports
+http://30.30.30.138:8088/102/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/SOMOY_TV_Logo.svg/500px-SOMOY_TV_Logo.svg.png" group-title="BDIX 11 PLUS",Somoy TV
+http://30.30.30.138:8088/205/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/ATN_Bangla_Logo_without_slogan.svg/500px-ATN_Bangla_Logo_without_slogan.svg.png" group-title="BDIX 11 PLUS",ATN BANGLA
+http://30.30.30.138:8088/202/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%A6%9C%E0%A6%BF_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB.svg/500px-%E0%A6%9C%E0%A6%BF_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB.svg.png" group-title="BDIX 11 PLUS",Zee Bangla
+http://30.30.30.138:8088/301/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/bn/7/70/%E0%A6%9C%E0%A6%B2%E0%A6%B8%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%AD%E0%A6%BF%E0%A6%9C%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.png" group-title="BDIX 11 PLUS",Jalsha Movies HD
+http://30.30.30.138:8088/303/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Colors_Bangla_logo.svg/500px-Colors_Bangla_logo.svg.png" group-title="BDIX 11 PLUS",Colours Bangla
+http://30.30.30.138:8088/304/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/gMytFZwL/Screenshot-2026-06-17-18-41-15-72-680d03679600f7af0b4c700c6b270fe7.jpg" group-title="BDIX 11 PLUS",Zee Bangla Sonar
+http://30.30.30.138:8088/305/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Star_Gold_2020.svg/1920px-Star_Gold_2020.svg.png?_=20220425150200" group-title="BDIX 11 PLUS",Star Gold
+http://30.30.30.138:8088/402/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/de/Sony_TV_new.png" group-title="BDIX 11 PLUS",Sony ENT
+http://30.30.30.138:8088/403/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/SONY_MAX_Logo_2022.png/500px-SONY_MAX_Logo_2022.png" group-title="BDIX 11 PLUS",Sony Max
+http://30.30.30.138:8088/404/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Zee_Cinema_2025.svg/1920px-Zee_Cinema_2025.svg.png?_=20250608063155" group-title="BDIX 11 PLUS",Zee Cinema
+http://30.30.30.138:8088/406/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%26pictures.svg/1920px-%26pictures.svg.png?_=20240622175648" group-title="BDIX 11 PLUS",&pictures
+http://30.30.30.138:8088/407/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://etimg.etb2bimg.com/photo/57491637.cms" group-title="BDIX 11 PLUS",Star Gold Srlect HD
+http://30.30.30.138:8088/408/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://etimg.etb2bimg.com/photo/57491637.cms" group-title="BDIX 11 PLUS",Star Gold Romance
+http://30.30.30.138:8088/409/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Sony_Pix_logo.svg/250px-Sony_Pix_logo.svg.png" group-title="BDIX 11 PLUS",Sony Pix
+http://30.30.30.138:8088/503/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6f/Nick.png?_=20211031233932" group-title="BDIX 11 PLUS",Nick
+http://30.30.30.138:8088/601/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2024_Disney_Jr._Logo.svg/500px-2024_Disney_Jr._Logo.svg.png" group-title="BDIX 11 PLUS",Disnep Jr.
+http://30.30.30.138:8088/602/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/74/B4U_Music_logo.png" group-title="BDIX 11 PLUS",B4U music
+http://30.30.30.138:8088/701/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sangeet_Bangla.png" group-title="BDIX 11 PLUS",Sangeet Bangla
+http://30.30.30.138:8088/702/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Sounds_of_Earth_-_GPN-2000-001976.jpg/960px-The_Sounds_of_Earth_-_GPN-2000-001976.jpg" group-title="BDIX 11 PLUS",Ox Jalawa
+http://30.30.30.138:8088/703/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Sounds_of_Earth_-_GPN-2000-001976.jpg/960px-The_Sounds_of_Earth_-_GPN-2000-001976.jpg" group-title="BDIX 11 PLUS",OXM
+http://30.30.30.138:8088/704/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/Casi_Discovery_HD.png?_=20120611022337" group-title="BDIX 11 PLUS",DiscoveryHD
+http://30.30.30.138:8088/801/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/rSVOeefFjgRzSO1UD7tqJIPvS2O.jpg" group-title="BDIX 11 PLUS",National Geographic
+http://30.30.30.138:8088/802/index.m3u8?token=83abfe6113ea28dae9f0dd63988786f90657110c-03752f2ef65353e7e96124a8c0b89f96-9781695131-1781691531
+
