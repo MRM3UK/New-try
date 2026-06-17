@@ -1,13 +1,21 @@
-Date: 16-06-2026
-http://shosttv.top:8880/get.php?username=9cf64ce8&password=abcdabcd&type=m3u
+Date: 17-06-2026
 
-http://shosttv.top:8880/get.php?username=70311621&password=53867276&type=m3u
+http://ha1.159843.xyz/get.php?username=2319tncr&password=awpdM8y67M&type=m3u_plus
 
-http://shosttv.top:8880/get.php?username=6bd39bb1&password=6aa73fd9&type=m3u
+http://ha1.159843.xyz/get.php?username=Koray.Bilsel&password=tsbVYGBdTw&type=m3u_plus
 
-http://shosttv.top:8880/get.php?username=28863318&password=62152263&type=m3u
+http://ha1.159843.xyz/get.php?username=urar139&password=24022022erd&type=m3u_plus
 
-http://manutanplus.space:8080/get.php?username=ValterWp&password=vHpLuXAZRdrV&type=m3u
+http://ha1.159843.xyz/get.php?username=hasn.acar&password=vBkg34UCu7&type=m3u_plus
+
+http://ha1.159843.xyz/get.php?username=ege032&password=sarsu12.vlk&type=m3u_plus
+
+http://181.78.12.164:9000/playlist.m3u8
+
+http://190.0.247.38:8000/playlist.m3u8 
+
+http://38.49.128.38:8000/playlist.m3u8
+
 
 
 
