@@ -1,27 +1,13 @@
-Date: 17-06-2026
+Date: 18-06-2026
 
 
-http://wx-sm.co:2095/get.php?username=966551020755&password=762333837881&type=m3u
+http://wolvestv.net:8880/get.php?username=moorad&password=re173827&type=m3u
 
-http://wx-sm.co:2095/get.php?username=966555562622&password=905256269688&type=m3u
+http://10366-north.cdn-o2.me:80/get.php?username=3ec208af27&password=f9954cd6997a&type=m3u_plus
+http://185.160.192.64:80/get.php?username=mangin15&password=85784&type=m3u_plus
 
-http://wx-sm.co:2095/get.php?username=966554131838&password=167417548677&type=m3u
-
-http://ha1.159843.xyz/get.php?username=2319tncr&password=awpdM8y67M&type=m3u_plus
-
-http://ha1.159843.xyz/get.php?username=Koray.Bilsel&password=tsbVYGBdTw&type=m3u_plus
-
-http://ha1.159843.xyz/get.php?username=urar139&password=24022022erd&type=m3u_plus
-
-http://ha1.159843.xyz/get.php?username=hasn.acar&password=vBkg34UCu7&type=m3u_plus
-
-http://ha1.159843.xyz/get.php?username=ege032&password=sarsu12.vlk&type=m3u_plus
-
-http://181.78.12.164:9000/playlist.m3u8
-
-http://190.0.247.38:8000/playlist.m3u8 
-
-http://38.49.128.38:8000/playlist.m3u8
+http://10k.lucastv.pro/get.php?username=2c99755ae255&password=gJnMAT2&type=m3u_plu
+http://eg.youtv83it.eu:8080/get.php?username=1ein9jritp&password=6vz8n50h5e&type=m3u
 
 
 
