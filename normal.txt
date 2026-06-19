@@ -3,7 +3,7 @@ Fifa special - https://raw.githubusercontent.com/sanjoykb/-KB-TV-Playlist/refs/h
 
 Auto update, 200+ channel - https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
 
-Fifa special - https://raw.githubusercontent.com/sanjoykb/-KB-TV-Playlist/refs/heads/main/Github%20Auto%20Update%20Channel.m3u
+Fifa special - https://raw.githubusercontent.com/Monjil404/TVspo/refs/heads/main/tvs,use vlc,ns player
 
 Auto Update, 1500+ channel,  Exp : no - https://iptv-org.github.io/iptv/categories/sports.m3u
 
