@@ -12,17 +12,9 @@ Auto Update, 1500+ channel,  Exp : no - https://iptv-org.github.io/iptv/categori
 
 Win sports- https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8  Use NS Player
 
-TRT 1 (TURKISH) 2K 10.50 Mbps
-https://tv-trt1-esdai.medya.trt.com.tr/master.m3u8
-ZOR TV (UZBEK) 5.50 Mbps
-https://stream8.cinerama.uz/1016/playlist.m3u8
-CAZE TV (PORTU) 5.20 Mbps
-https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
-TELEMUNDO (SPANISH) 4.80 Mbps
-https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
-beIN MAX FHD (ARAB) 4.5 Mbps
-https://raw.githubusercontent.com/ON2026/1smas/refs/heads/main/mx1app2.m3u8
-Bein Sports 1 Max (ARAB) 3.8 Mbps
-https://no-red.pages.dev/liveop2.m3u8
-RTB Go (ENG) 4 Mbps
-https://d1211whpimeups.cloudfront.net/smil:rtbgo/playlist.m3u8
+TRT 1 (TURKISH) 2K 10.50 Mbps,https://tv-trt1-esdai.medya.trt.com.tr/master.m3u8
+ZOR TV (UZBEK) 5.50 Mbps,https://stream8.cinerama.uz/1016/playlist.m3u8
+CAZE TV (PORTU) 5.20 Mbps,https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
+TELEMUNDO (SPANISH) 4.80 Mbps,https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8
+beIN MAX FHD (ARAB) 4.5 Mbps,https://raw.githubusercontent.com/ON2026/1smas/refs/heads/main/mx1app2.m3u8,Bein Sports 1 Max (ARAB) 3.8 Mbps,https://no-red.pages.dev/liveop2.m3u8
+RTB Go (ENG) 4 Mbps,https://d1211whpimeups.cloudfront.net/smil:rtbgo/playlist.m3u8
