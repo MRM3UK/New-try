@@ -1,7 +1,7 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-06-21 05:17:08 UTC
-# Manual: 17 | Auto: 0
+# Updated: 2026-06-21 09:05:45 UTC
+# Manual: 18 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
@@ -16,7 +16,6 @@ https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/FOX_Sports_logo.svg/500px-FOX_Sports_logo.svg.png" group-title="",Fox 4K
 https://vfdbdfbd.pages.dev/1782028518/40dd5100ee634824b1e68542e76d063d/0TBHGusKiVHkE6BqU37r9lCN8o0_mlB06yh6KFVV63Q/fox-sports-1-4k.m3u8
-
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Fussball TV
 https://test.movielinkbd.com/storage/relay/test/index.m3u8
@@ -61,6 +60,6 @@ https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-06-21 05:17:08 UTC
+# Scanned: 2026-06-21 09:05:45 UTC
 
 # No live World Cup 2026 matches found right now.
