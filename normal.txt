@@ -1,3 +1,5 @@
+
+20000+Movies & Channel- https://raw.githubusercontent.com/opensourceflix/OpenSourceFlix/refs/heads/main/iptv.m3u8,Use Ns Player ♨️
 Indian 4k- https://raw.githubusercontent.com/ahan443/FAST-IPTV/refs/heads/main/Indian.m3u,Playlist 
 Fifa special - https://raw.githubusercontent.com/sanjoykb/-KB-TV-Playlist/refs/heads/main/Github%20Auto%20Update%20Channel.m3u
 
