@@ -25,18 +25,18 @@ https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Fifa
 https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8
-
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Munsun Sports
+https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Fifa 2
 https://bl.video.matchtv.ru/media/playlist/free_d46d0cf1712c0542ec7fd4f0808f600a_hd/17_89756005/1080/e6bef86de8a133cd7b27deb040758a00/4796141934.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",BeIN Arabic
-https://raw.githubusercontent.com/ON2026/1smas/refs/heads/main/mx1app2.m3u8
+#EXTINF:-1 tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="",Caze TV
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Zee Bangla Sonar
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Muhsun Sports
-https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/60/ESPN_logos.png?_=20210816020428" group-title="",ESPN
 https://1nyaler.streamhostingcdn.top/stream/99/index.m3u8
@@ -56,8 +56,7 @@ https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TyC_Sports_logo.svg/1920px-TyC_Sports_logo.svg.png?_=20221004223240" group-title="",Tyc Sports
 https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="",Caze TV
-https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8
+
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
 # Scanned: 2026-06-22 00:00:21 UTC
