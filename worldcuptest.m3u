@@ -5,6 +5,9 @@
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Munsun Sports
+https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+
 #EXTINF:-1 tvg-logo="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=03-06-2025?w=384&q=75" group-title="",Bein Sports
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 
@@ -45,7 +48,7 @@ https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
 https://1nyaler.streamhostingcdn.top/stream/99/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/vnbkF0r/fifa-world-cup-2026-logo-png-seeklogo-665644.png" group-title="",FIFA
-https://prod-cdn01-live.toffeelive.com/live/FIFA-2026-4/0/master_2000.m3u8?hdntl=Expires=1782221968~_GO=Generated~URLPrefix=aHR0cHM6Ly9wcm9kLWNkbjAxLWxpdmUudG9mZmVlbGl2ZS5jb20~Signature=AVXEwvfBQQCClC7f2nigt-RYOPX4srVnQtUXEiMFGLMOMIqoUhsLMJKEqeoY03rNXIgsjNennbEvSbTQEedVJsxTIHAG
+https://pull.niues.live/live/stream-9912060_lsd.m3u8?auth_key=1782150502-0-0-1c5691d6505e92808b00f275efcdfbf2
 
 #EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="",TUDN
 https://1nyaler.streamhostingcdn.top/stream/27/index.m3u8
