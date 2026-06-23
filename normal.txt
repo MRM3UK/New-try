@@ -11,6 +11,7 @@ Auto Update, 1500+ channel,  Exp : no - https://iptv-org.github.io/iptv/categori
 
 
 #Single Channel 
+Fox 4K- https://inproviszon.st/fs14k-1.m3u8
 Toffee- https://cdn-tt.pages.dev/ch4.m3u8,Use App
 Win sports- https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8  Use NS Player
 
