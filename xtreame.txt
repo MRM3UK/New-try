@@ -3,7 +3,7 @@ http://kytv.xyz//get.php?username=southworth&password=southworth&type=m3u_plus
 http://kytv.xyz//get.php?username=Aldo1234&password=Aldo1234&type=m3u_plus
 http://kytv.xyz//get.php?username=brendan1&password=brendan1&type=m3u_plus
 http://bazaruto.top:8000/get.php?username=userZ&password=userZ321&type=m3u_plus
-http://pro.376579.xyz:8080/get.php?username=ibrahimdeyeni&password=Q6Nx9P4UJN&type=m3u_plus
+http://jo122.voorcqds.top:8080/get.php?username=VIP01571708409037004&password=adaac3364e63&type=m3u_plus
 http://triaena.dyndns.info:25001/get.php?username=PAN_midaapostolisHD&password=apostolis&type=m3u_plus
 http://triaena.dyndns.info:25001/get.php?username=Back_KostasVFB&password=cc112017&type=m3u_plus
 http://triaena.dyndns.info:25001/get.php?username=EDS_Gonidis150&password=18211994&type=m3u_plus
