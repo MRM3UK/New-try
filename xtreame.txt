@@ -1,4 +1,10 @@
 Date: 25-06-2026
+R1:
+http://2connect.xyz/get.php?username=GQR3B5N&password=TD06WML&type=m3u_plus&output=ts
+
+http://2connect.xyz/get.php?username=IPKARIMEFES24&password=010436015518&type=m3u_plus&output=ts
+
+http://2connect.xyz/get.php?username=kazesala201120215322&password=1FDFBCD75B63&type=m3u_plus&output=ts
 http://kytv.xyz//get.php?username=southworth&password=southworth&type=m3u_plus
 http://red952.net:80/get.php?username=Fbecchina&password=zM9WEsRfgn&type=m3u_plus&output=ts
 http://kytv.xyz//get.php?username=Aldo1234&password=Aldo1234&type=m3u_plus
