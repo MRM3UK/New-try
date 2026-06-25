@@ -4,6 +4,10 @@
 # Manual: 21 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://toffeelive.com/images/logos/logo.svg" group-title="",Toffee
+https://sports.abdullahroman276.workers.dev/live/roman368/01726686368/459.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/R4dZbjWV/Screenshot-2026-06-25-07-06-34-25-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" group-title="",koora live
 https://3.bb1.dpdns.org/hls/1/stream.m3u8
