@@ -1,5 +1,6 @@
 Date: 25-06-2026
 http://kytv.xyz//get.php?username=southworth&password=southworth&type=m3u_plus
+http://red952.net:80/get.php?username=Fbecchina&password=zM9WEsRfgn&type=m3u_plus&output=ts
 http://kytv.xyz//get.php?username=Aldo1234&password=Aldo1234&type=m3u_plus
 http://kytv.xyz//get.php?username=brendan1&password=brendan1&type=m3u_plus
 http://bazaruto.top:8000/get.php?username=userZ&password=userZ321&type=m3u_plus
