@@ -1,20 +1,34 @@
-Date: 25-06-2026
-R1:
+Date: 26-06-2026
+
+
+http://abc123.ovh:7355/get.php?username=PR5546115348659&password=8885171874369&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=sBcx0UWA&password=hxSHksP&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=ibrahimorhan2727xxx&password=0104202666&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=metpol9217ncv&password=uc62zdk84&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=AdnanMehmedov&password=ejhxQp9&type=m3u_plus
+
+
+
+
+
+http://myserveriptv.com:2082/get.php?username=moh547&password=1672458&type=m3u_plus
+http://myserveriptv.com:2082/get.php?username=azeddine17&password=18748352&type=m3u_plus
+http://myserveriptv.com:2082/get.php?username=Amal123&password=123Amal&type=m3u_plus
+
+
+
+http://elit64.xyz:3800/xmltv.php?username=AdnanMehmedov&password=ejhxQp9&type=m3u_plus
+
 http://2connect.xyz/get.php?username=GQR3B5N&password=TD06WML&type=m3u_plus&output=ts
 
 http://2connect.xyz/get.php?username=IPKARIMEFES24&password=010436015518&type=m3u_plus&output=ts
 
 http://2connect.xyz/get.php?username=kazesala201120215322&password=1FDFBCD75B63&type=m3u_plus&output=ts
-http://kytv.xyz//get.php?username=southworth&password=southworth&type=m3u_plus
-http://red952.net:80/get.php?username=Fbecchina&password=zM9WEsRfgn&type=m3u_plus&output=ts
-http://kytv.xyz//get.php?username=Aldo1234&password=Aldo1234&type=m3u_plus
-http://kytv.xyz//get.php?username=brendan1&password=brendan1&type=m3u_plus
-http://bazaruto.top:8000/get.php?username=userZ&password=userZ321&type=m3u_plus
-http://jo122.voorcqds.top:8080/get.php?username=VIP01571708409037004&password=adaac3364e63&type=m3u_plus
-http://triaena.dyndns.info:25001/get.php?username=PAN_midaapostolisHD&password=apostolis&type=m3u_plus
-http://triaena.dyndns.info:25001/get.php?username=Back_KostasVFB&password=cc112017&type=m3u_plus
-http://triaena.dyndns.info:25001/get.php?username=EDS_Gonidis150&password=18211994&type=m3u_plus
-http://triaena.dyndns.info:25001/get.php?username=EDS_Mikros_NtDen&password=18211994&type=m3u_plus
+
 
 
 
