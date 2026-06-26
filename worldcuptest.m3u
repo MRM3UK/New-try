@@ -1,10 +1,9 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-06-26 20:07:15 UTC
-# Manual: 22 | Auto: 0
+# Updated: 2026-06-26 21:40:11 UTC
+# Manual: 20 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
-
 
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1578569975509532672/_-eaf67D_400x400.jpg" group-title="",Koora City
 https://za.teworld.online/mooott1_720/index.m3u8
@@ -23,8 +22,6 @@ https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_M6_%282020%2C_fond_clair%29.svg/500px-Logo_M6_%282020%2C_fond_clair%29.svg.png" group-title="",M6
 https://tfwz3gr3uomttgr31hp3tfa3dqmmeqfsg17uff3hsnhuqcp1ghmucpf5gk.100ycdn.com/hqlive.yarncdn.live/live/hqtv_blv_phanma/playlist.m3u8?wsSession=3389cfe769edf9bcd6f19c64-178223213606042&wsIPSercert=474a89181ce264d3328bf31cb23b0443&wsBindIP=2&wsserid=1668201446950356247
-
-
 
 #EXTINF:-1 tvg-logo="https://toffeelive.com/images/logos/logo.svg" group-title="",Toffee
 https://sports.abdullahroman276.workers.dev/live/roman368/01726686368/459.m3u8
@@ -69,6 +66,6 @@ https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
 https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-06-26 20:07:15 UTC
+# Scanned: 2026-06-26 21:40:11 UTC
 
 # No live World Cup 2026 matches found right now.
