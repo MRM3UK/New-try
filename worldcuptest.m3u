@@ -1,7 +1,7 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-06-27 11:39:46 UTC
-# Manual: 21 | Auto: 0
+# Updated: 2026-06-27 12:57:09 UTC
+# Manual: 22 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
@@ -35,9 +35,6 @@ https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Fifa
 https://ed.omener.xyz/qoozn2_720/index.m3u8
 
-
-
-
 #EXTINF:-1 tvg-logo="https://carboncredits.com/wp-content/uploads/2025/09/shutterstock_2306088965-e1757112807302.jpg" group-title="",Ios 2
 https://hugh.cdn.rumble.cloud/live/y16rq9u0/slot-13/2rvn-cv3b_1080p/chunklist_DVR.m3u8
 
@@ -46,12 +43,12 @@ https://bl.video.matchtv.ru/media/playlist/free_d46d0cf1712c0542ec7fd4f0808f600a
 
 #EXTINF:-1 tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="",Caze TV
 https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
+
 #EXTINF:-1 tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2022/3/21/1647846719088_381.png" group-title="",CCTV 5
 https://play1.gzxdby.com/live/783234345958_4547667094.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Zee Bangla Sonar
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
-
-
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/vnbkF0r/fifa-world-cup-2026-logo-png-seeklogo-665644.png" group-title="",Tsports
 https://trs1.aynaott.com/tsports/index.m3u8
@@ -59,23 +56,22 @@ https://trs1.aynaott.com/tsports/index.m3u8
 #EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="",TUDN
 https://1nyaler.streamhostingcdn.top/stream/27/index.m3u8
 
-
-
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",WIN sports
 https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TyC_Sports_logo.svg/1920px-TyC_Sports_logo.svg.png?_=20221004223240" group-title="",Tyc Sports
 https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
-#EXTM3U
+
 #EXTINF:-1 tvg-logo="https://asset.bioscopelive.com/uploads/images/2026/06/26/poster_animateds_4b21ab16011e30e0e0bcbd4518f7bd36_goplay_jordan_vs_argentina_8am_28_june_bioscope_p.jpg?w=750&q=75" group-title="",Bioscope+
 https://d1kep4defqj6r1.cloudfront.net/out/v1/4e21d5a122c549289dd6feab259266e8/index_1.m3u8
+
 #EXTINF:-1 tvg-logo="https://toffeelive.com/images/logos/logo.svg" group-title="",Toffee 2
 https://sm-monirul.top/tof/live/toffee4/index.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Telemundo_logo_2018.svg/500px-Telemundo_logo_2018.svg.png" group-title="",Telemundo HD
 https://tda-nnaa-drct-pa6dy.fast.nbcuni.com/live/master_2.m3u8
 
-
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-06-27 11:39:46 UTC
+# Scanned: 2026-06-27 12:57:09 UTC
 
 # No live World Cup 2026 matches found right now.
