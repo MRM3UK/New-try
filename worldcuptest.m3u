@@ -5,7 +5,7 @@
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_0,w_1919,h_1079/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images%2FvoltaxMediaLibrary%2Fmmsport%2Fsi%2F01kw48eyfzx27jr0b8q5.jpg" group-title="",Jordan vs Argentina
+#EXTINF:-1 tvg-logo="https://prod-media.beinsports.com/image/Jordania%20vs%20Argentina.640.png?ver=03-06-2025" group-title="",Jordan vs Argentina
 https://live.inplyr.com/room/168740.m3u8
 
 
