@@ -1,14 +1,13 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-06-29 16:49:45 UTC
-# Manual: 22 | Auto: 0
+# Updated: 2026-06-29 18:59:15 UTC
+# Manual: 24 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
-#EXTM3U
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/FOX_Sports_logo.svg/500px-FOX_Sports_logo.svg.png" group-title="",Fox 4K
 https://cdn011.viaplus.site/fox-usa.m3u8
 
-#EXTM3U
 #EXTINF:-1 tvg-logo="https://library.sportingnews.com/styles/crop_style_16_9_mobile_webp/s3/2026-06/Round%20of%2032%20matches_Brazil%20x%20Japan.jpg.webp?itok=WyPUIZBUl-vs-Japan-TNT-Sports-UK.png" group-title="",Brazil VS Japan
 https://live.inplyr.com/room/168740.m3u8
 
@@ -79,6 +78,6 @@ https://sm-monirul.top/tof/live/toffee4/index.m3u8
 https://tda-nnaa-drct-pa6dy.fast.nbcuni.com/live/master_2.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-06-29 16:49:45 UTC
+# Scanned: 2026-06-29 18:59:15 UTC
 
 # No live World Cup 2026 matches found right now.
