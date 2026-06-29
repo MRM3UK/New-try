@@ -1,7 +1,7 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-06-29 18:59:15 UTC
-# Manual: 24 | Auto: 0
+# Updated: 2026-06-29 20:54:35 UTC
+# Manual: 23 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
@@ -28,8 +28,6 @@ https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_M6_%282020%2C_fond_clair%29.svg/500px-Logo_M6_%282020%2C_fond_clair%29.svg.png" group-title="",M6 [Auto]
 https://tfwz3gr3uomttgr31hp3tfa3dqmmeqfsg17uff3hsnhuqcp1ghmucpf5gk.100ycdn.com/hqlive.yarncdn.live/live/hqtv_blv_phanma/playlist.m3u8?wsSession=3389cfe769edf9bcd6f19c64-178223213606042&wsIPSercert=474a89181ce264d3328bf31cb23b0443&wsBindIP=2&wsserid=1668201446950356247
-
-
 
 #EXTINF:-1 tvg-logo="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=03-06-2025?w=384&q=75" group-title="",BeIN Arabic
 https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
@@ -77,6 +75,6 @@ https://sm-monirul.top/tof/live/toffee4/index.m3u8
 https://tda-nnaa-drct-pa6dy.fast.nbcuni.com/live/master_2.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-06-29 18:59:15 UTC
+# Scanned: 2026-06-29 20:54:35 UTC
 
 # No live World Cup 2026 matches found right now.
