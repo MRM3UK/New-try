@@ -5,6 +5,10 @@
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/FOX_Sports_logo.svg/500px-FOX_Sports_logo.svg.png" group-title="",Fox 4K
+https://cdn011.viaplus.site/fox-usa.m3u8
+
+#EXTM3U
 #EXTINF:-1 tvg-logo="https://library.sportingnews.com/styles/crop_style_16_9_mobile_webp/s3/2026-06/Round%20of%2032%20matches_Brazil%20x%20Japan.jpg.webp?itok=WyPUIZBUl-vs-Japan-TNT-Sports-UK.png" group-title="",Brazil VS Japan
 https://live.inplyr.com/room/168740.m3u8
 
