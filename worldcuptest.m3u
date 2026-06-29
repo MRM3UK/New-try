@@ -4,6 +4,9 @@
 # Manual: 22 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://library.sportingnews.com/styles/crop_style_16_9_mobile_webp/s3/2026-06/Round%20of%2032%20matches_Brazil%20x%20Japan.jpg.webp?itok=WyPUIZBUl-vs-Japan-TNT-Sports-UK.png" group-title="",Brazil VS Japan
+https://live.inplyr.com/room/168740.m3u8
 
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1578569975509532672/_-eaf67D_400x400.jpg" group-title="",Koora City
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn3.m3u8
