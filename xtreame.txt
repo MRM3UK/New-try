@@ -1,8 +1,8 @@
 Date: 30-06-2026
 
-http://185.134.22.131:8080/get.php?username=Naas@01182024&password=ryJ4R3HZJpB5&type=m3u&output=ts
 
-http://185.134.22.131:8080/get.php?username=Naas@01182024&password=ryJ4R3HZJpB5&type=m3u_plus
+
+
 
 http://obsfullhd.tv:25461/get.php?username=Loulou&password=Virgineddy&type=m3u_plus&output=m3u8
 
