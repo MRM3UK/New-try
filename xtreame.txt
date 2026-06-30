@@ -4,7 +4,7 @@ Date: 30-06-2026
 
 
 
-http://obsfullhd.tv:25461/get.php?username=Loulou&password=Virgineddy&type=m3u_plus&output=m3u8
+
 
 
 http://fastopen.live:8080/get.php?username=PVI7bELTYG&password=8uxQvWtDCS&type=m3u
