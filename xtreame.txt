@@ -1,34 +1,31 @@
-Date: 29-06-2026
+Date: 30-06-2026
 
-http://elit64.xyz:3800/xmltv.php?username=ayhanseyrek64&password=ZXNF6kZnsT&type=m3u_plus
+http://185.134.22.131:8080/get.php?username=Naas@01182024&password=ryJ4R3HZJpB5&type=m3u&output=ts
 
-http://elit64.xyz:3800/xmltv.php?username=bakituncer64&password=U05T5H62fQ&type=m3u_plus
+http://185.134.22.131:8080/get.php?username=Naas@01182024&password=ryJ4R3HZJpB5&type=m3u_plus
 
-http://elit64.xyz:3800/xmltv.php?username=bircanmehmet&password=gF2XfPN&type=m3u_plus
-
-http://elit64.xyz:3800/xmltv.php?username=cabaryasar64&password=ePUCPFq&type=m3u_plus
-
-http://elit64.xyz:3800/xmltv.php?username=cetincivez64&password=53hzAfUXop&type=m3u_plus
-
-http://elit64.xyz:3800/xmltv.php?username=christianufuk&password=ZwwTMUzh0&type=m3u_plus
-
-http://elit64.xyz:3800/xmltv.php?username=dilekturkmen64&password=qPNNUipG9m&type=m3u_plus
-
-http://elit64.xyz:3800/get.php?username=erolomer&password=kgEkqEH&type=m3u_plus
+http://obsfullhd.tv:25461/get.php?username=Loulou&password=Virgineddy&type=m3u_plus&output=m3u8
 
 
+http://fastopen.live:8080/get.php?username=PVI7bELTYG&password=8uxQvWtDCS&type=m3u
 
-http://ultimeiptv.net/get.php?username=ANSS9335&password=ANSS9335&type=m3u_plus
+http://elit64.xyz:3800/xmltv.php?username=huseyinseyrek64&password=hj5n887Fj6&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=ibrahimav356435&password=356435ibo&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=ilhanistanbul643564&password=senoleniste2121&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=incekara6435&password=L4L2DD9zwd&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=ismailyildirim2&password=JKq4cCZYav&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=kemalcetin0017&password=1u21U2432X&type=m3u_plus
+
+http://elit64.xyz:3800/xmltv.php?username=mahir356435&password=64158719&type=m3u_plus
 
 
 
 
-
-
-http://link.zozotv.xyz:8080/get.php?username=adelia&password=gAqrPERoVv&type=m3u_plus
-
-
-http://vipbtpxnzmb.top:8080/get.php?username=VIP012681760795419102&password=1fe6bce04fc9&type=m3u_plus
 
 
 
