@@ -2,7 +2,80 @@
 # FIFA World Cup 2026 Live Streams
 # Updated: 2026-07-02 21:46:24 UTC
 # Manual: 0 | Auto: 0
+#EXTM3U
+# FIFA World Cup 2026 Live Streams
+# Updated: 2026-07-02 05:41:37 UTC
+# Manual: 21 | Auto: 0
 
+# ═══ MANUALLY ADDED CHANNELS (protected) ═══
+
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1578569975509532672/_-eaf67D_400x400.jpg" group-title="",Koora City
+https://live.narv4.com/dlive/D999-HD.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/50/Logo_bein_sports_max_1.png?_=20170228140554" group-title="",Bein Sports
+https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5a/DSports.png?_=20221114223321" group-title="",Dsports
+https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.korax90.net/livekora.png" group-title="",Korax90
+https://1.simoplay.com/my-hls/h9asfma10d5.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
+https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_M6_%282020%2C_fond_clair%29.svg/500px-Logo_M6_%282020%2C_fond_clair%29.svg.png" group-title="",M6 [Auto]
+https://tfwz3gr3uomttgr31hp3tfa3dqmmeqfsg17uff3hsnhuqcp1ghmucpf5gk.100ycdn.com/hqlive.yarncdn.live/live/hqtv_blv_phanma/playlist.m3u8?wsSession=3389cfe769edf9bcd6f19c64-178223213606042&wsIPSercert=474a89181ce264d3328bf31cb23b0443&wsBindIP=2&wsserid=1668201446950356247
+
+#EXTINF:-1 tvg-logo="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=03-06-2025?w=384&q=75" group-title="",BeIN Arabic
+https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
+
+#EXTINF:-1 tvg-logo="https://image.roku.com/developer_channels/prod/9ba908d683c2afc4489e2ad65fc02133e7911104b2a5602c10895f4df2026df8.png" group-title="",TVP latina
+https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Fifa
+https://ed.omener.xyz/qoozn2_720/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://carboncredits.com/wp-content/uploads/2025/09/shutterstock_2306088965-e1757112807302.jpg" group-title="",Ios 2
+https://hugh.cdn.rumble.cloud/live/y16rq9u0/slot-13/2rvn-cv3b_1080p/chunklist_DVR.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Fifa 2
+https://bl.video.matchtv.ru/media/playlist/free_d46d0cf1712c0542ec7fd4f0808f600a_hd/17_89756005/1080/e6bef86de8a133cd7b27deb040758a00/4796141934.m3u8
+
+#EXTINF:-1 tvg-logo="https://stream.codecloud.bd/uploads/logos/logo_6a2a39c4ac184.png" group-title="",Caze TV
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
+
+#EXTINF:-1 tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2022/3/21/1647846719088_381.png" group-title="",CCTV 5
+https://play1.gzxdby.com/live/783234345958_4547667094.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Zee Bangla Sonar
+https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/vnbkF0r/fifa-world-cup-2026-logo-png-seeklogo-665644.png" group-title="",Tsports
+https://tv.emnetbd.com/flussonic/Tsports1/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="",TUDN
+https://1nyaler.streamhostingcdn.top/stream/27/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",WIN sports
+https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TyC_Sports_logo.svg/1920px-TyC_Sports_logo.svg.png?_=20221004223240" group-title="",Tyc Sports
+https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://asset.bioscopelive.com/uploads/images/2026/06/26/poster_animateds_4b21ab16011e30e0e0bcbd4518f7bd36_goplay_jordan_vs_argentina_8am_28_june_bioscope_p.jpg?w=750&q=75" group-title="",Bioscope+
+https://d1kep4defqj6r1.cloudfront.net/out/v1/4e21d5a122c549289dd6feab259266e8/index_1.m3u8
+
+#EXTINF:-1 tvg-logo="https://toffeelive.com/images/logos/logo.svg" group-title="",Toffee 2
+https://sm-monirul.top/tof/live/toffee4/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Telemundo_logo_2018.svg/500px-Telemundo_logo_2018.svg.png" group-title="",Telemundo HD
+https://tda-nnaa-drct-pa6dy.fast.nbcuni.com/live/master_2.m3u8
+
+# ═══ AUTO-DETECTED WC 2026 MATCHES ═══
+# Scanned: 2026-07-02 05:41:37 UTC
+
+# No live World Cup 2026 matches found right now.
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
 # Scanned: 2026-07-02 21:46:24 UTC
 
