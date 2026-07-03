@@ -26,9 +26,10 @@ https://1.simoplay.com/my-hls/h9asfma10d5.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
 https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/PTV_Logo.png" group-title="2023 - Music",PTV
+https://lstv-web.pages.dev/api/proxy?url=https://tv.beyondtaxconsultants.com/api/robi/lps/http://198.195.239.50:8095/ptv/tracks-v1a1/mono.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_M6_%282020%2C_fond_clair%29.svg/500px-Logo_M6_%282020%2C_fond_clair%29.svg.png" group-title="",M6 [Auto]
-https://tfwz3gr3uomttgr31hp3tfa3dqmmeqfsg17uff3hsnhuqcp1ghmucpf5gk.100ycdn.com/hqlive.yarncdn.live/live/hqtv_blv_phanma/playlist.m3u8?wsSession=3389cfe769edf9bcd6f19c64-178223213606042&wsIPSercert=474a89181ce264d3328bf31cb23b0443&wsBindIP=2&wsserid=1668201446950356247
 
 #EXTINF:-1 tvg-logo="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=03-06-2025?w=384&q=75" group-title="",BeIN Arabic
 https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
