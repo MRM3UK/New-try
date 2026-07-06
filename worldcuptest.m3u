@@ -5,7 +5,7 @@
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
-#EXTINF:-1 tvg-logo="https://wpgh53.com/resources/media2/16x9/3840/986/center/90/32866b01-5a4a-4860-9723-f51ff43a9a7c-wcu.png" group-title="2009 - Adventure",Fox
+#EXTINF:-1 tvg-logo="https://wpgh53.com/resources/media2/16x9/3840/986/center/90/32866b01-5a4a-4860-9723-f51ff43a9a7c-wcu.png" group-title="",Fox
 https://andro.evrenesoglu57.click/checklist/androstreamliveexn1.m3u8
 
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1578569975509532672/_-eaf67D_400x400.jpg" group-title="",Koora City
@@ -23,8 +23,6 @@ https://1.simoplay.com/my-hls/h9asfma10d5.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
 https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/PTV_Logo.png" group-title="2023 - Music",PTV
-https://lstv-web.pages.dev/api/proxy?url=https://tv.beyondtaxconsultants.com/api/robi/lps/http://198.195.239.50:8095/ptv/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=03-06-2025?w=384&q=75" group-title="",BeIN Arabic
 https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
