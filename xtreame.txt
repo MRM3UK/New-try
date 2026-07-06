@@ -1,40 +1,24 @@
-Date: 06-07-2026
+Date: 07-07-2026
 
-http://filexott.uk/get.php?username=@boss1751&password=rS27a9QKeT&type=m3u_plus
+http://cdn.pt-private.com:80/get.php?username=108035&password=Odjo5yvRwk0UXm2&type=m3u_plus
 
-http://mediagrupa.club/get.php?username=35eeaa871b03f1e0&password=rjo8fu4&type=m3u_plus
+http://premium2.ottpro2.org:8789/get.php?username=jeannoel&password=4213845&type=m3u_plus&output=m3u8
 
-http://mediagrupa.club/get.php?username=982017aa22289db3&password=9c7b17c2b5b1c6af&type=m3u_plus
+http://line.tvlion.xyz:80/get.php?username=5CxQ2974&password=asuw9715&type=m3u_plus&output=m3u8
 
-http://mediagrupa.club/get.php?username=7df1b4d94a2c817a&password=bdb8b0407707bdc7&type=m3u_plus
+http://195.128.27.253:2095/get.php?username=g3hRcAuH&password=gRuXbTTj&type=m3u_plus&output=m3u8
 
-http://bosstv.click:8080/get.php?username=87654321&password=12345678&type=m3u_plus
+http://cdn.pt-private.com:80/get.php?username=223105&password=ctjcwwh&type=m3u_plus
+
+
+
+
 
 http://filex.homes/get.php?username=124567&password=124567&type=m3u_plus
 
 http://filex.homes/get.php?username=99887766&password=99887766&type=m3u_plus
 
 
-http://line.glantv.com:80/c/
-00:1A:79:ca:10:02  June 15, 2026
-00:1A:79:64:25:54  July 19, 2026
-00:1A:79:4d:ef:41  June 5, 2026
-00:1A:79:17:6c:e4  April 2, 2027
-00:1A:79:39:12:82  December 29, 2026
-00:1A:79:7f:ab:e1  June 8, 2026
-00:1A:79:fc:89:72  April 5, 2027
-00:1A:79:bb:ea:70  August 11, 2026
-00:1A:79:c6:f8:8c  April 27, 2027
-00:1A:79:b2:f2:38  June 20, 2026
-00:1A:79:77:15:4f  September 2, 2026
-00:1A:79:b5:8b:6e  April 9, 2027
-00:1A:79:dd:7e:43  February 1, 2027
-00:1A:79:85:5e:e6  June 3, 2026
-00:1A:79:73:3c:14  December 15, 2026
-00:1A:79:32:6d:8a  May 26, 2026
-00:1A:79:e5:b3:b4  April 17, 2027
-00:1A:79:c5:47:78  October 30, 2026
-00:1A:79:54:47:8b  April 26, 2027
 opplex 
 
 https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playlist/main/otv.m3u
