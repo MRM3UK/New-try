@@ -30,8 +30,8 @@ https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5a/DSports.png?_=20221114223321" group-title="",Dsports
 https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://www.korax90.net/livekora.png" group-title="",Korax90
-https://1.simoplay.com/my-hls/h9asfma10d5.m3u8
+#EXTINF:-1 tvg-logo="https://static.themebuilder.aws.arc.pub/bellmediainc/1741638442172.svg" group-title="",TSN 1
+https://xredsox.s3.eu-central-1.amazonaws.com/msg.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
 https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
