@@ -5,7 +5,7 @@
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
-#EXTINF:-1 tvg-logo="https://www.tntsports.co.uk/betting/thumbor/A28ZhZPxR-ehRIQloKSz38_2GP0=/640x360/smart/filters:format(webp)/https%3A%2F%2Fmedia-eurosport.s3.gra.io.cloud.ovh.net%2Fbetting%2F2026%2F07%2FArgentina-vs-Egypt-TNT-Sports-UK.png" group-title="Sports",Argentina vs Egypt
+#EXTINF:-1 tvg-logo="https://cdn.brandfetch.io/idZfICkzCs/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1775829291034" group-title="Sports",SocoLive
 https://pull.niues.live/live/stream-9912060_lhd.m3u8?auth_key=1783284383-0-0-ba541e77b9330eab42075af6aa5029e4
 
 #EXTINF:-1 tvg-logo="https://wpgh53.com/resources/media2/16x9/3840/986/center/90/32866b01-5a4a-4860-9723-f51ff43a9a7c-wcu.png" group-title="",Fox
@@ -14,8 +14,7 @@ https://andro.evrenesoglu57.click/checklist/androstreamliveexn1.m3u8
 #EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1578569975509532672/_-eaf67D_400x400.jpg" group-title="",Koora City
 https://ez.zyntrio.website/donts2.m3u8
 
-#EXTINF:-1 tvg-logo="https://www.tntsports.co.uk/betting/thumbor/A28ZhZPxR-ehRIQloKSz38_2GP0=/640x360/smart/filters:format(webp)/https%3A%2F%2Fmedia-eurosport.s3.gra.io.cloud.ovh.net%2Fbetting%2F2026%2F07%2FArgentina-vs-Egypt-TNT-Sports-UK.png" group-title="Sports",Argentina vs Egypt
-https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/500px-TRT_1_logo_%282021-%29.svg.png" group-title="",TRT 1
 https://andro.evrenesoglu57.click/checklist/androstreamlivetrt1.m3u8
