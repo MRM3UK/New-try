@@ -15,6 +15,14 @@ https://cb.goalpulse.store/poerde2_720/index.m3u8
 https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/500px-TRT_1_logo_%282021-%29.svg.png" group-title="",TRT 1
 https://andro.evrenesoglu57.click/checklist/androstreamlivetrt1.m3u8
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/ITV_plc_2025_logo.svg/500px-ITV_plc_2025_logo.svg.png" group-title="",ITV [BeIN ]
+https://andro.evrenesoglu57.click/checklist/androstreamliveexn4.m3u8
+#EXTINF:-1 tvg-logo="https://fasttv.am/svg/logo.svg" group-title="Sports",Fast TV
+https://a3285273028-s80718.cdn.ngenix.net/hls/CH_FAST_SPORTSHD/video_1920x1080_avc1/playlist.m3u8?profile=web_auto
+#EXTINF:-1 tvg-logo="https://cdn.brandfetch.io/idZfICkzCs/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1775829291034" group-title="",SocoLive
+https://pull.niues.live/live/stream-9912060_lhd.m3u8?auth_key=1783284383-0-0-ba541e77b9330eab42075af6aa5029e4
+
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/50/Logo_bein_sports_max_1.png?_=20170228140554" group-title="",Bein Sports
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
