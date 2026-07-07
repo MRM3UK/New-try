@@ -1,7 +1,7 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-07-07 13:09:00 UTC
-# Manual: 17 | Auto: 0
+# Updated: 2026-07-07 15:52:32 UTC
+# Manual: 21 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
@@ -13,6 +13,7 @@ https://eu.nexalure.site/loock1_720/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://www.tntsports.co.uk/betting/thumbor/A28ZhZPxR-ehRIQloKSz38_2GP0=/640x360/smart/filters:format(webp)/https%3A%2F%2Fmedia-eurosport.s3.gra.io.cloud.ovh.net%2Fbetting%2F2026%2F07%2FArgentina-vs-Egypt-TNT-Sports-UK.png" group-title="Sports",Argentina vs Egypt
 https://hls.diptom3ow.workers.dev/r/https%3A%2F%2Ffifa-stream-01.bioscopelive.com%2Fout%2Fv1%2F60e7608404004b1186261497b404630b%2Findex_2.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/500px-TRT_1_logo_%282021-%29.svg.png" group-title="",TRT 1
 https://andro.evrenesoglu57.click/checklist/androstreamlivetrt1.m3u8
 
@@ -21,7 +22,6 @@ https://andro.evrenesoglu57.click/checklist/androstreamliveexn4.m3u8
 
 #EXTINF:-1 tvg-logo="https://cdn.brandfetch.io/idZfICkzCs/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1775829291034" group-title="",SocoLive
 https://pull.niues.live/live/stream-9912060_lhd.m3u8?auth_key=1783284383-0-0-ba541e77b9330eab42075af6aa5029e4
-
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/50/Logo_bein_sports_max_1.png?_=20170228140554" group-title="",Bein Sports
 https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
@@ -69,6 +69,6 @@ https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 https://tda-nnaa-drct-pa6dy.fast.nbcuni.com/live/master_2.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-07-07 13:09:00 UTC
+# Scanned: 2026-07-07 15:52:32 UTC
 
 # No live World Cup 2026 matches found right now.
