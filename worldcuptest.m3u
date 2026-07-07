@@ -31,6 +31,10 @@ https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://static.themebuilder.aws.arc.pub/bellmediainc/1741638442172.svg" group-title="",TSN 1
 https://xredsox.s3.eu-central-1.amazonaws.com/msg.m3u8
+#EXTM3U
+#EXTINF:-1 tvg-id="toffee" tvg-name="Fifa World Cup" tvg-logo="https://i.imgur.com/53aSeDH.png" group-title="Sports Channels" tvg-logo="https://i.imgur.com/53aSeDH.png" group-title="Sports Channels",Toffee
+https://toffee-fifa.sm-monirul.top/sm/toffee1.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
 https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
