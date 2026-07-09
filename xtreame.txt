@@ -2,6 +2,18 @@ Date: 09-07-2026
 
 http://xdgo.live:8080/get.php?username=WPTP027&password=Jm9mEqbW&type=m3u_plus
 
+
+
+http://stb.iphd.tv:80/get.php?username=16805808&password=hoj4Mgz3H2&type=m3u_plus
+http://stb.iphd.tv:80/get.php?username=27687571&password=aeH33FEHuo&type=m3u_plus
+http://elit64.xyz:2086/get.php?username=orhanilkcag&password=jg5hB7k&type=m3u_plus&output=ts
+http://elit64.xyz:3800/get.php?username=sabanduk45&password=643564saban&type=m3u_plus&output=ts
+
+http://elit64.xyz:3800/get.php?username=remzi643564&password=Bvc45sr54&type=m3u_plus&output=ts
+
+http://pradahype.com:80/get.php?username=BSHOP8543986&password=HTF2857419&type=m3u_plus
+http://pradahype.com:80/get.php?username=Ross123&password=Clarence&type=m3u_plus
+
 http://138.59.177.34:25461/get.php?username=192&password=1922021&type=m3u_plus
 
 opplex 
