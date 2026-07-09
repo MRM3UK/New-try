@@ -1,26 +1,8 @@
-Date: 08-07-2026
+Date: 09-07-2026
 
-http://xdgo.live:8080/get.php?username=ecuaconforme&password=nJwT5WPd9u&type=m3u_plus
+http://xdgo.live:8080/get.php?username=WPTP027&password=Jm9mEqbW&type=m3u_plus
 
-http://009900.live:8080/get.php?username=4647872413261520&password=4647872413261520&type=m3u_plus
-
-
-http://92.62.110.118:88/stalker_portal/c/
-00:1A:79:35:DF:E0
-00:1A:79:5E:FA:12
-00:1A:79:6B:8E:43
-00:1A:79:36:D6:43
-
-
-http://cdn.pt-private.com:80/get.php?username=108035&password=Odjo5yvRwk0UXm2&type=m3u_plus
-
-http://premium2.ottpro2.org:8789/get.php?username=jeannoel&password=4213845&type=m3u_plus&output=m3u8
-
-http://line.tvlion.xyz:80/get.php?username=5CxQ2974&password=asuw9715&type=m3u_plus&output=m3u8
-
-http://195.128.27.253:2095/get.php?username=g3hRcAuH&password=gRuXbTTj&type=m3u_plus&output=m3u8
-http://filex.homes/get.php?username=99887766&password=99887766&type=m3u_plus
-
+http://138.59.177.34:25461/get.php?username=192&password=1922021&type=m3u_plus
 
 opplex 
 
