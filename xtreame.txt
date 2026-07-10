@@ -2,7 +2,7 @@ Date: 10-07-2026
 
 
 
-http://tv.gold-tr.live:80/get.php?username=8f0abc7958&password=2ac6d17d24a0&type=m3u_plus
+
 http://xdgo.live:8080/get.php?username=WPTP027&password=Jm9mEqbW&type=m3u_plus
 
 http://redworld.pro:8880/get.php?username=vj9V988RnkAJ&password=zkmLnsstTHDW&type=m3u_plus
