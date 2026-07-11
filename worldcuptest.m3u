@@ -30,7 +30,7 @@ https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8
 https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png" group-title="",Tsports
-https://flussonic.deltainfonet.com/01_Tsports_HD/tracks-v1a1/mono.m3u8
+https://proxy.futuredesh.com/api/proxy?url=http://103.165.93.31:8095/tsports/video.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
 https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
