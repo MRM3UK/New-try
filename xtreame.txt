@@ -3,7 +3,7 @@ Date: 11-07-2026
 
 
 
-http://lionboxiptv.xyz:80/get.php?username=dani79@dani79&password=dYcMjJV9bw&type=m3u&output=ts
+
 
 
 
