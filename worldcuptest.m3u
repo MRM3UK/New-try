@@ -1,7 +1,7 @@
 #EXTM3U
 # FIFA World Cup 2026 Live Streams
-# Updated: 2026-07-11 23:31:24 UTC
-# Manual: 20 | Auto: 0
+# Updated: 2026-07-12 01:12:10 UTC
+# Manual: 23 | Auto: 0
 
 # ═══ MANUALLY ADDED CHANNELS (protected) ═══
 
@@ -31,11 +31,13 @@ https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png" group-title="",Tsports
 https://proxy.futuredesh.com/api/proxy?url=http://103.165.93.31:8095/tsports/video.m3u8
-#EXTM3U
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/PTV_Logo.png" group-title=".",PTV
 https://proxy.futuredesh.com/api/proxy?url=http://103.165.93.31:8095/ptv/tracks-v1a1/mono.m3u8
+
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Bangladesh_Television_Logo.svg/500px-Bangladesh_Television_Logo.svg.png" group-title=".",BTV
 https://proxy.futuredesh.com/api/proxy?url=http://103.114.11.37:8081/BTV/index.m3u8?token=1dsfds1fsdf
+
 #EXTINF:-1 tvg-logo="https://cdn.prod.website-files.com/5d655866b2055c7cbb5d79a1/5d7a6396e5f68d18117c7c14_tsnarticle88_1-p-800.jpeg" group-title="",TSN 4
 https://proxy.futuredesh.com/api/proxy?url=http://213.152.185.148/tsn4/tracks-v1a1/mono.ts.m3u8
 
@@ -73,6 +75,6 @@ https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8
 https://tda-nnaa-drct-pa6dy.fast.nbcuni.com/live/master_2.m3u8
 
 # ═══ AUTO-DETECTED WC 2026 MATCHES ═══
-# Scanned: 2026-07-11 23:31:24 UTC
+# Scanned: 2026-07-12 01:12:10 UTC
 
 # No live World Cup 2026 matches found right now.
