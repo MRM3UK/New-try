@@ -1,4 +1,4 @@
-Date: 11-07-2026
+Date: 12-07-2026
 
 
 
@@ -9,19 +9,13 @@ Date: 11-07-2026
 
 
 
-http://tv14s.xyz:8080/get.php?username=p9qQu1&password=372083&type=m3u_plus&output=ts
-http://ott.global-telecom.eu:25461/get.php?username=robert2go9138&password=FqF2NknTCN&type=m3u_plus&output=ts
-http://lunar.pm:8080/get.php?username=2052966030&password=m25TabYGvfhR&type=m3u_plus&output=ts
-http://lunar.pm:8080/get.php?username=mmysicka&password=Joshua95&type=m3u_plus&output=ts
-http://neosfpoo.top:8080/get.php?username=5311767686353&password=16b504027bc6&type=m3u_plus&output=ts
-http://neosfpoo.top:8080/get.php?username=7711768060899&password=4dcb83c6e335&type=m3u_plus&output=ts
-http://neosfpoo.top:8080/get.php?username=25177117913557&password=5nj29e748u33&type=m3u_plus&output=ts
-http://neosfpoo.top:8080/get.php?username=63177446662094&password=pj7hcgn2aqfv&type=m3u_plus&output=ts
-http://aro4us.com:80/get.php?username=mohamed78249&password=652528208&type=m3u_plus
-http://portal.geniptv.com:8080/get.php?username=MartaZbicinskaMAMA&password=QqEUyJx1pn&type=m3u_plus&output=m3u8
-http://portal.geniptv.com:8080/get.php?username=1A64T2q8PH&password=ewviImt2lD&type=m3u_plus&output=m3u8
-http://vtpi.no-ip.biz:80/get.php?username=70:2a:d5:ce:bd:a0&password=yreG74xrzr&type=m3u_plus
-http://live.iptv.wtf:80/get.php?username=xirxbqou&password=qWl7jTq905&type=m3u_plus
+http://smart.cwdn.cx:80/get.php?username=bff5c5331d&password=f4c1ef040678&type=m3u_plus
+http://smart.cwdn.cx:80/get.php?username=5sxdiau6up&password=br0grnixi6&type=m3u
+http://hqmgsvqm.supzak.xyz:80/get.php?username=W5L2CT7&password=B4143JC&type=m3u&output=mpegts
+http://pradahype.com:80/get.php?username=BSHOP8543986&password=HTF2857419&type=m3u&output=mpegts
+http://kosamo.xyz/get.php?username=661831&password=edtUBEr&type=m3u_plus&output=mpegts
+http://pradahype.com/get.php?username=jrichardson&password=nexbox19&type=m3u_plus
+
 opplex 
 
 https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playlist/main/otv.m3u
