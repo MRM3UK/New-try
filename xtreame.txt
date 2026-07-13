@@ -11,7 +11,7 @@ Date: 13-07-2026
 
 
 
-http://aro4us.com:80/get.php?username=mohamed78249&password=652528208&type=m3u_plus
+
 
 http://portal.geniptv.com:8080/get.php?username=1A64T2q8PH&password=ewviImt2lD&type=m3u_plus&output=m3u8
 
