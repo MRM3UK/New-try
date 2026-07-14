@@ -32,8 +32,8 @@ https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/T_Sports_logo.svg/500px-T_Sports_logo.svg.png" group-title="",Tsports
 https://bdixserver.tvhunter.top/ant1009/tracks-v1a1/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/PTV_Logo.png" group-title=".",PTV
-https://proxy.futuredesh.com/api/proxy?url=http://103.165.93.31:8095/ptv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/0c/PTV_Logo.png" group-title=".",PTV (somoy)
+https://raihantv.onrender.com/api/proxy?url=http://103.165.93.31:8095/ptv/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Bangladesh_Television_Logo.svg/500px-Bangladesh_Television_Logo.svg.png" group-title=".",BTV
 https://proxy.futuredesh.com/api/proxy?url=http://103.114.11.37:8081/BTV/index.m3u8?token=1dsfds1fsdf
