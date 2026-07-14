@@ -1,10 +1,17 @@
-Date: 13-07-2026
+Date: 14-07-2026
 
 
 
 
 
+http://line.gofast-tv.me:80/get.php?username=3b925f72c4&password=08b78f6603&type=m3u_plus
+http://bouiti.com:80/get.php?username=K3P35C7&password=6WJ7VUC&type=m3u_plus
+http://vgr.tahpascal78.space:80/get.php?username=Mogangreece2026&password=T36YL44&type=m3u_plus
 
+
+
+
+http://line.tivi-ott.net:80/get.php?username=PS7DV6&password=NFDUWH&type=m3u_plus
 
 
 
@@ -40,11 +47,7 @@ http://xdgo.live:8080/get.php?username=KenyoRamirez&password=fQgpQxQq8y&type=m3u
 
 
 http://smart.cwdn.cx:80/get.php?username=bff5c5331d&password=f4c1ef040678&type=m3u_plus
-http://smart.cwdn.cx:80/get.php?username=5sxdiau6up&password=br0grnixi6&type=m3u
-http://hqmgsvqm.supzak.xyz:80/get.php?username=W5L2CT7&password=B4143JC&type=m3u&output=mpegts
-http://pradahype.com:80/get.php?username=BSHOP8543986&password=HTF2857419&type=m3u&output=mpegts
-http://kosamo.xyz/get.php?username=661831&password=edtUBEr&type=m3u_plus&output=mpegts
-http://pradahype.com/get.php?username=jrichardson&password=nexbox19&type=m3u_plus
+
 
 opplex 
 
