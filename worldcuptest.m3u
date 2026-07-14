@@ -38,12 +38,13 @@ https://raihantv.onrender.com/api/proxy?url=http://103.165.93.31:8095/ptv/tracks
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Bangladesh_Television_Logo.svg/500px-Bangladesh_Television_Logo.svg.png" group-title=".",BTV
 https://proxy.futuredesh.com/api/proxy?url=http://103.114.11.37:8081/BTV/index.m3u8?token=1dsfds1fsdf
 
-#EXTINF:-1 tvg-logo="https://cdn.prod.website-files.com/5d655866b2055c7cbb5d79a1/5d7a6396e5f68d18117c7c14_tsnarticle88_1-p-800.jpeg" group-title="",TSN 4
-https://proxy.futuredesh.com/api/proxy?url=http://213.152.185.148/tsn4/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.prod.website-files.com/5d655866b2055c7cbb5d79a1/5d7a6396e5f68d18117c7c14_tsnarticle88_1-p-800.jpeg" group-title="",TSN 1
+https://raihantv.onrender.com/cors-proxy?url=http%3A%2F%2F40.160.24.55%2FTSN_1%2Findex.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="",Mahsun Sports
 https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8
-
+#EXTINF:-1 tvg-logo="https://cdn.prod.website-files.com/5d655866b2055c7cbb5d79a1/5d7a6396e5f68d18117c7c14_tsnarticle88_1-p-800.jpeg" group-title="",TSN 2
+https://raihantv.onrender.com/cors-proxy?url=http%3A%2F%2F40.160.24.55%2FTSN_1%2Findex.m3u8
 #EXTINF:-1 tvg-logo="https://www.lyngsat.com/as10/wc2026-mobile.jpg" group-title="",Fussball
 https://edge22.776740.ir.cdn.ir/hls2/sport.m3u8
 
