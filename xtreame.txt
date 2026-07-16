@@ -1,28 +1,16 @@
-Date: 15-07-2026
+Date: 16-07-2026
 
 
 
 
 
-http://skytv4k.org:8080/get.php?username=fmol5vEPIW&password=ouaRnEzDf6&type=m3u_plus
-
-http://skytv4k.org:8080/get.php?username=7usRcGEAJL&password=Ho4bvax7tw&type=m3u_plus
-
-
-
-
-
-
-
-
-
-http://inservice4u.123tv.to:8080/get.php?username=BcTaEXj4Qd&password=pRwBuxWjsX&type=m3u_plus
-
-
-
-http://smart.cwdn.cx:80/get.php?username=61105085a3&password=665a275d1334&type=m3u_plus
-
-http://kamil995.itservice.fans:80/get.php?username=kMx9t49xfN7pEy5bwg&password=kyb8sJMh4eCu7yYZdk&type=m3u_plus
+http://line.tiger-ott.net:80/get.php?username=3S71NY&password=EP2CHD&type=m3u_plus
+http://tvline.cc:80/get.php?username=EDRJUE6&password=04X9JQ8&type=m3u_plus
+http://ilultranew.xyz:80/get.php?username=30903096400660&password=28661010691842&type=m3u_plus&output=ts
+http://16386-incest.tx-4kott.com:80/get.php?username=4bc06afd48&password=25de8a441d01&type=m3u_plus
+http://ott-platinum.live:80/get.php?username=dud2412&password=426CE8B11937&type=m3u
+http://slh.kop.homes:80/get.php?username=knv4jf1npa&password=tfueqmjpjj&type=m3u_plus
+http://63043-keep.tx-4kott.com:80/get.php?username=68a86df442&password=7900780c8fe0&type=m3u_plus
 
 
 
@@ -32,9 +20,11 @@ http://skytv4k.org:8080/get.php?username=7usRcGEAJL&password=Ho4bvax7tw&type=m3u
 
 
 
-http://line.gofast-tv.me:80/get.php?username=3b925f72c4&password=08b78f6603&type=m3u_plus
 
-http://smart.cwdn.cx:80/get.php?username=bff5c5331d&password=f4c1ef040678&type=m3u_plus
+
+
+
+
 
 
 opplex 
