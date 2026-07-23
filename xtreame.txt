@@ -1,5 +1,9 @@
-Date: 21-07-2026
+Date: 23-07-2026
+http://www.teledunet.com:8080/get.php?username=tdn&password=tdn&type=m3u
 
+http://no1.no1turk.com:2086/get.php?username=T.Tarkan&password=DKiQCHhmAo&type=m3u_plus&output=mpegts
+http://no1.no1turk.com:2086/get.php?username=AtillaTirSchlafzimmer&password=74tsNosjpu&type=m3u_plus
+http://no1.no1turk.com:2086/get.php?username=AtillaTirSchlafzimmer&password=74tsNosjpu&type=m3u_plus
 
 http://luxus-iptv.xyz:8000/get.php?username=HakanKara01&password=XGuSAvs5Kc&type=m3u_plus
 http://jarodtv62000.com:8000/get.php?username=mohamed_aoudia2&password=01022024&type=m3u_plus
