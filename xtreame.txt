@@ -1,38 +1,34 @@
-Date: 23-07-2026
-http://www.teledunet.com:8080/get.php?username=tdn&password=tdn&type=m3u
+Date: 24-07-2026
 
-http://no1.no1turk.com:2086/get.php?username=T.Tarkan&password=DKiQCHhmAo&type=m3u_plus&output=mpegts
-http://no1.no1turk.com:2086/get.php?username=AtillaTirSchlafzimmer&password=74tsNosjpu&type=m3u_plus
-http://no1.no1turk.com:2086/get.php?username=AtillaTirSchlafzimmer&password=74tsNosjpu&type=m3u_plus
+http://web2021.biz:8080/get.php?username=543837205118965358&password=9198775732424111&type=m3u_plus
 
-http://luxus-iptv.xyz:8000/get.php?username=HakanKara01&password=XGuSAvs5Kc&type=m3u_plus
-http://jarodtv62000.com:8000/get.php?username=mohamed_aoudia2&password=01022024&type=m3u_plus
-http://jarodtv62000.com:8000/get.php?username=800004879&password=05112019&type=m3u_plus
-http://restream-live.realiptv.to:8080/get.php?username=Davenport&password=c9074e1fb0&type=m3u_plus
-http://jet34.net:8080/get.php?username=deggnmhgbgfg2&password=vougycp5Ft&type=m3u_plus
-http://line.member848px.xyz:80/get.php?username=a12mktaa893&password=DD6D7D&type=m3u_plus
 
-http://skyplay.mov:80/get.php?username=justin2024b&password=skyplay3454&type=m3u_plus
-
-http://line.4twins.space:80/get.php?username=961393&password=13954C&type=m3u_plus
-
-http://line.tsclean.cc:80/get.php?username=78a2ba8114&password=dd4cf204f793&type=m3u_plus
-
-http://worldtv.win:8080/get.php?username=eder7378&password=8388eder&type=m3u_plus
-
-http://line.tsclean.cc:80/get.php?username=b18c80c7ed&password=91193a68848f&type=m3u_plus
+http://lg.peces.biz:8080/get.php?username=02020202&password=03030303&type=m3u_plus
+http://lg.peces.biz:8080/get.php?username=542567743688356131&password=2740112024359405&type=m3u_plus
 
 
 
-http://qpuyured.g31feb.xyz:80/get.php?username=3fe918767&password=W6qQEdY54Gy&type=m3u_plus
 
-http://line.fastviewtv.com:80/get.php?username=731CA7&password=9D158D&type=m3u_plus
 
-http://felicia.upxdsx.xyz:80/get.php?username=BULR8JHE48&password=EQReU5RBKXf&type=m3u_plus
+http://filex.me:8080/get.php?username=@alexchong1&password=Sje8jL4HZx6Z&type=m3u_plus
 
-http://line.mg-str.com:80/get.php?username=e3d50e4c0f&password=c21qqhkgsp&type=m3u_plus
+http://fiufiu.live/get.php?username=0341905&password=4683569&type=m3u_plus
 
-http://vpn.huno.online:80/get.php?username=e8bed697b5&password=3091956d02ed&type=m3u_plus
+http://flipex.pro:80/get.php?username=6281168685&password=ujymk21zo9u0&type=m3u_plus
+
+http://flipex.pro:80/get.php?username=6296926&password=62956925925&type=m3u_plus
+
+http://flipex.pro:80/get.php?username=6738784994&password=88498838893&type=m3u_plus
+
+http://flipex.pro:80/get.php?username=6bj2iQpt&password=dSKHNSHY&type=m3u_plus
+
+http://flipex.pro:80/get.php?username=6vpbsA6h&password=RNmIBENn&type=m3u_plus
+
+
+
+
+
+
 
 
 
