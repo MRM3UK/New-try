@@ -1,24 +1,12 @@
-Date: 24-07-2026
-
-http://web2021.biz:8080/get.php?username=543837205118965358&password=9198775732424111&type=m3u_plus
-
-
-http://lg.peces.biz:8080/get.php?username=02020202&password=03030303&type=m3u_plus
-http://lg.peces.biz:8080/get.php?username=542567743688356131&password=2740112024359405&type=m3u_plus
+Date: 26-07-2026
 
 
 
 
 
-http://filex.me:8080/get.php?username=@alexchong1&password=Sje8jL4HZx6Z&type=m3u_plus
-
-http://fiufiu.live/get.php?username=0341905&password=4683569&type=m3u_plus
-
-http://flipex.pro:80/get.php?username=6281168685&password=ujymk21zo9u0&type=m3u_plus
-
-http://flipex.pro:80/get.php?username=6296926&password=62956925925&type=m3u_plus
-
-http://flipex.pro:80/get.php?username=6738784994&password=88498838893&type=m3u_plus
+http://zerotv.eu:8080/get.php?username=dXYJYnzaaG&password=8zGCUfo9me&type=m3u_plus&output=ts
+http://zerotv.eu:8080/get.php?username=aNDY6JaN&password=hpqAnwHXc8BY&type=m3u_plus&output=ts
+http://zerotv.eu:8080/get.php?username=pSmj5m72xv&password=yyacwwcezj&type=m3u_plus&output=ts
 
 http://flipex.pro:80/get.php?username=6bj2iQpt&password=dSKHNSHY&type=m3u_plus
 
