@@ -133,7 +133,7 @@ https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
 #EXTINF:-1 tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2022/3/21/1647846719088_381.png" group-title="SPORTS",CCTV 5
 https://live01-cn-ali.bvjicd.com/live/79361366.m3u8
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/2026_FIFA_World_Cup_emblem.svg/330px-2026_FIFA_World_Cup_emblem.svg.png" group-title="Entertainment",Zee Bangla Sonar
+#EXTINF:-1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Bangla_Cinema.png" group-title="Entertainment",Zee Bangla Sonar
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8
 
 #EXTINF:-1 tvg-logo="https://assets.goal.com/images/v3/blt965b95412976cfad/TUDN.avif?auto=webp&format=pjpg&width=750&quality=60" group-title="SPORTS",TUDN
@@ -173,7 +173,7 @@ https://andro.226503.xyz/checklist/androstreamlivebs3.m3u8
 #EXTINF:-1 tvg-id="beinsports4" tvg-name="beIN Sports 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BeIN_Sports_logo_%28horizontal_version%29.svg/500px-BeIN_Sports_logo_%28horizontal_version%29.svg.png" group-title="Sports",beIN Sports 4
 https://andro.226503.xyz/checklist/androstreamlivebs4.m3u8
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/bn/7/70/%E0%A6%9C%https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Bangla.png" group-title="",nick bengali
+#EXTINF:-1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Bangla.png" group-title="",nick bengali
 https://jioplaylistdown.yecic62314.workers.dev/live.m3u8?id=1341
 
 #EXTINF:-1 tvg-logo="https://www.sonyaath.com/assets/media/images/AathLogo.png" group-title="INDIAN BANGLA",Sony Aath (BC)
