@@ -2,7 +2,14 @@ opplex- https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playli
 20000+Movies & Channel- https://raw.githubusercontent.com/opensourceflix/OpenSourceFlix/refs/heads/main/iptv.m3u8,Use Ns Player ♨️
 Indian 4k- https://raw.githubusercontent.com/ahan443/FAST-IPTV/refs/heads/main/Indian.m3u,Playlist 
 Fifa special - https://raw.githubusercontent.com/sanjoykb/-KB-TV-Playlist/refs/heads/main/Github%20Auto%20Update%20Channel.m3u
+Akash GO Live TV — Auto Update, Auto Channel, Exp: Unknown
+https://raw.githubusercontent.com/srhady/Hady/refs/heads/main/akash_live.m3u
 
+FanCode BD — Auto Update, Auto Channel, Bangladesh Only, All Resolutions Supported, Exp: Unknown
+https://raw.githubusercontent.com/srhady/Fancode-bd/refs/heads/main/main_playlist.m3u
+
+SonyLiv Live Event — Auto Update, Auto Event Channel, Live Events, Exp: Unknown
+https://raw.githubusercontent.com/srhady/SonyLiv/refs/heads/main/sonyliv_playlist.m3u
 Auto update, 200+ channel - https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
 
 Fifa special - https://raw.githubusercontent.com/Monjil404/TVspo/refs/heads/main/tvs,use vlc,ns player
