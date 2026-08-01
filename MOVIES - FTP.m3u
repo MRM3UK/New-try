@@ -7,8 +7,8 @@ http://103.191.99.248:5550/301/index.m3u8
 
 
 
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Indian Bangla",Star Jalsha HD
-https://biostartvworld.pages.dev/api/key/aHR0cHM6Ly95dXBwdHZjYXRjaHVwaXJlLnl1cHBjZG4ubmV0L3ByZXZpZXcvc3RhcmphbHNoYS8xODAwLm0zdTh8fHx8fHx7fQ/1800.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Indian Bangla",Star Jalsha HD (iptvidn)
+http://circleplaylists.geoclaster.xyz:8082/Star_jalsha/tracks-v1a1/mono.m3u8
 
 
 
