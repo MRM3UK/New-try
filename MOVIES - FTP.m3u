@@ -3,6 +3,7 @@
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Indian Bangla",Star Jalsha HD
 http://172.19.17.34:80/play/JmU-3pCgErAiWP5dU8MsA8PwkV3_HSXlG7wgILF5Hbk/ts
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/10/Z_Bangla_logo.jpg?20250607164238" group-title="Indian Bangla",Zee Bangla HD
+http://circleplaylists.geoclaster.xyz:8082/zee-bangla/index.m3u8
 http://103.191.99.248:5550/301/index.m3u8
 
 
@@ -25,7 +26,7 @@ http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Indian Bangla",Star Jalsha HD
 http://103.191.99.248:5550/302/index.m3u8
 #EXTINF:-1 tvg-logo="https://tollytales.com/wp-content/uploads/2025/08/Zee-Launches-Hybrid-Bengali-Channel-Zee-Bangla-Sonar-For-Modern-Viewers-768x403.webp" group-title="Indian Bangla",Zee Bangla Sonar
-http://103.191.99.248:5550/305/index.m3u8
+http://circleplaylists.geoclaster.xyz:8082/ZEE-BANGLA-CINEMA/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/64/Sony_Aath_Logo.png" group-title="Indian Bangla",Sony Aath
 https://stream.ottplus.bd/live/sony_aath_abr/live/sony_aath_720/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ary_Digital_Logo.png/330px-Ary_Digital_Logo.png" group-title="",ARY digital
