@@ -9,6 +9,18 @@ http://circleplaylists.geoclaster.xyz:8082/Star_jalsha/tracks-v1a1/mono.m3u8
 http://30.30.30.138:8088/302/tracks-v1a1/mono.m3u8?token=2cf3fd509a2c263ed91bda2dae5a8645aec321e7-765f64baddc6657d6e24a0650cc7e8a1-6781614684-1781611084
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/bn/7/70/%E0%A6%9C%E0%A6%B2%E0%A6%B8%E0%A6%BE_%E0%A6%AE%E0%A7%81%E0%A6%AD%E0%A6%BF%E0%A6%9C%E0%A7%87%E0%A6%B0_%E0%A6%B2%E0%A7%8B%E0%A6%97%E0%A7%8B.png" group-title="BDIX 11 PLUS",Jalsha Movies HD
 http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8
+
+
+
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/ef/Star_Jalsha_logo_2023.png?20230625063343" group-title="Indian Bangla",Star Jalsha (BC-2)
+http://103.165.93.31:8095/starJalsha/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Indian Bangla",Somoy(BC)
+http://103.165.93.31:8095/somoyTv/index.m3u8
+#EXTINF:-1 tvg-logo="" group-title="Indian Bangla",zee bangla
+http://103.165.93.31:8095/zeeBangla/tracks-v1a1/mono.m3u8
+
+
 #EXTINF:-1 tvg-logo="https://tollytales.com/wp-content/uploads/2025/08/Zee-Launches-Hybrid-Bengali-Channel-Zee-Bangla-Sonar-For-Modern-Viewers-768x403.webp" group-title="Indian Bangla",Zee Bangla Sonar
 http://circleplaylists.geoclaster.xyz:8082/ZEE-BANGLA-CINEMA/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/64/Sony_Aath_Logo.png" group-title="Indian Bangla",Sony Aath
