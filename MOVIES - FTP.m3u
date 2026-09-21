@@ -3,6 +3,15 @@
 
 
 
+#EXTM3U
+#EXTINF:-1 tvg-logo="" group-title="",Star Jalsha [temp]
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+#EXTINF:-1 tvg-logo="" group-title="",Jamuna TV [temp]
+https://tv.kbhub.online/Bangladesh/Jamuna-TV.m3u8
+#EXTINF:-1 tvg-logo="" group-title="",Sony Aath
+https://tv4.udiqipuw544.workers.dev/cdn/live/sonyaath/playlist.m3u8?hdnea=exp=1789995676~acl=/*~id=91711382199657279678206105189661~hmac=f7f30707b74d098de4ffdd1ce18782ea88377de19e64253d7b730076cd1e4dc9
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/1KMxFBOIo64MT4Elqo8k50gdH2G.jpg" group-title="",Zee Bangla
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/ZeeBanglaHD.m3u8
 
 
 
