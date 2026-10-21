@@ -1,30 +1,25 @@
-Date: 
+Date: 22-10-2026
 
 
 
 
 
 
- 
+ http://filex.me:8080/get.php?username=5143626&password=6263415&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=1441776694544&password=de8ec0fa694a&type=m3u_plus&output=ts
+http://royaltv.world:25461/get.php?username=T6013&password=4432&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=98176548485754&password=wpjr7hj2f5a3&type=m3u_plus&output=ts
+http://af4k.sbs:8080/get.php?username=18012689&password=77561563&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=6321786904471&password=afe4b6d7deb5&type=m3u_plus&output=ts
+http://ornek.live:2082/get.php?username=8929769465&password=8929769465&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=qbSMSENjvVg6&password=Zfk9mAP7uTcJ&type=m3u_plus&output=ts
+http://ornek.live:2082/get.php?username=8929769465&password=8929769465&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=551669619253587057&password=271669619253587&type=m3u_plus&output=ts
+http://ornek.live:2082/get.php?username=R8725966R7&password=R8725966R7&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=1&password=1&type=m3u_plus&output=ts
+http://cmskos.bekaks.net:777/get.php?username=Ekremi_Belgjik&password=K1zy2KjUFf&type=m3u_plus&output=ts
 
-http://neoyjpw.top:8080/get.php?username=551669619253587057&password=271669619253587&type=m3u_plus&output=ts
-
-http://neoyjpw.top:8080/get.php?username=antonio&password=antonio&type=m3u_plus&output=ts
-
-
-
+http://cmskos.bekaks.net:777/get.php?username=ArsimHaziri&password=l3gbNIN6ao2&type=m3u_plus&output=ts
 
 
 
@@ -41,18 +36,39 @@ opplex
 
 https://raw.githubusercontent.com/johirxofficial/otv-auto-updated-playlist/main/otv.m3u
 
-Player ♨️
-Indian 4k- https://raw.githubusercontent.com/ahan443/FAST-IPTV/refs/heads/main/Indian.m3u,Playlist 
-Emni - https://raw.githubusercontent.com/sanjoykb/-KB-TV-Playlist/refs/heads/main/Github%20Auto%20Update%20Channel.m3u
-Akash GO Live TV - https://raw.githubusercontent.com/srhady/Hady/refs/heads/main/akash_live.m3u,use NS player
-Akash go - https://go.skym3u.top/94x6.m3u,credit :skym3u.top
-FanCode BD - https://raw.githubusercontent.com/srhady/Fancode-bd/refs/heads/main/main_playlist.m3u
 
-SonyLiv Live Event - https://raw.githubusercontent.com/srhady/SonyLiv/refs/heads/main/sonyliv_playlist.m3u
-Auto update, 200+ channel - https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
+Indian 4k- 
+
+https://raw.githubusercontent.com/ahan443/FAST-IPTV/refs/heads/main/Indian.m3u,Playlist 
+
+Emni - 
+
+https://raw.githubusercontent.com/sanjoykb/-KB-TV-Playlist/refs/heads/main/Github%20Auto%20Update%20Channel.m3u
+
+
+Akash GO Live TV - 
+
+https://raw.githubusercontent.com/srhady/Hady/refs/heads/main/akash_live.m3u,use NS player
+
+Akash go - 
+
+https://go.skym3u.top/94x6.m3u,credit :skym3u.top
+
+FanCode BD - 
+
+https://raw.githubusercontent.com/srhady/Fancode-bd/refs/heads/main/main_playlist.m3u
+
+SonyLiv Live Event - 
+https://raw.githubusercontent.com/srhady/SonyLiv/refs/heads/main/sonyliv_playlist.m3u
+
+Auto update, 200+ channel - 
+
+https://github.com/abusaeeidx/Mrgify-BDIX-IPTV/raw/main/playlist.m3u
 
 Fifa special - https://raw.githubusercontent.com/Monjil404/TVspo/refs/heads/main/tvs,use vlc,ns player
 
-Auto Update, 1500+ channel,  Exp : no - https://iptv-org.github.io/iptv/categories/sports.m3u
+Auto Update, 1500+ channel,  Exp : no - 
+
+https://iptv-org.github.io/iptv/categories/sports.m3u
 
 
