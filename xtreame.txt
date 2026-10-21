@@ -8,32 +8,15 @@ Date:
  
 
 
-
-http://abda.in:80/get.php?username=9837enzo1&password=76915519&type=m3u_plus&output=m3u8
-http://line.tvforrall.com:80/get.php?username=ed1fffea60&password=1c634b3eb3fa&type=m3u_plus&output=m3u8
-http://neospaxy.top:8080/get.php?username=541701522742001&password=11701522742196&type=m3u_plus&output=m3u8
-
-http://c.overboxtv.com:8080/get.php?username=6er2b8X1DE&password=8g3kMvrB47&type=m3u_plus
-http://v1v.click:80/get.php?username=hmx&password=44kaux0zI&type=m3u_plus
-http://luxus-iptv.xyz:8000/get.php?username=HakanKara01&password=XGuSAvs5Kc&type=m3u_plus
-http://206.212.244.54/get.php?username=queens&password=queens&type=m3u_plus
-http://atpxnzes.top:8080/get.php?username=vod7081772823750&password=bb2c3998b544&type=m3u_plus
-http://bo.ib3mix.com:8080/get.php?username=emmanuel38322&password=emmanuel94522&type=m3u_plus&output=m3u8
-http://lmdns.online:80/get.php?username=b2umkc&password=rzx2ay&type=m3u_plus&output=m3u8
-http://aiotv.site:80/get.php?username=5e05755540&password=36658b10fff1&type=m3u_plus&output=m3u8
-http://vukmei.in:80/get.php?username=w4rNdd&password=gEmuPX&type=m3u_plus&output=m3u8
-
-http://smar8-tv.xyz:8880/get.php?username=at80%40sb13.org&password=uuRucKWT3d&type=m3u_plus
-
-http://realsport.scalecdn.co:8080/get.php?username=John2022&password=John2022&type=m3u
-
-http://fastrunner.live:8080/get.php?username=2rSvsynKRJ&password=5GHeYZFNwI&type=m3u
-
-http://10k.lucastv.pro/get.php?username=2c99755ae255&password=gJnMAT2&type=m3u_plus
-
-http://rjcf.ofztvxv.top:8080/get.php?username=VIP01671713459308006&password=0c4b47ec8323&type=m3u_plus
-
-http://nxtportal.xyz:8080/get.php?username=gFpqqnJY&password=k6YwDtG&type=m3u_plus
+http://rafmix.org:80/get.php?username=Z72pDp&password=Yw48cW&type=m3u_plus
+http://dreamteev.xyz:80/get.php?username=8CJ9JQ5P96B8E0B&password=3dkDuW41QB&type=m3u_plus
+http://cf.8kiptv.space/get.php?username=5a8976a93be8&password=0f3748bfb4&type=m3u_plus&output=ts
+http://cf.8kiptv.space/get.php?username=2fef471fe518&password=4f45cb2bc3&type=m3u_plus&output=ts
+http://cf.8kiptv.space/get.php?username=2bd964706452&password=3929de92d3&type=m3u_plus&output=ts
+http://cf.8kiptv.space/get.php?username=4398f4529564&password=daf53b0a79&type=m3u_plus&output=ts
+http://cf.8kiptv.space/get.php?username=4f2d73dbe1c1&password=5156bf416f&type=m3u_plus&output=ts
+http://cf.8kiptv.space/get.php?username=650e7a2eeb55&password=05681a1976&type=m3u_plus&output=ts
+http://cf.8kiptv.space/get.php?username=3a5344ba9536&password=69d6144991&type=m3u_plus&output=ts
 
 
 
