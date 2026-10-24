@@ -1,28 +1,19 @@
-Date: 22-10-2026
+Date: 
 
-
-
-
-
-
- http://filex.me:8080/get.php?username=5143626&password=6263415&type=m3u_plus&output=ts
-
-http://royaltv.world:25461/get.php?username=T6013&password=4432&type=m3u_plus&output=ts
-
-http://af4k.sbs:8080/get.php?username=18012689&password=77561563&type=m3u_plus&output=ts
-
-http://ornek.live:2082/get.php?username=8929769465&password=8929769465&type=m3u_plus&output=ts
-
-http://ornek.live:2082/get.php?username=8929769465&password=8929769465&type=m3u_plus&output=ts
-
-http://ornek.live:2082/get.php?username=R8725966R7&password=R8725966R7&type=m3u_plus&output=ts
-
-http://cmskos.bekaks.net:777/get.php?username=Ekremi_Belgjik&password=K1zy2KjUFf&type=m3u_plus&output=ts
-
-http://cmskos.bekaks.net:777/get.php?username=ArsimHaziri&password=l3gbNIN6ao2&type=m3u_plus&output=ts
-
-
-
+http://23.153.217.158:8080/get.php?username=945259507tv&password=qwsvtad73&type=m3u_plus&output=ts
+http://justmeme.net:8080/get.php?username=Daniela_Dumitrescu&password=hduDfADQWC&type=m3u_plus&output=ts
+http://ipc.proipciptv.com:8000/get.php?username=54155454&password=93jbVynh9x&type=m3u_plus&output=ts
+http://rumxb.top/get.php?username=650185397344&password=485522978179&type=m3u_plus&output=ts
+http://watchall.live/get.php?username=MAGD919586&password=MAGF739K48&type=m3u_plus&output=ts
+http://ablouch.tvct.net/get.php?username=X74LGMKEKL&password=KLXCHYCNZ6&type=m3u_plus&output=ts
+http://benstv2025.art:8080/get.php?username=Sonerkaradag&password=fggcfJtPgh&type=m3u_plus&output=ts
+http://ciresebune.com:8080/get.php?username=Popa_Ionel&password=eu3ksNp&type=m3u_plus&output=ts
+http://stkip.ddns.me:2082/get.php?username=Americamedel&password=wUthULteBHcg&type=m3u_plus&output=ts
+http://ccvopojh.top:8080/get.php?username=VIP0126170043267734&password=78642df3dd34&type=m3u_plus&output=ts
+http://ipc.jaba.tv:8000/get.php?username=KcG24XPGfxA7&password=7YMg6N3WSZ&type=m3u_plus&output=ts
+http://ekonomtv.com:25461/get.php?username=sp112&password=10102040&type=m3u_plus&output=ts
+http://g-tv.cx:1991/get.php?username=KARABATOUCANADA2&password=Ka10r4fus6&type=m3u_plus&output=ts
+http://btpan.net/get.php?username=revertonpapi&password=16981288083&type=m3u_plus&output=ts
 
 
 
