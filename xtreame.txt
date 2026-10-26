@@ -1,15 +1,19 @@
 Date: 
 
-http://tv.streamid.tv:8080/get.php?username=carlocasanello62363&password=SbqlozoQ0h&type=m3u_plus&output=ts
-http://tv.streamid.tv:8080/get.php?username=Yoselin23flores&password=4hHyXrJqaH&type=m3u_plus&output=ts
-http://activefrance.net/get.php?username=267581143F18&password=6C939C99D5AE&type=m3u_plus&output=ts
-http://m3u.drm-26.com/get.php?username=Mkdtv1_279893&password=i7uk9ShL&type=m3u_plus&output=ts
-http://s.conecty.in/get.php?username=11985453898luis03&password=u74psm3sf&type=m3u_plus&output=ts
-http://abd2022.xyz/get.php?username=8T4Y5Z3Z1P658H4&password=QS3s2nhJQG&type=m3u_plus&output=ts
-http://localiptv.site:85/get.php?username=lacigalfov&password=lacigalfov&type=m3u_plus&output=ts
-http://tomixe.in/get.php?username=ousmadiat104&password=7D433DC61AC0&type=m3u_plus&output=ts
-http://4kgood.org/get.php?username=Yaya112_454628&password=Wq2u6e9p&type=m3u_plus&output=ts
-http://vip8.sharkgate.xyz/get.php?username=7949770923&password=0238215923&type=m3u_plus&output=ts
+http://ekonomtv.com:25461/get.php?username=FZL0531&password=188639961&type=m3u_plus&output=ts
+http://directo.ddns.me:33200/get.php?username=azplay453&password=75662763&type=m3u_plus&output=ts
+http://4kgood.org/get.php?username=fid4w4teyz&password=zdzq8cy2rr&type=m3u_plus&output=ts
+http://shqip.cc/get.php?username=BJHJHZA&password=4CV91VW&type=m3u_plus&output=ts
+http://vca.easy747.com/get.php?username=8SLX441GN6RC429&password=RP54HCni8C&type=m3u_plus&output=ts
+http://94.130.11.12:8080/get.php?username=%40Tv4Krestream&password=P5PDqBW9ySze&type=m3u_plus&output=ts
+http://shqip.cc/get.php?username=BJHJHZA&password=4CV91VW&type=m3u_plus&output=ts
+http://lovebricks.online/get.php?username=MAG7S7L5KR&password=MAG3YWWME3&type=m3u_plus&output=ts
+http://iptv.amberme.xyz:8000/get.php?username=FRfz5947&password=uMp15337&type=m3u_plus&output=ts
+http://kwick.cc:8080/get.php?username=twan1&password=twan1&type=m3u_plus&output=ts
+http://59984472.ultimate.cx/get.php?username=Z48Z57G5&password=7277364&type=m3u_plus&output=ts
+http://23.153.217.158:8080/get.php?username=56991789162&password=07042023zero&type=m3u_plus&output=ts
+http://31.43.191.125:8080/get.php?username=VIP01711763046701115&password=6001f202b22b&type=m3u_plus&output=ts
+http://ekonomtv.com:25461/get.php?username=Emin0328&password=Murad0502268626&type=m3u_plus&output=ts
 
 
 
