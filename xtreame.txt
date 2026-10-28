@@ -1,15 +1,13 @@
 Date: 
 
-http://ekonomtv.com:25461/get.php?username=FZL0531&password=188639961&type=m3u_plus&output=ts
-http://directo.ddns.me:33200/get.php?username=azplay453&password=75662763&type=m3u_plus&output=ts
-http://4kgood.org/get.php?username=fid4w4teyz&password=zdzq8cy2rr&type=m3u_plus&output=ts
-http://shqip.cc/get.php?username=BJHJHZA&password=4CV91VW&type=m3u_plus&output=ts
-http://vca.easy747.com/get.php?username=8SLX441GN6RC429&password=RP54HCni8C&type=m3u_plus&output=ts
-http://94.130.11.12:8080/get.php?username=%40Tv4Krestream&password=P5PDqBW9ySze&type=m3u_plus&output=ts
-http://shqip.cc/get.php?username=BJHJHZA&password=4CV91VW&type=m3u_plus&output=ts
-http://lovebricks.online/get.php?username=MAG7S7L5KR&password=MAG3YWWME3&type=m3u_plus&output=ts
-http://iptv.amberme.xyz:8000/get.php?username=FRfz5947&password=uMp15337&type=m3u_plus&output=ts
-http://kwick.cc:8080/get.php?username=twan1&password=twan1&type=m3u_plus&output=ts
+http://lionpoweriptv.com/get.php?username=KDHBTYMV&password=U741XAMH&type=m3u_plus&output=ts
+http://maroc.iptvboss.net/get.php?username=chicard&password=vkjsPZPSlH&type=m3u_plus&output=ts
+http://markethelp1.com/get.php?username=sree1602&password=9196sree&type=m3u_plus&output=ts
+http://mana.etnoselo.tv:25461/get.php?username=YP2We8qxWu&password=56EeSXW2VF&type=m3u_plus&output=ts
+http://mantul.biz.id:8888/get.php?username=238&password=832&type=m3u_plus&output=ts
+http://my.atrupo4k.com/get.php?username=04b9e3f00f77&password=YOxpcckwbdczXho&type=m3u_plus&output=ts
+http://premium-pro2.com:8789/get.php?username=edwi&password=8467846&type=m3u_plus&output=ts
+http://p-vision.xyz/get.php?username=Kocmetin&password=3yyQPu3BE7&type=m3u_plus&output=ts
 http://59984472.ultimate.cx/get.php?username=Z48Z57G5&password=7277364&type=m3u_plus&output=ts
 http://23.153.217.158:8080/get.php?username=56991789162&password=07042023zero&type=m3u_plus&output=ts
 http://31.43.191.125:8080/get.php?username=VIP01711763046701115&password=6001f202b22b&type=m3u_plus&output=ts
@@ -47,7 +45,7 @@ https://go.skym3u.top/94x6.m3u,credit :skym3u.top
 
 FanCode BD - 
 
-https://raw.githubusercontent.com/srhady/Fancode-bd/refs/heads/main/main_playlist.m3u
+https://raw.githubusercontent.com/doctor-8trange/zyphx8/refs/heads/main/data/fancode.m3u
 
 SonyLiv Live Event - 
 https://raw.githubusercontent.com/srhady/SonyLiv/refs/heads/main/sonyliv_playlist.m3u
