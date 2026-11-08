@@ -1,4 +1,15 @@
 Date: 
+
+
+http://123tv.pro/get.php?username=aB0jpxAE&password=jbYBgxs&type=m3u_plus&output=ts
+http://igettv.xyz/get.php?username=941409050617902&password=9304385246&type=m3u_plus&output=ts
+http://ex.guteex.com:8000/get.php?username=cumhuramazon1811&password=xg1YcqP3rBx5dEou&type=m3u_plus&output=ts
+http://live.cloudstreamiptv.com/get.php?username=fp6rcwjbpu&password=RWnzfp4PrV&type=m3u_plus&output=ts
+http://quebecfasttv.vg/get.php?username=9N2JCPS8UCG4D53&password=K1psvcd9nB&type=m3u_plus&output=ts
+http://othroad.com/get.php?username=MAGCPPP7R7&password=MAGSWZHJTH&type=m3u_plus&output=ts
+http://ekonomtv.com:25461/get.php?username=bb825&password=827652&type=m3u_plus&output=ts
+http://nordicstream.xyz:2095/get.php?username=yGXEMBR7&password=heTwf9yQ&type=m3u_plus&output=ts
+
 http://emcshysy.qinndns.com/get.php?username=HUSZXG7J&password=1PUQ671L&type=m3u_plus&output=ts
 http://venexuw.com:8080/get.php?username=hmdkong794&password=5QVJC8dWssTVbh3&type=m3u_plus&output=ts
 http://38hacibaba38.gentv.to:8080/get.php?username=ArianTairi&password=JexIujaTrf&type=m3u_plus&output=ts
@@ -6,11 +17,6 @@ http://gold-tech.xyz/get.php?username=MAGMZL7SBX&password=4WcxE9SLSS&type=m3u_pl
 http://4host.cc:8080/get.php?username=abouxaraab&password=es78242&type=m3u_plus&output=ts
 http://gold-tech.xyz/get.php?username=MAG9B3U85U&password=hrBDFhxA98&type=m3u_plus&output=ts
 
-
-http://iptvch.com:2082/get.php?username=MI6m7jdHNww&password=tUSgBGZcpB&type=m3u_plus
-http://iptvch.com:2082/get.php?username=Mohdarwich12&password=Mohdarwich21&type=m3u_plus
-http://iptvch.com:2082/get.php?username=HansNarkander12&password=HansNarkander21&type=m3u_plus
-http://iptvch.com:2082/get.php?username=radhouane&password=514218754&type=m3u_plus
 http://iptvch.com:2082/get.php?username=Hananet&password=JUJT9zt2bR5P&type=m3u_plus
 http://iptvch.com:2082/get.php?username=mahmoudabd&password=greatlive2141&type=m3u_plus
 
