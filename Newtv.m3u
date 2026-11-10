@@ -4,6 +4,14 @@ https://livetv.shamon-cable.net:8443/Star-select-2/tracks-v1a1/mono.m3u8
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/%E0%A6%9C%E0%A6%BF_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB.svg/250px-%E0%A6%9C%E0%A6%BF_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A7%A8%E0%A7%A6%E0%A7%A8%E0%A7%AB.svg.png?utm_source=bn.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" group-title="",Zee Bangla
 https://d1rc86nwwc9fag.cloudfront.net/260723/smil:zeebangla.smil/chunklist_b896000.m3u8
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Star_Jalsha_logo_2023.png/500px-Star_Jalsha_logo_2023.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" group-title="",Star Jalsha
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starjalsha.smil/chunklist_b1928000.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/ur/f/f4/Green_Entertainment_logo.jpg?utm_source=ur.wikipedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20230702081523" group-title="Livezone",Green Entertainment
+https://cdn4.mjunoon.tv:8087/streamtest/166M/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Ary_Digital_Logo.png/330px-Ary_Digital_Logo.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" group-title="",Ary Digital
+https://cdn4.mjunoon.tv:8087/streamtest/84M/chunks.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/e/e4/Hum_TV_2013.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" group-title="",Hum TV
 https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/HUM/TV3/chunks_dvr.m3u8
