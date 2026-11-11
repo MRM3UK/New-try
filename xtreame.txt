@@ -1,18 +1,15 @@
 Date: 
-
+Adult http://tv.dimaiptv.com/get.php?username=Lexdec74&password=Santos12&type=m3u_plus&output=ts
+http://dns.mmtv.me/get.php?username=teste&password=teste&type=m3u_plus&output=ts
+http://pro.livepro2.com:2095/get.php?username=Ihsandastan&password=8cPNZuv5pi5CSj&type=m3u_plus&output=ts
+http://goldott.org/get.php?username=5BKP5MJB763N7BD&password=0cDq2Im7F5&type=m3u_plus&output=ts
+http://fr.magtr.cc/get.php?username=2269343749351058&password=2269343749351058&type=m3u_plus&output=ts
 
 http://1.iptv11.is/get.php?username=K51269Y5089A&password=t3e7e49Uku&type=m3u_plus&output=ts
 http://fanja3006tv.net/get.php?username=Q37VCZH&password=t0Ksm5V6Zj&type=m3u_plus&output=ts
 http://sxstreem.net/get.php?username=1XQ85YRLXEC4263&password=Wj9D3CYnmg&type=m3u_plus&output=ts
 http://23.153.217.158:8080/get.php?username=966187619tv&password=1dba63&type=m3u_plus&output=ts
 http://hyper.de1-eu.com:8000/get.php?username=kseV2246&password=KMK23423&type=m3u_plus&output=ts
-http://whalesayblue.top/get.php?username=DFRP5VFBFD1HL23&password=EOZoPskVMs&type=m3u_plus&output=ts
-http://lordstreams.live/get.php?username=Daneille&password=aLK2rw5gZLG2&type=m3u_plus&output=ts
-http://lordstreams.live/get.php?username=Dev&password=Dev&type=m3u_plus&output=ts
-http://lordstreams.live/get.php?username=Lap&password=Lap&type=m3u_plus&output=ts
-http://lordstreams.live/get.php?username=Pat123&password=Pat123&type=m3u_plus&output=ts
-
-
 
 
 
