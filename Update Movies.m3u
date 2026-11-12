@@ -1,20 +1,21 @@
 
-#EXTM3U
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/46/462c25cdb3521248dde39180e009a005eff41baa.webp" group-title="Movies",Jailer 2
-https://movie.ctgfun.com/disk4/South%20Indian%20Movies/Jailer-2%20(2026)%20Hindi%20Tamil%201080p%20HDRip%20x264%20ESub%20%5bDDN%5d/Jailer-2%20(2026)%20Hindi%20Tamil%201080p%20HDRip%20x264%20ESub%20%5bDDN%5d.mp4
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/f9/f9252ef39e5d469f97999aed9bd8ead29ac4a234.webp" group-title="Movies",Blind Game
-https://ftp.ctgfun.com/Indian/Hindi%20Movies/Blind%20Game%20%282026%29%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Blind%20Game%20%282026%29%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/42/42c4114bfd5a64ea9c24e737e28c580d4495c173.webp" group-title="Movies",Babystar
-https://ftp.ctgfun.com/Others/European%20Movies/Babystar%20%282025%29%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Babystar%20%282025%29%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/e0/e0dfdea549b2a4c347b67745298c3feb6d1f1d32.webp" group-title="Movies",Universe Designed
-https://ftp.ctgfun.com/English/Universe%20Designed%20%282025%29%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Universe%20Designed%20%282025%29%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/04/0473f2799bac66612754bc962167eef165e4be3b.webp" group-title="Movies",Atonement
-https://ftp.ctgfun.com/English/Atonement%20%282026%29%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Atonement%20%282026%29%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/02/02c18255714b78af493aae446001af22cb9bc96f.webp" group-title="Movies",Ignition
-https://ftp.ctgfun.com/English/Ignition%20%282026%29%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Ignition%20%282026%29%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/4e/4e9cc5a72d6803bf52c911f55c6e1c62aa371d79.webp" group-title="Movies",Kankaan De Ohle
-https://ftp.ctgfun.com/Indian/Hindi%20Movies/Kankaan%20De%20Ohle%20%282026%29%20Punjabi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Kankaan%20De%20Ohle%20%282026%29%20Punjabi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+##EXTM3U
+#PLAYLIST:My Metflix Playlist
 
+#EXTINF:-1 tvg-id="ctg::https://ctgmovies.com/movies/supernowa" tvg-name="Supernowa" tvg-logo="https://ctgmovies.com/imgcache/35/358aadf6073995f38be44b0d23a20b6c996d7334.webp" group-title=""Super" Nowa Ohini, a gifted 12-year-old who prefers to stay unseen, is pushed into a major competition by a new teacher and her brother. To move forward, she must confront the taunting figure born from her anxiety and decide whether to keep hiding or finally step into her own light.",Supernowa
+ctg::https://ctgmovies.com/movies/supernowa
+
+#EXTINF:-1 tvg-id="ctg::https://ctgmovies.com/movies/ralph-s-perfekt-christmas" tvg-name="Ralph's Perfekt Christmas" tvg-logo="https://ctgmovies.com/imgcache/dc/dc6342efd9862fc78371456590261af94c8d21b8.webp" group-title="To win back his wife, Christmas-obsessed Ralph concocts a crazy plan to kidnap the washed-up child star of his favorite Christmas movie. His scheme goes awry and spirals darkly out of control in an outrageous dark comedy with a horror twist that reveals two sides of one very desperate man determined to have his "Perfekt Christmas," no matter what - even if it lands him on the Naughty List.",Ralph's Perfekt Christmas
+ctg::https://ctgmovies.com/movies/ralph-s-perfekt-christmas
+
+#EXTINF:-1 tvg-id="ctg::https://ctgmovies.com/movies/the-cycle-of-love" tvg-name="The Cycle of Love" tvg-logo="https://ctgmovies.com/imgcache/55/5550cae1e4bef993174ba586239b2b9f1fd32447.webp" group-title="Explores the romantic journey of PK Mahanandia, a Delhi street artist who trekked 6,000 miles by bicycle in 1977, venturing across continents to reunite with the woman he loved.",The Cycle of Love
+ctg::https://ctgmovies.com/movies/the-cycle-of-love
+
+#EXTINF:-1 tvg-id="ctg::https://ctgmovies.com/movies/jailer-2" tvg-name="Jailer 2" tvg-logo="https://ctgmovies.com/imgcache/46/462c25cdb3521248dde39180e009a005eff41baa.webp" group-title="When a dangerous syndicate expands its reach to threaten his family's peace, retired jailer Tiger Muthuvel Pandian goes undercover as a driver. Operating from the shadows, he takes on ruthless new enemies to protect his home.",Jailer 2
+ctg::https://ctgmovies.com/movies/jailer-2
+
+#EXTINF:-1 tvg-id="ctg::https://ctgmovies.com/movies/sardaarji-3" tvg-name="Sardaarji 3" tvg-logo="https://ctgmovies.com/imgcache/4e/4e6a0b815aa173b3618fc1cffd38ce5ee67d257e.webp" group-title="Legendary ghosthunter Jaggi returns with his ghost buddy Pinky to take on a haunted English castle. As the spirit defies all rules and a dark secret comes to light, Jaggi faces his toughest challenge yet. Will he discover the truth before it's too late?",Sardaarji 3
+ctg::https://ctgmovies.com/movies/sardaarji-3
 
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/f9/f9252ef39e5d469f97999aed9bd8ead29ac4a234.webp" group-title="Movies",Blind Game
