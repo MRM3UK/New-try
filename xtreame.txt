@@ -1,16 +1,13 @@
 Date: 
-http://megatv5074.com:80/get.php?username=02926AD784327A0&password=fa9yZrXklw&type=m3u_plus
-http://megatv5074.com:80/get.php?username=2BRE4RQJ4JJ3HYX&password=bjmTAtFkfI&type=m3u_plus
-http://megatv5074.com:80/get.php?username=37XK56RPPA4ESY4&password=WQ80IVhKvr&type=m3u_plus
-http://megatv5074.com:80/get.php?username=3KRSA1DTXX8N5CF&password=wGOfmMDnVr&type=m3u_plus
-http://megatv5074.com:80/get.php?username=430834571696283&password=57URoE9Lii&type=m3u_plus
-http://megatv5074.com:80/get.php?username=511441353125991&password=3VFrh1xsvI&type=m3u_plus
-
-Adult http://tv.dimaiptv.com/get.php?username=Lexdec74&password=Santos12&type=m3u_plus&output=ts
-http://dns.mmtv.me/get.php?username=teste&password=teste&type=m3u_plus&output=ts
-http://pro.livepro2.com:2095/get.php?username=Ihsandastan&password=8cPNZuv5pi5CSj&type=m3u_plus&output=ts
-http://goldott.org/get.php?username=5BKP5MJB763N7BD&password=0cDq2Im7F5&type=m3u_plus&output=ts
-http://fr.magtr.cc/get.php?username=2269343749351058&password=2269343749351058&type=m3u_plus&output=ts
+http://otx.arabitv5.com:8000/get.php?username=w9vYpAHT2BbW&password=HDH5mQQtGWX5&type=m3u_plus&output=ts
+http://wolvestv.net:8080/get.php?username=maherx24&password=x1754329&type=m3u_plus&output=ts
+http://12vult.top/get.php?username=298465371924&password=144785039171&type=m3u_plus&output=ts
+http://olympia.euro24.vip/get.php?username=d0%3Ad0%3A03%3A4d%3Aa1%3A48&password=8y0eq4vwqz&type=m3u_plus&output=ts
+http://u.goldeniptv.com:2052/get.php?username=0C55320203EF&password=8f98f521cdda&type=m3u_plus&output=ts
+http://kochhzbgb.rapid-cdn.net:8080/get.php?username=razvan_clienti&password=tyX3939CKTKp&type=m3u_plus&output=ts
+http://jerry.topcdn.cam:8080/get.php?username=nou2026&password=LEGRNrBrDbQZ&type=m3u_plus&output=ts
+http://mitv.netinc.org:8691/get.php?username=Iptv2552&password=J05fsW92&type=m3u_plus&output=ts
+http://superxlatino.com:8880/get.php?username=miguel731%409392&password=RZKmpzrje2&type=m3u_plus&output=ts
 
 
 
