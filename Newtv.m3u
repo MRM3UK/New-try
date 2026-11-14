@@ -1,8 +1,12 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/9f/2026_SAFF_Championship.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" group-title="SAFF CHAMPIONSHIP",Bangladesh VS Pakistan
+https://pull.niues.live/live/stream-9912138_lhd.m3u8?auth_key=1794672279-0-0-d7f104b894a279e98c05a88aae5810f3
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/9f/2026_SAFF_Championship.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" group-title="SAFF CHAMPIONSHIP",Bangladesh vs Pakistan  [T]
 https://tvsen5.aynaott.com/TnMn5kZz8aLmjklkk/index.m3u8
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/9f/2026_SAFF_Championship.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled" group-title="SAFF CHAMPIONSHIP",Bangladesh vs Pakistan  [B]
 https://nkafmbewiff.gpcdn.net/tile_2/master.m3u8
+
+
 
 
 
