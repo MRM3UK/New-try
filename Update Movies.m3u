@@ -1,5 +1,34 @@
 
-##EXTM3U
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/4c/4ce642ec5043b364b3095240b75cb9e3009e8e32.webp" group-title="Movies",Insecta
+https://data.ctgfun.com/disk10/disk10/MOVIES%201080p/EUROPEAN/Insecta%20%282026%29%20Spanish%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Insecta%20%282026%29%20Spanish%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/ed/ed874fea016d3bc9767209a4d6c986966a6f2d15.webp" group-title="Movies",Street Fighter
+https://movie.ctgfun.com/disk1/English%20Movies/2026/Street%20Fighter%20%282026%29%20Hindi%20Telugu%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Street%20Fighter%20(2026)%20Hindi%20Telugu%20English%201080p%20WEBRip%20x264%20ESub%20%5bDDN%5d.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/cc/cc0e8b261ea2891909e2e13d0911c67cb43fdfb0.webp" group-title="Movies",Avengers Endgame: Encore
+https://movie.ctgfun.com/disk1/English%20Movies/2019/Avengers%20Endgame%20Encore%20%282026%29%20Hindi%20English%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Avengers%20Endgame%20Encore%20(2026)%20Hindi%20English%201080p%20WEBRip%20x264%20ESub%20%5bDDN%5d.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/25/25678918f1e633b2cf442d04c5b04bbb3a4cc20a.webp" group-title="Movies",Parasakthi
+https://ftp.ctgfun.com/Indian/South%20Indian%20Movies/Parasakthi%20UNCENSORED%20%282026%29%20Hindi%20Telugu%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Parasakthi%20UNCENSORED%20%282026%29%20Hindi%20Telugu%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/d1/d14c4d2676e92dc3a789bed568a323adae9c3fdd.webp" group-title="Movies",Lucky Man
+https://ftp.ctgfun.com/Indian/South%20Indian%20Movies/Lucky%20Man%20%282023%29%20Hindi%20Tamil%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Lucky%20Man%20%282023%29%20Hindi%20Tamil%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/9f/9ffc5be812a5c4716e4b5c9e07a1945fb59072bb.webp" group-title="Movies",Software Sudheer
+https://movie.ctgfun.com/disk4/South%20Indian%20Movies/Software%20Sudheer%20%282019%29%20Hindi%20Telugu%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Software%20Sudheer%20(2019)%20Hindi%20Telugu%201080p%20WEBRip%20x264%20ESub%20%5bDDN%5d.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/96/96a796c7c80e5a4c6cc779303fff475fb65c319a.webp" group-title="Movies",Appan
+https://movie.ctgfun.com/disk4/South%20Indian%20Movies/Appan%20%282022%29%20Hindi%20Malayalam%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Appan%20(2022)%20Hindi%20Malayalam%201080p%20WEBRip%20x264%20ESub%20%5bDDN%5d.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/fa/faaef0160009a1934b07697ac208cae0593f03a4.webp" group-title="Movies",Never Surrender
+https://ftp.ctgfun.com/Others/Asian%20Movie/Never%20Surrender%20%282026%29%20Hindi%20English%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Never%20Surrender%20%282026%29%20Hindi%20English%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/f6/f69b20aab6dc7c106f41809d8052c6bb8b26b72f.webp" group-title="Movies",Prem Keetanu
+https://ftp.ctgfun.com/Indian/Hindi%20Movies/Prem%20Keetanu%20%282026%29%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Prem%20Keetanu%20%282026%29%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/b9/b9a58f67214b3442fa795f4694f172edd7e94b67.webp" group-title="Movies",Heartland
+https://ftp.ctgfun.com/English/Heartland%20%282026%29%20Hindi%20English%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Heartland%20%282026%29%20Hindi%20English%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/7f/7f466cdbe0f26ec93f42e477b4ed0a119bee3a06.webp" group-title="Movies",The Third Murder
+https://ftp.ctgfun.com/Indian/South%20Indian%20Movies/The%20Third%20Murder%20%282026%29%20Hindi%20Malayalam%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/The%20Third%20Murder%20%282026%29%20Hindi%20Malayalam%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/6a/6a4cafec278039eea80d9cf0358e239b8117cf1e.webp" group-title="Movies",Cold Storage
+https://movie.ctgfun.com/disk1/English%20Movies/2026/Cold%20Storage%20%282026%29%20Hindi%20English%201080p%20BluRay%20x264%20ESub%20%5BDDN%5D/Cold%20Storage%20(2026)%20Hindi%20English%201080p%20BluRay%20x264%20ESub%20%5bDDN%5d.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/a1/a1190ff145eb3f8f8800779df729b2ff78e57ab6.webp" group-title="Movies",Vibe
+https://data.ctgfun.com/disk10/disk10/MOVIES%201080p/HINDI/Vibe%20%282026%29%20Hindi%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Vibe%20%282026%29%20Hindi%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+#EXTINF:-1 tvg-logo="https://ctgmovies.com/imgcache/89/89d24190cb0d43397be7e8ead56421f0a2d1fe08.webp" group-title="Movies",Last Man in Tower
+https://data.ctgfun.com/disk10/disk10/MOVIES%201080p/HINDI/Last%20Man%20In%20Tower%20%282026%29%20Hindi%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Last%20Man%20In%20Tower%20%282026%29%20Hindi%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
+
 
 
 #EXTM3U
