@@ -1,17 +1,20 @@
 Date: 
 
 
-http://60900428.gitut.xyz:80/get.php?username=YASSINECHAR9&password=2047701&type=m3u_plus
-http://bouygues.r1v.us:8080/get.php?username=190450699530340&password=yW3DuvOfaolCA1d&type=m3u_plus&output=m3u8
-
-
-http://superp4.xyz:80/get.php?username=6885EQN8KFEYR4A&password=J9ZuFzRqqr&type=m3u_plus
-http://superp4.xyz:80/get.php?username=9C1LS4SWP357WZE&password=HMsNZ4Iy69&type=m3u_plus
-http://superp4.xyz:80/get.php?username=MAGL57NJQL&password=MAGC8FC3SD&type=m3u_plus
-http://superp4.xyz:80/get.php?username=SX5WN9N88S13V92&password=rZdiCCPWPD&type=m3u_plus
-http://3colorwasabi.xyz:80/get.php?username=indra&password=indra&type=m3u
-http://allprodtv.com:80/get.php?username=GTVW53N56EE57JG&password=5DA9IXkbfv&type=m3u
-
+http://ipc.proipciptv.com:8000/get.php?username=Haider.Ibrahim75&password=F5p7KJzLn2PJ&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=R6pQKkqJpJvb&password=4ySWY3CLzC92&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=haysm2020&password=6331534sd&type=m3u_plus
+http://ipc.proipciptv.com:8000//get.php?username=TalaatM&password=2iWYe&type=m3u_plus&output=ts
+http://ipc.proipciptv.com:8000/get.php?username=MohamedJenid&password=McjLr&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=54155454&password=93jbVynh9x&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=325465uz&password=tz4552415&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=l0PdTrBS73&password=PfZxZW9B5o&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=IBOTVNACHBAR0811&password=GAETHdtnrand&type=m3u_plus
+http://ipc.proipciptv.com:8000//get.php?username=thamer.alothman&password=alothman.542404&type=m3u_plus&output=ts
+http://ipc.proipciptv.com:8000/get.php?username=Abomustafahomse12&password=Nordenhamabodana2&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=TVRAEED2806&password=IUH654H&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=419102861&password=0152853700&type=m3u_plus
+http://ipc.proipciptv.com:8000/get.php?username=IBOBASSAMTV0712&password=rtttU15KIG14DVC&type=m3u_plus
 
 
 https://raw.githubusercontent.com/Rangon500/1234556/refs/heads/main/BDIX.m3u
